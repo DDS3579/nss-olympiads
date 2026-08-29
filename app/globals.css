@@ -24,3 +24,76 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 199 89% 96%;
+    --secondary-foreground: 199 89% 30%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+    --radius: 1rem;
+
+    /* Olympiad category colors */
+    --subject-math: 199 89% 48%;
+    --subject-physics: 258 90% 66%;
+    --subject-chemistry: 160 84% 39%;
+    --subject-astronomy: 239 84% 67%;
+    --subject-ai: 25 95% 53%;
+    --subject-informatics: 350 89% 60%;
+    --subject-biology: 173 80% 40%;
+  }
+
+  .dark {
+    --background: 223 49% 8%;
+    --foreground: 210 40% 96%;
+    --card: 223 40% 11%;
+    --card-foreground: 210 40% 96%;
+    --popover: 223 40% 11%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 199 89% 58%;
+    --primary-foreground: 223 49% 8%;
+    --secondary: 223 30% 16%;
+    --secondary-foreground: 199 89% 70%;
+    --accent: 25 95% 58%;
+    --accent-foreground: 223 49% 8%;
+    --muted: 223 30% 16%;
+    --muted-foreground: 215 20% 65%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 223 30% 18%;
+    --input: 223 30% 18%;
+    --ring: 199 89% 58%;
+
+    --subject-math: 199 89% 58%;
+    --subject-physics: 258 90% 72%;
+    --subject-chemistry: 160 74% 46%;
+    --subject-astronomy: 239 84% 74%;
+    --subject-ai: 25 95% 60%;
+    --subject-informatics: 350 89% 66%;
+    --subject-biology: 173 70% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-body font-body;
+  }
+}
