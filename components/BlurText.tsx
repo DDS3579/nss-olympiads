@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef } from 'react'
-import anime from 'animejs'
+import { animate, stagger } from 'animejs'
 import { cn } from '@/lib/utils'
 
 export function BlurText({ 
@@ -18,26 +18,29 @@ export function BlurText({
   const hasAnimated = useRef(false)
 
   useEffect(() => {
-    if (!containerRef.current) return
+    const el = containerRef.current
+    if (!el) return
 
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true
-          anime({
-            targets: containerRef.current.querySelectorAll('.word'),
-            opacity: [0, 1],
-            filter: ['blur(8px)', 'blur(0px)'],
-            translateY: [20, 0],
-            delay: anime.stagger(staggerDelay, { start: baseDelay }),
-            easing: 'easeOutExpo'
-          })
+          animate(
+            el.querySelectorAll('.word'),
+            {
+              opacity: [0, 1],
+              filter: ['blur(8px)', 'blur(0px)'],
+              translateY: [20, 0],
+              delay: stagger(staggerDelay, { start: baseDelay }),
+              easing: 'easeOutExpo'
+            }
+          )
         }
       },
       { threshold: 0.2 }
     )
 
-    observer.observe(containerRef.current)
+    observer.observe(el)
     return () => observer.disconnect()
   }, [staggerDelay, baseDelay])
 

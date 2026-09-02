@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef } from 'react'
-import anime from 'animejs'
+import { animate, remove } from 'animejs'
 import { cn } from '@/lib/utils'
 
 export function GeometricHeroCanvas({ 
@@ -27,8 +27,7 @@ export function GeometricHeroCanvas({
     const targets = containerRef.current.querySelectorAll('.shape')
     
     const timelines = Array.from(targets).map((target, i) => {
-      return anime({
-        targets: target,
+      return animate(target, {
         translateY: [0, -20, 0],
         rotate: [0, 15, 0],
         duration: 8000 + i * 600,
@@ -41,7 +40,7 @@ export function GeometricHeroCanvas({
 
     return () => {
       timelines.forEach(tl => tl.pause())
-      anime.remove(targets)
+      remove(targets)
     }
   }, [])
 

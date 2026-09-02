@@ -24,6 +24,7 @@
   --ring: 199 89% 48%;
   --radius: 1rem;
 
+  /* Olympiad category colors */
   --subject-math: 199 89% 48%;
   --subject-physics: 258 90% 66%;
   --subject-chemistry: 160 84% 39%;
@@ -31,9 +32,6 @@
   --subject-ai: 25 95% 53%;
   --subject-informatics: 350 89% 60%;
   --subject-biology: 173 80% 40%;
-
-  --font-heading: var(--font-geist-sans);
-  --font-body: var(--font-geist-sans);
 }
 
 .dark {
@@ -87,14 +85,26 @@
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Fonts — bridged from next/font CSS variables set on <html> */
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
+  --font-sans: var(--font-body);
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  /* Animation tokens for tailwindcss-animate keyframes */
+  --animate-in-opacity: 0;
+  --animate-in-scale: 1;
+  --animate-in-rotate: 0;
+  --animate-in-translate-x: 0;
+  --animate-in-translate-y: 0;
+  --animate-out-opacity: 1;
+  --animate-out-scale: 1;
+  --animate-out-rotate: 0;
+  --animate-out-translate-x: 0;
+  --animate-out-translate-y: 0;
 }
 
 @layer base {
@@ -102,8 +112,86 @@
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground font-body;
-    font-family: var(--font-body);
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+}
+
+/* ===== Animation Keyframes (replaces tailwindcss-animate plugin) ===== */
+
+@keyframes enter {
+  from {
+    opacity: var(--animate-in-opacity, 1);
+    transform:
+      translate3d(var(--animate-in-translate-x, 0), var(--animate-in-translate-y, 0), 0)
+      scale3d(var(--animate-in-scale, 1), var(--animate-in-scale, 1), var(--animate-in-scale, 1))
+      rotate(var(--animate-in-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--animate-out-opacity, 1);
+    transform:
+      translate3d(var(--animate-out-translate-x, 0), var(--animate-out-translate-y, 0), 0)
+      scale3d(var(--animate-out-scale, 1), var(--animate-out-scale, 1), var(--animate-out-scale, 1))
+      rotate(var(--animate-out-rotate, 0));
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation-name: enter;
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: both;
+    --animate-in-opacity: 0;
+    --animate-in-translate-x: 0;
+    --animate-in-translate-y: 0;
+    --animate-in-scale: 1;
+    --animate-in-rotate: 0;
+  }
+
+  .animate-out {
+    animation-name: exit;
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: both;
+    --animate-out-opacity: 1;
+    --animate-out-translate-x: 0;
+    --animate-out-translate-y: 0;
+    --animate-out-scale: 1;
+    --animate-out-rotate: 0;
+  }
+
+  /* Fade */
+  .fade-in-0 { --animate-in-opacity: 0; }
+  .fade-in-50 { --animate-in-opacity: 0.5; }
+  .fade-out-0 { --animate-out-opacity: 0; }
+
+  /* Slide in */
+  .slide-in-from-top { --animate-in-translate-y: -100%; }
+  .slide-in-from-bottom { --animate-in-translate-y: 100%; }
+  .slide-in-from-left { --animate-in-translate-x: -100%; }
+  .slide-in-from-right { --animate-in-translate-x: 100%; }
+
+  /* Slide out */
+  .slide-out-to-top { --animate-out-translate-y: -100%; }
+  .slide-out-to-bottom { --animate-out-translate-y: 100%; }
+  .slide-out-to-left { --animate-out-translate-x: -100%; }
+  .slide-out-to-right { --animate-out-translate-x: 100%; }
+
+  /* Duration overrides */
+  .duration-250 { animation-duration: 250ms; }
+  .duration-300 { animation-duration: 300ms; }
+  .duration-500 { animation-duration: 500ms; }
 }

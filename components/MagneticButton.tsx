@@ -1,5 +1,5 @@
 "use client"
-import { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { motion } from 'motion/react'
 
 export function MagneticButton({ 
@@ -31,13 +31,12 @@ export function MagneticButton({
 
   const reset = () => setPosition({ x: 0, y: 0 })
 
-  const { x, y } = position
   return (
     <motion.div
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
-      style={{ x, y }}
+      animate={{ x: position.x, y: position.y }}
       transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
       className={className}
     >

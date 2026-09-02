@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef, useState } from 'react'
-import anime from 'animejs'
+import { animate } from 'animejs'
 
 export function CountUp({ 
   to, 
@@ -23,15 +23,17 @@ export function CountUp({
         if (entries[0].isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true
           const obj = { val: 0 }
-          anime({
-            targets: obj,
-            val: to,
-            duration: duration,
-            easing: 'easeOutExpo',
-            update: () => {
-              setDisplay(Math.round(obj.val))
+          animate(
+            obj,
+            {
+              val: to,
+              duration: duration,
+              easing: 'easeOutExpo',
+              update: () => {
+                setDisplay(Math.round(obj.val))
+              }
             }
-          })
+          )
         }
       },
       { threshold: 0.5 }
