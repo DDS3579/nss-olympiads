@@ -66,11 +66,11 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           {/* Badge */}
-          <FadeIn delay={0} y={10}>
+          {/* <FadeIn delay={0} y={10}>
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary">
               NSS Clubs · Education Section
             </div>
-          </FadeIn>
+          </FadeIn> */}
 
           {/* Headline */}
           <div className="mt-6">
