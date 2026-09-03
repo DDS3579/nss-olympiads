@@ -1,22 +1,23 @@
+"use client"
+
 import Link from "next/link"
-import { 
-  ArrowRight, 
-  GraduationCap, 
-  Target, 
-  Globe2, 
-  Users, 
-  Quote, 
-  Crown, 
-  FlaskConical, 
-  HeartHandshake 
+import {
+  ArrowRight,
+  GraduationCap,
+  Target,
+  Globe2,
+  Users,
+  Quote,
+  Crown,
+  FlaskConical,
+  HeartHandshake,
 } from "lucide-react"
 import { FadeIn } from "@/components/FadeIn"
-import { BlurText } from "@/components/BlurText"
-import { CountUp } from "@/components/CountUp"
 import { GeometricHeroCanvas } from "@/components/GeometricHeroCanvas"
 import { MagneticButton } from "@/components/MagneticButton"
 import { CategoryCard } from "@/components/CategoryCard"
 import { SectionLabel } from "@/components/SectionLabel"
+import { OlympiadHero } from "@/components/hero/OlympiadHero"
 import { olympiads } from "@/lib/data/olympiads"
 
 const whyRows = [
@@ -60,75 +61,8 @@ const teamCards = [
 export default function Home() {
   return (
     <div className="bg-background overflow-hidden">
-      {/* 6.2 HERO */}
-      <section className="relative w-full overflow-hidden bg-gradient-to-b from-secondary/60 via-background to-background pt-40 pb-24 lg:pt-48 lg:pb-32">
-        <GeometricHeroCanvas className="absolute inset-0 -z-10 opacity-70" />
-
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-          {/* Badge */}
-          {/* <FadeIn delay={0} y={10}>
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary">
-              NSS Clubs · Education Section
-            </div>
-          </FadeIn> */}
-
-          {/* Headline */}
-          <div className="mt-6">
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05]">
-              <BlurText text="Every Olympiad champion was once a student who decided to" />{" "}
-              <span className="italic text-primary">start.</span>
-            </h1>
-          </div>
-
-          {/* Subheadline */}
-          <FadeIn delay={0.55} y={15}>
-            <p className="mt-6 text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Free preparation material, model question papers, and structured roadmaps for 7 Olympiads — built by NSS Clubs for Grade 11 and 12 students ready to compete.
-            </p>
-          </FadeIn>
-
-          {/* CTA Row */}
-          <FadeIn delay={0.7} y={15}>
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <MagneticButton>
-                <Link
-                  href="/olympiads"
-                  className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-semibold font-heading text-primary-foreground border-b-4 border-primary/40 transition-all duration-150 active:translate-y-1 active:border-b-2 hover:brightness-105"
-                >
-                  Start Preparing <ArrowRight className="h-[18px] w-[18px]" />
-                </Link>
-              </MagneticButton>
-
-              <Link
-                href="/olympiads"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-transparent px-8 py-3.5 text-sm font-semibold font-heading text-foreground transition-colors duration-200 hover:bg-secondary"
-              >
-                View Categories
-              </Link>
-            </div>
-          </FadeIn>
-
-          {/* Stat Row */}
-          <FadeIn delay={0.85} y={10}>
-            <div className="mt-14 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2 font-medium">
-                <span className="font-heading text-lg font-bold text-foreground">
-                  <CountUp to={7} />
-                </span>
-                <span>Olympiad Categories</span>
-              </div>
-              <div className="h-1.5 w-1.5 rounded-full bg-border hidden sm:block" />
-              <div className="flex items-center gap-2 font-medium">
-                <span>Grade 11 & 12 Focused</span>
-              </div>
-              <div className="h-1.5 w-1.5 rounded-full bg-border hidden sm:block" />
-              <div className="flex items-center gap-2 font-medium">
-                <span>Organized by NSS STEM Club</span>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      {/* 6.2 HERO — The Olympiad Universe */}
+      <OlympiadHero />
 
       {/* 6.3 WHY OLYMPIADS? */}
       <section className="relative bg-secondary/30 py-24 lg:py-32" id="why">
@@ -149,7 +83,6 @@ export default function Home() {
           </FadeIn>
         </div>
 
-        {/* 4 Alternating Rows */}
         <div className="mx-auto max-w-5xl px-6 space-y-20">
           {whyRows.map((row, index) => {
             const isOdd = index % 2 !== 0
@@ -161,25 +94,13 @@ export default function Home() {
                   isOdd ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
-                {/* Visual panel */}
-                <FadeIn
-                  x={isOdd ? 40 : -40}
-                  y={0}
-                  duration={0.6}
-                  delay={0}
-                >
+                <FadeIn x={isOdd ? 40 : -40} y={0} duration={0.6} delay={0}>
                   <div className={`h-48 sm:h-56 lg:aspect-square lg:h-auto max-w-sm mx-auto w-full rounded-3xl ${row.bgColor} flex items-center justify-center`}>
                     <Icon className={`h-20 w-20 lg:h-24 lg:w-24 ${row.iconColor}`} />
                   </div>
                 </FadeIn>
 
-                {/* Text block */}
-                <FadeIn
-                  x={isOdd ? 40 : -40}
-                  y={0}
-                  duration={0.6}
-                  delay={0.15}
-                >
+                <FadeIn x={isOdd ? 40 : -40} y={0} duration={0.6} delay={0.15}>
                   <div className="space-y-3 text-center lg:text-left">
                     <h3 className="font-heading text-2xl font-bold text-foreground">
                       {row.title}
@@ -193,8 +114,7 @@ export default function Home() {
             )
           })}
 
-          {/* Success Spotlight Card */}
-          {/* PLACEHOLDER — CMS FIELD: studentSuccessStory. Do not publish with fabricated names/achievements. Replace with a verified example once confirmed. Sanity schema: name, photo, olympiadCategory, achievement, resultingOpportunity, quote. */}
+          {/* PLACEHOLDER — CMS FIELD: studentSuccessStory. Do not publish with fabricated names/achievements. */}
           <FadeIn y={20}>
             <div className="mt-20 rounded-3xl border border-border bg-card p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-8">
               <div className="flex-shrink-0">
