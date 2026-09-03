@@ -1,6 +1,10 @@
 export function ScrollCue() {
   return (
-    <div className="pointer-events-none absolute inset-x-0 bottom-4 z-10 flex flex-col items-center gap-2.5">
+    <a
+      href="#why"
+      aria-label="Scroll to Why Olympiads"
+      className="absolute inset-x-0 bottom-4 z-10 flex flex-col items-center gap-2.5 pb-1 transition-opacity duration-300 hover:opacity-70"
+    >
       <span className="font-heading text-[9px] font-semibold uppercase tracking-[0.4em] text-muted-foreground/80">
         Explore
       </span>
@@ -10,6 +14,6 @@ export function ScrollCue() {
           style={{ animation: "hero-scroll-line 2.4s ease-in-out infinite" }}
         />
       </span>
-    </div>
+    </a>
   )
 }
