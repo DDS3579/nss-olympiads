@@ -34,6 +34,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
           label="The Constellation"
           title="How the topics connect"
           description="Each node is a topic. Follow the lines to see how ideas build on each other."
+          colorVar={colorVar}
         />
 
         {/* Desktop / tablet — freeform interactive map */}
