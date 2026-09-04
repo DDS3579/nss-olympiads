@@ -1,0 +1,2826 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: components/**/*, app/**/*, lib/**/*
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+app/
+  olympiads/
+    [slug]/
+      page.tsx
+    page.tsx
+  test/
+    page.tsx
+  favicon.ico
+  globals.css
+  layout.tsx
+  page.tsx
+components/
+  hero/
+    OlympiadHero.tsx
+    OlympiadHeroBackdrop.tsx
+    OlympiadNodes.tsx
+    ScrollCue.tsx
+  ui/
+    sheet.tsx
+    switch.tsx
+    tabs.tsx
+  BlurText.tsx
+  CategoryCard.tsx
+  CountUp.tsx
+  FadeIn.tsx
+  footer.tsx
+  GeometricHeroCanvas.tsx
+  MagneticButton.tsx
+  navbar.tsx
+  SectionLabel.tsx
+  SmoothScroll.tsx
+  theme-provider.tsx
+  theme-toggle.tsx
+lib/
+  data/
+    olympiads.ts
+  utils.ts
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="app/olympiads/[slug]/page.tsx">
+import { notFound } from "next/navigation"
+import Link from "next/link"
+import { 
+  ArrowLeft, 
+  FileText, 
+  ArrowDownToLine, 
+  Calendar 
+} from "lucide-react"
+import { FadeIn } from "@/components/FadeIn"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
+import { olympiads, getOlympiadBySlug } from "@/lib/data/olympiads"
+
+interface PageProps {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateStaticParams() {
+  return olympiads.map((item) => ({
+    slug: item.slug,
+  }))
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params
+  const olympiad = getOlympiadBySlug(slug)
+  if (!olympiad) return { title: "Olympiad Not Found" }
+
+  return {
+    title: `${olympiad.name} Olympiad | NSS Olympiad Hub`,
+    description: olympiad.description,
+  }
+}
+
+export default async function OlympiadDetailPage({ params }: PageProps) {
+  const { slug } = await params
+  const olympiad = getOlympiadBySlug(slug)
+
+  if (!olympiad) {
+    notFound()
+  }
+
+  const Icon = olympiad.icon
+
+  // Group model papers by year
+  const groupedPapers = olympiad.modelPapers.reduce((acc, paper) => {
+    const year = paper.year || "General"
+    if (!acc[year]) acc[year] = []
+    acc[year].push(paper)
+    return acc
+  }, {} as Record<string, typeof olympiad.modelPapers>)
+
+  const sortedYears = Object.keys(groupedPapers).sort((a, b) => b.localeCompare(a))
+
+  return (
+    <div className="min-h-screen bg-background pb-24">
+      {/* Header Band */}
+      <div 
+        className="pt-28 pb-16 lg:pt-32 lg:pb-20 border-b border-border transition-colors"
+        style={{
+          backgroundColor: `hsl(var(${olympiad.colorVar}) / 0.08)`,
+        }}
+      >
+        <div className="mx-auto max-w-4xl px-6">
+          <Link
+            href="/olympiads"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-medium mb-8"
+          >
+            <ArrowLeft className="h-4 w-4" /> All Olympiads
+          </Link>
+
+          <FadeIn y={10} duration={0.4}>
+            <div className="text-center">
+              <div 
+                className="h-14 w-14 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm"
+                style={{
+                  backgroundColor: `hsl(var(${olympiad.colorVar}) / 0.15)`,
+                }}
+              >
+                <Icon 
+                  className="h-7 w-7" 
+                  style={{ color: `hsl(var(${olympiad.colorVar}))` }}
+                />
+              </div>
+
+              <h1 className="font-heading text-4xl lg:text-5xl font-bold text-foreground">
+                {olympiad.name} Olympiad
+              </h1>
+
+              <p className="mt-4 text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
+                {olympiad.description}
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </div>
+
+      {/* Main Tabs Container */}
+      <div className="mx-auto max-w-4xl px-6 mt-12">
+        <Tabs defaultValue="study-material" className="w-full">
+          <TabsList className="grid grid-cols-3 gap-2 rounded-2xl bg-secondary p-1.5">
+            <TabsTrigger value="study-material">Study Material</TabsTrigger>
+            <TabsTrigger value="model-papers">Model Papers</TabsTrigger>
+            <TabsTrigger value="prep-roadmap">Prep Roadmap</TabsTrigger>
+          </TabsList>
+
+          {/* TAB 1: Study Material */}
+          <TabsContent value="study-material">
+            <div className="grid gap-4 mt-8">
+              {/* PLACEHOLDER: 4–5 sample resource entries per subject — swap file field via Sanity once real materials are uploaded. Do not link to non-existent files in production. */}
+              {olympiad.studyMaterial.map((res, i) => (
+                <FadeIn key={i} delay={i * 0.05} duration={0.3}>
+                  <div className="flex items-center justify-between rounded-2xl border border-border bg-card p-5 hover:border-primary/40 transition-colors">
+                    <div className="flex items-center gap-4">
+                      <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                        <FileText className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-semibold text-foreground">
+                          {res.title}
+                        </h3>
+                        <span className="inline-block mt-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-secondary text-secondary-foreground">
+                          {res.type}
+                        </span>
+                      </div>
+                    </div>
+
+                    <a
+                      href={res.fileUrl}
+                      download
+                      className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold text-foreground hover:bg-secondary transition-colors"
+                      title="Download material"
+                    >
+                      <ArrowDownToLine className="h-3.5 w-3.5 text-primary" />
+                      <span>Download</span>
+                    </a>
+                  </div>
+                </FadeIn>
+              ))}
+
+              {olympiad.studyMaterial.length === 0 && (
+                <div className="text-center py-12 border border-dashed border-border rounded-2xl">
+                  <p className="text-muted-foreground">No study materials uploaded yet.</p>
+                </div>
+              )}
+            </div>
+          </TabsContent>
+
+          {/* TAB 2: Model Papers */}
+          <TabsContent value="model-papers">
+            <div className="mt-8 space-y-6">
+              {/* PLACEHOLDER: real papers pending upload */}
+              {sortedYears.map((year) => (
+                <div key={year}>
+                  <div className="flex items-center gap-2 text-sm font-semibold text-muted-foreground mb-3">
+                    <Calendar className="h-4 w-4" />
+                    <span>{year} Question Papers</span>
+                  </div>
+
+                  <div className="grid gap-4">
+                    {groupedPapers[year].map((paper, i) => (
+                      <FadeIn key={i} delay={i * 0.05} duration={0.3}>
+                        <div className="flex items-center justify-between rounded-2xl border border-border bg-card p-5 hover:border-primary/40 transition-colors">
+                          <div className="flex items-center gap-4">
+                            <div className="h-10 w-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent flex-shrink-0">
+                              <FileText className="h-5 w-5" />
+                            </div>
+                            <div>
+                              <h3 className="font-heading font-semibold text-foreground">
+                                {paper.title}
+                              </h3>
+                              <span className="text-xs text-muted-foreground">
+                                Year: {paper.year}
+                              </span>
+                            </div>
+                          </div>
+
+                          <a
+                            href={paper.fileUrl}
+                            download
+                            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold text-foreground hover:bg-secondary transition-colors"
+                          >
+                            <ArrowDownToLine className="h-3.5 w-3.5 text-accent" />
+                            <span>Download Paper</span>
+                          </a>
+                        </div>
+                      </FadeIn>
+                    ))}
+                  </div>
+                </div>
+              ))}
+
+              {olympiad.modelPapers.length === 0 && (
+                <div className="text-center py-12 border border-dashed border-border rounded-2xl">
+                  <p className="text-muted-foreground">No model question papers uploaded yet.</p>
+                </div>
+              )}
+            </div>
+          </TabsContent>
+
+          {/* TAB 3: Prep Roadmap */}
+          <TabsContent value="prep-roadmap">
+            <div className="relative pl-8 mt-8 space-y-10 before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-border">
+              {olympiad.roadmap.map((step, index) => (
+                <FadeIn key={index} delay={index * 0.12} duration={0.4} x={-15}>
+                  <div className="relative">
+                    {/* Circle marker */}
+                    <div className="absolute -left-8 top-1 h-4 w-4 rounded-full bg-primary border-4 border-background ring-2 ring-primary/30" />
+                    
+                    <div className="space-y-1.5 bg-card border border-border rounded-2xl p-6">
+                      <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+                        Stage {index + 1}
+                      </div>
+                      <h3 className="font-heading text-xl font-bold text-foreground">
+                        {step.stage}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
+      </div>
+    </div>
+  )
+}
+</file>
+
+<file path="app/olympiads/page.tsx">
+import Link from "next/link"
+import { ArrowLeft } from "lucide-react"
+import { FadeIn } from "@/components/FadeIn"
+import { SectionLabel } from "@/components/SectionLabel"
+import { CategoryCard } from "@/components/CategoryCard"
+import { olympiads } from "@/lib/data/olympiads"
+
+export const metadata = {
+  title: "All Olympiads | NSS Olympiad Hub",
+  description: "Browse preparation material, model papers, and roadmaps for all 7 Olympiad categories.",
+}
+
+export default function OlympiadsPage() {
+  return (
+    <div className="pt-32 pb-24 min-h-screen bg-background">
+      {/* Back Link */}
+      <div className="mx-auto max-w-6xl px-6">
+        <Link 
+          href="/"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-medium"
+        >
+          <ArrowLeft className="h-4 w-4" /> Back to Home
+        </Link>
+      </div>
+
+      {/* Header */}
+      <div className="mx-auto max-w-2xl px-6 text-center mt-8 mb-16">
+        <SectionLabel>ALL OLYMPIADS</SectionLabel>
+        <h1 className="font-heading text-4xl lg:text-5xl font-bold text-foreground mt-3">
+          Choose your Olympiad.
+        </h1>
+        <p className="mt-4 text-muted-foreground text-lg">
+          Each category includes free study material, model papers, and a step-by-step roadmap.
+        </p>
+      </div>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto px-6">
+        {olympiads.map((item, index) => (
+          <FadeIn key={item.slug} delay={index * 0.08} duration={0.4} scale={0.95}>
+            <CategoryCard
+              slug={item.slug}
+              name={item.name}
+              tagline={item.tagline}
+              icon={item.icon}
+              colorVar={item.colorVar}
+            />
+          </FadeIn>
+        ))}
+      </div>
+    </div>
+  )
+}
+</file>
+
+<file path="app/test/page.tsx">
+"use client"
+
+import { FadeIn } from "@/components/FadeIn"
+import { BlurText } from "@/components/BlurText"
+import { CountUp } from "@/components/CountUp"
+import { GeometricHeroCanvas } from "@/components/GeometricHeroCanvas"
+import { MagneticButton } from "@/components/MagneticButton"
+import { CategoryCard } from "@/components/CategoryCard"
+import { SectionLabel } from "@/components/SectionLabel"
+import { ArrowRight, Sigma } from "lucide-react"
+import Link from "next/link"
+
+export default function TestPage() {
+  return (
+    <main className="relative min-h-screen bg-background text-foreground overflow-hidden">
+      {/* Background Test */}
+      <GeometricHeroCanvas variant="default" className="absolute inset-0 z-0" />
+
+      <div className="relative z-10 container mx-auto px-6 py-24 space-y-24">
+        
+        {/* 1. BlurText & CountUp Test */}
+        <section className="text-center space-y-8">
+          <SectionLabel>Animation Engine Test</SectionLabel>
+          <h1 className="font-heading text-5xl font-bold">
+            <BlurText text="Every champion starts somewhere." />
+          </h1>
+          <div className="flex justify-center gap-12 text-xl font-heading font-semibold">
+            <div className="flex items-center gap-2">
+              <CountUp to={7} /> <span className="text-muted-foreground text-sm">Categories</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CountUp to={100} suffix="%" /> <span className="text-muted-foreground text-sm">Free</span>
+            </div>
+          </div>
+        </section>
+
+        {/* 2. MagneticButton Test */}
+        <section className="flex justify-center">
+          <MagneticButton>
+            <Link 
+              href="/olympiads" 
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-primary-foreground border-b-4 border-primary/40 transition-all duration-150 active:translate-y-1 active:border-b-2 hover:brightness-105"
+            >
+              Magnetic CTA <ArrowRight className="h-4 w-4" />
+            </Link>
+          </MagneticButton>
+        </section>
+
+        {/* 3. CategoryCard Test */}
+        <section className="max-w-sm mx-auto">
+          <FadeIn y={40}>
+            <CategoryCard 
+              slug="mathematics" 
+              name="Mathematics" 
+              tagline="Numbers don't lie. Neither will your solutions." 
+              icon={Sigma} 
+              colorVar="--subject-math" 
+            />
+          </FadeIn>
+        </section>
+
+        {/* 4. FadeIn Scroll Test */}
+        <section className="h-[50vh] flex items-center justify-center border border-dashed border-border rounded-3xl">
+          <p className="text-muted-foreground">Scroll down to see FadeIn trigger...</p>
+        </section>
+
+        <section className="space-y-4">
+          <FadeIn delay={0.1}>
+            <h2 className="font-heading text-3xl font-bold">FadeIn Component</h2>
+            <p className="text-muted-foreground">
+              This block should slide up smoothly when it enters the viewport. 
+              If you see this instantly without animation, check your Framer Motion installation.
+            </p>
+          </FadeIn>
+        </section>
+
+      </div>
+    </main>
+  )
+}
+</file>
+
+<file path="components/hero/OlympiadHero.tsx">
+"use client"
+
+import { useState } from "react"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { FadeIn } from "@/components/FadeIn"
+import { CountUp } from "@/components/CountUp"
+import { MagneticButton } from "@/components/MagneticButton"
+import { olympiads } from "@/lib/data/olympiads"
+import { OlympiadHeroBackdrop } from "./OlympiadHeroBackdrop"
+import { OlympiadNodes } from "./OlympiadNodes"
+import { ScrollCue } from "./ScrollCue"
+
+const HERO_STATS = [
+  { key: "olympiads", value: "7", label: "Olympiads", countUp: true },
+  { key: "grade", value: "11–12", label: "Grade Focus", countUp: false },
+  { key: "free", value: "100%", label: "Free Preparation", countUp: false },
+]
+
+export function OlympiadHero() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  return (
+    <section className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-background">
+      {/* Layers 1–3: atmosphere · academic universe · depth objects */}
+      <OlympiadHeroBackdrop activeIndex={activeIndex} />
+
+      {/* The 7 Olympiad constellation (interactive) */}
+      <OlympiadNodes olympiads={olympiads} onActivate={setActiveIndex} />
+
+      {/* Hero content — clean negative space in the center */}
+      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-1 flex-col items-center justify-center px-6 pb-40 pt-36 text-center lg:pt-40">
+        {/* Eyebrow */}
+        <FadeIn delay={0.05} y={8}>
+          <div className="mb-7 inline-flex items-center gap-3">
+            <span className="h-px w-10 bg-gradient-to-r from-transparent to-primary/50" />
+            <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.32em] text-muted-foreground">
+              7 Olympiads · NSS STEM Club
+            </span>
+            <span className="h-px w-10 bg-gradient-to-l from-transparent to-primary/50" />
+          </div>
+        </FadeIn>
+
+        {/* Headline — three strong lines, poster-tight */}
+        <h1 className="font-heading text-4xl font-extrabold leading-[1.06] tracking-[-0.02em] text-foreground sm:text-6xl sm:leading-[1.02] lg:text-[4.4rem] xl:text-[4.75rem]">
+          <span className="hero-line inline-block lg:block" style={{ animationDelay: "0.12s" }}>
+            Every Olympiad champion
+          </span>{" "}
+          <span className="hero-line inline-block lg:block" style={{ animationDelay: "0.24s" }}>
+            was once a student who
+          </span>{" "}
+          <span className="hero-line inline-block lg:block" style={{ animationDelay: "0.36s" }}>
+            decided to <span className="hero-start italic">start.</span>
+          </span>
+        </h1>
+
+        {/* Subheadline */}
+        <FadeIn delay={0.55} y={15}>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-xl">
+            Free preparation material, model question papers, and structured roadmaps for 7
+            Olympiads — built by NSS Clubs for Grade 11 and 12 students ready to compete.
+          </p>
+        </FadeIn>
+
+        {/* CTA row — the only strongly saturated element */}
+        <FadeIn delay={0.7} y={15}>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <MagneticButton>
+              <Link
+                href="/olympiads"
+                className="inline-flex items-center gap-2 rounded-full border-b-4 border-primary/40 bg-primary px-8 py-3.5 font-heading text-sm font-semibold text-primary-foreground shadow-[0_12px_40px_-10px_rgba(40,184,242,0.55)] transition-all duration-150 hover:brightness-105 active:translate-y-1 active:border-b-2"
+              >
+                Start Preparing <ArrowRight className="h-[18px] w-[18px]" />
+              </Link>
+            </MagneticButton>
+
+            <Link
+              href="/olympiads"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.02] px-8 py-3.5 font-heading text-sm font-semibold text-foreground transition-colors duration-200 hover:border-white/25 hover:bg-secondary"
+            >
+              Explore Olympiads
+            </Link>
+          </div>
+        </FadeIn>
+
+        {/* Metadata — editorial stat blocks (the "0 categories" bug is gone) */}
+        <FadeIn delay={0.85} y={10}>
+          <div className="mt-16 grid grid-cols-3 divide-x divide-white/[0.08]">
+            {HERO_STATS.map((s) => (
+              <div key={s.key} className="px-5 text-center sm:px-10">
+                <div className="font-heading text-xl font-bold text-foreground sm:text-[1.7rem]">
+                  {s.countUp ? <CountUp to={7} /> : s.value}
+                </div>
+                <div className="mt-1.5 text-[9px] font-semibold uppercase tracking-[0.22em] text-muted-foreground sm:text-[10px]">
+                  {s.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+      </div>
+
+      <ScrollCue />
+    </section>
+  )
+}
+</file>
+
+<file path="components/hero/OlympiadHeroBackdrop.tsx">
+type BackdropProps = { activeIndex: number | null }
+
+/* ---- Layer 2: faint scientific diagrams (one per Olympiad, index-matched) ---- */
+const DIAGRAMS: { pos: string; svg: React.ReactNode }[] = [
+  {
+    // 0 · Mathematics — sigma / integral
+    pos: "left-[21%] top-[12%] w-28 xl:w-32",
+    svg: (
+      <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="1">
+        <path d="M88 26 H42 L70 60 L42 94 H88" />
+        <path d="M46 110 h44" opacity="0.55" />
+        <path d="M100 30 c -5 1 -6 6 -6 11 v 34 c 0 5 1 10 6 11" opacity="0.8" />
+      </svg>
+    ),
+  },
+  {
+    // 1 · Physics — projectile / vectors
+    pos: "left-[74%] top-[7%] w-32 xl:w-36",
+    svg: (
+      <svg viewBox="0 0 140 110" fill="none" stroke="currentColor" strokeWidth="1">
+        <path d="M12 90 Q 70 12 128 90" strokeDasharray="3 5" />
+        <circle cx="12" cy="90" r="3" fill="currentColor" stroke="none" />
+        <line x1="12" y1="90" x2="46" y2="52" />
+        <path d="M46 52 l-10 2 M46 52 l-2 10" />
+        <path d="M34 90 a 22 22 0 0 1 7 -15" opacity="0.6" />
+        <line x1="8" y1="102" x2="134" y2="102" opacity="0.45" />
+      </svg>
+    ),
+  },
+  {
+    // 2 · Chemistry — benzene ring
+    pos: "left-[88%] top-[62%] w-28 xl:w-32",
+    svg: (
+      <svg viewBox="0 0 130 120" fill="none" stroke="currentColor" strokeWidth="1">
+        <polygon points="65,28 94,45 94,79 65,96 36,79 36,45" />
+        <circle cx="65" cy="62" r="19" opacity="0.55" />
+        <line x1="94" y1="45" x2="118" y2="31" />
+        <circle cx="121" cy="29" r="4" />
+        <line x1="36" y1="79" x2="14" y2="92" />
+        <circle cx="11" cy="94" r="3" opacity="0.7" />
+      </svg>
+    ),
+  },
+  {
+    // 3 · Biology — double helix
+    pos: "left-[35%] top-[78%] w-24 xl:w-28",
+    svg: (
+      <svg viewBox="0 0 110 130" fill="none" stroke="currentColor" strokeWidth="1">
+        <path d="M34 6 C 82 30 82 54 34 78 C 14 88 14 106 38 124" />
+        <path d="M76 6 C 28 30 28 54 76 78 C 96 88 96 106 72 124" />
+        <line x1="46" y1="20" x2="64" y2="20" opacity="0.65" />
+        <line x1="52" y1="34" x2="58" y2="34" opacity="0.65" />
+        <line x1="47" y1="64" x2="63" y2="64" opacity="0.65" />
+        <line x1="40" y1="92" x2="70" y2="92" opacity="0.65" />
+        <line x1="42" y1="108" x2="68" y2="108" opacity="0.65" />
+      </svg>
+    ),
+  },
+  {
+    // 4 · Astronomy — orbits
+    pos: "left-[57%] top-[12%] w-32 xl:w-36",
+    svg: (
+      <svg viewBox="0 0 140 110" fill="none" stroke="currentColor" strokeWidth="1">
+        <circle cx="70" cy="55" r="5" fill="currentColor" stroke="none" />
+        <ellipse cx="70" cy="55" rx="60" ry="19" transform="rotate(-16 70 55)" />
+        <ellipse cx="70" cy="55" rx="42" ry="13" transform="rotate(22 70 55)" opacity="0.55" />
+        <circle cx="124" cy="34" r="2.5" fill="currentColor" stroke="none" />
+        <circle cx="32" cy="70" r="1.8" fill="currentColor" stroke="none" opacity="0.8" />
+      </svg>
+    ),
+  },
+  {
+    // 5 · Informatics — graph theory
+    pos: "left-[6%] top-[63%] w-28 xl:w-32",
+    svg: (
+      <svg viewBox="0 0 130 110" fill="none" stroke="currentColor" strokeWidth="1">
+        <line x1="22" y1="26" x2="78" y2="14" />
+        <line x1="78" y1="14" x2="116" y2="44" />
+        <line x1="22" y1="26" x2="54" y2="58" />
+        <line x1="78" y1="14" x2="54" y2="58" />
+        <line x1="116" y1="44" x2="54" y2="58" />
+        <line x1="54" y1="58" x2="28" y2="94" />
+        <line x1="54" y1="58" x2="98" y2="92" />
+        <line x1="28" y1="94" x2="98" y2="92" />
+        <line x1="116" y1="44" x2="98" y2="92" />
+        <circle cx="22" cy="26" r="3.5" />
+        <circle cx="78" cy="14" r="3.5" />
+        <circle cx="116" cy="44" r="3.5" />
+        <circle cx="54" cy="58" r="4" fill="currentColor" fillOpacity="0.25" />
+        <circle cx="28" cy="94" r="3" />
+        <circle cx="98" cy="92" r="3" />
+      </svg>
+    ),
+  },
+  {
+    // 6 · Geometry — circumscribed triangle
+    pos: "left-[63%] top-[76%] w-28 xl:w-32",
+    svg: (
+      <svg viewBox="0 0 130 120" fill="none" stroke="currentColor" strokeWidth="1">
+        <circle cx="65" cy="62" r="46" opacity="0.75" />
+        <polygon points="65,16 103,89 27,89" />
+        <circle cx="65" cy="62" r="1.6" fill="currentColor" stroke="none" />
+        <line x1="65" y1="62" x2="103" y2="89" strokeDasharray="2 3" opacity="0.6" />
+        <line x1="65" y1="16" x2="65" y2="62" strokeDasharray="2 3" opacity="0.35" />
+      </svg>
+    ),
+  },
+]
+
+export function OlympiadHeroBackdrop({ activeIndex }: BackdropProps) {
+  return (
+    <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+      {/* ───────────── LAYER 1 · ATMOSPHERE ───────────── */}
+      {/* subtle indigo wash at top */}
+      <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(30,44,82,0.5),transparent_60%)]" />
+
+      {/* huge breathing cyan glow — lit-from-behind, centered below "start." */}
+      <div
+        className="hero-motion hero-breathe absolute left-1/2 top-[62%] h-[80vmin] w-[120vmin] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        style={{
+          background:
+            "radial-gradient(closest-side, rgba(40,184,242,0.14), rgba(40,184,242,0.05) 55%, transparent 75%)",
+          filter: "blur(6px)",
+        }}
+      />
+
+      {/* cinematic vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(90%_70%_at_50%_45%,transparent_55%,rgba(3,7,16,0.55)_100%)]" />
+
+      {/* film grain */}
+      <div className="hero-grain absolute inset-0 opacity-[0.022]" />
+
+      {/* ───────────── LAYER 2 · ACADEMIC UNIVERSE ───────────── */}
+
+      {/* giant ghosted 7 — the seven Olympiads */}
+      <div className="absolute inset-x-0 top-[44%] flex -translate-y-1/2 justify-center">
+        <span
+          className="select-none font-heading text-[58vw] font-black leading-none text-[#f3f6fb]/[0.028] md:text-[42vw]"
+          style={{
+            maskImage:
+              "linear-gradient(to bottom, transparent 0%, black 22%, black 64%, transparent 96%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, transparent 0%, black 22%, black 64%, transparent 96%)",
+          }}
+        >
+          7
+        </span>
+      </div>
+
+      {/* scientific constellation — 4 corner clusters, center kept clean */}
+      <svg
+        className="absolute inset-0 h-full w-full"
+        viewBox="0 0 1440 900"
+        fill="none"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        {/* top-left cluster */}
+        <g
+          className="hero-motion"
+          style={{ animation: "hero-drift 17s ease-in-out -3s infinite" }}
+          stroke="rgba(142,157,181,0.14)"
+          strokeWidth="1"
+        >
+          <path d="M96 118 L168 74 L238 142 L146 196 Z" />
+          <path d="M168 74 L306 92 L338 186 L238 142" />
+          <path d="M58 210 L96 118" />
+          <circle cx="96" cy="118" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="168" cy="74" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="146" cy="196" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="306" cy="92" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="338" cy="186" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="58" cy="210" r="1.4" fill="rgba(243,246,251,0.24)" stroke="none" />
+          {/* glowing node */}
+          <circle cx="238" cy="142" r="7" fill="rgba(40,184,242,0.12)" stroke="none" />
+          <circle
+            cx="238" cy="142" r="2" fill="rgba(127,220,251,0.8)" stroke="none"
+            className="hero-motion" style={{ animation: "hero-pulse 5s ease-in-out infinite" }}
+          />
+        </g>
+
+        {/* top-right cluster */}
+        <g
+          className="hero-motion"
+          style={{ animation: "hero-drift 21s ease-in-out -9s infinite" }}
+          stroke="rgba(142,157,181,0.14)"
+          strokeWidth="1"
+        >
+          <path d="M1344 110 L1272 66 L1202 134 L1294 188 Z" />
+          <path d="M1272 66 L1134 84 L1102 178 L1202 134" />
+          <path d="M1382 202 L1344 110" />
+          <circle cx="1344" cy="110" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1272" cy="66" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1294" cy="188" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1134" cy="84" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1102" cy="178" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1382" cy="202" r="1.4" fill="rgba(243,246,251,0.24)" stroke="none" />
+          <circle cx="1202" cy="134" r="7" fill="rgba(40,184,242,0.12)" stroke="none" />
+          <circle
+            cx="1202" cy="134" r="2" fill="rgba(127,220,251,0.8)" stroke="none"
+            className="hero-motion" style={{ animation: "hero-pulse 6s ease-in-out -2s infinite" }}
+          />
+        </g>
+
+        {/* bottom-left cluster */}
+        <g
+          className="hero-motion"
+          style={{ animation: "hero-drift 19s ease-in-out -6s infinite" }}
+          stroke="rgba(142,157,181,0.14)"
+          strokeWidth="1"
+        >
+          <path d="M104 712 L176 772 L246 700 L152 652 Z" />
+          <path d="M246 700 L312 758" />
+          <path d="M76 632 L152 652" />
+          <circle cx="104" cy="712" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="176" cy="772" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="152" cy="652" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="312" cy="758" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="76" cy="632" r="1.4" fill="rgba(243,246,251,0.24)" stroke="none" />
+          <circle cx="246" cy="700" r="7" fill="rgba(40,184,242,0.12)" stroke="none" />
+          <circle
+            cx="246" cy="700" r="2" fill="rgba(127,220,251,0.8)" stroke="none"
+            className="hero-motion" style={{ animation: "hero-pulse 4.5s ease-in-out -1s infinite" }}
+          />
+        </g>
+
+        {/* bottom-right cluster */}
+        <g
+          className="hero-motion"
+          style={{ animation: "hero-drift 23s ease-in-out -12s infinite" }}
+          stroke="rgba(142,157,181,0.14)"
+          strokeWidth="1"
+        >
+          <path d="M1336 724 L1264 784 L1194 712 L1288 664 Z" />
+          <path d="M1194 712 L1148 770" />
+          <path d="M1378 644 L1288 664" />
+          <circle cx="1336" cy="724" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1264" cy="784" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1288" cy="664" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1148" cy="770" r="1.6" fill="rgba(243,246,251,0.3)" stroke="none" />
+          <circle cx="1378" cy="644" r="1.4" fill="rgba(243,246,251,0.24)" stroke="none" />
+          <circle cx="1194" cy="712" r="7" fill="rgba(40,184,242,0.12)" stroke="none" />
+          <circle
+            cx="1194" cy="712" r="2" fill="rgba(127,220,251,0.8)" stroke="none"
+            className="hero-motion" style={{ animation: "hero-pulse 5.5s ease-in-out -3.5s infinite" }}
+          />
+        </g>
+
+        {/* sparse survey marks */}
+        <g fill="rgba(243,246,251,0.18)" stroke="none">
+          <circle cx="420" cy="150" r="1.2" />
+          <circle cx="1010" cy="140" r="1.2" />
+          <circle cx="205" cy="470" r="1.2" />
+          <circle cx="1245" cy="480" r="1.2" />
+          <circle cx="390" cy="838" r="1.2" />
+          <circle cx="1064" cy="846" r="1.2" />
+        </g>
+        <g stroke="rgba(142,157,181,0.18)" strokeWidth="1">
+          <path d="M505 93 h10 M510 88 v10" />
+          <path d="M935 83 h10 M940 78 v10" />
+          <path d="M55 415 h10 M60 410 v10" />
+          <path d="M1385 425 h10 M1390 420 v10" />
+        </g>
+      </svg>
+
+      {/* perspective grid — fades out before reaching the headline */}
+      <div
+        className="absolute inset-x-0 bottom-[-1px] h-[36%] overflow-hidden"
+        style={{
+          maskImage:
+            "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.35) 55%, transparent 95%)",
+          WebkitMaskImage:
+            "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.35) 55%, transparent 95%)",
+        }}
+      >
+        <div
+          className="absolute bottom-[-58%] left-1/2 h-[170%] w-[190%]"
+          style={{
+            transform: "translateX(-50%) perspective(620px) rotateX(61deg)",
+            transformOrigin: "50% 100%",
+            backgroundImage:
+              "linear-gradient(rgba(126,164,204,0.11) 1px, transparent 1px), linear-gradient(90deg, rgba(126,164,204,0.11) 1px, transparent 1px)",
+            backgroundSize: "54px 54px",
+          }}
+        />
+      </div>
+
+      {/* faint science diagrams — hover a node to illuminate its diagram */}
+      {DIAGRAMS.map((d, i) => {
+        const active = activeIndex === i
+        return (
+          <div
+            key={i}
+            className={`absolute hidden md:block transition-all duration-700 ${d.pos} ${
+              active ? "text-[#28b8f2] opacity-40" : "text-[#f3f6fb] opacity-[0.05]"
+            }`}
+            style={active ? { filter: "drop-shadow(0 0 14px rgba(40,184,242,0.35))" } : undefined}
+          >
+            {d.svg}
+          </div>
+        )
+      })}
+
+      {/* ───────────── LAYER 3 · DEPTH OBJECTS (study artifacts) ───────────── */}
+
+      {/* Mathematics problem sheet — left edge */}
+      <div className="absolute left-[2.5%] top-[31%] hidden -rotate-6 opacity-[0.22] lg:block">
+        <div
+          className="hero-motion hero-float w-[190px] rounded-xl border border-white/[0.08] bg-[#0c1730]/50 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-[3px]"
+          style={{ animationDelay: "-2s" }}
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-[8.5px] font-bold uppercase tracking-[0.2em] text-[#f3f6fb]/75">Mathematics</span>
+            <span className="text-[8.5px] uppercase tracking-[0.14em] text-[#8e9db5]/70">Set 04</span>
+          </div>
+          <div className="mt-2.5 space-y-1.5 font-mono text-[10px] leading-snug text-[#f3f6fb]/70">
+            <p>Let f : ℝ → ℝ satisfy</p>
+            <p>f(x) + 2f(1 − x) = x²</p>
+            <p className="text-[#7fdcfb]/80">∫₀¹ f(x) dx = ?</p>
+          </div>
+          <div className="mt-3 space-y-1.5">
+            <div className="h-px w-full bg-white/[0.07]" />
+            <div className="h-px w-3/4 bg-white/[0.07]" />
+          </div>
+        </div>
+      </div>
+
+      {/* Physics vector card — right edge */}
+      <div className="absolute right-[2.5%] top-[27%] hidden rotate-[5deg] opacity-[0.22] lg:block">
+        <div
+          className="hero-motion hero-float w-[175px] rounded-xl border border-white/[0.08] bg-[#0c1730]/50 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-[3px]"
+          style={{ animationDelay: "-5s" }}
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-[8.5px] font-bold uppercase tracking-[0.2em] text-[#f3f6fb]/75">Physics</span>
+            <span className="text-[8.5px] uppercase tracking-[0.14em] text-[#8e9db5]/70">Mechanics</span>
+          </div>
+          <svg viewBox="0 0 150 64" className="mt-2 w-full text-[#f3f6fb]/60" fill="none" stroke="currentColor" strokeWidth="1">
+            <path d="M8 54 Q 75 -18 142 54" strokeDasharray="3 4" />
+            <circle cx="8" cy="54" r="2.5" fill="currentColor" stroke="none" />
+            <line x1="8" y1="54" x2="40" y2="20" />
+            <path d="M40 20 l-9 2.5 M40 20 l-2.5 9" />
+            <line x1="4" y1="60" x2="146" y2="60" opacity="0.5" />
+          </svg>
+          <p className="mt-2 font-mono text-[10px] text-[#f3f6fb]/70">v₀ = 12 m/s · θ = 30°</p>
+        </div>
+      </div>
+
+      {/* Proof card — bottom-left edge */}
+      <div className="absolute bottom-[9%] left-[7%] hidden rotate-[3deg] opacity-[0.18] lg:block">
+        <div
+          className="hero-motion hero-float w-[200px] rounded-xl border border-white/[0.08] bg-[#0c1730]/50 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-[3px]"
+          style={{ animationDelay: "-7s", animationDuration: "10s" }}
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-[8.5px] font-bold uppercase tracking-[0.2em] text-[#f3f6fb]/75">Analysis</span>
+            <span className="text-[8.5px] uppercase tracking-[0.14em] text-[#8e9db5]/70">Proof</span>
+          </div>
+          <div className="mt-2.5 space-y-1 font-mono text-[9.5px] leading-relaxed text-[#f3f6fb]/65">
+            <p>Let ε &gt; 0. Choose N ∈ ℕ with</p>
+            <p>1/N &lt; ε. Then ∀ n ≥ N,</p>
+            <p>|aₙ − L| &lt; ε.&nbsp;&nbsp;∎</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+</file>
+
+<file path="components/hero/OlympiadNodes.tsx">
+"use client"
+
+import Link from "next/link"
+
+type NodeOlympiad = { slug: string; name: string }
+
+type NodeDef = {
+  x: number
+  y: number
+  label: "bottom" | "bottom-right" | "bottom-left" | "right" | "left" | "top-right" | "top-left"
+}
+
+/* ring order: top-center → clockwise */
+const NODES: NodeDef[] = [
+  { x: 50, y: 8,  label: "bottom" },
+  { x: 89, y: 23, label: "bottom-left" },
+  { x: 94, y: 53, label: "left" },
+  { x: 82, y: 84, label: "top-left" },
+  { x: 20, y: 76, label: "top-right" },
+  { x: 6,  y: 55, label: "right" },
+  { x: 11, y: 27, label: "bottom-right" },
+]
+
+const LABEL_CLS: Record<NodeDef["label"], string> = {
+  bottom: "left-1/2 top-full mt-2 -translate-x-1/2",
+  "bottom-right": "left-3 top-full mt-2",
+  "bottom-left": "right-3 top-full mt-2",
+  right: "left-full top-1/2 ml-2 -translate-y-1/2",
+  left: "right-full top-1/2 mr-2 -translate-y-1/2",
+  "top-right": "left-3 bottom-full mb-2",
+  "top-left": "right-3 bottom-full mb-2",
+}
+
+export function OlympiadNodes({
+  olympiads,
+  onActivate,
+}: {
+  olympiads: NodeOlympiad[]
+  onActivate: (index: number | null) => void
+}) {
+  const items = olympiads.slice(0, 7)
+  const pos = NODES.slice(0, items.length)
+
+  return (
+    <div className="absolute inset-0 z-[2] hidden md:block">
+      {/* dotted ring connecting the seven worlds */}
+      <svg
+        aria-hidden
+        className="absolute inset-0 h-full w-full"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        {pos.map((p, i) => {
+          const q = pos[(i + 1) % pos.length]
+          return (
+            <line
+              key={i}
+              x1={p.x} y1={p.y} x2={q.x} y2={q.y}
+              stroke="rgba(40,184,242,0.12)"
+              strokeWidth="1"
+              strokeDasharray="1 7"
+              strokeLinecap="round"
+              vectorEffect="non-scaling-stroke"
+            />
+          )
+        })}
+      </svg>
+
+      {/* the seven Olympiad nodes */}
+      {items.map((o, i) => {
+        const p = pos[i]
+        return (
+          <Link
+            key={o.slug}
+            href={`/olympiads/${o.slug}`}
+            aria-label={`Explore ${o.name}`}
+            onMouseEnter={() => onActivate(i)}
+            onMouseLeave={() => onActivate(null)}
+            onFocus={() => onActivate(i)}
+            onBlur={() => onActivate(null)}
+            className="group absolute -translate-x-1/2 -translate-y-1/2 p-3"
+            style={{ left: `${p.x}%`, top: `${p.y}%` }}
+          >
+            {/* node */}
+            <span className="relative block h-2.5 w-2.5">
+              <span className="absolute -inset-[7px] rounded-full border border-primary/20 transition-colors duration-300 group-hover:border-primary/60" />
+              <span className="absolute -inset-[3px] rounded-full bg-primary/20 blur-[3px] transition-colors duration-300 group-hover:bg-primary/50" />
+              <span className="absolute inset-0 rounded-full bg-[#7fdcfb] shadow-[0_0_10px_rgba(40,184,242,0.9)] transition-transform duration-300 group-hover:scale-125" />
+            </span>
+
+            {/* hover label */}
+            <span
+              className={`pointer-events-none absolute z-10 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus:translate-y-0 group-focus:opacity-100 ${LABEL_CLS[p.label]}`}
+            >
+              <span className="block rounded-lg border border-white/10 bg-[#0a1226]/95 px-3 py-2 text-left shadow-[0_8px_30px_rgba(0,0,0,0.5)] backdrop-blur">
+                <span className="block whitespace-nowrap font-heading text-[11px] font-bold uppercase tracking-[0.12em] text-[#f3f6fb]">
+                  {o.name}
+                </span>
+                <span className="mt-0.5 block text-[10px] font-medium text-[#28b8f2]">
+                  Explore →
+                </span>
+              </span>
+            </span>
+          </Link>
+        )
+      })}
+    </div>
+  )
+}
+</file>
+
+<file path="components/ui/sheet.tsx">
+"use client"
+
+import * as React from "react"
+import * as SheetPrimitive from "@radix-ui/react-dialog"
+import { cva, type VariantProps } from "class-variance-authority"
+import { X } from "lucide-react"
+import { cn } from "@/lib/utils"
+
+const Sheet = SheetPrimitive.Root
+const SheetTrigger = SheetPrimitive.Trigger
+const SheetClose = SheetPrimitive.Close
+const SheetPortal = SheetPrimitive.Portal
+
+const SheetOverlay = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
+>(({ className, ...props }, ref) => (
+  <SheetPrimitive.Overlay
+    className={cn(
+      "fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      className
+    )}
+    {...props}
+    ref={ref}
+  />
+))
+SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
+
+const sheetVariants = cva(
+  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+  {
+    variants: {
+      side: {
+        top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
+        bottom:
+          "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
+        left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
+        right:
+          "inset-y-0 right-0 h-full w-3/4 border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm",
+      },
+    },
+    defaultVariants: {
+      side: "right",
+    },
+  }
+)
+
+interface SheetContentProps
+  extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
+    VariantProps<typeof sheetVariants> {}
+
+const SheetContent = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Content>,
+  SheetContentProps
+>(({ side = "right", className, children, ...props }, ref) => (
+  <SheetPortal>
+    <SheetOverlay />
+    <SheetPrimitive.Content
+      ref={ref}
+      className={cn(sheetVariants({ side }), className)}
+      {...props}
+    >
+      {children}
+      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+        <X className="h-4 w-4" />
+        <span className="sr-only">Close</span>
+      </SheetPrimitive.Close>
+    </SheetPrimitive.Content>
+  </SheetPortal>
+))
+SheetContent.displayName = SheetPrimitive.Content.displayName
+
+const SheetHeader = ({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className={cn(
+      "flex flex-col space-y-2 text-center sm:text-left",
+      className
+    )}
+    {...props}
+  />
+)
+SheetHeader.displayName = "SheetHeader"
+
+const SheetTitle = React.forwardRef<
+  React.ElementRef<typeof SheetPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
+>(({ className, ...props }, ref) => (
+  <SheetPrimitive.Title
+    ref={ref}
+    className={cn("text-lg font-semibold text-foreground", className)}
+    {...props}
+  />
+))
+SheetTitle.displayName = SheetPrimitive.Title.displayName
+
+export {
+  Sheet,
+  SheetPortal,
+  SheetOverlay,
+  SheetTrigger,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+}
+</file>
+
+<file path="components/ui/switch.tsx">
+"use client"
+
+import * as React from "react"
+import * as SwitchPrimitives from "@radix-ui/react-switch"
+
+import { cn } from "@/lib/utils"
+
+const Switch = React.forwardRef<
+  React.ElementRef<typeof SwitchPrimitives.Root>,
+  React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
+>(({ className, ...props }, ref) => (
+  <SwitchPrimitives.Root
+    className={cn(
+      "peer inline-flex h-7 w-14 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
+      className
+    )}
+    {...props}
+    ref={ref}
+  >
+    <SwitchPrimitives.Thumb
+      className={cn(
+        "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform duration-200 ease-out data-[state=checked]:translate-x-7 data-[state=unchecked]:translate-x-0"
+      )}
+    />
+  </SwitchPrimitives.Root>
+))
+Switch.displayName = SwitchPrimitives.Root.displayName
+
+export { Switch }
+</file>
+
+<file path="components/ui/tabs.tsx">
+"use client"
+
+import * as React from "react"
+import * as TabsPrimitive from "@radix-ui/react-tabs"
+
+import { cn } from "@/lib/utils"
+
+const Tabs = TabsPrimitive.Root
+
+const TabsList = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.List>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.List
+    ref={ref}
+    className={cn(
+      "grid grid-cols-3 gap-2 rounded-2xl bg-secondary p-1.5 text-muted-foreground",
+      className
+    )}
+    {...props}
+  />
+))
+TabsList.displayName = TabsPrimitive.List.displayName
+
+const TabsTrigger = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Trigger
+    ref={ref}
+    className={cn(
+      "inline-flex items-center justify-center whitespace-nowrap rounded-xl px-2 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-heading font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm",
+      className
+    )}
+    {...props}
+  />
+))
+TabsTrigger.displayName = TabsPrimitive.Trigger.displayName
+
+const TabsContent = React.forwardRef<
+  React.ElementRef<typeof TabsPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof TabsPrimitive.Content>
+>(({ className, ...props }, ref) => (
+  <TabsPrimitive.Content
+    ref={ref}
+    className={cn(
+      "mt-6 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 transition-opacity duration-250 animate-in fade-in-50",
+      className
+    )}
+    {...props}
+  />
+))
+TabsContent.displayName = TabsPrimitive.Content.displayName
+
+export { Tabs, TabsList, TabsTrigger, TabsContent }
+</file>
+
+<file path="components/CategoryCard.tsx">
+import Link from 'next/link'
+import { LucideIcon } from 'lucide-react'
+import { cn } from '@/lib/utils'
+
+interface CategoryCardProps {
+  slug: string
+  name: string
+  tagline: string
+  icon: LucideIcon
+  colorVar: string
+}
+
+export function CategoryCard({ slug, name, tagline, icon: Icon, colorVar }: CategoryCardProps) {
+  return (
+    <Link
+      href={`/olympiads/${slug}`}
+      className={cn(
+        "group relative flex flex-col items-start gap-4 rounded-3xl border-2 p-6 transition-transform duration-150 border-b-[6px] active:translate-y-1 active:border-b-[2px] hover:-translate-y-1 hover:shadow-lg cursor-pointer"
+      )}
+      style={{
+        backgroundColor: `hsl(var(${colorVar}) / 0.08)`,
+        borderColor: `hsl(var(${colorVar}) / 0.35)`,
+      }}
+    >
+      <div className="h-12 w-12 rounded-2xl flex items-center justify-center bg-white/80 shadow-sm dark:bg-card">
+        <Icon 
+          className="h-6 w-6" 
+          style={{ color: `hsl(var(${colorVar}))` }} 
+        />
+      </div>
+      <div>
+        <h3 className="font-heading text-lg font-bold text-foreground">{name}</h3>
+        <p className="mt-1 text-sm text-muted-foreground leading-snug">{tagline}</p>
+      </div>
+    </Link>
+  )
+}
+</file>
+
+<file path="components/footer.tsx">
+import Link from "next/link"
+import { Mail } from "lucide-react"
+import { olympiads } from "@/lib/data/olympiads"
+
+function InstagramIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  )
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  )
+}
+
+export function Footer() {
+  return (
+    <footer className="bg-background border-t border-border pt-16 pb-8" id="contact">
+      <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+        {/* Col 1: Brand */}
+        <div className="sm:col-span-2">
+          <Link href="/" className="flex items-center gap-2.5">
+            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold font-heading text-sm">
+              N
+            </div>
+            <span className="text-lg font-heading font-semibold text-foreground">
+              NSS Olympiad Hub
+            </span>
+          </Link>
+          <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
+            Free Olympiad preparation for NSS students — organized by NSS Clubs Education Section.
+          </p>
+          <div className="mt-6 flex gap-4">
+            {/* TODO: replace hrefs with real NSS Clubs social URLs and contact email */}
+            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+              <InstagramIcon className="h-5 w-5" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+              <FacebookIcon className="h-5 w-5" />
+              <span className="sr-only">Facebook</span>
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+              <Mail className="h-5 w-5" />
+              <span className="sr-only">Email</span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Col 2: Quick Links */}
+        <div>
+          <h3 className="text-sm font-semibold text-foreground mb-4">Quick Links</h3>
+          <ul className="space-y-2">
+            <li><Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">Home</Link></li>
+            <li><Link href="/olympiads" className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">Olympiads</Link></li>
+            <li><Link href="/#why" className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">About</Link></li>
+            <li><Link href="/#team" className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">Team</Link></li>
+            <li><Link href="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">Contact</Link></li>
+          </ul>
+        </div>
+
+        {/* Col 3: Categories */}
+        <div>
+          <h3 className="text-sm font-semibold text-foreground mb-4">Categories</h3>
+          <ul className="space-y-2">
+            {olympiads.map((o) => (
+              <li key={o.slug}>
+                <Link href={`/olympiads/${o.slug}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">
+                  {o.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Col 4: Support */}
+        <div>
+          <h3 className="text-sm font-semibold text-foreground mb-4">Support</h3>
+          <ul className="space-y-2">
+            {/* TODO: FAQ and Report an Issue can point to placeholder routes if built later */}
+            <li><Link href="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">Contact</Link></li>
+            <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">FAQ</Link></li>
+            <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1">Report Issue</Link></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="mt-16 pt-8 border-t border-border mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <p>© 2026 NSS Clubs. All Rights Reserved.</p>
+        <div className="flex gap-4">
+          <Link href="#" className="hover:text-foreground transition-colors">Privacy</Link>
+          <Link href="#" className="hover:text-foreground transition-colors">Terms</Link>
+        </div>
+      </div>
+    </footer>
+  )
+}
+</file>
+
+<file path="components/navbar.tsx">
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { motion, useScroll, useMotionValueEvent } from "motion/react"
+import { Menu, ArrowRight } from "lucide-react"
+import { cn } from "@/lib/utils"
+import { ThemeToggle } from "@/components/theme-toggle"
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet"
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/olympiads", label: "Olympiads" },
+  { href: "/#why", label: "About" },
+  { href: "/#team", label: "Team" },
+  { href: "/#contact", label: "Contact" },
+]
+
+export function Navbar() {
+  const [hidden, setHidden] = useState(false)
+  const [activeHash, setActiveHash] = useState("")
+  const pathname = usePathname()
+  const { scrollY } = useScroll()
+
+  // Track hash changes for active link highlighting
+  useEffect(() => {
+    const onHashChange = () => setActiveHash(window.location.hash)
+    setActiveHash(window.location.hash)
+    window.addEventListener("hashchange", onHashChange)
+    return () => window.removeEventListener("hashchange", onHashChange)
+  }, [])
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0
+    if (latest > previous && latest > 150) {
+      setHidden(true)
+    } else {
+      setHidden(false)
+    }
+  })
+
+  const isActive = (href: string) => {
+    // Exact match for non-hash routes
+    if (!href.includes("#")) {
+      return pathname === href
+    }
+    // For hash links like /#why — active when on homepage and hash matches
+    const [basePath, hash] = href.split("#")
+    const baseMatch = basePath === "" || basePath === "/" ? pathname === "/" : pathname === basePath
+    return baseMatch && activeHash === `#${hash}`
+  }
+
+  return (
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={hidden ? { y: "-100%", opacity: 1 } : { y: 0, opacity: 1 }}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className="sticky top-0 inset-x-0 z-50 h-20 border-b border-border bg-background/90 backdrop-blur-md transition-colors duration-300"
+    >
+      <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-8">
+        {/* Left: Logo */}
+        <Link href="/" className="flex items-center gap-2.5">
+          <div className="h-9 w-9 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold font-heading text-sm">
+            N
+          </div>
+          <span className="text-lg font-heading font-semibold text-foreground">
+            NSS Olympiad Hub
+          </span>
+        </Link>
+
+        {/* Center: Desktop Nav */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "relative text-sm font-medium transition-colors duration-200 py-1",
+                isActive(link.href)
+                  ? "text-foreground"
+                  : "text-foreground/70 hover:text-foreground"
+              )}
+            >
+              {link.label}
+              {isActive(link.href) && (
+                <motion.span
+                  layoutId="nav-underline"
+                  className="absolute -bottom-1 left-0 h-0.5 w-full bg-primary rounded-full"
+                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                />
+              )}
+            </Link>
+          ))}
+        </div>
+
+        {/* Right: Actions */}
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          
+          <Link
+            href="/olympiads"
+            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold font-heading text-primary-foreground border-b-4 border-primary/40 transition-all duration-150 active:translate-y-1 active:border-b-2 hover:brightness-105"
+          >
+            Start Preparing
+          </Link>
+
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="lg:hidden p-2 text-foreground" aria-label="Open menu">
+                <Menu className="h-6 w-6" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+              <SheetHeader>
+                <SheetTitle className="text-left font-heading">Menu</SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col gap-4 mt-8">
+                {navLinks.map((link) => (
+                  <SheetClose asChild key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={cn(
+                        "text-lg font-medium py-2 border-b border-border transition-colors",
+                        isActive(link.href) ? "text-primary" : "text-foreground"
+                      )}
+                    >
+                      {link.label}
+                    </Link>
+                  </SheetClose>
+                ))}
+                <SheetClose asChild>
+                  <Link
+                    href="/olympiads"
+                    className="mt-4 flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold font-heading text-primary-foreground border-b-4 border-primary/40 active:translate-y-1 active:border-b-2 transition-all duration-150"
+                  >
+                    Start Preparing <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </SheetClose>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </nav>
+    </motion.header>
+  )
+}
+</file>
+
+<file path="components/theme-toggle.tsx">
+"use client"
+
+import * as React from "react"
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+import { Switch } from "@/components/ui/switch"
+import { cn } from "@/lib/utils"
+
+export function ThemeToggle() {
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = React.useState(false)
+
+  // Avoid hydration mismatch
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return <div className="h-7 w-14" /> // Placeholder to prevent layout shift
+  }
+
+  const isChecked = theme === "dark"
+
+  return (
+    <div className="flex items-center gap-2">
+      <Sun className={cn("h-4 w-4 transition-opacity", isChecked ? "opacity-50" : "opacity-100 text-primary")} />
+      <Switch
+        checked={isChecked}
+        onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
+        aria-label="Toggle theme"
+      />
+      <Moon className={cn("h-4 w-4 transition-opacity", isChecked ? "opacity-100 text-primary" : "opacity-50")} />
+    </div>
+  )
+}
+</file>
+
+<file path="lib/data/olympiads.ts">
+import { 
+  Sigma, 
+  Atom, 
+  FlaskConical, 
+  Telescope, 
+  BrainCircuit, 
+  Code2, 
+  Leaf, 
+  LucideIcon 
+} from 'lucide-react'
+
+// --- Types (Sanity Schema Ready) ---
+
+export interface Resource {
+  title: string
+  type: 'PDF' | 'Video' | 'Link' | 'Doc'
+  fileUrl: string // Placeholder for future Sanity file asset
+}
+
+export interface ModelPaper {
+  title: string
+  year: string
+  fileUrl: string
+}
+
+export interface RoadmapStage {
+  stage: string
+  description: string
+}
+
+export interface Olympiad {
+  slug: string
+  name: string
+  tagline: string
+  description: string
+  icon: LucideIcon
+  colorVar: string
+  studyMaterial: Resource[]
+  modelPapers: ModelPaper[]
+  roadmap: RoadmapStage[]
+}
+
+// --- Shared Roadmap Content ---
+const DEFAULT_ROADMAP: RoadmapStage[] = [
+  {
+    stage: "Foundation",
+    description: "Build core concepts from your school syllabus before touching Olympiad-level problems. Focus on accuracy over speed."
+  },
+  {
+    stage: "Problem Practice",
+    description: "Work through past national and international papers by topic. Track which problem types consistently trip you up."
+  },
+  {
+    stage: "Timed Mocks",
+    description: "Simulate real exam conditions — full-length, timed, no shortcuts. This is where speed and accuracy start to merge."
+  },
+  {
+    stage: "Exam-Ready",
+    description: "Final review of weak areas, light practice only. Trust the preparation — this is peak-taper, not cram time."
+  }
+]
+
+// --- Data ---
+export const olympiads: Olympiad[] = [
+  {
+    slug: "mathematics",
+    name: "Mathematics",
+    tagline: "Numbers don't lie. Neither will your solutions.",
+    description: "Master algebra, combinatorics, geometry, and number theory with problems modeled directly on IMO and national Olympiad formats.",
+    icon: Sigma,
+    colorVar: "--subject-math",
+    studyMaterial: [
+      { title: "IMO Shortlist 2024 - Algebra", type: "PDF", fileUrl: "#" },
+      { title: "Number Theory Basics", type: "Video", fileUrl: "#" },
+    ],
+    modelPapers: [
+      { title: "National Round 2025", year: "2025", fileUrl: "#" },
+      { title: "National Round 2024", year: "2024", fileUrl: "#" },
+    ],
+    roadmap: DEFAULT_ROADMAP
+  },
+  {
+    slug: "physics",
+    name: "Physics",
+    tagline: "Passionate about how the universe actually works? This one's for you.",
+    description: "Explore mechanics, thermodynamics, electromagnetism, and modern physics through challenging theoretical and experimental problems.",
+    icon: Atom,
+    colorVar: "--subject-physics",
+    studyMaterial: [
+      { title: "IPhO Syllabus Guide", type: "PDF", fileUrl: "#" },
+      { title: "Mechanics Problem Set", type: "Doc", fileUrl: "#" },
+    ],
+    modelPapers: [
+      { title: "Physics Bowl 2025", year: "2025", fileUrl: "#" },
+    ],
+    roadmap: DEFAULT_ROADMAP
+  },
+  {
+    slug: "chemistry",
+    name: "Chemistry",
+    tagline: "If reactions excite you more than gossip, welcome home.",
+    description: "Dive into organic, inorganic, and physical chemistry with a focus on reaction mechanisms and laboratory intuition.",
+    icon: FlaskConical,
+    colorVar: "--subject-chemistry",
+    studyMaterial: [
+      { title: "Organic Chemistry Roadmap", type: "PDF", fileUrl: "#" },
+    ],
+    modelPapers: [
+      { title: "IChO Preparatory Round", year: "2025", fileUrl: "#" },
+    ],
+    roadmap: DEFAULT_ROADMAP
+  },
+  {
+    slug: "astronomy",
+    name: "Astronomy",
+    tagline: "Ever stared at the sky and needed answers? This one's for you.",
+    description: "Study celestial mechanics, astrophysics, and observational techniques to prepare for IOAA and national astronomy challenges.",
+    icon: Telescope,
+    colorVar: "--subject-astronomy",
+    studyMaterial: [
+      { title: "Stellar Evolution Notes", type: "PDF", fileUrl: "#" },
+    ],
+    modelPapers: [
+      { title: "IOAA Data Analysis Round", year: "2024", fileUrl: "#" },
+    ],
+    roadmap: DEFAULT_ROADMAP
+  },
+  {
+    slug: "artificial-intelligence",
+    name: "Artificial Intelligence",
+    tagline: "Built something smarter than your professor? Let's go further.",
+    description: "Learn machine learning fundamentals, neural networks, and ethical AI deployment through practical project challenges.",
+    icon: BrainCircuit,
+    colorVar: "--subject-ai",
+    studyMaterial: [
+      { title: "Intro to Neural Networks", type: "Video", fileUrl: "#" },
+    ],
+    modelPapers: [
+      { title: "AI Olympiad Qualifier", year: "2025", fileUrl: "#" },
+    ],
+    roadmap: DEFAULT_ROADMAP
+  },
+  {
+    slug: "informatics",
+    name: "Informatics",
+    tagline: "Think in loops and logic? Time to compete like it.",
+    description: "Sharpen your algorithmic thinking, data structures, and competitive programming skills for IOI and national coding rounds.",
+    icon: Code2,
+    colorVar: "--subject-informatics",
+    studyMaterial: [
+      { title: "Dynamic Programming Patterns", type: "Link", fileUrl: "#" },
+    ],
+    modelPapers: [
+      { title: "National Informatics Round 1", year: "2025", fileUrl: "#" },
+    ],
+    roadmap: DEFAULT_ROADMAP
+  },
+  {
+    slug: "biology",
+    name: "Biology",
+    tagline: "Obsessed with how life actually works? This one's for you.",
+    description: "Investigate cell biology, genetics, evolution, and ecology with the depth required for IBO and national biology exams.",
+    icon: Leaf,
+    colorVar: "--subject-biology",
+    studyMaterial: [
+      { title: "Genetics Crash Course", type: "Video", fileUrl: "#" },
+    ],
+    modelPapers: [
+      { title: "IBO Theory Paper 1", year: "2024", fileUrl: "#" },
+    ],
+    roadmap: DEFAULT_ROADMAP
+  }
+]
+
+// Helper to get a single olympiad by slug
+export const getOlympiadBySlug = (slug: string) => {
+  return olympiads.find((o) => o.slug === slug)
+}
+</file>
+
+<file path="lib/utils.ts">
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+</file>
+
+<file path="components/hero/ScrollCue.tsx">
+export function ScrollCue() {
+  return (
+    <a
+      href="#why"
+      aria-label="Scroll to Why Olympiads"
+      className="absolute inset-x-0 bottom-4 z-10 flex flex-col items-center gap-2.5 pb-1 transition-opacity duration-300 hover:opacity-70"
+    >
+      <span className="font-heading text-[9px] font-semibold uppercase tracking-[0.4em] text-muted-foreground/80">
+        Explore
+      </span>
+      <span className="relative block h-9 w-px overflow-hidden rounded-full bg-white/[0.07]">
+        <span
+          className="hero-motion absolute left-0 top-0 h-3.5 w-px bg-gradient-to-b from-transparent via-[#28b8f2] to-transparent"
+          style={{ animation: "hero-scroll-line 2.4s ease-in-out infinite" }}
+        />
+      </span>
+    </a>
+  )
+}
+</file>
+
+<file path="components/BlurText.tsx">
+"use client"
+import { useEffect, useRef } from 'react'
+import { animate, stagger } from 'animejs'
+import { cn } from '@/lib/utils'
+
+export function BlurText({ 
+  text, 
+  className, 
+  staggerDelay = 40, 
+  baseDelay = 150 
+}: { 
+  text: string, 
+  className?: string, 
+  staggerDelay?: number, 
+  baseDelay?: number 
+}) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const hasAnimated = useRef(false)
+
+  useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true
+          animate(
+            el.querySelectorAll('.word'),
+            {
+              opacity: [0, 1],
+              filter: ['blur(8px)', 'blur(0px)'],
+              translateY: [20, 0],
+              delay: stagger(staggerDelay, { start: baseDelay }),
+              easing: 'easeOutExpo'
+            }
+          )
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [staggerDelay, baseDelay])
+
+  const words = text.split(' ')
+
+  return (
+    <div ref={containerRef} className={cn('inline-block', className)}>
+      {words.map((word, i) => (
+        <span 
+          key={i} 
+          className="word inline-block mr-[0.25em] opacity-0 blur-[8px] translate-y-[20px]"
+          style={{ willChange: 'transform, opacity, filter' }}
+        >
+          {word}
+        </span>
+      ))}
+    </div>
+  )
+}
+</file>
+
+<file path="components/CountUp.tsx">
+"use client"
+import { useEffect, useRef, useState } from 'react'
+import { animate } from 'animejs'
+
+export function CountUp({ 
+  to, 
+  duration = 1200, 
+  suffix = "" 
+}: { 
+  to: number, 
+  duration?: number, 
+  suffix?: string 
+}) {
+  const [display, setDisplay] = useState(0)
+  const ref = useRef<HTMLSpanElement>(null)
+  const hasAnimated = useRef(false)
+
+  useEffect(() => {
+    if (!ref.current) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true
+          const obj = { val: 0 }
+          animate(
+            obj,
+            {
+              val: to,
+              duration: duration,
+              easing: 'easeOutExpo',
+              update: () => {
+                setDisplay(Math.round(obj.val))
+              }
+            }
+          )
+        }
+      },
+      { threshold: 0.5 }
+    )
+
+    observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [to, duration])
+
+  return <span ref={ref}>{display}{suffix}</span>
+}
+</file>
+
+<file path="components/FadeIn.tsx">
+"use client"
+import { motion } from "motion/react"
+import { cn } from "@/lib/utils"
+
+export function FadeIn({ 
+  children, 
+  delay = 0, 
+  duration = 0.5, 
+  x = 0,
+  y = 20, 
+  scale = 1,
+  once = true, 
+  className 
+}: { 
+  children: React.ReactNode, 
+  delay?: number, 
+  duration?: number, 
+  x?: number,
+  y?: number, 
+  scale?: number,
+  once?: boolean, 
+  className?: string 
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x, y, scale }}
+      whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+      viewport={{ once, margin: "-100px" }}
+      transition={{ duration, delay, ease: "easeOut" }}
+      className={cn(className)}
+    >
+      {children}
+    </motion.div>
+  )
+}
+</file>
+
+<file path="components/GeometricHeroCanvas.tsx">
+"use client"
+import { useEffect, useRef } from 'react'
+import { animate, remove } from 'animejs'
+import { cn } from '@/lib/utils'
+
+export function GeometricHeroCanvas({ 
+  variant = 'default', 
+  className 
+}: { 
+  variant?: 'default' | 'light', 
+  className?: string 
+}) {
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  const shapes = [
+    { type: 'circle', color: 'var(--primary)', x: '15%', y: '20%', size: 120 },
+    { type: 'triangle', color: 'var(--accent)', x: '80%', y: '15%', size: 80 },
+    { type: 'hexagon', color: 'var(--subject-math)', x: '25%', y: '70%', size: 100 },
+    { type: 'circle', color: 'var(--subject-biology)', x: '75%', y: '80%', size: 60 },
+    { type: 'square', color: 'var(--subject-physics)', x: '50%', y: '40%', size: 90 },
+    { type: 'triangle', color: 'var(--subject-astronomy)', x: '10%', y: '85%', size: 50 },
+  ]
+
+  useEffect(() => {
+    if (!containerRef.current) return
+
+    const targets = containerRef.current.querySelectorAll('.shape')
+    
+    const timelines = Array.from(targets).map((target, i) => {
+      return animate(target, {
+        translateY: [0, -20, 0],
+        rotate: [0, 15, 0],
+        duration: 8000 + i * 600,
+        easing: 'easeInOutSine',
+        loop: true,
+        direction: 'alternate',
+        delay: i * 200,
+      })
+    })
+
+    return () => {
+      timelines.forEach(tl => tl.pause())
+      remove(targets)
+    }
+  }, [])
+
+  const renderShape = (shape: any, index: number) => {
+    const fill = variant === 'light' ? 'white' : `hsl(${shape.color})`
+    const opacity = variant === 'light' ? 0.1 : 0.15 
+
+    return (
+      <div
+        key={index}
+        className={cn("shape absolute", variant === 'light' ? 'text-white' : '')}
+        style={{
+          left: shape.x,
+          top: shape.y,
+          width: shape.size,
+          height: shape.size,
+          opacity: opacity,
+        }}
+      >
+        <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
+          {shape.type === 'circle' && <circle cx="50" cy="50" r="50" fill={fill} />}
+          {shape.type === 'triangle' && <polygon points="50,0 100,100 0,100" fill={fill} />}
+          {shape.type === 'hexagon' && <polygon points="25,0 75,0 100,50 75,100 25,100 0,50" fill={fill} />}
+          {shape.type === 'square' && <rect width="100" height="100" rx="20" fill={fill} />}
+        </svg>
+      </div>
+    )
+  }
+
+  return (
+    <div 
+      ref={containerRef} 
+      className={cn("absolute inset-0 overflow-hidden pointer-events-none", className)}
+      aria-hidden="true"
+    >
+      {shapes.map((shape, i) => renderShape(shape, i))}
+    </div>
+  )
+}
+</file>
+
+<file path="components/MagneticButton.tsx">
+"use client"
+import React, { useRef, useState } from 'react'
+import { motion } from 'motion/react'
+
+export function MagneticButton({ 
+  children, 
+  strength = 0.3, 
+  className 
+}: { 
+  children: React.ReactNode, 
+  strength?: number, 
+  className?: string 
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+
+  const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!ref.current) return
+    const { clientX, clientY } = e
+    const { height, width, left, top } = ref.current.getBoundingClientRect()
+    const middleX = clientX - (left + width / 2)
+    const middleY = clientY - (top + height / 2)
+    
+    const distance = Math.sqrt(middleX ** 2 + middleY ** 2)
+    if (distance < 120) {
+      setPosition({ x: middleX * strength, y: middleY * strength })
+    } else {
+      setPosition({ x: 0, y: 0 })
+    }
+  }
+
+  const reset = () => setPosition({ x: 0, y: 0 })
+
+  return (
+    <motion.div
+      ref={ref}
+      onMouseMove={handleMouse}
+      onMouseLeave={reset}
+      animate={{ x: position.x, y: position.y }}
+      transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  )
+}
+</file>
+
+<file path="components/SectionLabel.tsx">
+import { cn } from "@/lib/utils"
+
+export function SectionLabel({ children, className }: { children: React.ReactNode, className?: string }) {
+  return (
+    <span className={cn(
+      "inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-primary",
+      className
+    )}>
+      {children}
+    </span>
+  )
+}
+</file>
+
+<file path="components/theme-provider.tsx">
+"use client"
+
+import * as React from "react"
+import { ThemeProvider as NextThemesProvider, type ThemeProviderProps } from "next-themes"
+
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+}
+</file>
+
+<file path="components/SmoothScroll.tsx">
+"use client"
+
+import { useEffect, useRef, type ReactNode } from "react"
+import { usePathname } from "next/navigation"
+import Lenis from "lenis"
+
+let lenisInstance: Lenis | null = null
+
+/** For the future: modals/overlays can call getLenis()?.stop() / .start() */
+export function getLenis() {
+  return lenisInstance
+}
+
+export function SmoothScroll({ children }: { children: ReactNode }) {
+  const pathname = usePathname()
+  const lenisRef = useRef<Lenis | null>(null)
+  const mounted = useRef(false)
+  const popNav = useRef(false)
+
+  useEffect(() => {
+    // Never hijack scrolling for users who prefer reduced motion
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+
+    const lenis = new Lenis({
+      duration: 1.25,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      wheelMultiplier: 1,
+    })
+    lenisRef.current = lenis
+    lenisInstance = lenis
+
+    let rafId: number
+    const raf = (time: number) => {
+      lenis.raf(time)
+      rafId = requestAnimationFrame(raf)
+    }
+    rafId = requestAnimationFrame(raf)
+
+    // Same-page anchor links on ANY page (#why, #categories, #team, ...)
+    const onClick = (event: MouseEvent) => {
+      const anchor = (event.target as HTMLElement).closest<HTMLAnchorElement>('a[href^="#"]')
+      if (!anchor) return
+      const hash = anchor.getAttribute("href")
+      if (!hash || hash === "#") return
+      const target = document.querySelector(hash)
+      if (!(target instanceof HTMLElement)) return
+
+      event.preventDefault()
+      lenis.scrollTo(target, {
+        offset: -80, // clears the fixed navbar — one value, applies everywhere
+        duration: 1.5,
+      })
+      window.history.pushState(null, "", hash)
+    }
+    window.addEventListener("click", onClick)
+
+    // Don't fight the browser's back/forward scroll restoration
+    const onPopState = () => { popNav.current = true }
+    window.addEventListener("popstate", onPopState)
+
+    return () => {
+      window.removeEventListener("click", onClick)
+      window.removeEventListener("popstate", onPopState)
+      cancelAnimationFrame(rafId)
+      lenis.destroy()
+      lenisRef.current = null
+      lenisInstance = null
+    }
+  }, [])
+
+  // The layout never unmounts, so reset to top on every route change
+  useEffect(() => {
+    if (!mounted.current) { mounted.current = true; return } // skip initial load
+    if (popNav.current) { popNav.current = false; return }    // skip back/forward
+    if (window.location.hash) return                          // let deep links resolve
+    lenisRef.current?.scrollTo(0, { immediate: true })
+  }, [pathname])
+
+  return <>{children}</>
+}
+</file>
+
+<file path="app/layout.tsx">
+import type { Metadata } from "next";
+import { Space_Grotesk, Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import "./globals.css";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "NSS Olympiad Hub",
+  description:
+    "Free preparation material, model question papers, and structured roadmaps for 7 Olympiads — built by NSS Clubs.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${spaceGrotesk.variable} ${inter.variable}`}
+    >
+      <body className="font-body bg-background text-foreground antialiased min-h-screen flex flex-col">
+        <SmoothScroll>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </ThemeProvider>
+        </SmoothScroll>
+      </body>
+    </html>
+  );
+}
+</file>
+
+<file path="app/globals.css">
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 199 89% 48%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 199 89% 96%;
+  --secondary-foreground: 199 89% 30%;
+  --accent: 25 95% 53%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 199 89% 48%;
+  --radius: 1rem;
+
+  /* Olympiad category colors */
+  --subject-math: 199 89% 48%;
+  --subject-physics: 258 90% 66%;
+  --subject-chemistry: 160 84% 39%;
+  --subject-astronomy: 239 84% 67%;
+  --subject-ai: 25 95% 53%;
+  --subject-informatics: 350 89% 60%;
+  --subject-biology: 173 80% 40%;
+}
+
+.dark {
+  --background: 223 49% 8%;
+  --foreground: 210 40% 96%;
+  --card: 223 40% 11%;
+  --card-foreground: 210 40% 96%;
+  --popover: 223 40% 11%;
+  --popover-foreground: 210 40% 96%;
+  --primary: 199 89% 58%;
+  --primary-foreground: 223 49% 8%;
+  --secondary: 223 30% 16%;
+  --secondary-foreground: 199 89% 70%;
+  --accent: 25 95% 58%;
+  --accent-foreground: 223 49% 8%;
+  --muted: 223 30% 16%;
+  --muted-foreground: 215 20% 65%;
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 223 30% 18%;
+  --input: 223 30% 18%;
+  --ring: 199 89% 58%;
+
+  --subject-math: 199 89% 58%;
+  --subject-physics: 258 90% 72%;
+  --subject-chemistry: 160 74% 46%;
+  --subject-astronomy: 239 84% 74%;
+  --subject-ai: 25 95% 60%;
+  --subject-informatics: 350 89% 66%;
+  --subject-biology: 173 70% 46%;
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  /* Fonts — bridged from next/font CSS variables set on <html> */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-sans: var(--font-body);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Animation tokens for tailwindcss-animate keyframes */
+  --animate-in-opacity: 0;
+  --animate-in-scale: 1;
+  --animate-in-rotate: 0;
+  --animate-in-translate-x: 0;
+  --animate-in-translate-y: 0;
+  --animate-out-opacity: 1;
+  --animate-out-scale: 1;
+  --animate-out-rotate: 0;
+  --animate-out-translate-x: 0;
+  --animate-out-translate-y: 0;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+}
+
+/* ===== Animation Keyframes (replaces tailwindcss-animate plugin) ===== */
+
+@keyframes enter {
+  from {
+    opacity: var(--animate-in-opacity, 1);
+    transform:
+      translate3d(var(--animate-in-translate-x, 0), var(--animate-in-translate-y, 0), 0)
+      scale3d(var(--animate-in-scale, 1), var(--animate-in-scale, 1), var(--animate-in-scale, 1))
+      rotate(var(--animate-in-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--animate-out-opacity, 1);
+    transform:
+      translate3d(var(--animate-out-translate-x, 0), var(--animate-out-translate-y, 0), 0)
+      scale3d(var(--animate-out-scale, 1), var(--animate-out-scale, 1), var(--animate-out-scale, 1))
+      rotate(var(--animate-out-rotate, 0));
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation-name: enter;
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: both;
+    --animate-in-opacity: 0;
+    --animate-in-translate-x: 0;
+    --animate-in-translate-y: 0;
+    --animate-in-scale: 1;
+    --animate-in-rotate: 0;
+  }
+
+  .animate-out {
+    animation-name: exit;
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: both;
+    --animate-out-opacity: 1;
+    --animate-out-translate-x: 0;
+    --animate-out-translate-y: 0;
+    --animate-out-scale: 1;
+    --animate-out-rotate: 0;
+  }
+
+  /* Fade */
+  .fade-in-0 { --animate-in-opacity: 0; }
+  .fade-in-50 { --animate-in-opacity: 0.5; }
+  .fade-out-0 { --animate-out-opacity: 0; }
+
+  /* Slide in */
+  .slide-in-from-top { --animate-in-translate-y: -100%; }
+  .slide-in-from-bottom { --animate-in-translate-y: 100%; }
+  .slide-in-from-left { --animate-in-translate-x: -100%; }
+  .slide-in-from-right { --animate-in-translate-x: 100%; }
+
+  /* Slide out */
+  .slide-out-to-top { --animate-out-translate-y: -100%; }
+  .slide-out-to-bottom { --animate-out-translate-y: 100%; }
+  .slide-out-to-left { --animate-out-translate-x: -100%; }
+  .slide-out-to-right { --animate-out-translate-x: 100%; }
+
+  /* Duration overrides */
+  .duration-250 { animation-duration: 250ms; }
+  .duration-300 { animation-duration: 300ms; }
+  .duration-500 { animation-duration: 500ms; }
+}
+
+
+
+/* ============================================================
+   Olympiad Hero — atmosphere, motion, grain
+   ============================================================ */
+@keyframes hero-breathe {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+@keyframes hero-drift {
+  0%, 100% { transform: translate(0, 0); }
+  33%      { transform: translate(9px, -7px); }
+  66%      { transform: translate(-7px, 5px); }
+}
+@keyframes hero-pulse {
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 0.9; }
+}
+@keyframes hero-float {
+  0%, 100% { transform: translateY(4px); }
+  50%      { transform: translateY(-4px); }
+}
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes hero-shimmer {
+  0%   { background-position: 140% center; }
+  100% { background-position: -40% center; }
+}
+@keyframes hero-scroll-line {
+  0%   { transform: translateY(-16px); opacity: 0; }
+  30%  { opacity: 1; }
+  100% { transform: translateY(34px); opacity: 0; }
+}
+
+.hero-breathe { animation: hero-breathe 6.5s ease-in-out infinite; }
+.hero-float   { animation: hero-float 8.5s ease-in-out infinite; }
+
+.hero-line {
+  opacity: 0;
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* one-time cyan shimmer on "start." */
+.hero-start {
+  background-image: linear-gradient(
+    100deg,
+    #28b8f2 0%, #28b8f2 40%,
+    #e8f9ff 50%,
+    #28b8f2 60%, #28b8f2 100%
+  );
+  background-size: 240% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hero-shimmer 1.7s ease-in-out 1.15s 1 both;
+}
+
+/* 1–3% monochrome film grain */
+.hero-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-motion,
+  .hero-breathe,
+  .hero-float,
+  .hero-start { animation: none !important; }
+  .hero-line  { animation: none !important; opacity: 1; }
+}
+
+
+
+/* ── Lenis smooth scroll ───────────────────────────── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+</file>
+
+<file path="app/page.tsx">
+"use client";
+
+import Link from "next/link";
+import {
+  ArrowRight,
+  GraduationCap,
+  Target,
+  Globe2,
+  Users,
+  Quote,
+  Crown,
+  FlaskConical,
+  HeartHandshake,
+} from "lucide-react";
+import { FadeIn } from "@/components/FadeIn";
+import { GeometricHeroCanvas } from "@/components/GeometricHeroCanvas";
+import { MagneticButton } from "@/components/MagneticButton";
+import { CategoryCard } from "@/components/CategoryCard";
+import { SectionLabel } from "@/components/SectionLabel";
+import { OlympiadHero } from "@/components/hero/OlympiadHero";
+import { olympiads } from "@/lib/data/olympiads";
+
+const whyRows = [
+  {
+    icon: GraduationCap,
+    iconColor: "text-primary",
+    bgColor: "bg-primary/10",
+    title: "Stand Out in University Applications",
+    body: "Olympiad participation and medals carry real weight with scholarship boards and admissions committees, both in Nepal and internationally — proof you can think under pressure, not just memorize.",
+  },
+  {
+    icon: Target,
+    iconColor: "text-accent",
+    bgColor: "bg-accent/10",
+    title: "A Sharper Foundation for IOE, IOM & NEB",
+    body: "The same problem-solving depth that wins Olympiad medals is exactly what engineering and medical entrance exams reward. Prepare for one, and you're already ahead on the other.",
+  },
+  {
+    icon: Globe2,
+    iconColor: "text-primary",
+    bgColor: "bg-primary/10",
+    title: "Represent Nepal on a Global Stage",
+    body: "IMO, IPhO, IChO, IOI, IOAA, and IBO all send national teams to compete internationally. Very few students ever get this far — this is how you become one of them.",
+  },
+  {
+    icon: Users,
+    iconColor: "text-accent",
+    bgColor: "bg-accent/10",
+    title: "You're Not Doing This Alone",
+    body: "NSS Clubs' STEM Club runs structured mentorship, peer study groups, and curated resources — so preparation feels like a team effort, not a solo grind.",
+  },
+];
+
+const teamCards = [
+  { icon: Crown, role: "President", name: "Divya D. Sharma" },
+  { icon: Users, role: "Executive Team", name: "NSS Clubs" },
+  { icon: FlaskConical, role: "Lead Organizer", name: "STEM Club" },
+  { icon: HeartHandshake, role: "Supporting Partner", name: "Social Club" },
+];
+
+export default function Home() {
+  return (
+      <div className="bg-background overflow-hidden">
+        {/* 6.2 HERO — The Olympiad Universe */}
+        <OlympiadHero />
+
+        {/* 6.3 WHY OLYMPIADS? */}
+        <section className="relative bg-secondary/30 py-24 lg:py-32" id="why">
+          <div className="mx-auto max-w-2xl px-6 text-center mb-16">
+            <FadeIn y={10}>
+              <SectionLabel>WHY OLYMPIADS</SectionLabel>
+            </FadeIn>
+            <FadeIn y={15} delay={0.1}>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4">
+                More than a competition. A{" "}
+                <span className="italic text-primary">launchpad</span>.
+              </h2>
+            </FadeIn>
+            <FadeIn y={10} delay={0.2}>
+              <p className="mt-4 text-muted-foreground text-lg">
+                For NSS students in Grade 11 and 12, Olympiads open doors
+                regular exams don&apos;t.
+              </p>
+            </FadeIn>
+          </div>
+
+          <div className="mx-auto max-w-5xl px-6 space-y-20">
+            {whyRows.map((row, index) => {
+              const isOdd = index % 2 !== 0;
+              const Icon = row.icon;
+              return (
+                <div
+                  key={index}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
+                    isOdd ? "lg:[&>*:first-child]:order-2" : ""
+                  }`}
+                >
+                  <FadeIn x={isOdd ? 40 : -40} y={0} duration={0.6} delay={0}>
+                    <div
+                      className={`h-48 sm:h-56 lg:aspect-square lg:h-auto max-w-sm mx-auto w-full rounded-3xl ${row.bgColor} flex items-center justify-center`}
+                    >
+                      <Icon
+                        className={`h-20 w-20 lg:h-24 lg:w-24 ${row.iconColor}`}
+                      />
+                    </div>
+                  </FadeIn>
+
+                  <FadeIn
+                    x={isOdd ? 40 : -40}
+                    y={0}
+                    duration={0.6}
+                    delay={0.15}
+                  >
+                    <div className="space-y-3 text-center lg:text-left">
+                      <h3 className="font-heading text-2xl font-bold text-foreground">
+                        {row.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {row.body}
+                      </p>
+                    </div>
+                  </FadeIn>
+                </div>
+              );
+            })}
+
+            {/* PLACEHOLDER — CMS FIELD: studentSuccessStory. Do not publish with fabricated names/achievements. */}
+            <FadeIn y={20}>
+              <div className="mt-20 rounded-3xl border border-border bg-card p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <Quote className="h-10 w-10 text-primary/40" />
+                </div>
+                <div className="space-y-2 text-center lg:text-left">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                    Success Spotlight
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-foreground">
+                    Real NSS students are already competing
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    This space is reserved for a verified student success story
+                    — swapped in via CMS once confirmed.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+        </section>
+
+        {/* 6.4 OLYMPIAD CATEGORIES */}
+        <section className="py-24 lg:py-32 bg-background" id="categories">
+          <div className="mx-auto max-w-2xl px-6 text-center mb-16">
+            <FadeIn y={10}>
+              <SectionLabel>OLYMPIAD CATEGORIES</SectionLabel>
+            </FadeIn>
+            <FadeIn y={15} delay={0.1}>
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4">
+                Pick your arena.
+              </h2>
+            </FadeIn>
+            <FadeIn y={10} delay={0.2}>
+              <p className="mt-4 text-muted-foreground text-lg">
+                Seven categories. One decision. Everything you need starts here.
+              </p>
+            </FadeIn>
+          </div>
+
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto px-6 mt-16">
+            {olympiads.map((item, index) => (
+              <FadeIn
+                key={item.slug}
+                delay={index * 0.08}
+                duration={0.4}
+                scale={0.95}
+              >
+                <CategoryCard
+                  slug={item.slug}
+                  name={item.name}
+                  tagline={item.tagline}
+                  icon={item.icon}
+                  colorVar={item.colorVar}
+                />
+              </FadeIn>
+            ))}
+          </div>
+        </section>
+
+        {/* 6.5 TEAM */}
+        <section
+          className="py-20 lg:py-28 bg-secondary/20 border-y border-border"
+          id="team"
+        >
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            <FadeIn y={10}>
+              <SectionLabel>WHO&apos;S BEHIND THIS</SectionLabel>
+            </FadeIn>
+            <FadeIn y={15} delay={0.1}>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mt-4">
+                Built by students, for students.
+              </h2>
+            </FadeIn>
+            <FadeIn y={10} delay={0.2}>
+              <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
+                NSS Olympiad Hub is organized by President Divya D. Sharma, the
+                Executive Team, and the STEM Club — with support from the Social
+                Club of NSS Clubs.
+              </p>
+            </FadeIn>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-12 max-w-4xl mx-auto px-6">
+            {teamCards.map((card, index) => {
+              const Icon = card.icon;
+              return (
+                <FadeIn key={index} delay={index * 0.1} duration={0.4} y={15}>
+                  <div className="rounded-2xl bg-card border border-border p-5 sm:p-6 flex flex-col items-center text-center gap-3 h-full justify-center">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] sm:text-xs uppercase tracking-wide text-muted-foreground font-semibold block">
+                        {card.role}
+                      </span>
+                      <h3 className="font-heading font-semibold text-sm sm:text-base text-foreground mt-1">
+                        {card.name}
+                      </h3>
+                    </div>
+                  </div>
+                </FadeIn>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* 6.6 CTA (PRE-FOOTER) */}
+        <section className="relative overflow-hidden py-24 lg:py-32 bg-primary">
+          <GeometricHeroCanvas
+            variant="light"
+            className="absolute inset-0 -z-10 opacity-15"
+          />
+
+          <FadeIn scale={0.98} duration={0.5}>
+            <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
+              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground">
+                Ready to prove what you know?
+              </h2>
+              <p className="mt-4 text-primary-foreground/80 text-lg leading-relaxed">
+                Pick your Olympiad and get instant access to study material,
+                model papers, and a roadmap built to get you there.
+              </p>
+
+              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <MagneticButton>
+                  <Link
+                    href="/olympiads"
+                    className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-8 py-3.5 text-sm font-semibold font-heading border-b-4 border-white/30 transition-all duration-150 active:translate-y-1 active:border-b-2 hover:brightness-105"
+                  >
+                    Start Preparing <ArrowRight className="h-[18px] w-[18px]" />
+                  </Link>
+                </MagneticButton>
+
+                <Link
+                  href="/olympiads"
+                  className="text-primary-foreground/90 underline-offset-4 hover:underline text-sm font-medium py-2"
+                >
+                  or browse all 7 categories →
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
+        </section>
+      </div>
+  );
+}
+</file>
+
+</files>
