@@ -10,15 +10,16 @@ function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; color
     <FadeIn delay={index * 0.05}>
       <div className="flex items-center justify-between gap-4 py-5">
         <div className="flex min-w-0 items-center gap-4">
-          <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-            <FileText className="h-5 w-5" />
+          <div
+            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl"
+            style={{ background: `hsl(var(${colorVar}) / 0.1)` }}
+          >
+            <FileText className="h-5 w-5" style={{ color: `hsl(var(${colorVar}))` }} />
           </div>
           <div className="min-w-0">
             <h3 className="truncate font-heading font-semibold text-foreground">{r.title}</h3>
             <div className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-              <span
-                className="rounded-full bg-secondary px-2 py-0.5 font-semibold text-secondary-foreground"
-              >
+              <span className="rounded-full bg-secondary px-2 py-0.5 font-semibold text-secondary-foreground">
                 {r.type}
               </span>
               {r.time && <span>· {r.time}</span>}
@@ -51,7 +52,8 @@ function EmptyLibrary() {
       </p>
       <button
         onClick={() => scrollToId("topics")}
-        className="mt-6 inline-flex items-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground"
+        className="mt-6 inline-flex items-center rounded-full px-6 py-2.5 text-sm font-semibold text-white"
+        style={{ backgroundColor: "hsl(var(--primary))" }}
       >
         Explore Topics
       </button>
@@ -61,6 +63,7 @@ function EmptyLibrary() {
 
 export function StudyMaterialSection({ olympiad }: { olympiad: Olympiad }) {
   const resources = olympiad.studyMaterial;
+  const c = olympiad.colorVar;
 
   return (
     <section
@@ -73,6 +76,7 @@ export function StudyMaterialSection({ olympiad }: { olympiad: Olympiad }) {
           label="Library"
           title="Study material"
           description={`Curated resources for ${olympiad.name}.`}
+          colorVar={c}
         />
 
         {resources.length === 0 ? (
@@ -80,7 +84,7 @@ export function StudyMaterialSection({ olympiad }: { olympiad: Olympiad }) {
         ) : (
           <div className="divide-y divide-border border-y border-border">
             {resources.map((r, i) => (
-              <ResourceRow key={`${r.title}-${i}`} r={r} index={i} colorVar={olympiad.colorVar} />
+              <ResourceRow key={`${r.title}-${i}`} r={r} index={i} colorVar={c} />
             ))}
           </div>
         )}

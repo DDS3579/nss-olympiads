@@ -10,6 +10,7 @@ import type { Olympiad } from "@/lib/data/olympiads";
 export function NextStep({ olympiad }: { olympiad: Olympiad }) {
   const { nextTopic, percent, toggle } = useOlympiadProgress();
   const [dismissed, setDismissed] = useState(false);
+  const c = olympiad.colorVar;
 
   if (dismissed) return null;
 
@@ -40,7 +41,7 @@ export function NextStep({ olympiad }: { olympiad: Olympiad }) {
                 className="h-full rounded-full transition-all"
                 style={{
                   width: `${percent}%`,
-                  background: `hsl(var(${olympiad.colorVar}))`,
+                  background: `hsl(var(${c}))`,
                 }}
               />
             </div>
@@ -60,7 +61,8 @@ export function NextStep({ olympiad }: { olympiad: Olympiad }) {
                   toggle(nextTopic.id);
                   scrollToId(`topic-${nextTopic.id}`);
                 }}
-                className="inline-flex items-center gap-1 rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground"
+                className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-semibold text-white transition-all hover:brightness-110"
+                style={{ backgroundColor: `hsl(var(${c}))` }}
               >
                 Continue <ArrowRight className="h-3 w-3" />
               </button>

@@ -35,7 +35,10 @@ function RoadmapStageRow({
       >
         <div className="rounded-2xl border border-border bg-card p-6">
           <div className="flex items-center justify-between gap-3 lg:justify-start">
-            <span className="font-heading text-xs font-bold uppercase tracking-[0.25em] text-primary">
+            <span
+              className="font-heading text-xs font-bold uppercase tracking-[0.25em]"
+              style={{ color: `hsl(var(${colorVar}))` }}
+            >
               Stage 0{index + 1}
             </span>
             {stage.tasks && (
@@ -60,6 +63,8 @@ function RoadmapStageRow({
 }
 
 export function PreparationRoadmap({ olympiad }: { olympiad: Olympiad }) {
+  const c = olympiad.colorVar;
+
   return (
     <section
       id="roadmap"
@@ -68,7 +73,7 @@ export function PreparationRoadmap({ olympiad }: { olympiad: Olympiad }) {
       <Motif
         motif={olympiad.motif}
         className="absolute -right-10 top-10 h-72 w-72 opacity-[0.05]"
-        style={{ color: `hsl(var(${olympiad.colorVar}))` }}
+        style={{ color: `hsl(var(${c}))` }}
       />
 
       <div className="relative mx-auto max-w-4xl px-6">
@@ -77,6 +82,7 @@ export function PreparationRoadmap({ olympiad }: { olympiad: Olympiad }) {
           label="Roadmap"
           title="Your trajectory"
           description="Five stages from first principles to competition day."
+          colorVar={c}
         />
 
         <div className="relative">
@@ -84,7 +90,7 @@ export function PreparationRoadmap({ olympiad }: { olympiad: Olympiad }) {
           <div className="absolute bottom-2 left-4 top-2 w-px bg-border lg:left-1/2" />
           <div className="space-y-10">
             {olympiad.roadmap.map((s, i) => (
-              <RoadmapStageRow key={s.stage} stage={s} index={i} colorVar={olympiad.colorVar} />
+              <RoadmapStageRow key={s.stage} stage={s} index={i} colorVar={c} />
             ))}
           </div>
         </div>

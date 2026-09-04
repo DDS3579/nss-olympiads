@@ -22,7 +22,7 @@ export function OlympiadExperience({ slug }: { slug: string }) {
     <ProgressProvider slug={slug} topics={olympiad.topics}>
       <div className="relative bg-background text-foreground">
         <OlympiadHero olympiad={olympiad} />
-        <OlympiadNav />
+        <OlympiadNav colorVar={olympiad.colorVar} />
         <main className="relative">
           <OlympiadOverview olympiad={olympiad} />
           <Constellation olympiad={olympiad} />

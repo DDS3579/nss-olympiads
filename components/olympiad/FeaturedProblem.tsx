@@ -20,6 +20,7 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
   const p = olympiad.featuredProblem;
+  const c = olympiad.colorVar;
 
   return (
     <section id="problem" className="section-anchor py-20 lg:py-28">
@@ -29,6 +30,7 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
           label="Featured Problem"
           title="This week's challenge"
           description={`A representative problem from ${olympiad.name}.`}
+          colorVar={c}
         />
 
         <FadeIn>
@@ -36,7 +38,7 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
             <div className="grid lg:grid-cols-[1fr_260px]">
               <div className="p-7 lg:p-10">
                 <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                  <span style={{ color: `hsl(var(${olympiad.colorVar}))` }}>
+                  <span style={{ color: `hsl(var(${c}))` }}>
                     {p.topic}
                   </span>
                   <span>·</span>
@@ -49,10 +51,11 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
                 <p className="mt-4 leading-relaxed text-foreground/85">{p.statement}</p>
 
                 <div className="mt-6 flex flex-wrap items-center gap-4">
-                  <DifficultyMeter level={p.difficulty} colorVar={olympiad.colorVar} />
+                  <DifficultyMeter level={p.difficulty} colorVar={c} />
                   <button
                     onClick={() => setOpen((o) => !o)}
-                    className="text-sm font-semibold text-primary hover:underline"
+                    className="text-sm font-semibold hover:underline"
+                    style={{ color: `hsl(var(${c}))` }}
                   >
                     {open ? "Hide hint" : "Reveal hint"}
                   </button>
@@ -69,7 +72,7 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
                     >
                       <p
                         className="mt-4 border-l-2 pl-4 text-sm text-muted-foreground"
-                        style={{ borderColor: `hsl(var(${olympiad.colorVar}))` }}
+                        style={{ borderColor: `hsl(var(${c}))` }}
                       >
                         {p.hint}
                       </p>

@@ -8,6 +8,8 @@ import { useOlympiadProgress } from "./context";
 import type { Olympiad, Topic } from "@/lib/data/olympiads";
 
 export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
+  const c = olympiad.colorVar;
+
   return (
     <section id="topics" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6">
@@ -16,6 +18,7 @@ export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
           label="Topics"
           title="The territory you'll master"
           description="Mark a topic to add it to your preparation path."
+          colorVar={c}
         />
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
@@ -26,7 +29,7 @@ export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
               scale={0.97}
               className={cn(t.featured && "sm:col-span-2 lg:col-span-2 lg:row-span-2")}
             >
-              <TopicCard topic={t} colorVar={olympiad.colorVar} />
+              <TopicCard topic={t} colorVar={c} />
             </FadeIn>
           ))}
         </div>
@@ -47,6 +50,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
         started ? "border-primary/50" : "border-border",
         topic.featured && "p-7 lg:p-8"
       )}
+      style={started ? { borderColor: `hsl(var(${colorVar}) / 0.5)` } : undefined}
     >
       <div>
         <div className="flex items-start justify-between gap-3">
@@ -80,9 +84,10 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
           className={cn(
             "rounded-full border px-4 py-2 text-xs font-semibold transition-colors",
             started
-              ? "border-primary bg-primary text-primary-foreground"
+              ? "border-transparent text-white"
               : "border-border bg-background text-foreground hover:bg-secondary"
           )}
+          style={started ? { backgroundColor: `hsl(var(${colorVar}))` } : undefined}
         >
           {started ? "In progress" : "Start topic"}
         </button>
