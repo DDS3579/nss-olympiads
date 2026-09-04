@@ -34,7 +34,7 @@ function mulberry32(a: number) {
 }
 
 // ---------------------------------------------------------------------------
-// Sparse, subtle star field — structured celestial map, not a screensaver
+// Sparse, subtle star field
 // ---------------------------------------------------------------------------
 export function StarField({ count = 40, className }: { count?: number; className?: string }) {
   const stars = useMemo(() => {
@@ -71,7 +71,7 @@ export function StarField({ count = 40, className }: { count?: number; className
 }
 
 // ---------------------------------------------------------------------------
-// Per-Olympiad scientific motif (same brand, different language)
+// Per-Olympiad scientific motif
 // ---------------------------------------------------------------------------
 export function Motif({
   motif,
@@ -187,25 +187,30 @@ export function Motif({
 }
 
 // ---------------------------------------------------------------------------
-// Editorial section heading: "01 / YOUR PATH —————"
+// Editorial section heading — NOW accepts colorVar
 // ---------------------------------------------------------------------------
 export function SectionHeading({
   index,
   label,
   title,
   description,
+  colorVar,
   className,
 }: {
   index: string;
   label: string;
   title?: string;
   description?: string;
+  colorVar?: string;
   className?: string;
 }) {
   return (
     <FadeIn className={cn("mb-10 lg:mb-14", className)}>
       <div className="flex items-center gap-4">
-        <span className="whitespace-nowrap font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-primary">
+        <span
+          className="whitespace-nowrap font-heading text-[11px] font-semibold uppercase tracking-[0.3em]"
+          style={{ color: colorVar ? `hsl(var(${colorVar}))` : "hsl(var(--primary))" }}
+        >
           {index} / {label}
         </span>
         <span className="h-px flex-1 bg-border" />
@@ -223,7 +228,7 @@ export function SectionHeading({
 }
 
 // ---------------------------------------------------------------------------
-// Stat chip (editorial, not a SaaS card)
+// Stat chip
 // ---------------------------------------------------------------------------
 export function StatChip({
   value,
