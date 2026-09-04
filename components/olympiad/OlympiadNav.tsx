@@ -14,7 +14,7 @@ const SECTIONS = [
   { id: "roadmap", label: "Roadmap" },
 ];
 
-export function OlympiadNav() {
+export function OlympiadNav({ colorVar }: { colorVar: string }) {
   const [active, setActive] = useState("overview");
 
   useEffect(() => {
@@ -53,7 +53,8 @@ export function OlympiadNav() {
             {active === s.id && (
               <motion.span
                 layoutId="oly-nav-underline"
-                className="absolute -bottom-px left-0 right-0 h-0.5 bg-primary"
+                className="absolute -bottom-px left-0 right-0 h-0.5"
+                style={{ background: `hsl(var(${colorVar}))` }}
                 transition={{ type: "spring", stiffness: 350, damping: 30 }}
               />
             )}
