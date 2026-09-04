@@ -138,7 +138,7 @@ const baseOlympiads: Olympiad[] = [
     roadmap: DEFAULT_ROADMAP,
   },
   {
-    slug: "artificial-intelligence",
+    slug: "ai",
     name: "Artificial Intelligence",
     tagline: "Built something smarter than your professor? Let's go further.",
     description:
