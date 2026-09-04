@@ -284,3 +284,17 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+
+/* ===== Olympiad pages — additive utilities only ===== */
+.section-anchor { scroll-margin-top: 96px; }
+
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+@keyframes oly-twinkle { 0%, 100% { opacity: 0.12; } 50% { opacity: 0.6; } }
+.oly-twinkle { animation: oly-twinkle 4.5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .oly-twinkle { animation: none; }
+}
