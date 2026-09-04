@@ -10,6 +10,7 @@ import { getOlympiadStats, type Olympiad } from "@/lib/data/olympiads";
 export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
   const Icon = olympiad.icon;
   const stats = getOlympiadStats(olympiad);
+  const c = olympiad.colorVar;
 
   return (
     <section className="relative overflow-hidden pb-14 pt-28 lg:pb-20 lg:pt-32">
@@ -17,7 +18,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
       <div
         className="pointer-events-none absolute inset-0"
         style={{
-          background: `radial-gradient(90% 60% at 70% 0%, hsl(var(${olympiad.colorVar}) / 0.08), transparent 60%)`,
+          background: `radial-gradient(90% 60% at 70% 0%, hsl(var(${c}) / 0.08), transparent 60%)`,
         }}
       />
       <StarField count={46} className="text-foreground/40" />
@@ -39,7 +40,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
               <div className="flex items-center gap-3 font-heading text-[11px] font-semibold uppercase tracking-[0.32em] text-muted-foreground">
                 <span
                   className="h-px w-8"
-                  style={{ background: `hsl(var(${olympiad.colorVar}))` }}
+                  style={{ background: `hsl(var(${c}))` }}
                 />
                 NSS Olympiad Series / {olympiad.series}
               </div>
@@ -59,7 +60,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
             <FadeIn y={10} delay={0.16}>
               <p
                 className="mt-4 text-sm font-medium"
-                style={{ color: `hsl(var(${olympiad.colorVar}))` }}
+                style={{ color: `hsl(var(${c}))` }}
               >
                 {olympiad.disciplines.join(" · ")}
               </p>
@@ -76,7 +77,11 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
                 <MagneticButton>
                   <a
                     href="#topics"
-                    className="inline-flex items-center gap-2 rounded-full border-b-4 border-primary/40 bg-primary px-7 py-3 font-heading text-sm font-semibold text-primary-foreground transition-all duration-150 hover:brightness-105 active:translate-y-1 active:border-b-2"
+                    className="inline-flex items-center gap-2 rounded-full border-b-4 px-7 py-3 font-heading text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 active:translate-y-1 active:border-b-2"
+                    style={{
+                      backgroundColor: `hsl(var(${c}))`,
+                      borderColor: `hsl(var(${c}) / 0.4)`,
+                    }}
                   >
                     Start Preparing <ArrowRight className="h-4 w-4" />
                   </a>
@@ -107,22 +112,22 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
                 <div
                   className="absolute inset-0 rounded-full"
                   style={{
-                    background: `radial-gradient(closest-side, hsl(var(${olympiad.colorVar}) / 0.12), transparent 70%)`,
+                    background: `radial-gradient(closest-side, hsl(var(${c}) / 0.12), transparent 70%)`,
                   }}
                 />
                 <Motif
                   motif={olympiad.motif}
                   className="absolute inset-0 h-full w-full"
-                  style={{ color: `hsl(var(${olympiad.colorVar}))`, opacity: 0.5 }}
+                  style={{ color: `hsl(var(${c}))`, opacity: 0.5 }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div
                     className="flex h-16 w-16 items-center justify-center rounded-2xl"
-                    style={{ background: `hsl(var(${olympiad.colorVar}) / 0.15)` }}
+                    style={{ background: `hsl(var(${c}) / 0.15)` }}
                   >
                     <Icon
                       className="h-8 w-8"
-                      style={{ color: `hsl(var(${olympiad.colorVar}))` }}
+                      style={{ color: `hsl(var(${c}))` }}
                     />
                   </div>
                 </div>

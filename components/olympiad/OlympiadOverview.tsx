@@ -15,6 +15,8 @@ const STEPS = [
 ];
 
 export function OlympiadOverview({ olympiad }: { olympiad: Olympiad }) {
+  const c = olympiad.colorVar;
+
   return (
     <section id="overview" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6">
@@ -23,6 +25,7 @@ export function OlympiadOverview({ olympiad }: { olympiad: Olympiad }) {
           label="Your Path"
           title="How preparation unfolds"
           description="A simple loop, repeated until it becomes instinct."
+          colorVar={c}
         />
 
         <div className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
@@ -31,7 +34,10 @@ export function OlympiadOverview({ olympiad }: { olympiad: Olympiad }) {
             {STEPS.map((s, i) => (
               <FadeIn key={s.title} delay={i * 0.08}>
                 <div className="flex gap-6 py-6">
-                  <span className="w-8 font-heading text-sm font-bold text-primary">
+                  <span
+                    className="w-8 font-heading text-sm font-bold"
+                    style={{ color: `hsl(var(${c}))` }}
+                  >
                     0{i + 1}
                   </span>
                   <div>
@@ -55,6 +61,7 @@ export function OlympiadOverview({ olympiad }: { olympiad: Olympiad }) {
 function ProgressTracker({ olympiad }: { olympiad: Olympiad }) {
   const { percent, started, nextTopic, toggle } = useOlympiadProgress();
   const total = olympiad.topics.length;
+  const c = olympiad.colorVar;
 
   return (
     <FadeIn delay={0.2}>
@@ -72,7 +79,7 @@ function ProgressTracker({ olympiad }: { olympiad: Olympiad }) {
             initial={{ width: 0 }}
             animate={{ width: `${percent}%` }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            style={{ background: `hsl(var(${olympiad.colorVar}))` }}
+            style={{ background: `hsl(var(${c}))` }}
           />
         </div>
 
@@ -96,7 +103,8 @@ function ProgressTracker({ olympiad }: { olympiad: Olympiad }) {
                 toggle(nextTopic.id);
                 scrollToId(`topic-${nextTopic.id}`);
               }}
-              className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground"
+              className="mt-3 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold text-white transition-all hover:brightness-110"
+              style={{ backgroundColor: `hsl(var(${c}))` }}
             >
               Continue <ArrowRight className="h-3.5 w-3.5" />
             </button>
