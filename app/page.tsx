@@ -19,7 +19,6 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { SectionLabel } from "@/components/SectionLabel";
 import { OlympiadHero } from "@/components/hero/OlympiadHero";
 import { olympiads } from "@/lib/data/olympiads";
-import { SmoothScroll } from "@/components/SmoothScroll";
 
 const whyRows = [
   {
@@ -61,7 +60,6 @@ const teamCards = [
 
 export default function Home() {
   return (
-    <SmoothScroll>
       <div className="bg-background overflow-hidden">
         {/* 6.2 HERO — The Olympiad Universe */}
         <OlympiadHero />
@@ -272,6 +270,5 @@ export default function Home() {
           </FadeIn>
         </section>
       </div>
-    </SmoothScroll>
   );
 }
