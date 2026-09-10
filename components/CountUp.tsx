@@ -29,7 +29,7 @@ export function CountUp({
               val: to,
               duration: duration,
               easing: 'easeOutExpo',
-              update: () => {
+              onUpdate: () => {
                 setDisplay(Math.round(obj.val))
               }
             }
