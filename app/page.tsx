@@ -316,49 +316,59 @@ export default function Home() {
       </section>
 
       {/* ───────────────────────── TEAM (unchanged) ───────────────────────── */}
+      {/* TEAM — editorial masthead */}
       <section
-        className="border-y border-border bg-secondary/20 py-20 lg:py-28"
+        className="border-y border-border bg-secondary/20 py-24 lg:py-32"
         id="team"
       >
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <FadeIn y={10}>
-            <SectionLabel>WHO&apos;S BEHIND THIS</SectionLabel>
-          </FadeIn>
-          <FadeIn y={15} delay={0.1}>
-            <h2 className="mt-4 font-heading text-3xl sm:text-4xl font-bold text-foreground">
-              Built by students, for students.
-            </h2>
-          </FadeIn>
-          <FadeIn y={10} delay={0.2}>
-            <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-              NSS Olympiad Hub is organized by President Divya D. Sharma, the
-              Executive Team, and the STEM Club — with support from the Social
-              Club of NSS Clubs.
-            </p>
-          </FadeIn>
-        </div>
+        <div className="mx-auto max-w-6xl px-6">
+          {/* split editorial header */}
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-xl">
+              <FadeIn y={10}>
+                <SectionLabel>WHO&apos;S BEHIND THIS</SectionLabel>
+              </FadeIn>
+              <FadeIn y={16} delay={0.08}>
+                <h2 className="mt-5 font-heading text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+                  Built by students, for students.
+                </h2>
+              </FadeIn>
+            </div>
+            <FadeIn delay={0.16}>
+              <p className="max-w-sm leading-relaxed text-muted-foreground md:text-right">
+                Organized by President Divya D. Sharma, the Executive Team, and
+                the STEM Club — with support from the Social Club of NSS Clubs.
+              </p>
+            </FadeIn>
+          </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-12 max-w-4xl mx-auto px-6">
-          {teamCards.map((card, index) => {
-            const Icon = card.icon;
-            return (
-              <FadeIn key={index} delay={index * 0.1} duration={0.4} y={15}>
-                <div className="rounded-2xl bg-card border border-border p-5 sm:p-6 flex flex-col items-center text-center gap-3 h-full justify-center">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] sm:text-xs uppercase tracking-wide text-muted-foreground font-semibold block">
-                      {card.role}
-                    </span>
-                    <h3 className="font-heading font-semibold text-sm sm:text-base text-foreground mt-1">
-                      {card.name}
+          {/* credits */}
+          <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+            {teamCards.map((m, i) => {
+              const Icon = m.icon;
+              return (
+                <FadeIn key={i} delay={i * 0.08} y={14}>
+                  <div className="group border-t border-border pt-5">
+                    <div className="flex items-center justify-between">
+                      <span className="font-heading text-[11px] font-bold tabular-nums text-muted-foreground/40">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="h-1 w-1 rounded-full bg-primary/40 transition-transform duration-300 group-hover:scale-150" />
+                    </div>
+                    <div className="mt-5 flex items-center gap-2">
+                      <Icon className="h-3.5 w-3.5 text-primary" />
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                        {m.role}
+                      </span>
+                    </div>
+                    <h3 className="mt-1.5 font-heading text-lg font-bold text-foreground sm:text-xl">
+                      {m.name}
                     </h3>
                   </div>
-                </div>
-              </FadeIn>
-            );
-          })}
+                </FadeIn>
+              );
+            })}
+          </div>
         </div>
       </section>
 
