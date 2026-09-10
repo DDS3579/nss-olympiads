@@ -1,11 +1,21 @@
 "use client";
 
 import { Calendar, ArrowDownToLine } from "lucide-react";
+import { useOlympiadProgress } from "./context";
+
 import { FadeIn } from "@/components/FadeIn";
 import { DifficultyMeter, SectionHeading } from "./primitives";
 import type { ModelPaper, Olympiad } from "@/lib/data/olympiads";
 
-function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) {
+function PaperRow({
+  paper,
+  colorVar,
+}: {
+  paper: ModelPaper;
+  colorVar: string;
+}) {
+  const { markPaperStarted } = useOlympiadProgress();
+
   return (
     <div
       className="rounded-2xl border border-border bg-card p-5 transition-colors"
@@ -45,6 +55,7 @@ function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) 
           <a
             href={paper.fileUrl}
             download
+            onClick={() => markPaperStarted(paper.title)}
             className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold text-white transition-all hover:brightness-110"
             style={{ backgroundColor: `hsl(var(${colorVar}))` }}
           >
@@ -74,12 +85,15 @@ export function ModelPapersSection({ olympiad }: { olympiad: Olympiad }) {
   const papers = olympiad.modelPapers;
   const c = olympiad.colorVar;
 
-  const grouped = papers.reduce((acc, paper) => {
-    const year = paper.year || "General";
-    if (!acc[year]) acc[year] = [];
-    acc[year].push(paper);
-    return acc;
-  }, {} as Record<string, ModelPaper[]>);
+  const grouped = papers.reduce(
+    (acc, paper) => {
+      const year = paper.year || "General";
+      if (!acc[year]) acc[year] = [];
+      acc[year].push(paper);
+      return acc;
+    },
+    {} as Record<string, ModelPaper[]>,
+  );
 
   const sortedYears = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
 
