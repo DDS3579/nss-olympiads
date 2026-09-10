@@ -3,49 +3,40 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  GraduationCap,
-  Target,
-  Globe2,
-  Users,
-  Quote,
+  ArrowUpRight,
   Crown,
   FlaskConical,
   HeartHandshake,
+  Users,
 } from "lucide-react";
+
 import { FadeIn } from "@/components/FadeIn";
 import { GeometricHeroCanvas } from "@/components/GeometricHeroCanvas";
 import { MagneticButton } from "@/components/MagneticButton";
-import { CategoryCard } from "@/components/CategoryCard";
 import { SectionLabel } from "@/components/SectionLabel";
 import { OlympiadHero } from "@/components/hero/OlympiadHero";
 import { olympiads } from "@/lib/data/olympiads";
 
+/* Each reason gets its own subject accent color — ties the section into the
+   olympiad palette without introducing anything new. */
 const whyRows = [
   {
-    icon: GraduationCap,
-    iconColor: "text-primary",
-    bgColor: "bg-primary/10",
+    colorVar: "--subject-physics",
     title: "Stand Out in University Applications",
     body: "Olympiad participation and medals carry real weight with scholarship boards and admissions committees, both in Nepal and internationally — proof you can think under pressure, not just memorize.",
   },
   {
-    icon: Target,
-    iconColor: "text-accent",
-    bgColor: "bg-accent/10",
+    colorVar: "--subject-chemistry",
     title: "A Sharper Foundation for IOE, IOM & NEB",
     body: "The same problem-solving depth that wins Olympiad medals is exactly what engineering and medical entrance exams reward. Prepare for one, and you're already ahead on the other.",
   },
   {
-    icon: Globe2,
-    iconColor: "text-primary",
-    bgColor: "bg-primary/10",
+    colorVar: "--subject-astronomy",
     title: "Represent Nepal on a Global Stage",
     body: "IMO, IPhO, IChO, IOI, IOAA, and IBO all send national teams to compete internationally. Very few students ever get this far — this is how you become one of them.",
   },
   {
-    icon: Users,
-    iconColor: "text-accent",
-    bgColor: "bg-accent/10",
+    colorVar: "--subject-ai",
     title: "You're Not Doing This Alone",
     body: "NSS Clubs' STEM Club runs structured mentorship, peer study groups, and curated resources — so preparation feels like a team effort, not a solo grind.",
   },
@@ -60,215 +51,265 @@ const teamCards = [
 
 export default function Home() {
   return (
-      <div className="bg-background overflow-hidden">
-        {/* 6.2 HERO — The Olympiad Universe */}
-        <OlympiadHero />
+    <div className="bg-background overflow-hidden">
+      {/* HERO */}
+      <OlympiadHero />
 
-        {/* 6.3 WHY OLYMPIADS? */}
-        <section className="relative bg-secondary/30 py-24 lg:py-32" id="why">
-          <div className="mx-auto max-w-2xl px-6 text-center mb-16">
-            <FadeIn y={10}>
-              <SectionLabel>WHY OLYMPIADS</SectionLabel>
-            </FadeIn>
-            <FadeIn y={15} delay={0.1}>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4">
-                More than a competition. A{" "}
-                <span className="italic text-primary">launchpad</span>.
-              </h2>
-            </FadeIn>
-            <FadeIn y={10} delay={0.2}>
-              <p className="mt-4 text-muted-foreground text-lg">
-                For NSS students in Grade 11 and 12, Olympiads open doors
-                regular exams don&apos;t.
+      {/* ───────────────────────── WHY OLYMPIADS ───────────────────────── */}
+      <section className="relative bg-secondary/30 py-24 lg:py-32" id="why">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+            {/* Left — sticky editorial intro */}
+            <div className="lg:col-span-5">
+              <div className="lg:sticky lg:top-28">
+                <FadeIn y={10}>
+                  <SectionLabel>WHY OLYMPIADS</SectionLabel>
+                </FadeIn>
+                <FadeIn y={16} delay={0.08}>
+                  <h2 className="mt-5 font-heading text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-[2.75rem]">
+                    More than a competition.{" "}
+                    <span className="italic text-primary">A launchpad.</span>
+                  </h2>
+                </FadeIn>
+                <FadeIn y={12} delay={0.16}>
+                  <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+                    For NSS students in Grade 11 and 12, Olympiads open doors
+                    regular exams don&apos;t.
+                  </p>
+                </FadeIn>
+                <FadeIn delay={0.24}>
+                  <div className="mt-8 flex items-center gap-3">
+                    {whyRows.map((r, i) => (
+                      <span
+                        key={i}
+                        className="h-1.5 w-1.5 rounded-full"
+                        style={{ background: `hsl(var(${r.colorVar}))` }}
+                      />
+                    ))}
+                    <span className="ml-1 text-xs font-medium text-muted-foreground/70">
+                      Four reasons. Zero cost.
+                    </span>
+                  </div>
+                </FadeIn>
+              </div>
+            </div>
+
+            {/* Right — numbered index (no icon blobs, typography-first) */}
+            <div className="lg:col-span-7">
+              <div className="border-t border-border">
+                {whyRows.map((row, i) => (
+                  <FadeIn key={i} y={18} delay={i * 0.07}>
+                    <article className="group flex gap-5 border-b border-border py-8 sm:gap-7 sm:py-9">
+                      {/* index + rail */}
+                      <div className="flex w-7 flex-shrink-0 flex-col items-center self-stretch">
+                        <span
+                          className="font-heading text-[13px] font-bold leading-6 tabular-nums"
+                          style={{ color: `hsl(var(${row.colorVar}))` }}
+                        >
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span
+                          aria-hidden
+                          className="mt-3 w-px flex-1 bg-border transition-colors duration-300 group-hover:bg-primary/40"
+                        />
+                      </div>
+                      {/* copy */}
+                      <div className="min-w-0 flex-1 pb-1">
+                        <h3 className="font-heading text-xl font-bold leading-snug text-foreground transition-colors duration-300 group-hover:text-primary sm:text-[1.35rem]">
+                          {row.title}
+                        </h3>
+                        <p className="mt-2.5 text-[15px] leading-relaxed text-muted-foreground">
+                          {row.body}
+                        </p>
+                      </div>
+                    </article>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Success spotlight — editorial pull-quote, not a card */}
+          <FadeIn y={20}>
+            <figure
+              className="mt-16 border-l-2 pl-6 sm:pl-8 lg:mt-24"
+              style={{ borderColor: "hsl(var(--primary) / 0.5)" }}
+            >
+              <figcaption className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+                Success Spotlight
+              </figcaption>
+              <blockquote className="mt-3 font-heading text-xl font-semibold leading-snug text-foreground sm:text-2xl lg:text-[1.7rem]">
+                &ldquo;Real NSS students are already competing — your name belongs
+                in this space.&rdquo;
+              </blockquote>
+              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                Reserved for a verified student success story — swapped in via CMS
+                once confirmed. No fabricated achievements ship to production.
+              </p>
+            </figure>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ─────────────────────── PICK YOUR ARENA ─────────────────────── */}
+      <section className="bg-background py-24 lg:py-32" id="categories">
+        <div className="mx-auto max-w-5xl px-6">
+          {/* split editorial header */}
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-xl">
+              <FadeIn y={10}>
+                <SectionLabel>OLYMPIAD CATEGORIES</SectionLabel>
+              </FadeIn>
+              <FadeIn y={16} delay={0.08}>
+                <h2 className="mt-5 font-heading text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+                  Pick your arena.
+                </h2>
+              </FadeIn>
+            </div>
+            <FadeIn delay={0.16}>
+              <p className="max-w-sm leading-relaxed text-muted-foreground md:text-right">
+                Seven disciplines. Study material, model papers, and a roadmap for
+                every single one.
               </p>
             </FadeIn>
           </div>
 
-          <div className="mx-auto max-w-5xl px-6 space-y-20">
-            {whyRows.map((row, index) => {
-              const isOdd = index % 2 !== 0;
-              const Icon = row.icon;
+          {/* manifest list — each row carries its own olympiad color */}
+          <div className="mt-12 border-t border-border lg:mt-16">
+            {olympiads.map((o, i) => {
+              const Icon = o.icon;
               return (
-                <div
-                  key={index}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
-                    isOdd ? "lg:[&>*:first-child]:order-2" : ""
-                  }`}
-                >
-                  <FadeIn x={isOdd ? 40 : -40} y={0} duration={0.6} delay={0}>
-                    <div
-                      className={`h-48 sm:h-56 lg:aspect-square lg:h-auto max-w-sm mx-auto w-full rounded-3xl ${row.bgColor} flex items-center justify-center`}
+                <FadeIn key={o.slug} y={16} delay={i * 0.05}>
+                  <Link
+                    href={`/olympiads/${o.slug}`}
+                    style={{
+                      ["--c" as any]: `hsl(var(${o.colorVar}))`,
+                      ["--c-soft" as any]: `hsl(var(${o.colorVar}) / 0.07)`,
+                    }}
+                    className="group relative flex items-center gap-4 border-b border-border px-2 py-6 transition-colors duration-300 hover:bg-[color:var(--c-soft)] sm:gap-6 sm:px-3 sm:py-7"
+                  >
+                    {/* index */}
+                    <span className="hidden w-7 flex-shrink-0 font-heading text-xs font-bold tabular-nums text-muted-foreground/50 transition-colors duration-300 group-hover:text-[color:var(--c)] sm:block">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+
+                    {/* icon chip — small, colored, no white blob */}
+                    <span
+                      className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border transition-transform duration-300 group-hover:scale-105 sm:h-12 sm:w-12"
+                      style={{
+                        borderColor: `hsl(var(${o.colorVar}) / 0.25)`,
+                        background: `hsl(var(${o.colorVar}) / 0.06)`,
+                      }}
                     >
                       <Icon
-                        className={`h-20 w-20 lg:h-24 lg:w-24 ${row.iconColor}`}
+                        className="h-5 w-5 sm:h-[22px] sm:w-[22px]"
+                        style={{ color: `hsl(var(${o.colorVar}))` }}
                       />
-                    </div>
-                  </FadeIn>
+                    </span>
 
-                  <FadeIn
-                    x={isOdd ? 40 : -40}
-                    y={0}
-                    duration={0.6}
-                    delay={0.15}
-                  >
-                    <div className="space-y-3 text-center lg:text-left">
-                      <h3 className="font-heading text-2xl font-bold text-foreground">
-                        {row.title}
+                    {/* copy */}
+                    <div className="min-w-0 flex-1">
+                      <h3 className="truncate font-heading text-base font-bold text-foreground transition-colors duration-300 group-hover:text-[color:var(--c)] sm:text-lg">
+                        {o.name}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {row.body}
+                      <p className="mt-0.5 truncate text-xs text-muted-foreground sm:text-sm">
+                        {o.tagline}
                       </p>
                     </div>
-                  </FadeIn>
-                </div>
-              );
-            })}
 
-            {/* PLACEHOLDER — CMS FIELD: studentSuccessStory. Do not publish with fabricated names/achievements. */}
-            <FadeIn y={20}>
-              <div className="mt-20 rounded-3xl border border-border bg-card p-8 lg:p-12 flex flex-col lg:flex-row items-center gap-8">
-                <div className="flex-shrink-0">
-                  <Quote className="h-10 w-10 text-primary/40" />
-                </div>
-                <div className="space-y-2 text-center lg:text-left">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                    Success Spotlight
-                  </div>
-                  <h3 className="font-heading text-xl font-bold text-foreground">
-                    Real NSS students are already competing
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    This space is reserved for a verified student success story
-                    — swapped in via CMS once confirmed.
-                  </p>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </section>
-
-        {/* 6.4 OLYMPIAD CATEGORIES */}
-        <section className="py-24 lg:py-32 bg-background" id="categories">
-          <div className="mx-auto max-w-2xl px-6 text-center mb-16">
-            <FadeIn y={10}>
-              <SectionLabel>OLYMPIAD CATEGORIES</SectionLabel>
-            </FadeIn>
-            <FadeIn y={15} delay={0.1}>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4">
-                Pick your arena.
-              </h2>
-            </FadeIn>
-            <FadeIn y={10} delay={0.2}>
-              <p className="mt-4 text-muted-foreground text-lg">
-                Seven categories. One decision. Everything you need starts here.
-              </p>
-            </FadeIn>
-          </div>
-
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 max-w-6xl mx-auto px-6 mt-16">
-            {olympiads.map((item, index) => (
-              <FadeIn
-                key={item.slug}
-                delay={index * 0.08}
-                duration={0.4}
-                scale={0.95}
-              >
-                <CategoryCard
-                  slug={item.slug}
-                  name={item.name}
-                  tagline={item.tagline}
-                  icon={item.icon}
-                  colorVar={item.colorVar}
-                />
-              </FadeIn>
-            ))}
-          </div>
-        </section>
-
-        {/* 6.5 TEAM */}
-        <section
-          className="py-20 lg:py-28 bg-secondary/20 border-y border-border"
-          id="team"
-        >
-          <div className="mx-auto max-w-3xl px-6 text-center">
-            <FadeIn y={10}>
-              <SectionLabel>WHO&apos;S BEHIND THIS</SectionLabel>
-            </FadeIn>
-            <FadeIn y={15} delay={0.1}>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mt-4">
-                Built by students, for students.
-              </h2>
-            </FadeIn>
-            <FadeIn y={10} delay={0.2}>
-              <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-                NSS Olympiad Hub is organized by President Divya D. Sharma, the
-                Executive Team, and the STEM Club — with support from the Social
-                Club of NSS Clubs.
-              </p>
-            </FadeIn>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-12 max-w-4xl mx-auto px-6">
-            {teamCards.map((card, index) => {
-              const Icon = card.icon;
-              return (
-                <FadeIn key={index} delay={index * 0.1} duration={0.4} y={15}>
-                  <div className="rounded-2xl bg-card border border-border p-5 sm:p-6 flex flex-col items-center text-center gap-3 h-full justify-center">
-                    <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <span className="text-[10px] sm:text-xs uppercase tracking-wide text-muted-foreground font-semibold block">
-                        {card.role}
-                      </span>
-                      <h3 className="font-heading font-semibold text-sm sm:text-base text-foreground mt-1">
-                        {card.name}
-                      </h3>
-                    </div>
-                  </div>
+                    {/* arrow */}
+                    <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 group-hover:border-[color:var(--c)] group-hover:bg-[color:var(--c-soft)] group-hover:text-[color:var(--c)]">
+                      <ArrowUpRight className="h-4 w-4" />
+                    </span>
+                  </Link>
                 </FadeIn>
               );
             })}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 6.6 CTA (PRE-FOOTER) */}
-        <section className="relative overflow-hidden py-24 lg:py-32 bg-primary">
-          <GeometricHeroCanvas
-            variant="light"
-            className="absolute inset-0 -z-10 opacity-15"
-          />
+      {/* ───────────────────────── TEAM (unchanged) ───────────────────────── */}
+      <section
+        className="border-y border-border bg-secondary/20 py-20 lg:py-28"
+        id="team"
+      >
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <FadeIn y={10}>
+            <SectionLabel>WHO&apos;S BEHIND THIS</SectionLabel>
+          </FadeIn>
+          <FadeIn y={15} delay={0.1}>
+            <h2 className="mt-4 font-heading text-3xl sm:text-4xl font-bold text-foreground">
+              Built by students, for students.
+            </h2>
+          </FadeIn>
+          <FadeIn y={10} delay={0.2}>
+            <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
+              NSS Olympiad Hub is organized by President Divya D. Sharma, the
+              Executive Team, and the STEM Club — with support from the Social
+              Club of NSS Clubs.
+            </p>
+          </FadeIn>
+        </div>
 
-          <FadeIn scale={0.98} duration={0.5}>
-            <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground">
-                Ready to prove what you know?
-              </h2>
-              <p className="mt-4 text-primary-foreground/80 text-lg leading-relaxed">
-                Pick your Olympiad and get instant access to study material,
-                model papers, and a roadmap built to get you there.
-              </p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-12 max-w-4xl mx-auto px-6">
+          {teamCards.map((card, index) => {
+            const Icon = card.icon;
+            return (
+              <FadeIn key={index} delay={index * 0.1} duration={0.4} y={15}>
+                <div className="rounded-2xl bg-card border border-border p-5 sm:p-6 flex flex-col items-center text-center gap-3 h-full justify-center">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] sm:text-xs uppercase tracking-wide text-muted-foreground font-semibold block">
+                      {card.role}
+                    </span>
+                    <h3 className="font-heading font-semibold text-sm sm:text-base text-foreground mt-1">
+                      {card.name}
+                    </h3>
+                  </div>
+                </div>
+              </FadeIn>
+            );
+          })}
+        </div>
+      </section>
 
-              <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <MagneticButton>
-                  <Link
-                    href="/olympiads"
-                    className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-8 py-3.5 text-sm font-semibold font-heading border-b-4 border-white/30 transition-all duration-150 active:translate-y-1 active:border-b-2 hover:brightness-105"
-                  >
-                    Start Preparing <ArrowRight className="h-[18px] w-[18px]" />
-                  </Link>
-                </MagneticButton>
-
+      {/* ───────────────────────── CTA (unchanged) ───────────────────────── */}
+      <section className="relative overflow-hidden py-24 lg:py-32 bg-primary">
+        <GeometricHeroCanvas
+          variant="light"
+          className="absolute inset-0 -z-10 opacity-15"
+        />
+        <FadeIn scale={0.98} duration={0.5}>
+          <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground">
+              Ready to prove what you know?
+            </h2>
+            <p className="mt-4 text-primary-foreground/80 text-lg leading-relaxed">
+              Pick your Olympiad and get instant access to study material,
+              model papers, and a roadmap built to get you there.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <MagneticButton>
                 <Link
                   href="/olympiads"
-                  className="text-primary-foreground/90 underline-offset-4 hover:underline text-sm font-medium py-2"
+                  className="inline-flex items-center gap-2 rounded-full bg-white text-primary px-8 py-3.5 text-sm font-semibold font-heading border-b-4 border-white/30 transition-all duration-150 active:translate-y-1 active:border-b-2 hover:brightness-105"
                 >
-                  or browse all 7 categories →
+                  Start Preparing <ArrowRight className="h-[18px] w-[18px]" />
                 </Link>
-              </div>
+              </MagneticButton>
+              <Link
+                href="/olympiads"
+                className="text-primary-foreground/90 underline-offset-4 hover:underline text-sm font-medium py-2"
+              >
+                or browse all 7 categories →
+              </Link>
             </div>
-          </FadeIn>
-        </section>
-      </div>
+          </div>
+        </FadeIn>
+      </section>
+    </div>
   );
 }
