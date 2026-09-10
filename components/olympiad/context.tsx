@@ -10,32 +10,56 @@ import {
 } from "react";
 import type { Topic, Resource, ModelPaper } from "@/lib/data/olympiads";
 
-export interface ProgressState {
-  isHydrated: boolean;
-  topics: string[];
-  resources: string[];
-  papers: string[];
+export interface LastActivity {
+  label: string;
+  timestamp: number;
+}
+
+export interface NextAction {
+  type: "topic" | "resource" | "paper";
+  id: string;
+  label: string;
+}
+
+export const STAGE_NAMES = [
+  "Foundations",
+  "Intermediate",
+  "Advanced",
+  "Simulation",
+  "Olympiad",
+];
+
+interface ProgressData {
+  startedTopics: string[];
+  openedResources: string[];
+  accessedPapers: string[];
+  lastActivity: LastActivity | null;
+}
+
+interface ProgressState {
   percent: number;
-  currentStage: number; // 0 to 4
-  isTopicStarted: (id: string) => boolean;
+  currentStage: number;
+  currentStageName: string;
+  hasStarted: boolean;
+  lastActivity: LastActivity | null;
+  isStarted: (id: string) => boolean;
   isResourceOpened: (id: string) => boolean;
-  isPaperStarted: (id: string) => boolean;
-  toggleTopic: (id: string) => void;
-  markResourceOpened: (id: string) => void;
-  markPaperStarted: (id: string) => void;
+  isPaperAccessed: (id: string) => boolean;
+  toggleTopic: (id: string, label: string) => void;
+  markResourceOpened: (id: string, label: string) => void;
+  markPaperAccessed: (id: string, label: string) => void;
   nextTopic: Topic | null;
+  nextAction: NextAction | null;
 }
 
 const ProgressContext = createContext<ProgressState | null>(null);
 
-// Map percentage to the 5 roadmap stages
-function getStageFromPercent(p: number): number {
-  if (p === 0) return 0;
-  if (p <= 20) return 0; // Foundations
-  if (p <= 45) return 1; // Intermediate
-  if (p <= 75) return 2; // Advanced
-  if (p <= 95) return 3; // Simulation
-  return 4;              // Olympiad
+function getStageFromPercent(percent: number): number {
+  if (percent < 25) return 0;
+  if (percent < 50) return 1;
+  if (percent < 70) return 2;
+  if (percent < 90) return 3;
+  return 4;
 }
 
 export function ProgressProvider({
@@ -52,89 +76,141 @@ export function ProgressProvider({
   children: React.ReactNode;
 }) {
   const storageKey = `olympiad-progress:${slug}`;
-  
-  const [isHydrated, setIsHydrated] = useState(false);
-  const [topicsState, setTopicsState] = useState<string[]>([]);
-  const [resourcesState, setResourcesState] = useState<string[]>([]);
-  const [papersState, setPapersState] = useState<string[]>([]);
+  const [data, setData] = useState<ProgressData>({
+    startedTopics: [],
+    openedResources: [],
+    accessedPapers: [],
+    lastActivity: null,
+  });
+  const [hydrated, setHydrated] = useState(false);
 
-  // Hydrate from localStorage
+  // Load from localStorage (with legacy array-format migration)
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem(storageKey);
       if (raw) {
         const parsed = JSON.parse(raw);
-        if (parsed.topics) setTopicsState(parsed.topics);
-        if (parsed.resources) setResourcesState(parsed.resources);
-        if (parsed.papers) setPapersState(parsed.papers);
+        if (Array.isArray(parsed)) {
+          setData({
+            startedTopics: parsed.filter((id) => topics.some((t) => t.id === id)),
+            openedResources: [],
+            accessedPapers: [],
+            lastActivity: null,
+          });
+        } else if (parsed && typeof parsed === "object") {
+          setData({
+            startedTopics: Array.isArray(parsed.startedTopics) ? parsed.startedTopics : [],
+            openedResources: Array.isArray(parsed.openedResources) ? parsed.openedResources : [],
+            accessedPapers: Array.isArray(parsed.accessedPapers) ? parsed.accessedPapers : [],
+            lastActivity: parsed.lastActivity ?? null,
+          });
+        }
       }
-    } catch { /* ignore */ }
-    setIsHydrated(true);
-  }, [storageKey]);
+    } catch {
+      /* ignore */
+    }
+    setHydrated(true);
+  }, [storageKey, topics]);
 
   // Persist to localStorage
-  const persist = useCallback((t: string[], r: string[], p: string[]) => {
+  useEffect(() => {
+    if (!hydrated) return;
     try {
-      window.localStorage.setItem(storageKey, JSON.stringify({ topics: t, resources: r, papers: p }));
-    } catch { /* ignore */ }
-  }, [storageKey]);
+      window.localStorage.setItem(storageKey, JSON.stringify(data));
+    } catch {
+      /* ignore */
+    }
+  }, [data, hydrated, storageKey]);
 
-  const toggleTopic = useCallback((id: string) => {
-    setTopicsState((prev) => {
-      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
-      persist(next, resourcesState, papersState);
-      return next;
+  const toggleTopic = useCallback((id: string, label: string) => {
+    setData((prev) => {
+      const isRemoving = prev.startedTopics.includes(id);
+      return {
+        ...prev,
+        startedTopics: isRemoving
+          ? prev.startedTopics.filter((x) => x !== id)
+          : [...prev.startedTopics, id],
+        lastActivity: isRemoving
+          ? prev.lastActivity
+          : { label: `Started ${label}`, timestamp: Date.now() },
+      };
     });
-  }, [persist, resourcesState, papersState]);
+  }, []);
 
-  const markResourceOpened = useCallback((id: string) => {
-    setResourcesState((prev) => {
-      if (prev.includes(id)) return prev;
-      const next = [...prev, id];
-      persist(topicsState, next, papersState);
-      return next;
+  const markResourceOpened = useCallback((id: string, label: string) => {
+    setData((prev) => {
+      if (prev.openedResources.includes(id)) return prev;
+      return {
+        ...prev,
+        openedResources: [...prev.openedResources, id],
+        lastActivity: { label: `Opened ${label}`, timestamp: Date.now() },
+      };
     });
-  }, [persist, topicsState, papersState]);
+  }, []);
 
-  const markPaperStarted = useCallback((id: string) => {
-    setPapersState((prev) => {
-      if (prev.includes(id)) return prev;
-      const next = [...prev, id];
-      persist(topicsState, resourcesState, next);
-      return next;
+  const markPaperAccessed = useCallback((id: string, label: string) => {
+    setData((prev) => {
+      if (prev.accessedPapers.includes(id)) return prev;
+      return {
+        ...prev,
+        accessedPapers: [...prev.accessedPapers, id],
+        lastActivity: { label: `Started ${label}`, timestamp: Date.now() },
+      };
     });
-  }, [persist, topicsState, resourcesState]);
+  }, []);
 
-  const totalItems = topics.length + resources.length + papers.length;
-  const doneItems = topicsState.length + resourcesState.length + papersState.length;
-  const percent = totalItems > 0 ? Math.round((doneItems / totalItems) * 100) : 0;
+  const total = topics.length + resources.length + papers.length;
+  const done =
+    data.startedTopics.length + data.openedResources.length + data.accessedPapers.length;
+  const percent = total > 0 ? Math.round((done / total) * 100) : 0;
   const currentStage = getStageFromPercent(percent);
+  const currentStageName = STAGE_NAMES[currentStage];
+  const hasStarted = done > 0;
 
-  const isTopicStarted = useCallback((id: string) => topicsState.includes(id), [topicsState]);
-  const isResourceOpened = useCallback((id: string) => resourcesState.includes(id), [resourcesState]);
-  const isPaperStarted = useCallback((id: string) => papersState.includes(id), [papersState]);
+  const isStarted = useCallback(
+    (id: string) => data.startedTopics.includes(id),
+    [data.startedTopics]
+  );
+  const isResourceOpened = useCallback(
+    (id: string) => data.openedResources.includes(id),
+    [data.openedResources]
+  );
+  const isPaperAccessed = useCallback(
+    (id: string) => data.accessedPapers.includes(id),
+    [data.accessedPapers]
+  );
 
   const nextTopic = useMemo(
-    () => topics.find((t) => !topicsState.includes(t.id)) ?? null,
-    [topics, topicsState]
+    () => topics.find((t) => !data.startedTopics.includes(t.id)) ?? null,
+    [topics, data.startedTopics]
   );
+
+  const nextAction = useMemo<NextAction | null>(() => {
+    const nt = topics.find((t) => !data.startedTopics.includes(t.id));
+    if (nt) return { type: "topic", id: nt.id, label: nt.name };
+    const nr = resources.find((r) => !data.openedResources.includes(r.title));
+    if (nr) return { type: "resource", id: nr.title, label: nr.title };
+    const np = papers.find((p) => !data.accessedPapers.includes(p.title));
+    if (np) return { type: "paper", id: np.title, label: np.title };
+    return null;
+  }, [topics, resources, papers, data.startedTopics, data.openedResources, data.accessedPapers]);
 
   return (
     <ProgressContext.Provider
       value={{
-        isHydrated,
-        topics: topicsState,
-        resources: resourcesState,
-        papers: papersState,
         percent,
         currentStage,
-        isTopicStarted,
+        currentStageName,
+        hasStarted,
+        lastActivity: data.lastActivity,
+        isStarted,
         isResourceOpened,
-        isPaperStarted,
+        isPaperAccessed,
         toggleTopic,
         markResourceOpened,
-        markPaperStarted,
+        markPaperAccessed,
         nextTopic,
+        nextAction,
       }}
     >
       {children}
@@ -144,6 +220,8 @@ export function ProgressProvider({
 
 export function useOlympiadProgress() {
   const ctx = useContext(ProgressContext);
-  if (!ctx) throw new Error("useOlympiadProgress must be used within ProgressProvider");
+  if (!ctx) {
+    throw new Error("useOlympiadProgress must be used within ProgressProvider");
+  }
   return ctx;
 }
