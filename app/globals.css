@@ -298,3 +298,10 @@ html.lenis body {
 @media (prefers-reduced-motion: reduce) {
   .oly-twinkle { animation: none; }
 }
+
+
+/* ===== Accessibility — visible keyboard focus (additive) ===== */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
