@@ -39,7 +39,7 @@ export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
 }
 
 function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
-  const { isStarted, toggle } = useOlympiadProgress();
+  const { isStarted, toggleTopic } = useOlympiadProgress();
   const started = isStarted(topic.id);
 
   return (
@@ -80,7 +80,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
 
       <div className="mt-5 flex items-center justify-between">
         <button
-          onClick={() => toggle(topic.id)}
+          onClick={() => toggleTopic(topic.id, topic.name)}
           className={cn(
             "rounded-full border px-4 py-2 text-xs font-semibold transition-colors",
             started
