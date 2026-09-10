@@ -1,32 +1,38 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { FadeIn } from "@/components/FadeIn"
-import { CountUp } from "@/components/CountUp"
-import { MagneticButton } from "@/components/MagneticButton"
-import { olympiads } from "@/lib/data/olympiads"
-import { OlympiadHeroBackdrop } from "./OlympiadHeroBackdrop"
-import { OlympiadNodes } from "./OlympiadNodes"
-import { ScrollCue } from "./ScrollCue"
+import { useState } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
+import { FadeIn } from "@/components/FadeIn";
+import { CountUp } from "@/components/CountUp";
+import { MagneticButton } from "@/components/MagneticButton";
+import { olympiads } from "@/lib/data/olympiads";
+
+import { OlympiadHeroBackdrop } from "./OlympiadHeroBackdrop";
+import { OlympiadNodes } from "./OlympiadNodes";
+import { OlympiadMobileConstellation } from "./OlympiadMobileConstellation";
+import { ScrollCue } from "./ScrollCue";
 
 const HERO_STATS = [
   { key: "olympiads", value: "7", label: "Olympiads", countUp: true },
   { key: "grade", value: "11–12", label: "Grade Focus", countUp: false },
   { key: "free", value: "100%", label: "Free Preparation", countUp: false },
-]
+];
 
 export function OlympiadHero() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
     <section className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-background">
       {/* Layers 1–3: atmosphere · academic universe · depth objects */}
       <OlympiadHeroBackdrop activeIndex={activeIndex} />
 
-      {/* The 7 Olympiad constellation (interactive) */}
+      {/* The 7 Olympiad constellation (interactive) — desktop */}
       <OlympiadNodes olympiads={olympiads} onActivate={setActiveIndex} />
+
+      {/* ADDED: mobile-only constellation so the motif survives small screens */}
+      <OlympiadMobileConstellation olympiads={olympiads} />
 
       {/* Hero content — clean negative space in the center */}
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-1 flex-col items-center justify-center px-6 pb-40 pt-36 text-center lg:pt-40">
@@ -41,7 +47,7 @@ export function OlympiadHero() {
           </div>
         </FadeIn>
 
-        {/* Headline — three strong lines, poster-tight */}
+        {/* Headline */}
         <h1 className="font-heading text-4xl font-extrabold leading-[1.06] tracking-[-0.02em] text-foreground sm:text-6xl sm:leading-[1.02] lg:text-[4.4rem] xl:text-[4.75rem]">
           <span className="hero-line inline-block lg:block" style={{ animationDelay: "0.12s" }}>
             Every Olympiad champion
@@ -62,7 +68,7 @@ export function OlympiadHero() {
           </p>
         </FadeIn>
 
-        {/* CTA row — the only strongly saturated element */}
+        {/* CTA row */}
         <FadeIn delay={0.7} y={15}>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <MagneticButton>
@@ -73,7 +79,6 @@ export function OlympiadHero() {
                 Start Preparing <ArrowRight className="h-[18px] w-[18px]" />
               </Link>
             </MagneticButton>
-
             <Link
               href="/olympiads"
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.02] px-8 py-3.5 font-heading text-sm font-semibold text-foreground transition-colors duration-200 hover:border-white/25 hover:bg-secondary"
@@ -83,7 +88,7 @@ export function OlympiadHero() {
           </div>
         </FadeIn>
 
-        {/* Metadata — editorial stat blocks (the "0 categories" bug is gone) */}
+        {/* Metadata */}
         <FadeIn delay={0.85} y={10}>
           <div className="mt-16 grid grid-cols-3 divide-x divide-white/[0.08]">
             {HERO_STATS.map((s) => (
@@ -102,5 +107,5 @@ export function OlympiadHero() {
 
       <ScrollCue />
     </section>
-  )
+  );
 }
