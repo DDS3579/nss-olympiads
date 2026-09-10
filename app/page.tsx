@@ -22,21 +22,25 @@ import { olympiads } from "@/lib/data/olympiads";
 const whyRows = [
   {
     colorVar: "--subject-physics",
+    tag: "Admissions",
     title: "Stand Out in University Applications",
     body: "Olympiad participation and medals carry real weight with scholarship boards and admissions committees, both in Nepal and internationally — proof you can think under pressure, not just memorize.",
   },
   {
     colorVar: "--subject-chemistry",
+    tag: "Entrance Exams",
     title: "A Sharper Foundation for IOE, IOM & NEB",
     body: "The same problem-solving depth that wins Olympiad medals is exactly what engineering and medical entrance exams reward. Prepare for one, and you're already ahead on the other.",
   },
   {
     colorVar: "--subject-astronomy",
+    tag: "Global Stage",
     title: "Represent Nepal on a Global Stage",
     body: "IMO, IPhO, IChO, IOI, IOAA, and IBO all send national teams to compete internationally. Very few students ever get this far — this is how you become one of them.",
   },
   {
     colorVar: "--subject-ai",
+    tag: "Community",
     title: "You're Not Doing This Alone",
     body: "NSS Clubs' STEM Club runs structured mentorship, peer study groups, and curated resources — so preparation feels like a team effort, not a solo grind.",
   },
@@ -77,30 +81,97 @@ export default function Home() {
                     regular exams don&apos;t.
                   </p>
                 </FadeIn>
+
+                {/* mini-constellation — the four reasons, mapped as stars */}
                 <FadeIn delay={0.24}>
-                  <div className="mt-8 flex items-center gap-3">
-                    {whyRows.map((r, i) => (
-                      <span
-                        key={i}
-                        className="h-1.5 w-1.5 rounded-full"
-                        style={{ background: `hsl(var(${r.colorVar}))` }}
+                  <div className="mt-10">
+                    <svg
+                      viewBox="0 0 240 90"
+                      className="w-full max-w-[250px]"
+                      aria-hidden
+                    >
+                      <path
+                        d="M22 62 L84 24 L152 58 L214 20"
+                        fill="none"
+                        stroke="hsl(var(--border))"
+                        strokeWidth="1"
+                        strokeDasharray="1 6"
+                        strokeLinecap="round"
                       />
-                    ))}
-                    <span className="ml-1 text-xs font-medium text-muted-foreground/70">
-                      Four reasons. Zero cost.
-                    </span>
+                      <circle
+                        cx="22"
+                        cy="62"
+                        r="9"
+                        fill="hsl(var(--subject-physics) / 0.14)"
+                      />
+                      <circle
+                        cx="84"
+                        cy="24"
+                        r="9"
+                        fill="hsl(var(--subject-chemistry) / 0.14)"
+                      />
+                      <circle
+                        cx="152"
+                        cy="58"
+                        r="9"
+                        fill="hsl(var(--subject-astronomy) / 0.14)"
+                      />
+                      <circle
+                        cx="214"
+                        cy="20"
+                        r="9"
+                        fill="hsl(var(--subject-ai) / 0.14)"
+                      />
+                      <circle
+                        cx="22"
+                        cy="62"
+                        r="3.5"
+                        fill="hsl(var(--subject-physics))"
+                      />
+                      <circle
+                        cx="84"
+                        cy="24"
+                        r="3.5"
+                        fill="hsl(var(--subject-chemistry))"
+                      />
+                      <circle
+                        cx="152"
+                        cy="58"
+                        r="3.5"
+                        fill="hsl(var(--subject-astronomy))"
+                      />
+                      <circle
+                        cx="214"
+                        cy="20"
+                        r="3.5"
+                        fill="hsl(var(--subject-ai))"
+                      />
+                    </svg>
+                    <div className="mt-4 flex items-center gap-3">
+                      <span className="h-px w-8 bg-primary/40" />
+                      <span className="text-xs font-medium text-muted-foreground/70">
+                        Four reasons. Zero cost.
+                      </span>
+                    </div>
                   </div>
                 </FadeIn>
               </div>
             </div>
 
-            {/* Right — numbered index (no icon blobs, typography-first) */}
+            {/* Right — numbered index */}
             <div className="lg:col-span-7">
               <div className="border-t border-border">
                 {whyRows.map((row, i) => (
                   <FadeIn key={i} y={18} delay={i * 0.07}>
-                    <article className="group flex gap-5 border-b border-border py-8 sm:gap-7 sm:py-9">
-                      {/* index + rail */}
+                    <article
+                      className="group relative flex gap-5 border-b border-border py-8 transition-colors duration-300 hover:bg-[color:var(--c-soft)] sm:gap-7 sm:py-9"
+                      style={{
+                        ["--c" as any]: `hsl(var(${row.colorVar}))`,
+                        ["--c-soft" as any]: `hsl(var(${row.colorVar}) / 0.05)`,
+                        ["--c-rail" as any]: `hsl(var(${row.colorVar}) / 0.25)`,
+                      }}
+                    >
+                      {/* index + color rail */}
                       <div className="flex w-7 flex-shrink-0 flex-col items-center self-stretch">
                         <span
                           className="font-heading text-[13px] font-bold leading-6 tabular-nums"
@@ -110,12 +181,19 @@ export default function Home() {
                         </span>
                         <span
                           aria-hidden
-                          className="mt-3 w-px flex-1 bg-border transition-colors duration-300 group-hover:bg-primary/40"
+                          className="mt-3 w-px flex-1 bg-[color:var(--c-rail)] transition-colors duration-300 group-hover:bg-[color:var(--c)]"
                         />
                       </div>
+
                       {/* copy */}
                       <div className="min-w-0 flex-1 pb-1">
-                        <h3 className="font-heading text-xl font-bold leading-snug text-foreground transition-colors duration-300 group-hover:text-primary sm:text-[1.35rem]">
+                        <span
+                          className="text-[10px] font-semibold uppercase tracking-[0.2em]"
+                          style={{ color: `hsl(var(${row.colorVar}) / 0.8)` }}
+                        >
+                          {row.tag}
+                        </span>
+                        <h3 className="mt-1.5 font-heading text-xl font-bold leading-snug text-foreground transition-colors duration-300 group-hover:text-[color:var(--c)] sm:text-[1.35rem]">
                           {row.title}
                         </h3>
                         <p className="mt-2.5 text-[15px] leading-relaxed text-muted-foreground">
@@ -129,22 +207,30 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Success spotlight — editorial pull-quote, not a card */}
+          {/* Success spotlight — pull-quote with ghost glyph */}
           <FadeIn y={20}>
             <figure
-              className="mt-16 border-l-2 pl-6 sm:pl-8 lg:mt-24"
+              className="relative mt-16 border-l-2 pl-6 sm:pl-8 lg:mt-24"
               style={{ borderColor: "hsl(var(--primary) / 0.5)" }}
             >
-              <figcaption className="text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
+              <span
+                aria-hidden
+                className="pointer-events-none absolute -top-12 left-0 select-none font-heading text-[110px] leading-none"
+                style={{ color: "hsl(var(--primary) / 0.08)" }}
+              >
+                &ldquo;
+              </span>
+              <figcaption className="relative text-[11px] font-semibold uppercase tracking-[0.22em] text-primary">
                 Success Spotlight
               </figcaption>
-              <blockquote className="mt-3 font-heading text-xl font-semibold leading-snug text-foreground sm:text-2xl lg:text-[1.7rem]">
-                &ldquo;Real NSS students are already competing — your name belongs
-                in this space.&rdquo;
+              <blockquote className="relative mt-3 font-heading text-xl font-semibold leading-snug text-foreground sm:text-2xl lg:text-[1.7rem]">
+                &ldquo;Real NSS students are already competing — your name
+                belongs in this space.&rdquo;
               </blockquote>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                Reserved for a verified student success story — swapped in via CMS
-                once confirmed. No fabricated achievements ship to production.
+              <p className="relative mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                Reserved for a verified student success story — swapped in via
+                CMS once confirmed. No fabricated achievements ship to
+                production.
               </p>
             </figure>
           </FadeIn>
@@ -168,8 +254,8 @@ export default function Home() {
             </div>
             <FadeIn delay={0.16}>
               <p className="max-w-sm leading-relaxed text-muted-foreground md:text-right">
-                Seven disciplines. Study material, model papers, and a roadmap for
-                every single one.
+                Seven disciplines. Study material, model papers, and a roadmap
+                for every single one.
               </p>
             </FadeIn>
           </div>
@@ -288,8 +374,8 @@ export default function Home() {
               Ready to prove what you know?
             </h2>
             <p className="mt-4 text-primary-foreground/80 text-lg leading-relaxed">
-              Pick your Olympiad and get instant access to study material,
-              model papers, and a roadmap built to get you there.
+              Pick your Olympiad and get instant access to study material, model
+              papers, and a roadmap built to get you there.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <MagneticButton>
