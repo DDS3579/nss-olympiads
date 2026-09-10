@@ -1,6 +1,6 @@
 "use client";
 
-import { getOlympiadBySlug } from "@/lib/data/olympiads";
+import { getOlympiadBySlug, olympiads as allOlympiads } from "@/lib/data/olympiads";
 import { ProgressProvider } from "./context";
 import { OlympiadHero } from "./OlympiadHero";
 import { OlympiadNav } from "./OlympiadNav";
@@ -19,10 +19,15 @@ export function OlympiadExperience({ slug }: { slug: string }) {
   if (!olympiad) return null;
 
   return (
-    <ProgressProvider slug={slug} topics={olympiad.topics}>
+    <ProgressProvider 
+      slug={slug} 
+      topics={olympiad.topics}
+      resources={olympiad.studyMaterial}
+      papers={olympiad.modelPapers}
+    >
       <div className="relative bg-background text-foreground">
         <OlympiadHero olympiad={olympiad} />
-        <OlympiadNav colorVar={olympiad.colorVar} />
+        <OlympiadNav olympiad={olympiad} allOlympiads={allOlympiads} />
         <main className="relative">
           <OlympiadOverview olympiad={olympiad} />
           <Constellation olympiad={olympiad} />
