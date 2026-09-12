@@ -81,6 +81,12 @@ export interface OlympiadMeta {
   format: string;
 }
 
+export interface SyllabusUnit {
+  unit: string;
+  weight: string; // e.g. "Core", "High", "Medium"
+  topics: string[];
+}
+
 export interface Olympiad {
   slug: string;
   name: string;
@@ -93,6 +99,7 @@ export interface Olympiad {
   disciplines: string[];
   meta: OlympiadMeta;
   topics: Topic[];
+  syllabus: SyllabusUnit[];
   edges: ConstellationEdge[];
   featuredProblem: FeaturedProblem;
   studyMaterial: Resource[];
@@ -220,6 +227,48 @@ const baseOlympiads: Olympiad[] = [
         ],
       },
     ],
+    syllabus: [
+      {
+        unit: "Algebra",
+        weight: "Core",
+        topics: [
+          "Equations & inequalities",
+          "Polynomials",
+          "Functional equations",
+          "Sequences & series",
+        ],
+      },
+      {
+        unit: "Geometry",
+        weight: "Core",
+        topics: [
+          "Euclidean geometry",
+          "Triangles & circles",
+          "Transformations",
+          "Analytic geometry",
+        ],
+      },
+      {
+        unit: "Number Theory",
+        weight: "Core",
+        topics: [
+          "Divisibility",
+          "Modular arithmetic",
+          "Diophantine equations",
+          "Primes & factorization",
+        ],
+      },
+      {
+        unit: "Combinatorics",
+        weight: "Core",
+        topics: [
+          "Counting",
+          "Graph theory",
+          "Pigeonhole principle",
+          "Extremal problems",
+        ],
+      },
+    ],
     edges: [
       { from: "algebra", to: "geometry" },
       { from: "algebra", to: "number-theory" },
@@ -341,6 +390,33 @@ const baseOlympiads: Olympiad[] = [
         subtopics: ["Relativity", "Quantum ideas", "Nuclear"],
       },
     ],
+    syllabus: [
+      {
+        unit: "Mechanics",
+        weight: "High",
+        topics: ["Kinematics", "Newton's laws", "Work & energy", "Rotation & momentum"],
+      },
+      {
+        unit: "Electromagnetism",
+        weight: "High",
+        topics: ["Electrostatics", "DC circuits", "Magnetism", "Induction"],
+      },
+      {
+        unit: "Thermodynamics",
+        weight: "Medium",
+        topics: ["Laws of thermodynamics", "Heat engines", "Kinetic theory"],
+      },
+      {
+        unit: "Optics & Waves",
+        weight: "Medium",
+        topics: ["Geometric optics", "Wave optics", "Interference & diffraction"],
+      },
+      {
+        unit: "Modern Physics",
+        weight: "Medium",
+        topics: ["Relativity", "Quantum phenomena", "Nuclear physics"],
+      },
+    ],
     edges: [
       { from: "mechanics", to: "electromagnetism" },
       { from: "mechanics", to: "thermodynamics" },
@@ -363,7 +439,13 @@ const baseOlympiads: Olympiad[] = [
         title: "IPhO Syllabus Guide",
         type: "PDF",
         fileUrl: "#",
-        topicIds: ["mechanics", "electromagnetism", "thermodynamics", "optics", "modern-physics"],
+        topicIds: [
+          "mechanics",
+          "electromagnetism",
+          "thermodynamics",
+          "optics",
+          "modern-physics",
+        ],
       },
       {
         title: "Mechanics Problem Set",
@@ -442,6 +524,28 @@ const baseOlympiads: Olympiad[] = [
         y: 80,
         blurb: "Measuring what matter is made of.",
         subtopics: ["Titrations", "Qualitative analysis"],
+      },
+    ],
+    syllabus: [
+      {
+        unit: "Physical Chemistry",
+        weight: "High",
+        topics: ["Thermodynamics", "Kinetics", "Equilibrium", "Electrochemistry"],
+      },
+      {
+        unit: "Organic Chemistry",
+        weight: "High",
+        topics: ["Reaction mechanisms", "Stereochemistry", "Functional groups", "Synthesis"],
+      },
+      {
+        unit: "Inorganic Chemistry",
+        weight: "Medium",
+        topics: ["Periodic trends", "Coordination compounds", "Chemical bonding"],
+      },
+      {
+        unit: "Analytical Chemistry",
+        weight: "Medium",
+        topics: ["Titrations", "Spectroscopy", "Qualitative analysis"],
       },
     ],
     edges: [
@@ -538,6 +642,28 @@ const baseOlympiads: Olympiad[] = [
         y: 80,
         blurb: "The universe at the largest scale.",
         subtopics: ["Expansion", "Distance ladder", "CMB"],
+      },
+    ],
+    syllabus: [
+      {
+        unit: "Celestial Mechanics",
+        weight: "High",
+        topics: ["Orbital motion", "Kepler's laws", "Gravitation"],
+      },
+      {
+        unit: "Stellar Physics",
+        weight: "High",
+        topics: ["Stellar structure", "Stellar evolution", "Magnitudes & luminosity"],
+      },
+      {
+        unit: "Observational Astronomy",
+        weight: "Medium",
+        topics: ["Telescopes", "Coordinate systems", "Imaging & photometry"],
+      },
+      {
+        unit: "Cosmology",
+        weight: "Medium",
+        topics: ["Expansion of the universe", "Distance ladder", "Cosmic microwave background"],
       },
     ],
     edges: [
@@ -656,6 +782,33 @@ const baseOlympiads: Olympiad[] = [
         subtopics: ["Tokenisation", "Embeddings", "Transformers"],
       },
     ],
+    syllabus: [
+      {
+        unit: "Machine Learning",
+        weight: "High",
+        topics: ["Supervised learning", "Unsupervised learning", "Model evaluation"],
+      },
+      {
+        unit: "Neural Networks",
+        weight: "High",
+        topics: ["Architectures", "Backpropagation", "Regularization"],
+      },
+      {
+        unit: "Optimization",
+        weight: "Medium",
+        topics: ["Gradient descent", "Loss functions", "Hyperparameters"],
+      },
+      {
+        unit: "Probabilistic Models",
+        weight: "Medium",
+        topics: ["Bayesian reasoning", "Distributions", "Inference"],
+      },
+      {
+        unit: "Applications",
+        weight: "Medium",
+        topics: ["Computer vision", "NLP", "Ethics & safety"],
+      },
+    ],
     edges: [
       { from: "machine-learning", to: "neural-networks" },
       { from: "machine-learning", to: "optimization" },
@@ -752,6 +905,28 @@ const baseOlympiads: Olympiad[] = [
         y: 80,
         blurb: "Breaking problems into overlapping subproblems.",
         subtopics: ["Memoisation", "Subsequences", "Intervals"],
+      },
+    ],
+    syllabus: [
+      {
+        unit: "Data Structures",
+        weight: "High",
+        topics: ["Arrays & strings", "Trees", "Heaps", "Hash maps"],
+      },
+      {
+        unit: "Algorithms",
+        weight: "High",
+        topics: ["Sorting", "Searching", "Greedy methods", "Complexity analysis"],
+      },
+      {
+        unit: "Graph Theory",
+        weight: "High",
+        topics: ["Traversal", "Shortest paths", "Minimum spanning trees", "Network flow"],
+      },
+      {
+        unit: "Dynamic Programming",
+        weight: "High",
+        topics: ["Memoization", "Subsequences", "Interval DP"],
       },
     ],
     edges: [
@@ -858,6 +1033,28 @@ const baseOlympiads: Olympiad[] = [
         y: 78,
         blurb: "The unifying theory of biology.",
         subtopics: ["Natural selection", "Phylogeny"],
+      },
+    ],
+    syllabus: [
+      {
+        unit: "Cell Biology",
+        weight: "High",
+        topics: ["Cell structure", "Membranes & transport", "Cell cycle"],
+      },
+      {
+        unit: "Genetics",
+        weight: "High",
+        topics: ["Inheritance", "Gene expression", "Pedigree analysis"],
+      },
+      {
+        unit: "Physiology",
+        weight: "Medium",
+        topics: ["Body systems", "Homeostasis"],
+      },
+      {
+        unit: "Ecology & Evolution",
+        weight: "Medium",
+        topics: ["Ecosystems", "Natural selection", "Phylogeny"],
       },
     ],
     edges: [
