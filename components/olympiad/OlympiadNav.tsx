@@ -7,23 +7,28 @@ import { ChevronDown, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { olympiads, type Olympiad } from "@/lib/data/olympiads";
 
-const SECTIONS = [
-  { id: "overview", label: "Overview" },
+const PRIMARY_SECTIONS = [
+  { id: "library", label: "Materials" },
+  { id: "papers", label: "Past Papers" },
+  { id: "syllabus", label: "Syllabus" },
+];
+
+const SECONDARY_SECTIONS = [
   { id: "constellation", label: "Map" },
   { id: "topics", label: "Topics" },
-  { id: "problem", label: "Problem" },
-  { id: "library", label: "Library" },
-  { id: "papers", label: "Papers" },
   { id: "roadmap", label: "Roadmap" },
 ];
 
+const ALL_SECTIONS = [...PRIMARY_SECTIONS, ...SECONDARY_SECTIONS];
+
 export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
-  const [active, setActive] = useState("overview");
+  const [active, setActive] = useState("library");
   const [switcherOpen, setSwitcherOpen] = useState(false);
   const switcherRef = useRef<HTMLDivElement>(null);
   const Icon = olympiad.icon;
+  const c = olympiad.colorVar;
 
-  // Scroll-spy for section tabs
+  // Scroll-spy
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,7 +38,7 @@ export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
       },
       { rootMargin: "-35% 0px -60% 0px" }
     );
-    SECTIONS.forEach((s) => {
+    ALL_SECTIONS.forEach((s) => {
       const el = document.getElementById(s.id);
       if (el) observer.observe(el);
     });
@@ -47,9 +52,7 @@ export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
         setSwitcherOpen(false);
       }
     }
-    if (switcherOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+    if (switcherOpen) document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [switcherOpen]);
 
@@ -58,26 +61,45 @@ export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
     function handleEscape(e: KeyboardEvent) {
       if (e.key === "Escape") setSwitcherOpen(false);
     }
-    if (switcherOpen) {
-      document.addEventListener("keydown", handleEscape);
-    }
+    if (switcherOpen) document.addEventListener("keydown", handleEscape);
     return () => document.removeEventListener("keydown", handleEscape);
   }, [switcherOpen]);
+
+  const renderTab = (s: { id: string; label: string }, primary: boolean) => (
+    <a
+      key={s.id}
+      href={`#${s.id}`}
+      className={cn(
+        "relative whitespace-nowrap rounded-full px-3 py-1.5 transition-colors",
+        primary
+          ? "font-heading text-sm font-bold"
+          : "text-sm font-medium",
+        active === s.id ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+      )}
+    >
+      {s.label}
+      {active === s.id && (
+        <motion.span
+          layoutId="oly-nav-underline"
+          className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full"
+          style={{ background: `hsl(var(${c}))` }}
+          transition={{ type: "spring", stiffness: 350, damping: 30 }}
+        />
+      )}
+    </a>
+  );
 
   return (
     <div className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex items-center gap-4 py-3">
-          {/* Left — Olympiad identity ("where am I") */}
+          {/* Identity */}
           <div className="flex min-w-0 flex-shrink-0 items-center gap-3">
             <div
               className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
-              style={{ background: `hsl(var(${olympiad.colorVar}) / 0.15)` }}
+              style={{ background: `hsl(var(${c}) / 0.15)` }}
             >
-              <Icon
-                className="h-4 w-4"
-                style={{ color: `hsl(var(${olympiad.colorVar}))` }}
-              />
+              <Icon className="h-4 w-4" style={{ color: `hsl(var(${c}))` }} />
             </div>
             <div className="min-w-0">
               <div className="truncate font-heading text-sm font-bold text-foreground">
@@ -89,33 +111,14 @@ export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
             </div>
           </div>
 
-          {/* Middle — section tabs (desktop) */}
+          {/* Desktop tabs */}
           <nav className="no-scrollbar hidden min-w-0 flex-1 items-center justify-center gap-1 overflow-x-auto lg:flex">
-            {SECTIONS.map((s) => (
-              <a
-                key={s.id}
-                href={`#${s.id}`}
-                className={cn(
-                  "relative whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
-                  active === s.id
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {s.label}
-                {active === s.id && (
-                  <motion.span
-                    layoutId="oly-nav-underline"
-                    className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full"
-                    style={{ background: `hsl(var(${olympiad.colorVar}))` }}
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                  />
-                )}
-              </a>
-            ))}
+            {PRIMARY_SECTIONS.map((s) => renderTab(s, true))}
+            <span className="mx-2 h-4 w-px flex-shrink-0 bg-border" />
+            {SECONDARY_SECTIONS.map((s) => renderTab(s, false))}
           </nav>
 
-          {/* Right — switcher */}
+          {/* Switcher */}
           <div className="relative ml-auto flex-shrink-0 lg:ml-0" ref={switcherRef}>
             <button
               onClick={() => setSwitcherOpen((o) => !o)}
@@ -161,10 +164,7 @@ export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
                             className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg"
                             style={{ background: `hsl(var(${o.colorVar}) / 0.15)` }}
                           >
-                            <OIcon
-                              className="h-3.5 w-3.5"
-                              style={{ color: `hsl(var(${o.colorVar}))` }}
-                            />
+                            <OIcon className="h-3.5 w-3.5" style={{ color: `hsl(var(${o.colorVar}))` }} />
                           </span>
                           <span className="flex-1 truncate text-sm font-medium text-foreground">
                             {o.name}
@@ -180,17 +180,28 @@ export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
           </div>
         </div>
 
-        {/* Mobile / tablet — scrollable section tabs */}
+        {/* Mobile tabs */}
         <nav className="no-scrollbar -mx-6 flex items-center gap-1 overflow-x-auto px-6 pb-3 lg:hidden">
-          {SECTIONS.map((s) => (
+          {PRIMARY_SECTIONS.map((s) => (
+            <a
+              key={s.id}
+              href={`#${s.id}`}
+              className={cn(
+                "whitespace-nowrap rounded-full px-3 py-1.5 font-heading text-sm font-bold transition-colors",
+                active === s.id ? "bg-secondary text-foreground" : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {s.label}
+            </a>
+          ))}
+          <span className="mx-1 h-4 w-px flex-shrink-0 bg-border" />
+          {SECONDARY_SECTIONS.map((s) => (
             <a
               key={s.id}
               href={`#${s.id}`}
               className={cn(
                 "whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
-                active === s.id
-                  ? "bg-secondary text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
+                active === s.id ? "bg-secondary text-foreground" : "text-muted-foreground hover:text-foreground"
               )}
             >
               {s.label}
