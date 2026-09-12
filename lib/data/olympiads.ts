@@ -30,9 +30,7 @@ export interface Resource {
   title: string;
   type: "PDF" | "Video" | "Link" | "Doc";
   fileUrl: string;
-  description?: string;
-  time?: string;
-  difficulty?: string;
+  topicIds?: string[]; // links resource to topics · empty/undefined = general
 }
 
 export interface ModelPaper {
@@ -42,6 +40,7 @@ export interface ModelPaper {
   duration?: string;
   problems?: number;
   difficulty?: number; // 1–5
+  topicIds?: string[]; // optional · comprehensive papers can stay untagged
 }
 
 export interface RoadmapStage {
@@ -171,7 +170,12 @@ const baseOlympiads: Olympiad[] = [
         x: 50,
         y: 18,
         blurb: "The language of structure and transformation.",
-        subtopics: ["Equations", "Inequalities", "Polynomials", "Functional equations"],
+        subtopics: [
+          "Equations",
+          "Inequalities",
+          "Polynomials",
+          "Functional equations",
+        ],
       },
       {
         id: "geometry",
@@ -180,7 +184,12 @@ const baseOlympiads: Olympiad[] = [
         x: 80,
         y: 44,
         blurb: "Reasoning about space, shape and proof.",
-        subtopics: ["Triangles", "Circles", "Transformations", "Projective ideas"],
+        subtopics: [
+          "Triangles",
+          "Circles",
+          "Transformations",
+          "Projective ideas",
+        ],
       },
       {
         id: "number-theory",
@@ -189,7 +198,12 @@ const baseOlympiads: Olympiad[] = [
         x: 22,
         y: 50,
         blurb: "The properties of integers and divisibility.",
-        subtopics: ["Divisibility", "Modular arithmetic", "Diophantine equations", "Primes"],
+        subtopics: [
+          "Divisibility",
+          "Modular arithmetic",
+          "Diophantine equations",
+          "Primes",
+        ],
       },
       {
         id: "combinatorics",
@@ -198,7 +212,12 @@ const baseOlympiads: Olympiad[] = [
         x: 58,
         y: 80,
         blurb: "Counting, structure and extremal arguments.",
-        subtopics: ["Counting", "Graph theory", "Pigeonhole", "Extremal problems"],
+        subtopics: [
+          "Counting",
+          "Graph theory",
+          "Pigeonhole",
+          "Extremal problems",
+        ],
       },
     ],
     edges: [
@@ -218,12 +237,36 @@ const baseOlympiads: Olympiad[] = [
       hint: "Prove f is bijective, then show it must be additive and equal to the identity.",
     },
     studyMaterial: [
-      { title: "IMO Shortlist 2024 — Algebra", type: "PDF", fileUrl: "#" },
-      { title: "Number Theory Basics", type: "Video", fileUrl: "#" },
+      {
+        title: "IMO Shortlist 2024 — Algebra",
+        type: "PDF",
+        fileUrl: "#",
+        topicIds: ["algebra"],
+      },
+      {
+        title: "Number Theory Basics",
+        type: "Video",
+        fileUrl: "#",
+        topicIds: ["number-theory"],
+      },
     ],
     modelPapers: [
-      { title: "National Round 2025", year: "2025", fileUrl: "#", duration: "4 hrs", problems: 6, difficulty: 4 },
-      { title: "National Round 2024", year: "2024", fileUrl: "#", duration: "4 hrs", problems: 6, difficulty: 4 },
+      {
+        title: "National Round 2025",
+        year: "2025",
+        fileUrl: "#",
+        duration: "4 hrs",
+        problems: 6,
+        difficulty: 4,
+      },
+      {
+        title: "National Round 2024",
+        year: "2024",
+        fileUrl: "#",
+        duration: "4 hrs",
+        problems: 6,
+        difficulty: 4,
+      },
     ],
     roadmap: DEFAULT_ROADMAP,
   },
@@ -231,13 +274,20 @@ const baseOlympiads: Olympiad[] = [
     slug: "physics",
     name: "Physics",
     series: "02",
-    tagline: "Passionate about how the universe actually works? This one's for you.",
+    tagline:
+      "Passionate about how the universe actually works? This one's for you.",
     description:
       "Explore mechanics, thermodynamics, electromagnetism, and modern physics through challenging theoretical and experimental problems.",
     icon: Atom,
     colorVar: "--subject-physics",
     motif: "physics",
-    disciplines: ["Mechanics", "Electromagnetism", "Thermodynamics", "Optics", "Modern Physics"],
+    disciplines: [
+      "Mechanics",
+      "Electromagnetism",
+      "Thermodynamics",
+      "Optics",
+      "Modern Physics",
+    ],
     meta: {
       duration: "16–22 weeks",
       difficultyRange: "Foundation → IPhO",
@@ -309,11 +359,28 @@ const baseOlympiads: Olympiad[] = [
       hint: "Conserve mechanical energy between the surface and infinity.",
     },
     studyMaterial: [
-      { title: "IPhO Syllabus Guide", type: "PDF", fileUrl: "#" },
-      { title: "Mechanics Problem Set", type: "Doc", fileUrl: "#" },
+      {
+        title: "IPhO Syllabus Guide",
+        type: "PDF",
+        fileUrl: "#",
+        topicIds: ["mechanics", "electromagnetism", "thermodynamics", "optics", "modern-physics"],
+      },
+      {
+        title: "Mechanics Problem Set",
+        type: "Doc",
+        fileUrl: "#",
+        topicIds: ["mechanics"],
+      },
     ],
     modelPapers: [
-      { title: "National Selection 2025", year: "2025", fileUrl: "#", duration: "4 hrs", problems: 6, difficulty: 4 },
+      {
+        title: "National Selection 2025",
+        year: "2025",
+        fileUrl: "#",
+        duration: "4 hrs",
+        problems: 6,
+        difficulty: 4,
+      },
     ],
     roadmap: DEFAULT_ROADMAP,
   },
@@ -342,7 +409,12 @@ const baseOlympiads: Olympiad[] = [
         x: 30,
         y: 20,
         blurb: "The quantitative backbone of chemistry.",
-        subtopics: ["Kinetics", "Equilibrium", "Electrochemistry", "Thermodynamics"],
+        subtopics: [
+          "Kinetics",
+          "Equilibrium",
+          "Electrochemistry",
+          "Thermodynamics",
+        ],
       },
       {
         id: "organic",
@@ -388,9 +460,23 @@ const baseOlympiads: Olympiad[] = [
         "A 0.1 M solution of a weak acid HA has pH 3. Estimate the acid dissociation constant Ka.",
       hint: "Use Ka ≈ [H+]² / (c − [H+]) with [H+] = 10⁻³.",
     },
-    studyMaterial: [{ title: "Organic Chemistry Roadmap", type: "PDF", fileUrl: "#" }],
+    studyMaterial: [
+      {
+        title: "Organic Chemistry Roadmap",
+        type: "PDF",
+        fileUrl: "#",
+        topicIds: ["organic"],
+      },
+    ],
     modelPapers: [
-      { title: "IChO Preparatory Round", year: "2025", fileUrl: "#", duration: "5 hrs", problems: 8, difficulty: 4 },
+      {
+        title: "IChO Preparatory Round",
+        year: "2025",
+        fileUrl: "#",
+        duration: "5 hrs",
+        problems: 8,
+        difficulty: 4,
+      },
     ],
     roadmap: DEFAULT_ROADMAP,
   },
@@ -404,7 +490,12 @@ const baseOlympiads: Olympiad[] = [
     icon: Telescope,
     colorVar: "--subject-astronomy",
     motif: "astronomy",
-    disciplines: ["Celestial Mechanics", "Stellar Physics", "Observational", "Cosmology"],
+    disciplines: [
+      "Celestial Mechanics",
+      "Stellar Physics",
+      "Observational",
+      "Cosmology",
+    ],
     meta: {
       duration: "12–18 weeks",
       difficultyRange: "Beginner → IOAA",
@@ -465,9 +556,23 @@ const baseOlympiads: Olympiad[] = [
         "Two stars orbit their common centre of mass with period P and separation a. Express the total mass of the system.",
       hint: "Apply Kepler's third law: M = 4π²a³ / (G P²).",
     },
-    studyMaterial: [{ title: "Stellar Evolution Notes", type: "PDF", fileUrl: "#" }],
+    studyMaterial: [
+      {
+        title: "Stellar Evolution Notes",
+        type: "PDF",
+        fileUrl: "#",
+        topicIds: ["stellar"],
+      },
+    ],
     modelPapers: [
-      { title: "IOAA Data Analysis Round", year: "2024", fileUrl: "#", duration: "3 hrs", problems: 5, difficulty: 4 },
+      {
+        title: "IOAA Data Analysis Round",
+        year: "2024",
+        fileUrl: "#",
+        duration: "3 hrs",
+        problems: 5,
+        difficulty: 4,
+      },
     ],
     roadmap: DEFAULT_ROADMAP,
   },
@@ -481,7 +586,14 @@ const baseOlympiads: Olympiad[] = [
     icon: BrainCircuit,
     colorVar: "--subject-ai",
     motif: "ai",
-    disciplines: ["Machine Learning", "Neural Networks", "Optimization", "Probabilistic Models", "Computer Vision", "NLP"],
+    disciplines: [
+      "Machine Learning",
+      "Neural Networks",
+      "Optimization",
+      "Probabilistic Models",
+      "Computer Vision",
+      "NLP",
+    ],
     meta: {
       duration: "12–18 weeks",
       difficultyRange: "Beginner → IOAI",
@@ -562,9 +674,23 @@ const baseOlympiads: Olympiad[] = [
         "State the parameter update rule for gradient descent on a loss L(θ) with learning rate η.",
       hint: "θ ← θ − η∇L(θ).",
     },
-    studyMaterial: [{ title: "Intro to Neural Networks", type: "Video", fileUrl: "#" }],
+    studyMaterial: [
+      {
+        title: "Intro to Neural Networks",
+        type: "Video",
+        fileUrl: "#",
+        topicIds: ["neural-networks"],
+      },
+    ],
     modelPapers: [
-      { title: "AI Olympiad Qualifier", year: "2025", fileUrl: "#", duration: "2 hrs", problems: 4, difficulty: 3 },
+      {
+        title: "AI Olympiad Qualifier",
+        year: "2025",
+        fileUrl: "#",
+        duration: "2 hrs",
+        problems: 4,
+        difficulty: 3,
+      },
     ],
     roadmap: DEFAULT_ROADMAP,
   },
@@ -578,7 +704,12 @@ const baseOlympiads: Olympiad[] = [
     icon: Code2,
     colorVar: "--subject-informatics",
     motif: "informatics",
-    disciplines: ["Data Structures", "Algorithms", "Graph Theory", "Dynamic Programming"],
+    disciplines: [
+      "Data Structures",
+      "Algorithms",
+      "Graph Theory",
+      "Dynamic Programming",
+    ],
     meta: {
       duration: "14–20 weeks",
       difficultyRange: "Beginner → IOI",
@@ -639,9 +770,23 @@ const baseOlympiads: Olympiad[] = [
         "Give the time complexity of merge sort and justify it from its recurrence.",
       hint: "T(n) = 2T(n/2) + O(n), which solves to O(n log n).",
     },
-    studyMaterial: [{ title: "Dynamic Programming Patterns", type: "Link", fileUrl: "#" }],
+    studyMaterial: [
+      {
+        title: "Dynamic Programming Patterns",
+        type: "Link",
+        fileUrl: "#",
+        topicIds: ["dynamic-programming"],
+      },
+    ],
     modelPapers: [
-      { title: "National Informatics Round 1", year: "2025", fileUrl: "#", duration: "3 hrs", problems: 4, difficulty: 3 },
+      {
+        title: "National Informatics Round 1",
+        year: "2025",
+        fileUrl: "#",
+        duration: "3 hrs",
+        problems: 4,
+        difficulty: 3,
+      },
     ],
     roadmap: DEFAULT_ROADMAP,
   },
@@ -655,7 +800,13 @@ const baseOlympiads: Olympiad[] = [
     icon: Leaf,
     colorVar: "--subject-biology",
     motif: "biology",
-    disciplines: ["Cell Biology", "Genetics", "Physiology", "Ecology", "Evolution"],
+    disciplines: [
+      "Cell Biology",
+      "Genetics",
+      "Physiology",
+      "Ecology",
+      "Evolution",
+    ],
     meta: {
       duration: "16–22 weeks",
       difficultyRange: "Foundation → IBO",
@@ -726,9 +877,23 @@ const baseOlympiads: Olympiad[] = [
         "In a dihybrid cross AaBb × AaBb, what fraction of offspring display both dominant phenotypes?",
       hint: "Independent assortment gives 9/16.",
     },
-    studyMaterial: [{ title: "Genetics Crash Course", type: "Video", fileUrl: "#" }],
+    studyMaterial: [
+      {
+        title: "Genetics Crash Course",
+        type: "Video",
+        fileUrl: "#",
+        topicIds: ["genetics"],
+      },
+    ],
     modelPapers: [
-      { title: "IBO Theory Paper 1", year: "2024", fileUrl: "#", duration: "3 hrs", problems: 30, difficulty: 3 },
+      {
+        title: "IBO Theory Paper 1",
+        year: "2024",
+        fileUrl: "#",
+        duration: "3 hrs",
+        problems: 30,
+        difficulty: 3,
+      },
     ],
     roadmap: DEFAULT_ROADMAP,
   },
