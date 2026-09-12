@@ -44,7 +44,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
 
       <div className="relative mx-auto max-w-6xl px-6">
         <SectionHeading
-          index="02"
+          index="04"
           label="The Constellation"
           title="How the topics connect"
           description="Click any node to focus that topic — the library and papers will follow."

@@ -73,8 +73,8 @@ export function ModelPapersSection({ olympiad }: { olympiad: Olympiad }) {
     <section id="papers" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading
-          index="06"
-          label="Model Papers"
+          index="02"
+          label="Past Papers"
           title="Simulate the real thing"
           description={
             isFocused
