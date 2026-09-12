@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowDownToLine } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "./primitives";
 import type { Olympiad } from "@/lib/data/olympiads";
@@ -17,7 +18,26 @@ export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
           title="What you'll be tested on"
           description={`The official topic areas for the ${olympiad.name} Olympiad.`}
           colorVar={c}
+          className="mb-6 lg:mb-8"
         />
+
+        {/* Download Syllabus */}
+        <FadeIn y={12} delay={0.08}>
+          <div className="mb-10 lg:mb-12">
+            <a
+              href={olympiad.syllabusFileUrl ?? "#"}
+              download
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-heading text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 active:translate-y-0.5"
+              style={{
+                backgroundColor: `hsl(var(${c}))`,
+                boxShadow: `0 10px 30px -10px hsl(var(${c}) / 0.55)`,
+              }}
+            >
+              <ArrowDownToLine className="h-4 w-4" />
+              Download Syllabus
+            </a>
+          </div>
+        </FadeIn>
 
         {syllabus.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
