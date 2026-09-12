@@ -31,7 +31,7 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
     <section id="problem" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading
-          index="04"
+          index="06"
           label="Featured Problem"
           title="This week's challenge"
           description={`A representative problem from ${olympiad.name}.`}

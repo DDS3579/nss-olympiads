@@ -1,0 +1,72 @@
+"use client";
+
+import { FadeIn } from "@/components/FadeIn";
+import { SectionHeading } from "./primitives";
+import type { Olympiad } from "@/lib/data/olympiads";
+
+export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
+  const c = olympiad.colorVar;
+  const syllabus = olympiad.syllabus ?? [];
+
+  return (
+    <section id="syllabus" className="section-anchor py-20 lg:py-28">
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeading
+          index="03"
+          label="Syllabus"
+          title="What you'll be tested on"
+          description={`The official topic areas for the ${olympiad.name} Olympiad.`}
+          colorVar={c}
+        />
+
+        {syllabus.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
+            <p className="font-heading text-lg font-semibold text-foreground">
+              Syllabus coming soon
+            </p>
+            <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
+              The detailed syllabus for {olympiad.name} is being prepared.
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-5">
+            {syllabus.map((unit, i) => (
+              <FadeIn key={unit.unit} delay={i * 0.06} scale={0.97}>
+                <div className="group relative h-full rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-foreground">
+                      {unit.unit}
+                    </h3>
+                    <span
+                      className="flex-shrink-0 rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider"
+                      style={{
+                        background: `hsl(var(${c}) / 0.12)`,
+                        color: `hsl(var(${c}))`,
+                      }}
+                    >
+                      {unit.weight}
+                    </span>
+                  </div>
+                  <ul className="mt-4 space-y-2">
+                    {unit.topics.map((topic) => (
+                      <li
+                        key={topic}
+                        className="flex items-center gap-2.5 text-sm text-foreground/80"
+                      >
+                        <span
+                          className="h-1 w-1 flex-shrink-0 rounded-full"
+                          style={{ background: `hsl(var(${c}))` }}
+                        />
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

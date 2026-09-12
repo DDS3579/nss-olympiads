@@ -14,7 +14,7 @@ export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
     <section id="topics" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          index="03"
+          index="05"
           label="Topics"
           title="The territory you'll master"
           description="Select a topic to focus its materials, or start it to track progress."
