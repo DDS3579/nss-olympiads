@@ -36,7 +36,8 @@ interface ProgressData {
   lastActivity: LastActivity | null;
 }
 
-interface ProgressState {
+interface OlympiadState {
+  // progress (persisted)
   percent: number;
   currentStage: number;
   currentStageName: string;
@@ -50,9 +51,15 @@ interface ProgressState {
   markPaperAccessed: (id: string, label: string) => void;
   nextTopic: Topic | null;
   nextAction: NextAction | null;
+  // focus / connectivity (ephemeral)
+  focusedTopicId: string | null;
+  focusedTopic: Topic | null;
+  focusTopic: (id: string | null) => void;
+  clearFocus: () => void;
+  matchesFocus: (topicIds?: string[]) => boolean;
 }
 
-const ProgressContext = createContext<ProgressState | null>(null);
+const OlympiadContext = createContext<OlympiadState | null>(null);
 
 function getStageFromPercent(percent: number): number {
   if (percent < 25) return 0;
@@ -84,7 +91,14 @@ export function ProgressProvider({
   });
   const [hydrated, setHydrated] = useState(false);
 
-  // Load from localStorage (with legacy array-format migration)
+  // Focus is view-state only — never persisted
+  const [focusedTopicId, setFocusedTopicId] = useState<string | null>(null);
+
+  // Reset focus whenever we switch Olympiad
+  useEffect(() => {
+    setFocusedTopicId(null);
+  }, [slug]);
+
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem(storageKey);
@@ -112,7 +126,6 @@ export function ProgressProvider({
     setHydrated(true);
   }, [storageKey, topics]);
 
-  // Persist to localStorage
   useEffect(() => {
     if (!hydrated) return;
     try {
@@ -159,6 +172,31 @@ export function ProgressProvider({
     });
   }, []);
 
+  // Focus controls (toggle on re-click)
+  const focusTopic = useCallback((id: string | null) => {
+    setFocusedTopicId((prev) => {
+      if (id === null) return null;
+      return prev === id ? null : id;
+    });
+  }, []);
+
+  const clearFocus = useCallback(() => setFocusedTopicId(null), []);
+
+  const focusedTopic = useMemo(
+    () => topics.find((t) => t.id === focusedTopicId) ?? null,
+    [topics, focusedTopicId]
+  );
+
+  // The heart of connectivity: does this content belong to the focused topic?
+  const matchesFocus = useCallback(
+    (topicIds?: string[]) => {
+      if (!focusedTopicId) return true;
+      if (!topicIds || topicIds.length === 0) return true; // general content
+      return topicIds.includes(focusedTopicId);
+    },
+    [focusedTopicId]
+  );
+
   const total = topics.length + resources.length + papers.length;
   const done =
     data.startedTopics.length + data.openedResources.length + data.accessedPapers.length;
@@ -196,7 +234,7 @@ export function ProgressProvider({
   }, [topics, resources, papers, data.startedTopics, data.openedResources, data.accessedPapers]);
 
   return (
-    <ProgressContext.Provider
+    <OlympiadContext.Provider
       value={{
         percent,
         currentStage,
@@ -211,15 +249,20 @@ export function ProgressProvider({
         markPaperAccessed,
         nextTopic,
         nextAction,
+        focusedTopicId,
+        focusedTopic,
+        focusTopic,
+        clearFocus,
+        matchesFocus,
       }}
     >
       {children}
-    </ProgressContext.Provider>
+    </OlympiadContext.Provider>
   );
 }
 
 export function useOlympiadProgress() {
-  const ctx = useContext(ProgressContext);
+  const ctx = useContext(OlympiadContext);
   if (!ctx) {
     throw new Error("useOlympiadProgress must be used within ProgressProvider");
   }
