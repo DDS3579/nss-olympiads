@@ -105,6 +105,7 @@ export interface Olympiad {
   studyMaterial: Resource[];
   modelPapers: ModelPaper[];
   roadmap: RoadmapStage[];
+  syllabusFileUrl: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -269,6 +270,7 @@ const baseOlympiads: Olympiad[] = [
         ],
       },
     ],
+    syllabusFileUrl: "#",
     edges: [
       { from: "algebra", to: "geometry" },
       { from: "algebra", to: "number-theory" },
@@ -417,6 +419,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Relativity", "Quantum phenomena", "Nuclear physics"],
       },
     ],
+    syllabusFileUrl: "#",
     edges: [
       { from: "mechanics", to: "electromagnetism" },
       { from: "mechanics", to: "thermodynamics" },
@@ -548,6 +551,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Titrations", "Spectroscopy", "Qualitative analysis"],
       },
     ],
+    syllabusFileUrl: "#",
     edges: [
       { from: "physical", to: "organic" },
       { from: "physical", to: "inorganic" },
@@ -666,6 +670,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Expansion of the universe", "Distance ladder", "Cosmic microwave background"],
       },
     ],
+    syllabusFileUrl: "#",
     edges: [
       { from: "celestial-mechanics", to: "stellar" },
       { from: "celestial-mechanics", to: "observational" },
@@ -809,6 +814,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Computer vision", "NLP", "Ethics & safety"],
       },
     ],
+    syllabusFileUrl: "#",
     edges: [
       { from: "machine-learning", to: "neural-networks" },
       { from: "machine-learning", to: "optimization" },
@@ -929,6 +935,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Memoization", "Subsequences", "Interval DP"],
       },
     ],
+    syllabusFileUrl: "#",
     edges: [
       { from: "data-structures", to: "algorithms" },
       { from: "algorithms", to: "graph-theory" },
@@ -1057,6 +1064,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Ecosystems", "Natural selection", "Phylogeny"],
       },
     ],
+    syllabusFileUrl: "#",
     edges: [
       { from: "cell", to: "genetics" },
       { from: "cell", to: "physiology" },
