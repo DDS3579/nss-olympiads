@@ -17,10 +17,7 @@ function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) 
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
             <span
               className="rounded-full px-2 py-0.5 font-semibold"
-              style={{
-                background: `hsl(var(${colorVar}) / 0.12)`,
-                color: `hsl(var(${colorVar}))`,
-              }}
+              style={{ background: `hsl(var(${colorVar}) / 0.12)`, color: `hsl(var(${colorVar}))` }}
             >
               {paper.year}
             </span>
@@ -31,9 +28,7 @@ function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) 
           </div>
           <h3 className="mt-2 font-heading text-lg font-bold text-foreground">{paper.title}</h3>
           <p className="mt-1 text-sm text-muted-foreground">
-            {[paper.problems && `${paper.problems} problems`, paper.duration]
-              .filter(Boolean)
-              .join(" · ")}
+            {[paper.problems && `${paper.problems} problems`, paper.duration].filter(Boolean).join(" · ")}
           </p>
         </div>
 
@@ -57,22 +52,15 @@ function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) 
   );
 }
 
-function EmptyPapers() {
-  return (
-    <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
-      <p className="font-heading text-lg font-semibold text-foreground">No papers published yet</p>
-      <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
-        Model question papers will appear here as they are released.
-      </p>
-    </div>
-  );
-}
-
 export function ModelPapersSection({ olympiad }: { olympiad: Olympiad }) {
+  const { focusedTopic, matchesFocus, clearFocus } = useOlympiadProgress();
   const papers = olympiad.modelPapers;
   const c = olympiad.colorVar;
 
-  const grouped = papers.reduce((acc, paper) => {
+  const visible = papers.filter((p) => matchesFocus(p.topicIds));
+  const isFocused = !!focusedTopic;
+
+  const grouped = visible.reduce((acc, paper) => {
     const year = paper.year || "General";
     if (!acc[year]) acc[year] = [];
     acc[year].push(paper);
@@ -88,20 +76,39 @@ export function ModelPapersSection({ olympiad }: { olympiad: Olympiad }) {
           index="06"
           label="Model Papers"
           title="Simulate the real thing"
-          description="Timed, competition-format papers. Treat each one like the real round."
+          description={
+            isFocused
+              ? `Papers relevant to ${focusedTopic.name}.`
+              : "Timed, competition-format papers. Treat each one like the real round."
+          }
           colorVar={c}
         />
 
         {papers.length === 0 ? (
-          <EmptyPapers />
+          <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
+            <p className="font-heading text-lg font-semibold text-foreground">No papers published yet</p>
+            <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
+              Model question papers will appear here as they are released.
+            </p>
+          </div>
+        ) : isFocused && visible.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
+            <p className="font-heading text-lg font-semibold text-foreground">
+              No {focusedTopic.name} papers yet
+            </p>
+            <button
+              onClick={clearFocus}
+              className="mt-6 inline-flex items-center rounded-full border border-border bg-background px-6 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            >
+              View all papers
+            </button>
+          </div>
         ) : (
           <div className="space-y-10">
             {sortedYears.map((year) => (
               <div key={year}>
                 <div className="mb-4 flex items-center gap-3">
-                  <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-foreground">
-                    {year}
-                  </span>
+                  <span className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-foreground">{year}</span>
                   <span className="h-px flex-1 bg-border" />
                 </div>
                 <div className="space-y-3">
