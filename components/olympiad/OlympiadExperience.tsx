@@ -4,6 +4,7 @@ import { getOlympiadBySlug } from "@/lib/data/olympiads";
 import { ProgressProvider } from "./context";
 import { OlympiadHero } from "./OlympiadHero";
 import { OlympiadNav } from "./OlympiadNav";
+import { TopicFocusBar } from "./TopicFocusBar";
 import { OlympiadOverview } from "./OlympiadOverview";
 import { Constellation } from "./Constellation";
 import { OlympiadTopics } from "./OlympiadTopics";
@@ -28,6 +29,7 @@ export function OlympiadExperience({ slug }: { slug: string }) {
       <div className="relative bg-background text-foreground">
         <OlympiadHero olympiad={olympiad} />
         <OlympiadNav olympiad={olympiad} />
+        <TopicFocusBar olympiad={olympiad} />
         <main className="relative">
           <OlympiadOverview olympiad={olympiad} />
           <Constellation olympiad={olympiad} />

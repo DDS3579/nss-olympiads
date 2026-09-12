@@ -6,6 +6,8 @@ import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { FadeIn } from "@/components/FadeIn";
 import { DifficultyMeter, SectionHeading } from "./primitives";
 import type { Olympiad } from "@/lib/data/olympiads";
+import { useOlympiadProgress } from "./context";
+
 
 function Meta({ label, value }: { label: string; value: string }) {
   return (
@@ -22,6 +24,9 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
   const p = olympiad.featuredProblem;
   const c = olympiad.colorVar;
 
+  const { focusTopic } = useOlympiadProgress();
+  const linkedTopic = olympiad.topics.find((t) => t.name === p.topic);
+  
   return (
     <section id="problem" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-6">
@@ -93,6 +98,14 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
                 >
                   Study this area
                 </Link>
+                {linkedTopic && (
+                  <button
+                    onClick={() => focusTopic(linkedTopic.id)}
+                    className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                  >
+                    Focus {linkedTopic.name}
+                  </button>
+                )}
               </div>
             </div>
           </div>
