@@ -29,7 +29,7 @@ const whyRows = [
   {
     colorVar: "--subject-chemistry",
     tag: "Entrance Exams",
-    title: "A Sharper Foundation for IOE, IOM & NEB",
+    title: "A Sharper Foundation for IOE, CEE & NEB",
     body: "The same problem-solving depth that wins Olympiad medals is exactly what engineering and medical entrance exams reward. Prepare for one, and you're already ahead on the other.",
   },
   {
