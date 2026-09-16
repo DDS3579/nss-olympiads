@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -21,31 +22,43 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  // TODO: replace with your production domain
-  metadataBase: new URL("https://nss-olympiad-hub.vercel.app"),
-  title: "NSS Olympiad Hub",
-  description:
-    "Free preparation material, model question papers, and structured roadmaps for 7 Olympiads — built by NSS Clubs for Grade 11 & 12 students.",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
   keywords: [
-    "Olympiad", "NSS", "IMO", "IPhO", "IChO", "IOI", "IOAA", "IBO",
-    "Nepal", "preparation", "model papers", "roadmap",
+    "Olympiad",
+    "NSS",
+    "IMO",
+    "IPhO",
+    "IChO",
+    "IOI",
+    "IOAA",
+    "IBO",
+    "IOAI",
+    "Nepal",
+    "preparation",
+    "model papers",
+    "study material",
+    "STEM",
   ],
   openGraph: {
     type: "website",
-    title: "NSS Olympiad Hub",
-    description:
-      "Free Olympiad preparation for NSS students — study material, model papers, and roadmaps for 7 disciplines.",
-    url: "/",
-    siteName: "NSS Olympiad Hub",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     locale: "en_US",
-    // TODO: add an OG image at /public/og.png, then uncomment:
-    // images: [{ url: "/og.png", width: 1200, height: 630, alt: "NSS Olympiad Hub" }],
+    // TODO: create /public/og.png (1200×630) and uncomment:
+    // images: [{ url: "/og.png", width: 1200, height: 630, alt: siteConfig.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NSS Olympiad Hub",
-    description:
-      "Free Olympiad preparation for NSS students — 7 disciplines, model papers, and roadmaps.",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    // images: ["/og.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -82,7 +95,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <main id="main" className="flex-grow">{children}</main>
+            <main id="main" className="flex-grow">
+              {children}
+            </main>
             <Footer />
           </ThemeProvider>
         </SmoothScroll>
