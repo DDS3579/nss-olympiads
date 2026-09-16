@@ -6,7 +6,7 @@ export const siteConfig = {
 
   social: {
     instagram: "https://www.instagram.com/nss_.club/",
-    facebook: "https://facebook.com/nssclubs",
+    // facebook: "https://facebook.com/nssclubs",
     // Add more as needed:
     // twitter: "https://x.com/nssclubs",
     // youtube: "https://youtube.com/@nssclubs",
