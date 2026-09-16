@@ -161,27 +161,26 @@ export function Footer() {
             Support
           </h3>
           <ul className="space-y-2">
-            {/* TODO: FAQ and Report an Issue can point to placeholder routes if built later */}
             <li>
               <Link
                 href="/#contact"
-                className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
               >
                 Contact
               </Link>
             </li>
             <li>
               <Link
-                href="#"
-                className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                href={siteConfig.legal.faq}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
               >
                 FAQ
               </Link>
             </li>
             <li>
               <Link
-                href="#"
-                className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                href={siteConfig.legal.reportIssue}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
               >
                 Report Issue
               </Link>
@@ -190,13 +189,19 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-16 flex max-w-7xl flex-col items-center justify-between gap-4 border-t border-border px-6 pt-8 text-sm text-muted-foreground sm:flex-row">
-        <p>© 2026 NSS Clubs. All Rights Reserved.</p>
+      <div className="mt-16 pt-8 border-t border-border mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <p>© {new Date().getFullYear()} NSS Clubs. All Rights Reserved.</p>
         <div className="flex gap-4">
-          <Link href="#" className="transition-colors hover:text-foreground">
+          <Link
+            href={siteConfig.legal.privacy}
+            className="hover:text-foreground transition-colors"
+          >
             Privacy
           </Link>
-          <Link href="#" className="transition-colors hover:text-foreground">
+          <Link
+            href={siteConfig.legal.terms}
+            className="hover:text-foreground transition-colors"
+          >
             Terms
           </Link>
         </div>
