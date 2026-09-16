@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, useScroll, useMotionValueEvent } from "motion/react"
 import { Menu, ArrowRight } from "lucide-react"
@@ -68,9 +69,13 @@ export function Navbar() {
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-2.5">
-          <div className="h-9 w-9 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold font-heading text-sm">
-            N
-          </div>
+          <Image
+            src="/logo.png"
+            alt="NSS Olympiad Hub logo"
+            width={36}
+            height={36}
+            className="h-9 w-9 rounded-lg object-contain"
+          />
           <span className="text-lg font-heading font-semibold text-foreground">
             NSS Olympiad Hub
           </span>

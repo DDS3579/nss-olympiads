@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail } from "lucide-react";
 import { olympiads } from "@/lib/data/olympiads";
 import { siteConfig } from "@/lib/site-config";
@@ -47,9 +48,13 @@ export function Footer() {
         {/* Brand */}
         <div className="sm:col-span-2">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-heading text-sm font-bold text-primary-foreground">
-              N
-            </div>
+            <Image
+              src="/logo.png"
+              alt="NSS Olympiad Hub logo"
+              width={32}
+              height={32}
+              className="h-8 w-8 rounded-lg object-contain"
+            />
             <span className="font-heading text-lg font-semibold text-foreground">
               NSS Olympiad Hub
             </span>
