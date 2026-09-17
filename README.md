@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🏆 NSS Olympiad Hub
 
 **Free Olympiad preparation platform for NSS Grade 11 & 12 students**
@@ -15,7 +13,6 @@
 
 [Explore Olympiads](#-olympiad-categories) · [Getting Started](#-getting-started) · [Project Structure](#-project-structure) · [Customization](#-customization)
 
-</div>
 
 ---
 
