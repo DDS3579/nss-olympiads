@@ -270,7 +270,7 @@ const baseOlympiads: Olympiad[] = [
         ],
       },
     ],
-    syllabusFileUrl: "/materials/olympiads/mathematics/syllabus.pdf",
+    syllabusFileUrl: "/materials/mathematics/syllabus.pdf",
     edges: [
       { from: "algebra", to: "geometry" },
       { from: "algebra", to: "number-theory" },
@@ -419,7 +419,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Relativity", "Quantum phenomena", "Nuclear physics"],
       },
     ],
-    syllabusFileUrl: "/materials/olympiads/physics/syllabus.pdf",
+    syllabusFileUrl: "/materials/physics/syllabus.pdf",
     edges: [
       { from: "mechanics", to: "electromagnetism" },
       { from: "mechanics", to: "thermodynamics" },
@@ -551,7 +551,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Titrations", "Spectroscopy", "Qualitative analysis"],
       },
     ],
-    syllabusFileUrl: "/materials/olympiads/chemistry/syllabus.pdf",
+    syllabusFileUrl: "/materials/chemistry/syllabus.pdf",
     edges: [
       { from: "physical", to: "organic" },
       { from: "physical", to: "inorganic" },
@@ -670,7 +670,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Expansion of the universe", "Distance ladder", "Cosmic microwave background"],
       },
     ],
-    syllabusFileUrl: "/materials/olympiads/astronomy/syllabus.pdf",
+    syllabusFileUrl: "/materials/astronomy/syllabus.pdf",
     edges: [
       { from: "celestial-mechanics", to: "stellar" },
       { from: "celestial-mechanics", to: "observational" },
@@ -814,7 +814,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Computer vision", "NLP", "Ethics & safety"],
       },
     ],
-    syllabusFileUrl: "/materials/olympiads/ai/syllabus.pdf",
+    syllabusFileUrl: "/materials/ai/syllabus.pdf",
     edges: [
       { from: "machine-learning", to: "neural-networks" },
       { from: "machine-learning", to: "optimization" },
@@ -935,7 +935,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Memoization", "Subsequences", "Interval DP"],
       },
     ],
-    syllabusFileUrl: "/materials/olympiads/informatics/syllabus.pdf",
+    syllabusFileUrl: "/materials/informatics/syllabus.pdf",
     edges: [
       { from: "data-structures", to: "algorithms" },
       { from: "algorithms", to: "graph-theory" },
@@ -1064,7 +1064,7 @@ const baseOlympiads: Olympiad[] = [
         topics: ["Ecosystems", "Natural selection", "Phylogeny"],
       },
     ],
-    syllabusFileUrl: "/materials/olympiads/biology/syllabus.pdf",
+    syllabusFileUrl: "/materials/biology/syllabus.pdf",
     edges: [
       { from: "cell", to: "genetics" },
       { from: "cell", to: "physiology" },
