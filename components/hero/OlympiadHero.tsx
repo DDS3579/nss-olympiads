@@ -24,7 +24,7 @@ export function OlympiadHero() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-background">
+    <section className="dark relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-background">
       {/* Layers 1–3: atmosphere · academic universe · depth objects */}
       <OlympiadHeroBackdrop activeIndex={activeIndex} />
 
