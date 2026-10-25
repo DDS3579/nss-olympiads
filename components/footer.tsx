@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
 import { olympiads } from "@/lib/data/olympiads";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, mailto } from "@/lib/site-config";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -83,7 +83,7 @@ export function Footer() {
               <span className="sr-only">Facebook</span>
             </a> */}
             <a
-              href={siteConfig.contact.email}
+                href={mailto()}
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
               <Mail className="h-5 w-5" />
@@ -184,7 +184,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href={siteConfig.legal.reportIssue}
+                href={mailto("Report an issue")}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
               >
                 Report Issue
