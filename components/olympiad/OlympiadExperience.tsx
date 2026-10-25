@@ -53,7 +53,7 @@ export function OlympiadExperience({ slug }: { slug: string }) {
         <OlympiadNav olympiad={olympiad} />
         <TopicFocusBar olympiad={olympiad} />
 
-        <main className="relative">
+        <div className="relative">
           {/* ── Core resources: what the student came for ── */}
           <StudyMaterialSection olympiad={olympiad} />
           <ModelPapersSection olympiad={olympiad} />
@@ -68,7 +68,7 @@ export function OlympiadExperience({ slug }: { slug: string }) {
           <FeaturedProblem olympiad={olympiad} />
           <PreparationRoadmap olympiad={olympiad} />
           <OlympiadCTA olympiad={olympiad} />
-        </main>
+        </div>
 
         <NextStep olympiad={olympiad} />
       </div>
