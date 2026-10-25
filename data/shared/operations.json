@@ -1,0 +1,9 @@
+[
+  { "subject": "physics", "organiser": { "name": "Nepal Physical Society (NPS)", "url": "https://nps.org.np/" }, "eligibility": "Higher-secondary student; under 20 by 30 June; not enrolled in any Bachelor's programme", "grades": "11–12", "fee": null, "registration": null, "camp": null, "contact": null },
+  { "subject": "mathematics", "organiser": { "name": "Mathematical Association of Nepal (MAN)", "url": "https://www.mathassociationnepal.org.np/" }, "eligibility": null, "grades": "8–12", "fee": null, "registration": null, "camp": null, "contact": null },
+  { "subject": "chemistry", "organiser": { "name": "Science Teachers' Association of Nepal (STAN)", "url": null }, "eligibility": null, "grades": "11–12", "fee": null, "registration": null, "camp": null, "contact": null },
+  { "subject": "astronomy", "organiser": null, "eligibility": null, "grades": null, "fee": null, "registration": null, "camp": null, "contact": null },
+  { "subject": "ai", "organiser": null, "eligibility": null, "grades": null, "fee": null, "registration": null, "camp": null, "contact": null },
+  { "subject": "informatics", "organiser": { "name": "NPLCoder", "url": "https://www.nplcoder.org/en" }, "eligibility": "Nepali citizens, Grades 8–12, not enrolled in undergraduate studies", "grades": "8–12", "fee": "Free", "registration": null, "camp": null, "contact": null },
+  { "subject": "biology", "organiser": { "name": "Science Teachers' Association of Nepal (STAN)", "url": null }, "eligibility": "Age 16–19, below university", "grades": "10–12", "fee": null, "registration": null, "camp": null, "contact": null }
+]
