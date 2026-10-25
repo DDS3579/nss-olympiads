@@ -11,9 +11,8 @@ export default function manifest(): MetadataRoute.Manifest {
     background_color: "#0b1220",
     theme_color: "#28b8f2",
     icons: [
-      // TODO: add real icons at /public/icon-192.png and /public/icon-512.png
-      { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      // Interim only — real 192/512/maskable icons are generated in T7.5
+      { src: "/logo.png", sizes: "512x512", type: "image/png" },
     ],
   };
 }
