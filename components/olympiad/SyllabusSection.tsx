@@ -16,7 +16,7 @@ export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
           index="03"
           label="Syllabus"
           title="What you'll be tested on"
-          description={`The official topic areas for the ${olympiad.name} Olympiad.`}
+        description={`Topic areas for the ${olympiad.name} Olympiad. Official syllabus (PDF) below.`}
           colorVar={c}
           className="mb-6 lg:mb-8"
         />
