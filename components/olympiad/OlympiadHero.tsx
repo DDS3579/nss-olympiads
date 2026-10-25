@@ -76,7 +76,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <MagneticButton>
                   <a
-                    href="#topics"
+                    href="#library"
                     className="inline-flex items-center gap-2 rounded-full border-b-4 px-7 py-3 font-heading text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 active:translate-y-1 active:border-b-2"
                     style={{
                       backgroundColor: `hsl(var(${c}))`,

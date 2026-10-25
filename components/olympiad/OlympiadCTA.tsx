@@ -44,7 +44,7 @@ export function OlympiadCTA({ olympiad }: { olympiad: Olympiad }) {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <MagneticButton>
               <a
-                href="#topics"
+                href="#library"
                 className="inline-flex items-center gap-2 rounded-full border-b-4 px-8 py-3.5 font-heading text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 active:translate-y-1 active:border-b-2"
                 style={{
                   backgroundColor: `hsl(var(${c}))`,
