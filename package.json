@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "gen:registry": "node scripts/gen-registry.mjs",
+    "predev": "npm run gen:registry",
+    "prebuild": "npm run gen:registry"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",
