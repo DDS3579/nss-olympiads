@@ -98,9 +98,19 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
             <FadeIn y={10} delay={0.38}>
               <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-6 sm:grid-cols-4">
                 <StatChip value={stats.topics} label="Topics" />
-                <StatChip value={stats.problems} label="Problems" />
+                <StatChip
+                  value={olympiad.topics.reduce(
+                    (n, t) => n + t.subtopics.length,
+                    0,
+                  )}
+                  label="Sub-topics"
+                />
                 <StatChip value={stats.papers} label="Model Papers" />
-                <StatChip value={olympiad.meta.difficultyRange} label="Level" small />
+                <StatChip
+                  value={olympiad.meta.difficultyRange}
+                  label="Level"
+                  small
+                />
               </div>
             </FadeIn>
           </div>

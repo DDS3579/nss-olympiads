@@ -65,7 +65,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
               {topic.name}
             </h3>
             <span className="whitespace-nowrap text-[11px] font-semibold text-muted-foreground">
-              {topic.problems} problems
+              {topic.subtopics.length} sub-topics
             </span>
           </div>
           <p className="mt-2 text-sm text-muted-foreground">

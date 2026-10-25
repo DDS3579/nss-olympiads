@@ -169,7 +169,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                         <span className="font-heading font-semibold text-foreground transition-colors group-hover:text-primary">
                           {t.name}
                         </span>
-                        <span className="text-xs text-muted-foreground">{t.problems} problems</span>
+                    <span className="text-xs text-muted-foreground">{t.subtopics.length} sub-topics</span>
                       </div>
                       <span className="text-xs text-muted-foreground">
                         {isFocused ? "Focused — tap to clear" : t.blurb}
