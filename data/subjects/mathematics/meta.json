@@ -1,0 +1,79 @@
+{
+  "slug": "mathematics",
+  "name": "Mathematics",
+  "series": "01",
+  "iconKey": "sigma",
+  "colorVar": "--subject-math",
+  "motif": "math",
+  "tagline": "Numbers don't lie. Neither will your solutions.",
+  "description": "Master algebra, combinatorics, geometry, and number theory with problems modeled directly on IMO and national Olympiad formats.",
+  "grades": "8–12",
+  "organiser": { "name": "Mathematical Association of Nepal (MAN)", "url": "https://www.mathassociationnepal.org.np/" },
+  "levels": {
+    "district": { "exists": true, "label": "DMO", "officialName": "District Mathematical Olympiad (DMO)" },
+    "province": { "exists": true, "label": "PMO", "officialName": "Provincial Mathematical Olympiad (PMO)" },
+    "national": { "exists": true, "label": "NMO + TST", "officialName": "National Mathematical Olympiad (NMO)" },
+    "international": { "exists": true, "label": "IMO · JBMO · EGMO · IGO", "officialName": "IMO" }
+  },
+  "rounds": [
+    {
+      "level": "district",
+      "name": "DMO — District Mathematical Olympiad",
+      "format": "50 MCQ · 100 min (2 min per question); score 25+ OR district Top 5 advances",
+      "marking": "−0.25 per wrong answer (a blind guess is break-even)",
+      "eligibility": "Regularly enrolled school/college students in Grades 8–12",
+      "centres": "All 77 districts, simultaneously",
+      "dates": [],
+      "source": { "label": "MAN — DMO programme page", "url": "https://www.mathassociationnepal.org.np/programs/dmo" }
+    },
+    {
+      "level": "province",
+      "name": "PMO — Provincial Mathematical Olympiad",
+      "format": "35 MCQ + 5 numerical-answer questions; Top 10–15 per province advance",
+      "marking": "Complete rigorous proofs required; correct numerical answers without justified reasoning receive minimal marks",
+      "eligibility": "DMO qualifiers",
+      "centres": "All 7 provinces, strict proctoring",
+      "dates": [],
+      "source": { "label": "MAN — PMO programme page", "url": "https://www.mathassociationnepal.org.np/programs/pmo" }
+    },
+    {
+      "level": "national",
+      "name": "NMO — National Mathematical Olympiad",
+      "format": "2 days × 3 problems × 4.5 h · 6 proof problems · 42 points · strict IMO format; Top 20 win national medals + camp admission",
+      "eligibility": "PMO qualifiers from all 7 provinces + reigning national medalists",
+      "centres": "Kathmandu",
+      "dates": [],
+      "source": { "label": "MAN — NMO programme page", "url": "https://www.mathassociationnepal.org.np/programs/nmo" }
+    },
+    {
+      "level": "national",
+      "name": "TST & Residential IMO Training Camp",
+      "format": "4-week residential camp (IMO alumni + university faculty) followed by 3 TST simulation exams; Top 6 cumulative scorers form the IMO delegation",
+      "eligibility": "Top 20 NMO medalists/qualifiers",
+      "dates": [],
+      "source": { "label": "MAN — TST programme page", "url": "https://www.mathassociationnepal.org.np/programs/tst" }
+    },
+    {
+      "level": "international",
+      "name": "IMO",
+      "format": "2 days × 3 problems × 4.5 h · 42 points · 6-member delegation",
+      "eligibility": "Under 20 on competition day; not enrolled at university",
+      "dates": [
+        { "label": "67th IMO 2026 — Shanghai, China (Nepal: 3 Honourable Mentions)", "iso": null, "status": "past" },
+        { "label": "68th IMO 2027", "iso": null, "status": "upcoming" }
+      ],
+      "source": { "label": "MAN — IMO programme page", "url": "https://www.mathassociationnepal.org.np/programs/imo" }
+    }
+  ],
+  "contacts": [
+    { "body": "Mathematical Association of Nepal (MAN)", "role": "National organiser — DMO/PMO/NMO/TST; selects all international teams", "links": [ { "label": "Website", "url": "https://www.mathassociationnepal.org.np/" } ], "email": "imonepal22@gmail.com", "phone": "9861294040 / 985-1130737" },
+    { "body": "Binod Prasad Pant", "role": "IMO's listed official contact for Nepal", "links": [], "email": "binod@kusoed.edu.np" },
+    { "body": "MAN YouTube", "role": "DMO/PMO/NMO paper walkthroughs by IMO alumni", "links": [ { "label": "Channel", "url": "https://www.youtube.com/@mathematicsolympiadnepal" } ] },
+    { "body": "MoEST", "role": "National olympiad recognition (कार्यविधि २०८२)", "links": [ { "label": "Olympiad procedure", "url": "https://moest.gov.np/content/13499/in-procedure-of-olmpiad-operations-related-to/" } ] },
+    { "body": "Curriculum Development Centre (CDC)", "role": "NEB Mathematics curriculum", "links": [ { "label": "Website", "url": "https://moecdc.gov.np/" }, { "label": "Digital library", "url": "http://lib.moecdc.gov.np/" } ] },
+    { "body": "IMO official", "role": "Problems, shortlists, results, country profiles", "links": [ { "label": "Website", "url": "https://www.imo-official.org/" } ] }
+  ],
+  "syllabusFileUrl": "/materials/mathematics/syllabus.pdf",
+  "syllabusMeta": { "officialVerified": false },
+  "updatedAt": "2026-10-24"
+}

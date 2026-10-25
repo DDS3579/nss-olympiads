@@ -24,5 +24,6 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 | M-14 FAQ/Privacy/Terms approval | ⏳ owner |
 
 ## Deviations from plan
-
-(none yet)
+- T1.1: `CountryRecord.firstYear` widened to `number | null` + optional `note` added — Appendix C's informatics record requires both (Nepal has no IOI participation; null is the honest value).
+- T1.2: denylist includes `olimpicos.net` per Appendix F, but chemistry.md verifies `olimpicos.net/icho/` as ✅ LIVE. Owner decision needed at Chemistry ingest (Phase 2).
+- T1.5: `prebuild` runs gen:registry only until validate-data.mjs exists (Phase 2); strict validation wired at T10.5.

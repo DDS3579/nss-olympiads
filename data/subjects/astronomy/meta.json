@@ -1,0 +1,39 @@
+{
+  "slug": "astronomy",
+  "name": "Astronomy",
+  "series": "04",
+  "iconKey": "telescope",
+  "colorVar": "--subject-astronomy",
+  "motif": "astronomy",
+  "tagline": "Ever stared at the sky and needed answers? This one's for you.",
+  "description": "Study celestial mechanics, astrophysics, and observational techniques to prepare for IOAA and national astronomy challenges.",
+  "grades": "Junior 8–10 · Senior 11–12",
+  "organiser": { "name": "NAO — National Astronomy Olympiad (full details to confirm from astronomy.md)" },
+  "levels": {
+    "district": {
+      "exists": false,
+      "label": "Entry (scored application, 10 marks)",
+      "officialName": null,
+      "honestNote": "There is no district round. The entry stage is a scored application file worth 10 marks (motivation statement 5 + SEE 5) — the only Nepali olympiad that grades the application."
+    },
+    "province": { "exists": true, "label": "Provincial Round", "officialName": "Provincial Round" },
+    "national": { "exists": true, "label": "National Round + Closed Camp", "officialName": "National Round / Final Round (Closed Camp, 7 days)" },
+    "international": { "exists": true, "label": "IOAA · IAO · IOAA-jr · OWAO · APAO", "officialName": "IOAA" }
+  },
+  "rounds": [
+    {
+      "level": "province",
+      "name": "Provincial Round",
+      "format": "2 h · 30 MCQ ×2 + 3 long ×10 = 90 marks",
+      "marking": "No negative marking; +10 marks for the scored application file",
+      "calculator": "Non-programmable",
+      "centres": "7 centres (one per province)",
+      "dates": [],
+      "source": { "label": "RECOMMENDATION plan — verify against astronomy.md before relying on this", "url": "" }
+    }
+  ],
+  "contacts": [],
+  "syllabusFileUrl": "/materials/astronomy/syllabus.pdf",
+  "syllabusMeta": { "officialVerified": false },
+  "updatedAt": "2026-10-24"
+}
