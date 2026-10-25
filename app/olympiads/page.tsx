@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { olympiads } from "@/lib/data/olympiads";
 
 export const metadata = {
-  title: "All Olympiads | NSS Olympiad Hub",
+  title: "All Olympiads",
   description:
     "Browse preparation material, model papers, and roadmaps for all 7 Olympiad categories.",
 };

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps) {
   const olympiad = getOlympiadBySlug(slug);
   if (!olympiad) return { title: "Olympiad Not Found" };
   return {
-    title: `${olympiad.name} Olympiad | NSS Olympiad Hub`,
+    title: `${olympiad.name} Olympiad`,
     description: olympiad.description,
   };
 }
