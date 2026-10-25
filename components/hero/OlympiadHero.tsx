@@ -16,7 +16,7 @@ import { ScrollCue } from "./ScrollCue";
 
 const HERO_STATS = [
   { key: "olympiads", value: "7", label: "Olympiads", countUp: true },
-  { key: "grade", value: "11–12", label: "Grade Focus", countUp: false },
+  { key: "grade", value: "8–12", label: "Grades (subject-dependent)", countUp: false },
   { key: "free", value: "100%", label: "Free Preparation", countUp: false },
 ];
 
@@ -64,7 +64,7 @@ export function OlympiadHero() {
         <FadeIn delay={0.55} y={15}>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-xl">
             Free preparation material, model question papers, and structured roadmaps for 7
-            Olympiads — built by NSS Clubs for Grade 11 and 12 students ready to compete.
+            Olympiads — built by NSS Clubs for students in Grades 8–12 ready to compete.
           </p>
         </FadeIn>
 
