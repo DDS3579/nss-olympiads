@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "id": "mechanics",
+    "name": "Mechanics",
+    "blurb": "Newton's laws, gravitation, circular & rotational motion, SHM and Kepler's laws — the physics backbone of celestial mechanics.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Newton's Laws of Motion", "Gravitation", "Circular Motion", "Rotational Motion", "Simple Harmonic Motion", "Kepler's Laws of Planetary Motion"]
+  },
+  {
+    "id": "heat-thermodynamics",
+    "name": "Heat & Thermodynamics",
+    "blurb": "Thermodynamic equilibrium, ideal gases, energy transfer, black-body radiation, luminosity and Wien's law.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Thermodynamic Equilibrium", "Ideal Gas", "Energy Transfer", "Black Body Radiation", "Luminosity", "Wien's Law"]
+  },
+  {
+    "id": "nuclear-physics",
+    "name": "Nuclear Physics",
+    "blurb": "The atom, the hydrogen spectrum, nucleus & radioactivity, and X-rays.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Atom", "Hydrogen Spectrum", "Nucleus and Radioactivity", "X-Rays"]
+  },
+  {
+    "id": "waves-optics",
+    "name": "Waves & Optics",
+    "blurb": "Interference, diffraction, polarization, the EM spectrum, optical instruments, Doppler effect and magnitudes. Junior category adds reflection, refraction and lenses.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Light", "Reflection, Refraction & Dispersion", "Interference", "Diffraction", "Polarization", "Microwave, Infrared, Ultraviolet, Gamma Rays & Visible Bands", "Optical Instruments (incl. Binoculars & Telescopes)", "Doppler's Effect", "Magnitude"]
+  },
+  {
+    "id": "electricity-magnetism",
+    "name": "Electricity & Magnetism",
+    "blurb": "Electromagnetic theory and magnetic behaviour; the junior syllabus adds circuits, induction and terrestrial magnetism.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Electromagnetic Theory", "Magnetic Properties and Behavior", "Ohm's Law · Resistance & Conductivity", "Magnetic Lines of Force · Components of Terrestrial Magnetism (Dip & Declination)", "Electromagnetic Induction · Fleming's Right Hand Rule", "Generator and Dynamo"]
+  },
+  {
+    "id": "the-sun",
+    "name": "The Sun",
+    "blurb": "Solar structure, the Sun–Earth relation, solar wind & radiation, and eclipses.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Solar Structure", "Sun–Earth Relation", "Solar Wind and Radiation", "Eclipse"]
+  },
+  {
+    "id": "the-earth",
+    "name": "The Earth",
+    "blurb": "Atmosphere, longitude & latitude, tides, seasons, meteors and aurorae.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Atmosphere", "Longitude and Latitude", "Tides", "Seasons", "Meteor, Meteoroid, Meteorite", "Aurora"]
+  },
+  {
+    "id": "the-solar-system",
+    "name": "The Solar System",
+    "blurb": "The Earth–Moon system; planets, dwarf planets, asteroids and comets.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Earth–Moon System", "Planets, Dwarf Planets, Asteroids, Comets"]
+  },
+  {
+    "id": "the-stars",
+    "name": "The Stars",
+    "blurb": "Stellar life cycles, nebulae, star clusters and the HR Diagram — plus Hand Measurement/Sky Navigation and Bayer Designation, three NAO-unique, high-yield skills.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Life Cycle", "Neutron Star", "Black Hole", "Supernova", "Constellation", "Nebula", "Star Cluster", "HR Diagram", "Hand Measurement / Sky Navigation (Altitude/Azimuth)", "Bayer Designation"],
+    "featured": true
+  },
+  {
+    "id": "the-universe",
+    "name": "The Universe",
+    "blurb": "Galaxies, dark matter & dark energy, the origin of the universe, and the Hubble–Lemaître law with its significance.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Galaxy", "Dark Matter", "Dark Energy", "Hubble–Lemaître law and its Significance", "Origin of the Universe"]
+  },
+  {
+    "id": "space-exploration",
+    "name": "Space Exploration",
+    "blurb": "Satellites and human exploration missions.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Satellites", "Human exploration and missions"]
+  },
+  {
+    "id": "mathematics",
+    "name": "Mathematics",
+    "blurb": "Statistics, trigonometry, coordinate geometry, transformation, polynomials and conics — the tools every other section uses.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Basic statistics", "Basic Trigonometry", "Coordinate Geometry", "Transformation", "Polynomials", "Circle, Ellipse, Hyperbola, Parabola"]
+  },
+  {
+    "id": "measurement-junior",
+    "name": "Measurement (Junior)",
+    "blurb": "Junior category only — fundamental & derived units and the relationships between them.",
+    "levels": ["province", "national"],
+    "subtopics": ["Fundamental and Derived Units", "Relationship between them"]
+  },
+  {
+    "id": "classification-of-elements-junior",
+    "name": "Classification of Elements (Junior)",
+    "blurb": "Junior category only — atomic structure, electronic configuration, valency, bonding and the modern periodic table.",
+    "levels": ["province", "national"],
+    "subtopics": ["Elements and Compounds", "Atomic Structure", "Electronic Configuration", "Valence Electrons and Valency", "Chemical Bond, Radicals, Ions, Molecular Formula", "Periodic Law", "Modern Periodic Table"]
+  },
+  {
+    "id": "practical-observation-data-analysis",
+    "name": "Practical: Observation & Data Analysis",
+    "blurb": "IOAA A.3 — naked-eye & instrument observations, sky maps, magnitude estimation, error calculation, graphing and statistics. Half of all IOAA marks; the NAO closed camp tests it too.",
+    "levels": ["national", "international"],
+    "subtopics": ["Naked-eye observations", "Sky maps & catalogues", "Coordinate systems in the sky", "Magnitude estimation", "Estimation of angular separation", "Telescopes & detectors", "Error sources & calculation of errors", "Graphs (polar & logarithmic scales) & best-fit lines", "Basic statistical analysis (mean, median, regression)"],
+    "gap": true,
+    "gapSubstituteId": null
+  }
+]

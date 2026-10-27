@@ -8,32 +8,121 @@
   "tagline": "Ever stared at the sky and needed answers? This one's for you.",
   "description": "Study celestial mechanics, astrophysics, and observational techniques to prepare for IOAA and national astronomy challenges.",
   "grades": "Junior 8–10 · Senior 11–12",
-  "organiser": { "name": "NAO — National Astronomy Olympiad (full details to confirm from astronomy.md)" },
+  "organiser": { "name": "Nepal Astronomical Society (NASO)", "url": "https://www.nepalastronomicalsociety.org" },
   "levels": {
     "district": {
       "exists": false,
       "label": "Entry (scored application, 10 marks)",
       "officialName": null,
-      "honestNote": "There is no district round. The entry stage is a scored application file worth 10 marks (motivation statement 5 + SEE 5) — the only Nepali olympiad that grades the application."
+      "honestNote": "There is no district round. The entry stage is a scored application file worth 10 marks (motivation statement 5 + SEE/BLE 5) — the only Nepali olympiad that grades the application."
     },
-    "province": { "exists": true, "label": "Provincial Round", "officialName": "Provincial Round" },
-    "national": { "exists": true, "label": "National Round + Closed Camp", "officialName": "National Round / Final Round (Closed Camp, 7 days)" },
+    "province": { "exists": true, "label": "Provincial Round", "officialName": "NAO Stage 1 — Provincial Round (Entrance Exam)" },
+    "national": { "exists": true, "label": "National Round + Closed Camp", "officialName": "NAO Stage 2 (National Round) + Stage 3 (Final Round / Closed Camp, 7 days)" },
     "international": { "exists": true, "label": "IOAA · IAO · IOAA-jr · OWAO · APAO", "officialName": "IOAA" }
   },
   "rounds": [
     {
       "level": "province",
-      "name": "Provincial Round",
-      "format": "2 h · 30 MCQ ×2 + 3 long ×10 = 90 marks",
-      "marking": "No negative marking; +10 marks for the scored application file",
-      "calculator": "Non-programmable",
-      "centres": "7 centres (one per province)",
+      "name": "NAO Provincial Round (Entrance Exam)",
+      "format": "2 h · 30 MCQ ×2 + 3 long questions ×10 = 90 marks",
+      "marking": "No negative marking. The scored application file adds 10 marks: motivation statement 5 + SEE (Senior) / last final exam (Junior) 5",
+      "calculator": "Scientific, non-programmable only",
+      "eligibility": "Nepali citizens; Senior = classes 11–12 (born after 1 July 2006 for NAO2026); Junior = classes 8–10 (born after 1 July 2010)",
+      "registration": "NRs 1,000 (non-refundable); 50% waiver with a local-government letter citing financial situation + academic excellence; deadline ≈ mid-January",
+      "centres": "7 centres — one per province; coordinators published by NASO",
+      "dates": [
+        { "label": "NAO2026 Provincial Round", "iso": "2026-01-17", "status": "past" },
+        { "label": "NAO2025 Provincial Round (12:00–14:00)", "iso": "2025-01-25", "status": "past" }
+      ],
+      "source": { "label": "NAO2025 Guidelines + official NAO Senior/Junior syllabus PDFs", "url": "https://drive.google.com/file/d/1t1-iNZ6whL9i80irCUhuFqMRsvwI5IE5/view" }
+    },
+    {
+      "level": "national",
+      "name": "NAO National Round (Stage 2)",
+      "format": "Assignments, projects and basic data-analysis tasks; small reports; simple observational tools such as paper telescopes",
+      "marking": "Emphasis on understanding, originality and clarity rather than competition",
+      "eligibility": "Provincial-round qualifiers",
       "dates": [],
-      "source": { "label": "RECOMMENDATION plan — verify against astronomy.md before relying on this", "url": "" }
+      "source": { "label": "'National Astronomy Olympiad (Nepal)' — Osish Niraula, IOAA 2024 & 2025", "url": "https://www.aoguide.app/assets/advice/NEP1.pdf" }
+    },
+    {
+      "level": "national",
+      "name": "NAO Final Round — Closed Camp (Stage 3)",
+      "format": "7-day national closed camp: theoretical tests + data analysis (mean, median, regression, error estimation) + observational astronomy (often paper-based); follows the IOAA syllabus structure; lectures + mock exams",
+      "eligibility": "National-round qualifiers",
+      "dates": [
+        { "label": "NAO2026 closed camp (Kathmandu)", "iso": "2026-06-01/2026-06-07", "status": "past" },
+        { "label": "NAO2026 National Merit Lists published (40 Senior + 40 Junior)", "iso": "2026-06-15", "status": "past" }
+      ],
+      "source": { "label": "'National Astronomy Olympiad (Nepal)' — Osish Niraula, IOAA 2024 & 2025", "url": "https://www.aoguide.app/assets/advice/NEP1.pdf" }
+    },
+    {
+      "level": "international",
+      "name": "IOAA",
+      "format": "Theory (300 marks) + Data Analysis (150) + Observation: Telescope (50) · Sky Map (50) · Planetarium (50) + Group round — 600 marks total",
+      "eligibility": "Top Senior merit-list students; final selection includes interviews with students and their parents",
+      "dates": [
+        { "label": "19th IOAA 2026 — Hanoi, Vietnam (Nepal: 5 students, HM — Pratyush Poudel)", "iso": "2026-09-25/2026-10-05", "status": "past" },
+        { "label": "IOAA 2027 — Türkiye", "iso": null, "status": "upcoming" }
+      ],
+      "source": { "label": "IOAA Foundation", "url": "https://ioaastrophysics.org" }
+    },
+    {
+      "level": "international",
+      "name": "IOAA-jr",
+      "format": "Junior version of the IOAA",
+      "eligibility": "Junior-category merit list",
+      "dates": [
+        { "label": "5th IOAA-jr 2026 — Ubon Ratchathani, Thailand", "iso": "2026-11-01/2026-11-08", "status": "upcoming" },
+        { "label": "IOAA-jr 2024 — Kathmandu, Nepal (hosted by Nepal)", "iso": "2024-10-03/2024-10-10", "status": "past" }
+      ],
+      "source": { "label": "IOAA Foundation — Junior IOAA", "url": "https://ioaastrophysics.org/junior-ioaa/past-olympiads" }
+    },
+    {
+      "level": "international",
+      "name": "OWAO (Open World Astronomy Olympiad)",
+      "format": null,
+      "eligibility": "Selected from the national merit list",
+      "dates": [
+        { "label": "5th OWAO 2026 — Sirius, Russia (Nepal: 6 students)", "iso": "2026-11-06/2026-11-14", "status": "upcoming" }
+      ],
+      "source": { "label": "NASO — 2026 delegation announcement", "url": "https://www.nepalastronomicalsociety.org/olympiad" }
+    },
+    {
+      "level": "international",
+      "name": "IAO (International Astronomy Olympiad)",
+      "format": "Theory + Data Analysis + Observation round",
+      "eligibility": "Selected from the national merit list",
+      "dates": [
+        { "label": "30th IAO 2026 — Andizhan, Uzbekistan", "iso": "2026-12-06/2026-12-14", "status": "upcoming" }
+      ],
+      "source": { "label": "NASO — 2026 delegation announcement", "url": "https://www.nepalastronomicalsociety.org/olympiad" }
+    },
+    {
+      "level": "international",
+      "name": "APAO (Asian-Pacific Astronomy Olympiad)",
+      "format": null,
+      "eligibility": "As per the invitation received from the organisers",
+      "dates": [],
+      "source": { "label": "NASO olympiad pathway (Step 5)", "url": "https://www.nepalastronomicalsociety.org/projects/olympiad/" }
     }
   ],
-  "contacts": [],
+  "contacts": [
+    { "body": "Nepal Astronomical Society (NASO)", "role": "National organiser — runs the NAO and selects all international delegations", "links": [ { "label": "Website", "url": "https://www.nepalastronomicalsociety.org" }, { "label": "Olympiad page", "url": "https://www.nepalastronomicalsociety.org/projects/olympiad/" }, { "label": "Email (alt)", "url": "mailto:nasonepal@gmail.com" } ], "email": "info@nepalastronomicalsociety.org", "phone": "+977-9843708248 (10:00–17:00, except holidays)" },
+    { "body": "Suresh Bhattarai", "role": "NASO Chairperson · Team Leader IOAA 2016, 2024, 2025, 2026 & OWAO 2026", "links": [] },
+    { "body": "Manisha Dwa", "role": "Team Leader IOAA 2016, 2024, 2025 · IOAA-jr 2026", "links": [] },
+    { "body": "Oshan Sharma Kattel", "role": "Team Leader IOAA-jr 2026", "links": [] },
+    { "body": "Koshi centre — Itahari International College, Morang", "role": "NAO Provincial Coordinator (Koshi)", "links": [], "email": "hermitsapkota@gmail.com", "phone": "9841521281 (Dev Raj Sapkota)" },
+    { "body": "Madhesh centre — Shree Janata Ma. Vi., Dhanusha", "role": "NAO Provincial Coordinator (Madhesh)", "links": [], "email": "nashir.micro07@gmail.com", "phone": "9807637322 (Nashir Mulla)" },
+    { "body": "Bagmati centre — Herald College Kathmandu, Naxal", "role": "NAO Provincial Coordinator (Bagmati)", "links": [], "email": "nasonepal@gmail.com", "phone": "9843708248 (Rupa Manandhar)" },
+    { "body": "Gandaki centre — Gandaki College of Engineering & Sciences, Pokhara", "role": "NAO Provincial Coordinator (Gandaki)", "links": [], "email": "rkdhakal29@gmail.com", "phone": "9856025604 (Raj Kumar Dhakal)" },
+    { "body": "Lumbini centre — New Horizons English Boarding School, Butwal", "role": "NAO Provincial Coordinator (Lumbini)", "links": [], "email": "mukti.paudel2004@gmail.com", "phone": "9841026434 (Mukti Nath Paudel)" },
+    { "body": "Karnali centre — GSST, Mid-West University, Surkhet", "role": "NAO Provincial Coordinator (Karnali)", "links": [], "email": "armalepushpa@gmail.com", "phone": "9860211202 (Dr. Pushpa Raj Acharya)" },
+    { "body": "Sudurpashchim centre — Aishwarya Vidhya Niketan, Dhangadhi", "role": "NAO Provincial Coordinator (Sudurpashchim)", "links": [], "email": "prem.vjoshi@gmail.com", "phone": "9849915594 (Prem Raj Joshi)" },
+    { "body": "IOAA Foundation", "role": "International governing body — IOAA & IOAA-jr", "links": [ { "label": "Website", "url": "https://ioaastrophysics.org" } ], "email": "admin.ioaa@ioaastrophysics.org" },
+    { "body": "MoEST", "role": "National olympiad recognition (कार्यविधि २०८२)", "links": [ { "label": "Olympiad procedure (NPS mirror)", "url": "https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf" } ] }
+  ],
   "syllabusFileUrl": "/materials/astronomy/syllabus.pdf",
   "syllabusMeta": { "officialVerified": false },
-  "updatedAt": "2026-10-24"
+  "updatedAt": "2026-10-27"
 }

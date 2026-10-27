@@ -51,3 +51,6 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T2.1: Chemistry's IChO archive tables (Volumes 1–5, direct 2020–25 exam PDFs, prep series D) are skipped by K.1's row-id rule — extend ingest needles at Chemistry split time.
 - Chemistry F5 (olimpicos.net/icho/) conflicts with the denylist — owner decision pending (from T1.2).
 - T2.1: Physics pilot reproduced the Appendix K.1 counts on every line except missingWhy (21 vs the plan's 29) — the local physics.md resolves a why-column on 8 more rows. No effect on the 95/44/51/9 record counts.
+- T3.3: 11px kept only on uppercase eyebrows (SectionHeading, SectionLabel, hero/nav/footer eyebrows); three decorative index-numeral rows keep their fade but are now aria-hidden.
+- Astronomy completion: meta.json + topics.json filled from astronomy.md; fee NRs 1,000 / 50% waiver verified in-file (earlier hold resolved). Astronomy gap:true on the practical topic follows Appendix G — owner to confirm; note Ayush Tiwari's Practical Handouts (Nepal IOAA 2025 team member) may already cover parts of it (candidate gapSubstitute).
+- Heads-up: astronomy (15), chemistry (14) and informatics (13) topics render through the legacy constellation, which was hand-tuned for ≤7 nodes — expect crowding until the T4.10 rebuild.
