@@ -14,7 +14,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
   const c = olympiad.colorVar;
 
   return (
-    <section className="relative overflow-hidden pb-14 pt-28 lg:pb-20 lg:pt-32">
+    <section aria-label={`${olympiad.name} Olympiad overview`} className="relative overflow-hidden pb-14 pt-28 lg:pb-20 lg:pt-32">
       {/* ambient subject illumination */}
       <div
         className="pointer-events-none absolute inset-0"

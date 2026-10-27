@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
+import { getScrollOffset } from "@/lib/scroll";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
@@ -50,7 +51,7 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
 
       event.preventDefault();
       lenis.scrollTo(target, {
-        offset: -80, // clears the fixed navbar — one value, applies everywhere
+        offset: -getScrollOffset(), // clears header + sub-nav (T3.5)
         duration: 1.5,
       });
       window.history.pushState(null, "", hash);
@@ -90,7 +91,7 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
       const timer = setTimeout(() => {
         const target = document.querySelector(hash);
         if (target instanceof HTMLElement) {
-          lenisRef.current?.scrollTo(target, { offset: -80, duration: 1.5 });
+          lenisRef.current?.scrollTo(target, { offset: -getScrollOffset(), duration: 1.5 });
         }
       }, 150);
       return () => clearTimeout(timer);

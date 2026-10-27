@@ -29,12 +29,13 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
   // Unverified problems never render (T4.12 rule) — honest empty state instead.
   if (!p) {
     return (
-      <section id="problem" className="section-anchor py-20 lg:py-28">
+      <section id="problem" aria-labelledby="problem-title" className="section-anchor py-20 lg:py-28">
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
             index="06"
             label="Featured Problem"
             title="This week's challenge"
+            titleId="problem-title"
             description={`A representative problem from ${olympiad.name}.`}
             colorVar={c}
           />
@@ -57,12 +58,13 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
   const linkedTopic = olympiad.topics.find((t) => t.name === p.topic);
   
   return (
-    <section id="problem" className="section-anchor py-20 lg:py-28">
+    <section id="problem" aria-labelledby="problem-title" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading
           index="06"
           label="Featured Problem"
           title="This week's challenge"
+          titleId="problem-title"
           description={`A representative problem from ${olympiad.name}.`}
           colorVar={c}
         />

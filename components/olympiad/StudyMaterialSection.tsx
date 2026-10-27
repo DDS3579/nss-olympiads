@@ -59,12 +59,13 @@ export function StudyMaterialSection({ olympiad }: { olympiad: Olympiad }) {
   const isFocused = !!focusedTopic;
 
   return (
-    <section id="library" className="section-anchor border-y border-border bg-secondary/20 py-20 lg:py-28">
+    <section id="library" aria-labelledby="library-title" className="section-anchor border-y border-border bg-secondary/20 py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading
           index="01"
           label="Materials"
           title="Study material"
+          titleId="library-title"
           description={
             isFocused
               ? `Materials for ${focusedTopic.name}, plus general resources.`

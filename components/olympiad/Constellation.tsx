@@ -35,6 +35,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
   return (
     <section
       id="constellation"
+      aria-labelledby="constellation-title"
       className="section-anchor relative overflow-hidden py-20 lg:py-28"
     >
       <Motif
@@ -48,6 +49,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
           index="04"
           label="The Constellation"
           title="How the topics connect"
+          titleId="constellation-title"
           description="Click any node to focus that topic — the library and papers will follow."
           colorVar={colorVar}
         />

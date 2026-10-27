@@ -4,22 +4,17 @@ import { useMemo } from "react";
 import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import { FadeIn } from "@/components/FadeIn";
-import { getLenis } from "@/components/SmoothScroll";
+// — scroll helper imported via lib/scroll.ts re-export (T3.5)
 import type { MotifKey } from "@/lib/types";
 import { strong } from "@/lib/color";
 
 // ---------------------------------------------------------------------------
 // Scroll helper (uses Lenis when available)
 // ---------------------------------------------------------------------------
-export function scrollToId(id: string) {
-  if (typeof window === "undefined") return;
-  const lenis = getLenis();
-  if (lenis) {
-    lenis.scrollTo(`#${id}`, { offset: -96, duration: 1.4 });
-  } else {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-}
+// ---------------------------------------------------------------------------
+// Scroll helper — single source of truth lives in lib/scroll.ts (T3.5)
+// ---------------------------------------------------------------------------
+export { scrollToId } from "@/lib/scroll";
 
 // ---------------------------------------------------------------------------
 // Deterministic pseudo-random (avoids hydration mismatch)
@@ -197,6 +192,7 @@ export function SectionHeading({
   description,
   colorVar,
   className,
+  titleId,
 }: {
   index: string;
   label: string;
@@ -204,6 +200,8 @@ export function SectionHeading({
   description?: string;
   colorVar?: string;
   className?: string;
+  /** id put on the <h2> so the parent <section> can aria-labelledby it (T3.6) */
+  titleId?: string;
 }) {
   return (
     <FadeIn className={cn("mb-10 lg:mb-14", className)}>
@@ -216,8 +214,8 @@ export function SectionHeading({
         </span>
         <span className="h-px flex-1 bg-border" />
       </div>
-      {title && (
-        <h2 className="mt-5 font-heading text-3xl font-bold text-foreground text-balance lg:text-4xl">
+    {title && (
+      <h2 id={titleId} className="mt-5 font-heading text-3xl font-bold text-foreground text-balance lg:text-4xl">
           {title}
         </h2>
       )}

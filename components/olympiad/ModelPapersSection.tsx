@@ -71,12 +71,13 @@ export function ModelPapersSection({ olympiad }: { olympiad: Olympiad }) {
   const sortedYears = Object.keys(grouped).sort((a, b) => b.localeCompare(a));
 
   return (
-    <section id="papers" className="section-anchor py-20 lg:py-28">
+    <section id="papers" aria-labelledby="papers-title" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading
           index="02"
           label="Past Papers"
           title="Simulate the real thing"
+          titleId="papers-title"
           description={
             isFocused
               ? `Papers relevant to ${focusedTopic.name}.`

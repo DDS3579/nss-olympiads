@@ -12,7 +12,7 @@ export function OlympiadCTA({ olympiad }: { olympiad: Olympiad }) {
   const c = olympiad.colorVar;
 
   return (
-    <section className="relative overflow-hidden py-24 lg:py-32">
+    <section aria-labelledby="cta-title" className="relative overflow-hidden py-24 lg:py-32">
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -31,7 +31,7 @@ export function OlympiadCTA({ olympiad }: { olympiad: Olympiad }) {
           </span>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="mt-4 font-heading text-3xl font-bold text-foreground text-balance sm:text-4xl lg:text-5xl">
+          <h2 id="cta-title" className="mt-4 font-heading text-3xl font-bold text-foreground text-balance sm:text-4xl lg:text-5xl">
             Your next problem is waiting.
           </h2>
         </FadeIn>

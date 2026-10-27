@@ -21,8 +21,8 @@ export function TopicFocusBar({ olympiad }: { olympiad: Olympiad }) {
       initial={{ opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -12 }}
-      transition={{ duration: 0.25, ease: "easeOut" }}
-      className="sticky top-[110px] z-30 border-b border-border bg-background/95 backdrop-blur-md lg:top-[64px]"
+      transition={{ duration: 0.25, ease: "easeOut" }}className="sticky z-30 border-b border-border bg-background/95 backdrop-blur-md"
+style={{ top: "calc(var(--nav-offset) + var(--subnav-h))" }}
     >
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-6 py-2.5 lg:px-8">
         <span

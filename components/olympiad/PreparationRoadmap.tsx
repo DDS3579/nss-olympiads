@@ -117,6 +117,7 @@ export function PreparationRoadmap({ olympiad }: { olympiad: Olympiad }) {
   return (
     <section
       id="roadmap"
+      aria-labelledby="roadmap-title"
       className="section-anchor relative overflow-hidden border-y border-border bg-secondary/20 py-20 lg:py-28"
     >
       <Motif
@@ -130,6 +131,7 @@ export function PreparationRoadmap({ olympiad }: { olympiad: Olympiad }) {
           index="07"
           label="Roadmap"
           title="Your trajectory"
+          titleId="roadmap-title"
           description="Five stages from first principles to competition day."
           colorVar={c}
         />

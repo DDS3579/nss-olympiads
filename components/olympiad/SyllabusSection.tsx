@@ -11,12 +11,13 @@ export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
   const syllabus = olympiad.syllabus ?? [];
 
   return (
-    <section id="syllabus" className="section-anchor py-20 lg:py-28">
+    <section id="syllabus" aria-labelledby="syllabus-title" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           index="03"
           label="Syllabus"
           title="What you'll be tested on"
+          titleId="syllabus-title"
         description={`Topic areas for the ${olympiad.name} Olympiad. Official syllabus (PDF) below.`}
           colorVar={c}
           className="mb-6 lg:mb-8"

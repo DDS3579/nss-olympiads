@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import { useId, type ReactNode } from "react";
 import { mailto, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -9,9 +9,10 @@ export const metadata: Metadata = {
 };
 
 function Item({ q, children }: { q: string; children: ReactNode }) {
+  const id = useId();
   return (
-    <section className="border-b border-border py-6">
-      <h2 className="font-heading text-lg font-bold text-foreground">{q}</h2>
+    <section aria-labelledby={id} className="border-b border-border py-6">
+      <h2 id={id} className="font-heading text-lg font-bold text-foreground">{q}</h2>
       <div className="mt-2 space-y-3 leading-relaxed text-muted-foreground">
         {children}
       </div>

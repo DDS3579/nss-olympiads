@@ -322,7 +322,7 @@ html.lenis body {
 
 
 /* ===== Olympiad pages — additive utilities only ===== */
-.section-anchor { scroll-margin-top: 96px; }
+.section-anchor { scroll-margin-top: calc(var(--nav-h) + var(--subnav-h) + 12px); }
 
 .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }

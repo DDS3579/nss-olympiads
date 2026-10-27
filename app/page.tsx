@@ -61,7 +61,7 @@ export default function Home() {
       <OlympiadHero subjects={subjects} />
 
       {/* ───────────────────────── WHY OLYMPIADS ───────────────────────── */}
-      <section className="relative bg-secondary/30 py-24 lg:py-32" id="why">
+      <section className="relative bg-secondary/30 py-24 lg:py-32" id="why" aria-labelledby="why-title">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
             {/* Left — sticky editorial intro */}
@@ -71,7 +71,7 @@ export default function Home() {
                   <SectionLabel>WHY OLYMPIADS</SectionLabel>
                 </FadeIn>
                 <FadeIn y={16} delay={0.08}>
-                  <h2 className="mt-5 font-heading text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-[2.75rem]">
+                  <h2 id="why-title" className="mt-5 font-heading text-3xl font-bold leading-[1.1] text-foreground sm:text-4xl lg:text-[2.75rem]">
                     More than a competition.{" "}
                     <span className="italic text-primary">A launchpad.</span>
                   </h2>
@@ -239,7 +239,7 @@ export default function Home() {
       </section>
 
       {/* ─────────────────────── PICK YOUR ARENA ─────────────────────── */}
-      <section className="bg-background py-24 lg:py-32" id="categories">
+      <section className="bg-background py-24 lg:py-32" id="categories" aria-labelledby="categories-title">
         <div className="mx-auto max-w-5xl px-6">
           {/* split editorial header */}
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -248,7 +248,7 @@ export default function Home() {
                 <SectionLabel>OLYMPIAD CATEGORIES</SectionLabel>
               </FadeIn>
               <FadeIn y={16} delay={0.08}>
-                <h2 className="mt-5 font-heading text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+                <h2 id="categories-title" className="mt-5 font-heading text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
                   Pick your arena.
                 </h2>
               </FadeIn>
@@ -322,6 +322,7 @@ export default function Home() {
       <section
         className="border-y border-border bg-secondary/20 py-24 lg:py-32"
         id="team"
+        aria-labelledby="team-title"
       >
         <div className="mx-auto max-w-6xl px-6">
           {/* split editorial header */}
@@ -331,7 +332,7 @@ export default function Home() {
                 <SectionLabel>WHO&apos;S BEHIND THIS</SectionLabel>
               </FadeIn>
               <FadeIn y={16} delay={0.08}>
-                <h2 className="mt-5 font-heading text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
+                <h2 id="team-title" className="mt-5 font-heading text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
                   Built by students, for students.
                 </h2>
               </FadeIn>
@@ -375,14 +376,14 @@ export default function Home() {
       </section>
 
       {/* ───────────────────────── CTA (unchanged) ───────────────────────── */}
-      <section className="relative overflow-hidden py-24 lg:py-32 bg-primary">
+      <section className="relative overflow-hidden py-24 lg:py-32 bg-primary" aria-labelledby="home-cta-title">
         <GeometricHeroCanvas
           variant="light"
           className="absolute inset-0 -z-10 opacity-15"
         />
         <FadeIn scale={0.98} duration={0.5}>
           <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground">
+            <h2 id="home-cta-title" className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground">
               Ready to prove what you know?
             </h2>
             <p className="mt-4 text-primary-foreground/80 text-lg leading-relaxed">

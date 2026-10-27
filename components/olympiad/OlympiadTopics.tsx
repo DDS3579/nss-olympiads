@@ -12,12 +12,13 @@ export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
   const c = olympiad.colorVar;
 
   return (
-    <section id="topics" className="section-anchor py-20 lg:py-28">
+    <section id="topics" aria-labelledby="topics-title" className="section-anchor py-20 lg:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
           index="05"
           label="Topics"
           title="The territory you'll master"
+          titleId="topics-title"
           description="Select a topic to focus its materials, or start it to track progress."
           colorVar={c}
         />
