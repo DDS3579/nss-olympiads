@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { Motif, SectionHeading } from "./primitives";
 import { useOlympiadProgress } from "./context";
 import type { Olympiad } from "@/components/olympiad/legacy";
+import { strong } from "@/lib/color";
 
 export function Constellation({ olympiad }: { olympiad: Olympiad }) {
   const reduce = useReducedMotion();
@@ -76,7 +77,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                     x2={b.x}
                     y2={b.y}
                     vectorEffect="non-scaling-stroke"
-                    stroke={active ? `hsl(var(${colorVar}))` : `hsl(var(--border))`}
+                    stroke={active ? strong(colorVar) : `hsl(var(--border))`}
                     strokeWidth={active ? 1.5 : 1}
                     strokeDasharray={active ? undefined : "1 6"}
                     initial={reduce ? false : { pathLength: 0, opacity: 0 }}
@@ -119,7 +120,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                         (t.featured ? "h-3.5 w-3.5" : "h-2.5 w-2.5")
                       }
                       style={{
-                        background: `hsl(var(${colorVar}))`,
+                        background: strong(colorVar),
                         boxShadow: active ? `0 0 16px hsl(var(${colorVar}) / 0.8)` : `0 0 12px hsl(var(${colorVar}) / 0.6)`,
                       }}
                     />
@@ -160,7 +161,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                     <span
                       className="absolute -left-[31px] top-1 h-2.5 w-2.5 rounded-full"
                       style={{
-                        background: `hsl(var(${colorVar}))`,
+                        background: strong(colorVar),
                         boxShadow: isFocused ? `0 0 12px hsl(var(${colorVar}) / 0.8)` : "none",
                       }}
                     />

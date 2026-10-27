@@ -14,6 +14,7 @@ import { MagneticButton } from "@/components/MagneticButton";
 import { SectionLabel } from "@/components/SectionLabel";
 import { OlympiadHero } from "@/components/hero/OlympiadHero";
 import { SubjectIcon } from "@/lib/data/icons";
+import { strong } from "@/lib/color";
 import { getSubjectIndex } from "@/lib/data";
 
 /* Each reason gets its own subject accent color — ties the section into the
@@ -189,7 +190,7 @@ export default function Home() {
                       <div className="min-w-0 flex-1 pb-1">
                         <span
                           className="text-[10px] font-semibold uppercase tracking-[0.2em]"
-                          style={{ color: `hsl(var(${row.colorVar}) / 0.8)` }}
+                          style={{ color: strong(row.colorVar) }}
                         >
                           {row.tag}
                         </span>
@@ -270,6 +271,7 @@ export default function Home() {
                     style={{
                       ["--c" as any]: `hsl(var(${o.colorVar}))`,
                       ["--c-soft" as any]: `hsl(var(${o.colorVar}) / 0.07)`,
+                      ["--c-strong" as any]: strong(o.colorVar),
                     }}
                     className="group relative flex items-center gap-4 border-b border-border px-2 py-6 transition-colors duration-300 hover:bg-[color:var(--c-soft)] sm:gap-6 sm:px-3 sm:py-7"
                   >
@@ -289,13 +291,13 @@ export default function Home() {
                       <SubjectIcon
                         iconKey={o.iconKey}
                         className="h-5 w-5 sm:h-[22px] sm:w-[22px]"
-                        style={{ color: `hsl(var(${o.colorVar}))` }}
+                        style={{ color: "var(--c-strong)" }}
                       />
                     </span>
 
                     {/* copy */}
                     <div className="min-w-0 flex-1">
-                      <h3 className="truncate font-heading text-base font-bold text-foreground transition-colors duration-300 group-hover:text-[color:var(--c)] sm:text-lg">
+                      <h3 className="truncate font-heading text-base font-bold text-foreground transition-colors duration-300 group-hover:text-[color:var(--c-strong)] sm:text-lg">
                         {o.name}
                       </h3>
                       <p className="mt-0.5 truncate text-xs text-muted-foreground sm:text-sm">
@@ -304,7 +306,7 @@ export default function Home() {
                     </div>
 
                     {/* arrow */}
-                    <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 group-hover:border-[color:var(--c)] group-hover:bg-[color:var(--c-soft)] group-hover:text-[color:var(--c)]">
+                    <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 group-hover:border-[color:var(--c)] group-hover:bg-[color:var(--c-soft)] group-hover:text-[color:var(--c-strong)]">
                       <ArrowUpRight className="h-4 w-4" />
                     </span>
                   </Link>

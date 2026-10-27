@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { SectionHeading } from "./primitives";
 import { useOlympiadProgress } from "./context";
 import type { Olympiad, Topic } from "@/components/olympiad/legacy";
+import { strong, onStrong } from "@/lib/color";
 
 export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
   const c = olympiad.colorVar;
@@ -90,11 +91,11 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
           onClick={() => toggleTopic(topic.id, topic.name)}
           className={cn(
             "rounded-full border px-4 py-2 text-xs font-semibold transition-colors",
-            started
-              ? "border-transparent text-white"
-              : "border-border bg-background text-foreground hover:bg-secondary"
-          )}
-          style={started ? { backgroundColor: `hsl(var(${colorVar}))` } : undefined}
+        started
+          ? "border-transparent"
+          : "border-border bg-background text-foreground hover:bg-secondary"
+      )}
+      style={started ? { backgroundColor: strong(colorVar), color: onStrong } : undefined}
         >
           {started ? "In progress" : "Start topic"}
         </button>
@@ -103,7 +104,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
           onClick={() => focusTopic(topic.id)}
           aria-label={`Focus ${topic.name} materials`}
           className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
-          style={focused ? { borderColor: `hsl(var(${colorVar}))`, color: `hsl(var(${colorVar}))` } : undefined}
+          style={focused ? { borderColor: strong(colorVar), color: strong(colorVar) } : undefined}
         >
           <ArrowUpRight className="h-4 w-4" />
         </button>

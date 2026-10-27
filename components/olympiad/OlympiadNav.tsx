@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import type { SubjectIndexItem } from "@/lib/types";
 import { SubjectIcon } from "@/lib/data/icons";
 import type { Olympiad } from "./legacy";
+import { strong } from "@/lib/color";
 
 const PRIMARY_SECTIONS = [
   { id: "library", label: "Materials" },
@@ -84,7 +85,7 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
         <motion.span
           layoutId="oly-nav-underline"
           className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full"
-          style={{ background: `hsl(var(${c}))` }}
+          style={{ background: strong(c) }}
           transition={{ type: "spring", stiffness: 350, damping: 30 }}
         />
       )}
@@ -101,7 +102,7 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
               className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg"
               style={{ background: `hsl(var(${c}) / 0.15)` }}
             >
-              <Icon className="h-4 w-4" style={{ color: `hsl(var(${c}))` }} />
+              <Icon className="h-4 w-4" style={{ color: strong(c) }} />
             </div>
             <div className="min-w-0">
               <div className="truncate font-heading text-sm font-bold text-foreground">

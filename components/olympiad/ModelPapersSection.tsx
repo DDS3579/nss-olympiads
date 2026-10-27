@@ -5,6 +5,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { DifficultyMeter, SectionHeading } from "./primitives";
 import { useOlympiadProgress } from "./context";
 import type { ModelPaper, Olympiad } from "@/components/olympiad/legacy";
+import { strong, onStrong } from "@/lib/color";
 
 function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) {
   const { isPaperAccessed, markPaperAccessed } = useOlympiadProgress();
@@ -17,7 +18,7 @@ function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) 
           <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
             <span
               className="rounded-full px-2 py-0.5 font-semibold"
-              style={{ background: `hsl(var(${colorVar}) / 0.12)`, color: `hsl(var(${colorVar}))` }}
+              style={{ background: `hsl(var(${colorVar}) / 0.12)`, color: strong(colorVar) }}
             >
               {paper.year}
             </span>
@@ -40,8 +41,8 @@ function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) 
             href={paper.fileUrl}
             download
             onClick={() => markPaperAccessed(paper.title, paper.title)}
-            className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold text-white transition-all hover:brightness-110"
-            style={{ backgroundColor: `hsl(var(${colorVar}))` }}
+            className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold transition-all hover:brightness-110"
+            style={{ backgroundColor: strong(colorVar), color: onStrong }}
           >
             <ArrowDownToLine className="h-3.5 w-3.5" />
             {accessed ? "Continue Paper" : "Start Paper"}

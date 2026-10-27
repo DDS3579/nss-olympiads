@@ -5,6 +5,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading, scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
 import type { Olympiad, Resource } from "@/components/olympiad/legacy";
+import { strong } from "@/lib/color";
 
 function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; colorVar: string }) {
   const { isResourceOpened, markResourceOpened } = useOlympiadProgress();
@@ -18,13 +19,13 @@ function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; color
             className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl"
             style={{ background: `hsl(var(${colorVar}) / 0.1)` }}
           >
-            <FileText className="h-5 w-5" style={{ color: `hsl(var(${colorVar}))` }} />
+            <FileText className="h-5 w-5" style={{ color: strong(colorVar) }} />
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-2">
               <h3 className="truncate font-heading font-semibold text-foreground">{r.title}</h3>
               {opened && (
-                <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0" style={{ color: `hsl(var(${colorVar}))` }} />
+                <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0" style={{ color: strong(colorVar) }} />
               )}
             </div>
             <div className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
@@ -41,7 +42,7 @@ function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; color
           onClick={() => markResourceOpened(r.title, r.title)}
           className="inline-flex flex-shrink-0 items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
         >
-          <ArrowDownToLine className="h-3.5 w-3.5" style={{ color: `hsl(var(${colorVar}))` }} />
+          <ArrowDownToLine className="h-3.5 w-3.5" style={{ color: strong(colorVar) }} />
           <span className="hidden sm:inline">{opened ? "Opened" : "Download"}</span>
         </a>
       </div>

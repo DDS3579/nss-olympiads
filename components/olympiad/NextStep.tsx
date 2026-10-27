@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
 import type { Olympiad } from "@/components/olympiad/legacy";
+import { strong, onStrong } from "@/lib/color";
 
 const TYPE_LABEL: Record<string, string> = {
   topic: "Topic",
@@ -56,7 +57,7 @@ export function NextStep({ olympiad }: { olympiad: Olympiad }) {
             <div className="mt-2 h-1 overflow-hidden rounded-full bg-border">
               <div
                 className="h-full rounded-full transition-all"
-                style={{ width: `${percent}%`, background: `hsl(var(${c}))` }}
+                style={{ width: `${percent}%`, background: strong(c) }}
               />
             </div>
           </div>
@@ -72,8 +73,8 @@ export function NextStep({ olympiad }: { olympiad: Olympiad }) {
             {nextAction && (
               <button
                 onClick={handleContinue}
-                className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-semibold text-white transition-all hover:brightness-110"
-                style={{ backgroundColor: `hsl(var(${c}))` }}
+                className="inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-semibold transition-all hover:brightness-110"
+                style={{ backgroundColor: strong(c), color: onStrong }}
               >
                 Continue <ArrowRight className="h-3 w-3" />
               </button>

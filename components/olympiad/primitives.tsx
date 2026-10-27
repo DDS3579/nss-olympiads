@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { FadeIn } from "@/components/FadeIn";
 import { getLenis } from "@/components/SmoothScroll";
 import type { MotifKey } from "@/lib/types";
+import { strong } from "@/lib/color";
 
 // ---------------------------------------------------------------------------
 // Scroll helper (uses Lenis when available)
@@ -209,7 +210,7 @@ export function SectionHeading({
       <div className="flex items-center gap-4">
         <span
           className="whitespace-nowrap font-heading text-[11px] font-semibold uppercase tracking-[0.3em]"
-          style={{ color: colorVar ? `hsl(var(${colorVar}))` : "hsl(var(--primary))" }}
+          style={{ color: colorVar ? strong(colorVar) : "hsl(var(--primary))" }}
         >
           {index} / {label}
         </span>
@@ -278,11 +279,12 @@ export function DifficultyMeter({
         <span
           key={i}
           className="h-1.5 w-4 rounded-full"
-          style={{
-            background:
-              i <= level
-                ? `hsl(var(${colorVar ?? "--primary"}))`
-                : `hsl(var(--border))`,
+          style={{              background:
+                i <= level
+                  ? colorVar
+                    ? strong(colorVar)
+                    : "hsl(var(--primary))"
+                  : `hsl(var(--border))`,
           }}
         />
       ))}

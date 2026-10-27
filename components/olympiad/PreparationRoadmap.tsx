@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Motif, SectionHeading, scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
 import type { Olympiad, RoadmapStage } from "@/components/olympiad/legacy";
+import { strong, onStrong } from "@/lib/color";
 
 type StageStatus = "completed" | "current" | "upcoming";
 
@@ -34,7 +35,7 @@ function RoadmapStageRow({
           background:
             status === "upcoming"
               ? `hsl(var(--muted-foreground) / 0.3)`
-              : `hsl(var(${colorVar}))`,
+              : strong(colorVar),
           boxShadow:
             status === "current" ? `0 0 16px hsl(var(${colorVar}) / 0.6)` : "none",
         }}
@@ -67,14 +68,14 @@ function RoadmapStageRow({
           >
             <span
               className="font-heading text-xs font-bold uppercase tracking-[0.25em]"
-              style={{ color: `hsl(var(${colorVar}))` }}
+              style={{ color: strong(colorVar) }}
             >
               Stage 0{index + 1}
             </span>
             {status === "current" && (
               <span
-                className="rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white"
-                style={{ background: `hsl(var(${colorVar}))` }}
+                className="rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider"
+                style={{ background: strong(colorVar), color: onStrong }}
               >
                 You are here
               </span>
@@ -93,7 +94,7 @@ function RoadmapStageRow({
           <h3 className="mt-2 font-heading text-xl font-bold text-foreground">{stage.stage}</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{stage.description}</p>
           {stage.outcome && (
-            <p className="mt-3 text-sm font-semibold" style={{ color: `hsl(var(${colorVar}))` }}>
+            <p className="mt-3 text-sm font-semibold" style={{ color: strong(colorVar) }}>
               Outcome — {stage.outcome}
             </p>
           )}

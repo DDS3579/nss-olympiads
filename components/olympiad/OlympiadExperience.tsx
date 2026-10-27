@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import type { SubjectData, SubjectIndexItem } from "@/lib/types";
 import { toOlympiad } from "./legacy";
+import { strong } from "@/lib/color";
 import { ProgressProvider } from "./context";
 import { OlympiadHero } from "./OlympiadHero";
 import { OlympiadNav } from "./OlympiadNav";
@@ -23,7 +24,7 @@ function GoDeeper({ colorVar }: { colorVar: string }) {
       <div className="mx-auto max-w-2xl px-6 text-center">
         <span
           className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em]"
-          style={{ color: `hsl(var(${colorVar}))` }}
+          style={{ color: strong(colorVar) }}
         >
           Go deeper
         </span>

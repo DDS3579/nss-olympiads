@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { MagneticButton } from "@/components/MagneticButton";
 import { Motif, StarField, StatChip } from "./primitives";
 import { getOlympiadStats, type Olympiad } from "@/components/olympiad/legacy";
+import { strong, onStrong } from "@/lib/color";
 
 export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
   const Icon = olympiad.icon;
@@ -60,7 +61,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
             <FadeIn y={10} delay={0.16}>
               <p
                 className="mt-4 text-sm font-medium"
-                style={{ color: `hsl(var(${c}))` }}
+                style={{ color: strong(c) }}
               >
                 {olympiad.disciplines.join(" · ")}
               </p>
@@ -77,10 +78,11 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
                 <MagneticButton>
                   <a
                     href="#library"
-                    className="inline-flex items-center gap-2 rounded-full border-b-4 px-7 py-3 font-heading text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 active:translate-y-1 active:border-b-2"
+                    className="inline-flex items-center gap-2 rounded-full border-b-4 px-7 py-3 font-heading text-sm font-semibold transition-all duration-150 hover:brightness-110 active:translate-y-1 active:border-b-2"
                     style={{
-                      backgroundColor: `hsl(var(${c}))`,
-                      borderColor: `hsl(var(${c}) / 0.4)`,
+                      backgroundColor: strong(c),
+                      borderColor: `hsl(var(${c}-strong) / 0.4)`,
+                      color: onStrong,
                     }}
                   >
                     Start Preparing <ArrowRight className="h-4 w-4" />
@@ -137,7 +139,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
                   >
                     <Icon
                       className="h-8 w-8"
-                      style={{ color: `hsl(var(${c}))` }}
+                      style={{ color: strong(c) }}
                     />
                   </div>
                 </div>

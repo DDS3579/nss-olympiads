@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
 import type { Olympiad } from "@/components/olympiad/legacy";
+import { strong } from "@/lib/color";
 
 export function TopicFocusBar({ olympiad }: { olympiad: Olympiad }) {
   const { focusedTopic, clearFocus, matchesFocus } = useOlympiadProgress();
@@ -26,7 +27,7 @@ export function TopicFocusBar({ olympiad }: { olympiad: Olympiad }) {
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-6 py-2.5 lg:px-8">
         <span
           className="h-2 w-2 flex-shrink-0 rounded-full"
-          style={{ background: `hsl(var(${c}))`, boxShadow: `0 0 10px hsl(var(${c}) / 0.6)` }}
+          style={{ background: strong(c), boxShadow: `0 0 10px hsl(var(${c}) / 0.6)` }}
         />
         <span className="truncate font-heading text-sm font-bold text-foreground">
           {focusedTopic.name}

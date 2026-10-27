@@ -4,6 +4,7 @@ import { ArrowDownToLine } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "./primitives";
 import type { Olympiad } from "@/components/olympiad/legacy";
+import { strong, onStrong } from "@/lib/color";
 
 export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
   const c = olympiad.colorVar;
@@ -27,9 +28,10 @@ export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
             <a
               href={olympiad.syllabusFileUrl ?? "#"}
               download
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-heading text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 active:translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-heading text-sm font-semibold transition-all duration-150 hover:brightness-110 active:translate-y-0.5"
               style={{
-                backgroundColor: `hsl(var(${c}))`,
+                backgroundColor: strong(c),
+                color: onStrong,
                 boxShadow: `0 10px 30px -10px hsl(var(${c}) / 0.55)`,
               }}
             >
@@ -61,7 +63,7 @@ export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
                       className="flex-shrink-0 rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider"
                       style={{
                         background: `hsl(var(${c}) / 0.12)`,
-                        color: `hsl(var(${c}))`,
+                        color: strong(c),
                       }}
                     >
                       {unit.weight}

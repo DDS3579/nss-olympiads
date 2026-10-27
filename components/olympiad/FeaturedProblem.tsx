@@ -6,6 +6,7 @@ import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { FadeIn } from "@/components/FadeIn";
 import { DifficultyMeter, SectionHeading } from "./primitives";
 import type { Olympiad } from "@/components/olympiad/legacy";
+import { strong } from "@/lib/color";
 import { useOlympiadProgress } from "./context";
 
 
@@ -71,9 +72,9 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
             <div className="grid lg:grid-cols-[1fr_260px]">
               <div className="p-7 lg:p-10">
                 <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                  <span style={{ color: `hsl(var(${c}))` }}>
-                    {p.topic}
-                  </span>
+              <span style={{ color: strong(c) }}>
+                {p.topic}
+              </span>
                   <span>·</span>
                   <span>{p.source}</span>
                 </div>
@@ -88,7 +89,7 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
                   <button
                     onClick={() => setOpen((o) => !o)}
                     className="text-sm font-semibold hover:underline"
-                    style={{ color: `hsl(var(${c}))` }}
+                    style={{ color: strong(c) }}
                   >
                     {open ? "Hide hint" : "Reveal hint"}
                   </button>
