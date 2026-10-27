@@ -5,7 +5,9 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { olympiads, type Olympiad } from "@/components/olympiad/legacy";
+import type { SubjectIndexItem } from "@/lib/types";
+import { SubjectIcon } from "@/lib/data/icons";
+import type { Olympiad } from "./legacy";
 
 const PRIMARY_SECTIONS = [
   { id: "library", label: "Materials" },
@@ -21,7 +23,7 @@ const SECONDARY_SECTIONS = [
 
 const ALL_SECTIONS = [...PRIMARY_SECTIONS, ...SECONDARY_SECTIONS];
 
-export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
+export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: SubjectIndexItem[] }) {
   const [active, setActive] = useState("library");
   const [switcherOpen, setSwitcherOpen] = useState(false);
   const switcherRef = useRef<HTMLDivElement>(null);
@@ -147,9 +149,8 @@ export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
                     </span>
                   </div>
                   <div className="max-h-80 overflow-y-auto p-1.5">
-                    {olympiads.map((o) => {
-                      const OIcon = o.icon;
-                      const isCurrent = o.slug === olympiad.slug;
+                {index.map((o) => {
+                  const isCurrent = o.slug === olympiad.slug;
                       return (
                         <Link
                           key={o.slug}
@@ -164,7 +165,7 @@ export function OlympiadNav({ olympiad }: { olympiad: Olympiad }) {
                             className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg"
                             style={{ background: `hsl(var(${o.colorVar}) / 0.15)` }}
                           >
-                            <OIcon className="h-3.5 w-3.5" style={{ color: `hsl(var(${o.colorVar}))` }} />
+                            <SubjectIcon iconKey={o.iconKey} className="h-3.5 w-3.5" style={{ color: `hsl(var(${o.colorVar}))` }} />
                           </span>
                           <span className="flex-1 truncate text-sm font-medium text-foreground">
                             {o.name}

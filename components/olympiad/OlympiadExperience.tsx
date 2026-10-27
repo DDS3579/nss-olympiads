@@ -1,6 +1,8 @@
 "use client";
 
-import { getOlympiadBySlug } from "@/lib/data/olympiads";
+import { useMemo } from "react";
+import type { SubjectData, SubjectIndexItem } from "@/lib/types";
+import { toOlympiad } from "./legacy";
 import { ProgressProvider } from "./context";
 import { OlympiadHero } from "./OlympiadHero";
 import { OlympiadNav } from "./OlympiadNav";
@@ -29,28 +31,33 @@ function GoDeeper({ colorVar }: { colorVar: string }) {
           Map the territory, then plan your run
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Once you've grabbed the materials, explore how the topics connect and chart
-          your preparation.
+          Once you&apos;ve grabbed the materials, explore how the topics connect
+          and chart your preparation.
         </p>
       </div>
     </div>
   );
 }
 
-export function OlympiadExperience({ slug }: { slug: string }) {
-  const olympiad = getOlympiadBySlug(slug);
-  if (!olympiad) return null;
+export function OlympiadExperience({
+  data,
+  index,
+}: {
+  data: SubjectData;
+  index: SubjectIndexItem[];
+}) {
+  const olympiad = useMemo(() => toOlympiad(data), [data]);
 
   return (
     <ProgressProvider
-      slug={slug}
+      slug={olympiad.slug}
       topics={olympiad.topics}
       resources={olympiad.studyMaterial}
       papers={olympiad.modelPapers}
     >
       <div className="relative bg-background text-foreground">
         <OlympiadHero olympiad={olympiad} />
-        <OlympiadNav olympiad={olympiad} />
+        <OlympiadNav olympiad={olympiad} index={index} />
         <TopicFocusBar olympiad={olympiad} />
 
         <div className="relative">

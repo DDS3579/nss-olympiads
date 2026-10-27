@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { olympiads, getOlympiadBySlug } from "@/lib/data/olympiads";
+import { getAllSubjects, getSubject, getSubjectIndex } from "@/lib/data";
 import { OlympiadExperience } from "@/components/olympiad/OlympiadExperience";
 
 interface PageProps {
@@ -7,22 +7,22 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  return olympiads.map((item) => ({ slug: item.slug }));
+  return getAllSubjects().map((s) => ({ slug: s.meta.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const olympiad = getOlympiadBySlug(slug);
-  if (!olympiad) return { title: "Olympiad Not Found" };
+  const data = getSubject(slug);
+  if (!data) return { title: "Olympiad Not Found" };
   return {
-    title: `${olympiad.name} Olympiad`,
-    description: olympiad.description,
+    title: `${data.meta.name} Olympiad`,
+    description: data.meta.description,
   };
 }
 
 export default async function OlympiadDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const olympiad = getOlympiadBySlug(slug);
-  if (!olympiad) notFound();
-  return <OlympiadExperience slug={slug} />;
+  const data = getSubject(slug);
+  if (!data) notFound();
+  return <OlympiadExperience data={data} index={getSubjectIndex()} />;
 }
