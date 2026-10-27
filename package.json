@@ -9,6 +9,7 @@
     "lint": "eslint",
     "gen:registry": "node scripts/gen-registry.mjs",
     "ingest": "node scripts/ingest-md.mjs",
+    "validate:data": "node scripts/validate-data.mjs",
     "predev": "npm run gen:registry",
     "prebuild": "npm run gen:registry"
   },
