@@ -25,7 +25,7 @@ export function OlympiadMobileConstellation({ olympiads }: { olympiads: MobileNo
             key={o.slug}
             href={`/olympiads/${o.slug}`}
             aria-label={`Explore ${o.name}`}
-            className="group relative z-[1] flex h-9 w-9 items-center justify-center"
+            className="group relative z-[1] flex h-11 w-11 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))]"
           >
             <span
               className="absolute inset-0 rounded-full opacity-0 transition-opacity duration-300 group-active:opacity-100"

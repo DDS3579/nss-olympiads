@@ -66,7 +66,7 @@ export function NextStep({ olympiad }: { olympiad: Olympiad }) {
             <button
               onClick={() => setDismissed(true)}
               aria-label="Dismiss next step"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
             >
               <X className="h-4 w-4" />
             </button>

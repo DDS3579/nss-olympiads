@@ -107,7 +107,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                   onClick={() => focusTopic(t.id)}
                   aria-label={`Focus topic ${t.name}`}
                   aria-pressed={focusedTopicId === t.id}
-                  className="group absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1.5 focus:outline-none"
+                  className="group absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2 focus-visible:ring-offset-background before:absolute before:-inset-2 before:content-['']"
                   style={{ left: `${t.x}%`, top: `${t.y}%`, opacity: dimmed ? 0.35 : 1, transition: "opacity 0.3s" }}
                 >
                   <span className="relative block">
@@ -167,7 +167,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                         boxShadow: isFocused ? `0 0 12px hsl(var(${colorVar}) / 0.8)` : "none",
                       }}
                     />
-                    <button onClick={() => focusTopic(t.id)} className="group w-full text-left" aria-pressed={isFocused}>
+                    <button onClick={() => focusTopic(t.id)} className="group min-h-10 w-full rounded-lg text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2" aria-pressed={isFocused}>
                       <div className="flex items-center justify-between">
                         <span className="font-heading font-semibold text-foreground transition-colors group-hover:text-primary">
                           {t.name}

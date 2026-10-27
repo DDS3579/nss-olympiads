@@ -90,7 +90,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
         <button
           onClick={() => toggleTopic(topic.id, topic.name)}
           className={cn(
-            "rounded-full border px-4 py-2 text-xs font-semibold transition-colors",
+            "inline-flex min-h-10 items-center rounded-full border px-4 text-xs font-semibold transition-colors",
         started
           ? "border-transparent"
           : "border-border bg-background text-foreground hover:bg-secondary"
@@ -103,7 +103,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
         <button
           onClick={() => focusTopic(topic.id)}
           aria-label={`Focus ${topic.name} materials`}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
           style={focused ? { borderColor: strong(colorVar), color: strong(colorVar) } : undefined}
         >
           <ArrowUpRight className="h-4 w-4" />

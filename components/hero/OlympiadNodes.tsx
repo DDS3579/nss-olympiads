@@ -78,7 +78,7 @@ export function OlympiadNodes({
             onMouseLeave={() => onActivate(null)}
             onFocus={() => onActivate(i)}
             onBlur={() => onActivate(null)}
-            className="group absolute -translate-x-1/2 -translate-y-1/2 p-3"
+            className="group absolute -translate-x-1/2 -translate-y-1/2 rounded-full p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             style={{ left: `${p.x}%`, top: `${p.y}%` }}
           >
             {/* node */}

@@ -40,7 +40,7 @@ function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; color
           href={r.fileUrl}
           download
           onClick={() => markResourceOpened(r.title, r.title)}
-          className="inline-flex flex-shrink-0 items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
+          className="inline-flex min-h-10 flex-shrink-0 items-center gap-2 rounded-full border border-border bg-background px-4 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
         >
           <ArrowDownToLine className="h-3.5 w-3.5" style={{ color: strong(colorVar) }} />
           <span className="hidden sm:inline">{opened ? "Opened" : "Download"}</span>

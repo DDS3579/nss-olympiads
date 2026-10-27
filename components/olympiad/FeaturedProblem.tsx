@@ -88,11 +88,13 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
 
                 <div className="mt-6 flex flex-wrap items-center gap-4">
                   <DifficultyMeter level={p.difficulty} colorVar={c} />
-                  <button
-                    onClick={() => setOpen((o) => !o)}
-                    className="text-sm font-semibold hover:underline"
-                    style={{ color: strong(c) }}
-                  >
+              <button
+                onClick={() => setOpen((o) => !o)}
+                aria-expanded={open}
+                aria-controls="problem-hint"
+                className="py-2 text-sm font-semibold hover:underline"
+                style={{ color: strong(c) }}
+              >
                     {open ? "Hide hint" : "Reveal hint"}
                   </button>
                 </div>
@@ -107,6 +109,7 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
                       className="overflow-hidden"
                     >
                       <p
+                        id="problem-hint"
                         className="mt-4 border-l-2 pl-4 text-sm text-muted-foreground"
                         style={{ borderColor: `hsl(var(${c}))` }}
                       >

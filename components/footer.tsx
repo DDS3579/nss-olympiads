@@ -69,7 +69,7 @@ export function Footer() {
               href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors duration-200 hover:text-primary"
             >
               <InstagramIcon className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
@@ -78,14 +78,14 @@ export function Footer() {
               href={siteConfig.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors duration-200 hover:text-primary"
             >
               <FacebookIcon className="h-5 w-5" />
               <span className="sr-only">Facebook</span>
             </a> */}
             <a
                 href={mailto()}
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors duration-200 hover:text-primary"
             >
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>
@@ -170,7 +170,7 @@ export function Footer() {
             <li>
               <Link
                 href="/#contact"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-2"
               >
                 Contact
               </Link>
@@ -178,7 +178,7 @@ export function Footer() {
             <li>
               <Link
                 href={siteConfig.legal.faq}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-2"
               >
                 FAQ
               </Link>
@@ -186,7 +186,7 @@ export function Footer() {
             <li>
               <Link
                 href={mailto("Report an issue")}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-2"
               >
                 Report Issue
               </Link>

@@ -41,7 +41,7 @@ function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) 
             href={paper.fileUrl}
             download
             onClick={() => markPaperAccessed(paper.title, paper.title)}
-            className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-semibold transition-all hover:brightness-110"
+            className="inline-flex min-h-10 items-center gap-2 rounded-full px-5 text-xs font-semibold transition-all hover:brightness-110"
             style={{ backgroundColor: strong(colorVar), color: onStrong }}
           >
             <ArrowDownToLine className="h-3.5 w-3.5" />
