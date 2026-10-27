@@ -35,7 +35,7 @@ export function NextStep({ olympiad }: { olympiad: Olympiad }) {
   };
 
   return (
-    <div className="fixed inset-x-4 bottom-4 z-40 pb-[env(safe-area-inset-bottom)] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:max-w-xs">
+    <div data-no-print className="fixed inset-x-4 bottom-4 z-40 pb-[env(safe-area-inset-bottom)] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:max-w-xs">
       <FadeIn y={20}>
         <div className="flex items-start gap-3 rounded-2xl border border-border bg-card/95 p-4 shadow-lg backdrop-blur">
           <div className="min-w-0 flex-1">

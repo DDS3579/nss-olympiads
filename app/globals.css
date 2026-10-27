@@ -340,3 +340,29 @@ html.lenis body {
   outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
 }
+
+/* ===== Print (T3.7, U-35) — clean syllabus/roadmap checklists ===== */
+@media print {
+  header, footer, #olympiad-subnav, [data-no-print], .hero-motion { display: none !important; }
+  body { background: #fff; color: #000; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 10px; }
+  section { break-inside: avoid-page; padding: 12px 0 !important; }
+  .section-anchor { scroll-margin-top: 0; }
+
+  /* Force the light print palette regardless of active theme */
+  :root, .dark {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 25%;
+    --border: 0 0% 80%;
+    --primary: 199 89% 30%;
+    --primary-foreground: 0 0% 100%;
+  }
+}
