@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import {
   ArrowRight,
@@ -15,7 +13,8 @@ import { GeometricHeroCanvas } from "@/components/GeometricHeroCanvas";
 import { MagneticButton } from "@/components/MagneticButton";
 import { SectionLabel } from "@/components/SectionLabel";
 import { OlympiadHero } from "@/components/hero/OlympiadHero";
-import { olympiads } from "@/lib/data/olympiads";
+import { SubjectIcon } from "@/lib/data/icons";
+import { getSubjectIndex } from "@/lib/data";
 
 /* Each reason gets its own subject accent color — ties the section into the
    olympiad palette without introducing anything new. */
@@ -54,10 +53,11 @@ const teamCards = [
 ];
 
 export default function Home() {
+  const subjects = getSubjectIndex();
   return (
     <div className="bg-background overflow-hidden">
       {/* HERO */}
-      <OlympiadHero />
+      <OlympiadHero subjects={subjects} />
 
       {/* ───────────────────────── WHY OLYMPIADS ───────────────────────── */}
       <section className="relative bg-secondary/30 py-24 lg:py-32" id="why">
@@ -262,8 +262,7 @@ export default function Home() {
 
           {/* manifest list — each row carries its own olympiad color */}
           <div className="mt-12 border-t border-border lg:mt-16">
-            {olympiads.map((o, i) => {
-              const Icon = o.icon;
+            {subjects.map((o, i) => {
               return (
                 <FadeIn key={o.slug} y={16} delay={i * 0.05}>
                   <Link
@@ -287,7 +286,8 @@ export default function Home() {
                         background: `hsl(var(${o.colorVar}) / 0.06)`,
                       }}
                     >
-                      <Icon
+                      <SubjectIcon
+                        iconKey={o.iconKey}
                         className="h-5 w-5 sm:h-[22px] sm:w-[22px]"
                         style={{ color: `hsl(var(${o.colorVar}))` }}
                       />

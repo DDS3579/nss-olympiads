@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
-import { olympiads } from "@/lib/data/olympiads";
+import { getSubjectIndex } from "@/lib/data";
+import { SubjectIcon } from "@/lib/data/icons";
 
 export const metadata = {
   title: "All Olympiads",
@@ -26,6 +27,7 @@ const NODE_EDGES: [number, number][] = [
 ];
 
 export default function OlympiadsPage() {
+  const subjects = getSubjectIndex();
   return (
     <div className="relative min-h-screen overflow-hidden bg-background pb-24 pt-32">
       {/* soft top glow for depth */}
@@ -105,7 +107,7 @@ export default function OlympiadsPage() {
                     strokeLinecap="round"
                   />
                 ))}
-                {olympiads.slice(0, 7).map((o, i) => (
+                {subjects.slice(0, 7).map((o, i) => (
                   <g key={o.slug}>
                     <circle
                       cx={NODE_POS[i].x}
@@ -130,8 +132,7 @@ export default function OlympiadsPage() {
       {/* The manifest */}
       <div className="relative mx-auto mt-14 max-w-5xl px-6 lg:mt-20">
         <div className="border-t border-border">
-          {olympiads.map((item, index) => {
-            const Icon = item.icon;
+          {subjects.map((item, index) => {
             return (
               <FadeIn key={item.slug} y={16} delay={index * 0.05}>
                 <Link
@@ -155,7 +156,8 @@ export default function OlympiadsPage() {
                       background: `hsl(var(${item.colorVar}) / 0.06)`,
                     }}
                   >
-                    <Icon
+                    <SubjectIcon
+                      iconKey={item.iconKey}
                       className="h-5 w-5 sm:h-[22px] sm:w-[22px]"
                       style={{ color: `hsl(var(${item.colorVar}))` }}
                     />

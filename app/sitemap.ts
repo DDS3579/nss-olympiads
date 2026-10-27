@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { olympiads } from "@/lib/data/olympiads";
+import { getAllSubjects } from "@/lib/data";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,8 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteConfig.url}/olympiads`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
   ];
 
-  const olympiadRoutes: MetadataRoute.Sitemap = olympiads.map((o) => ({
-    url: `${siteConfig.url}/olympiads/${o.slug}`,
+const olympiadRoutes: MetadataRoute.Sitemap = getAllSubjects().map((s) => ({
+  url: `${siteConfig.url}/olympiads/${s.meta.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.8,

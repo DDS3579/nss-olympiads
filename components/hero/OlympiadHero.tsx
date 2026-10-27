@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { CountUp } from "@/components/CountUp";
 import { MagneticButton } from "@/components/MagneticButton";
-import { olympiads } from "@/lib/data/olympiads";
+import type { SubjectIndexItem } from "@/lib/types";
 
 import { OlympiadHeroBackdrop } from "./OlympiadHeroBackdrop";
 import { OlympiadNodes } from "./OlympiadNodes";
@@ -20,7 +20,7 @@ const HERO_STATS = [
   { key: "free", value: "100%", label: "Free Preparation", countUp: false },
 ];
 
-export function OlympiadHero() {
+export function OlympiadHero({ subjects }: { subjects: SubjectIndexItem[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
@@ -29,10 +29,10 @@ export function OlympiadHero() {
       <OlympiadHeroBackdrop activeIndex={activeIndex} />
 
       {/* The 7 Olympiad constellation (interactive) — desktop */}
-      <OlympiadNodes olympiads={olympiads} onActivate={setActiveIndex} />
+      <OlympiadNodes olympiads={subjects} onActivate={setActiveIndex} />
 
       {/* ADDED: mobile-only constellation so the motif survives small screens */}
-      <OlympiadMobileConstellation olympiads={olympiads} />
+      <OlympiadMobileConstellation olympiads={subjects} />
 
       {/* Hero content — clean negative space in the center */}
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-1 flex-col items-center justify-center px-6 pb-40 pt-36 text-center lg:pt-40">
@@ -94,7 +94,7 @@ export function OlympiadHero() {
             {HERO_STATS.map((s) => (
               <div key={s.key} className="px-5 text-center sm:px-10">
                 <div className="font-heading text-xl font-bold text-foreground sm:text-[1.7rem]">
-                  {s.countUp ? <CountUp to={7} /> : s.value}
+                  {s.countUp ? <CountUp to={subjects.length} /> : s.value}
                 </div>
                 <div className="mt-1.5 text-[9px] font-semibold uppercase tracking-[0.22em] text-muted-foreground sm:text-[10px]">
                   {s.label}

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail } from "lucide-react";
-import { olympiads } from "@/lib/data/olympiads";
+import { getSubjectIndex } from "@/lib/data";
 import { siteConfig, mailto } from "@/lib/site-config";
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -39,6 +39,7 @@ function FacebookIcon({ className }: { className?: string }) {
 }
 
 export function Footer() {
+  const subjects = getSubjectIndex();
   return (
     <footer
       className="border-t border-border bg-background pb-8 pt-16"
@@ -147,7 +148,7 @@ export function Footer() {
             Categories
           </h3>
           <ul className="space-y-2">
-            {olympiads.map((o) => (
+            {subjects.map((o) => (
               <li key={o.slug}>
                 <Link
                   href={`/olympiads/${o.slug}`}
