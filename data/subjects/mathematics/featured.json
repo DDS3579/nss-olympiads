@@ -1,0 +1,17 @@
+[
+  {
+    "id": "mathematics-a-functional-equation",
+    "title": "A Functional Equation",
+    "topicId": "algebra-inequalities",
+    "level": "international",
+    "difficulty": 4,
+    "statement": "Find all functions f : ℝ → ℝ such that f(x + f(y)) = f(x) + y for every real x and y.",
+    "hint": "Prove f is bijective, then show it must be additive and equal to the identity.",
+    "solutionUrl": null,
+    "source": {
+      "label": "Attributed to IMO Shortlist — unverified. Ill-posed as stated (U-24); owner must verify or replace (M-10).",
+      "url": ""
+    },
+    "verified": false
+  }
+]

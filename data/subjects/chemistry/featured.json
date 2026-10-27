@@ -1,0 +1,17 @@
+[
+  {
+    "id": "chemistry-weak-acid-equilibrium",
+    "title": "Weak Acid Equilibrium",
+    "topicId": "physical-chemistry",
+    "level": "international",
+    "difficulty": 3,
+    "statement": "A 0.1 M solution of a weak acid HA has pH 3. Estimate the acid dissociation constant Ka.",
+    "hint": "Use Ka ≈ [H+]² / (c − [H+]) with [H+] = 10⁻³.",
+    "solutionUrl": null,
+    "source": {
+      "label": "IChO Preparatory — citation to verify (Appendix H suggests IChO 2024 Prep P12).",
+      "url": ""
+    },
+    "verified": false
+  }
+]

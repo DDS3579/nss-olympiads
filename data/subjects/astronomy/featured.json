@@ -1,0 +1,17 @@
+[
+  {
+    "id": "astronomy-binary-star-masses",
+    "title": "Binary Star Masses",
+    "topicId": "",
+    "level": "international",
+    "difficulty": 4,
+    "statement": "Two stars orbit their common centre of mass with period P and separation a. Express the total mass of the system.",
+    "hint": "Apply Kepler's third law: M = 4π²a³ / (G P²).",
+    "solutionUrl": null,
+    "source": {
+      "label": "IOAA Data Round — real source IOAA A.2.5 Stellar Systems (Appendix H). topicId pending astronomy.md.",
+      "url": ""
+    },
+    "verified": false
+  }
+]

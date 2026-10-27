@@ -1,0 +1,17 @@
+[
+  {
+    "id": "physics-escape-velocity",
+    "title": "Escape Velocity",
+    "topicId": "mechanics",
+    "level": "international",
+    "difficulty": 3,
+    "statement": "A body is projected vertically from Earth's surface. Find the minimum speed needed to escape Earth's gravitational field, neglecting air resistance.",
+    "hint": "Conserve mechanical energy between the surface and infinity.",
+    "solutionUrl": null,
+    "source": {
+      "label": "IPhO Preparation — citation to verify (Appendix H suggests IPhO 2019 P1 or IPhO 1991 P1).",
+      "url": ""
+    },
+    "verified": false
+  }
+]

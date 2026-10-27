@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ai-gradient-descent-update",
+    "title": "Gradient Descent Update",
+    "topicId": "",
+    "level": "district",
+    "difficulty": 2,
+    "statement": "State the parameter update rule for gradient descent on a loss L(θ) with learning rate η.",
+    "hint": "θ ← θ − η∇L(θ).",
+    "solutionUrl": null,
+    "source": {
+      "label": "IOAI Qualifier — citation to verify (Appendix H: AION Round 1). topicId pending ai.md.",
+      "url": ""
+    },
+    "verified": false
+  }
+]
