@@ -1,0 +1,31 @@
+[
+  {
+    "id": "algebra-inequalities",
+    "name": "Algebra & Inequalities",
+    "blurb": "Polynomials, functional equations, AM-GM, Cauchy-Schwarz, sequences & recurrences.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Polynomials", "Functional equations", "AM-GM inequality", "Cauchy-Schwarz inequality", "Sequences & recurrences"],
+    "featured": true
+  },
+  {
+    "id": "number-theory",
+    "name": "Number Theory",
+    "blurb": "Divisibility, primes, modular arithmetic, Euler's totient theorem, Diophantine equations, LTE lemma.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Divisibility", "Primes", "Modular arithmetic", "Euler totient theorem", "Diophantine equations", "LTE lemma"]
+  },
+  {
+    "id": "euclidean-geometry",
+    "name": "Euclidean Geometry",
+    "blurb": "Triangles, cyclic quadrilaterals, power of a point, radical axis, projective geometry, homothety.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Triangles", "Cyclic quadrilaterals", "Power of a point", "Radical axis", "Projective geometry", "Homothety"]
+  },
+  {
+    "id": "combinatorics-graph-theory",
+    "name": "Combinatorics & Graph Theory",
+    "blurb": "Counting principles, pigeonhole principle, invariant principles, graph coloring, extremal combinatorics.",
+    "levels": ["province", "national", "international"],
+    "subtopics": ["Counting principles", "Pigeonhole principle", "Invariant principles", "Graph coloring", "Extremal combinatorics"]
+  }
+]
