@@ -76,7 +76,7 @@ export default function OlympiadsPage() {
             </FadeIn>
 
             <FadeIn y={10} delay={0.24}>
-              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground/70">
+              <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
                 <span>7 disciplines</span>
                 <span className="h-1 w-1 rounded-full bg-border" />
                 <span>100% free</span>
@@ -146,7 +146,7 @@ export default function OlympiadsPage() {
                   className="group relative flex items-center gap-4 border-b border-border px-2 py-6 transition-colors duration-300 hover:bg-[color:var(--c-soft)] sm:gap-6 sm:px-3 sm:py-7"
                 >
                   {/* index */}
-                  <span className="hidden w-8 flex-shrink-0 font-heading text-xs font-bold tabular-nums text-muted-foreground/50 transition-colors duration-300 group-hover:text-[color:var(--c)] sm:block">
+                  <span aria-hidden className="hidden w-8 flex-shrink-0 font-heading text-xs font-bold tabular-nums text-muted-foreground/50 transition-colors duration-300 group-hover:text-[color:var(--c)] sm:block">
                     {String(index + 1).padStart(2, "0")}
                   </span>
 

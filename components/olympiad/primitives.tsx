@@ -250,9 +250,9 @@ export function StatChip({
       >
         {value}
       </span>
-      <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-        {label}
-      </span>
+    <span className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+      {label}
+    </span>
     </div>
   );
 }

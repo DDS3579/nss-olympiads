@@ -108,7 +108,7 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
               <div className="truncate font-heading text-sm font-bold text-foreground">
                 {olympiad.name}
               </div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+              <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                 Series {olympiad.series}
               </div>
             </div>
@@ -145,7 +145,7 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
                   className="absolute right-0 top-full mt-2 w-64 overflow-hidden rounded-2xl border border-border bg-card shadow-xl"
                 >
                   <div className="border-b border-border px-4 py-2.5">
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                       All Olympiads
                     </span>
                   </div>

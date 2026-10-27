@@ -39,7 +39,7 @@ export function NextStep({ olympiad }: { olympiad: Olympiad }) {
       <FadeIn y={20}>
         <div className="flex items-start gap-3 rounded-2xl border border-border bg-card/95 p-4 shadow-lg backdrop-blur">
           <div className="min-w-0 flex-1">
-            <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
               Next
             </div>
             {nextAction ? (

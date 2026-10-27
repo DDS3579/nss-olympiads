@@ -64,8 +64,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
           <div className="flex items-start justify-between gap-3">
             <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-foreground lg:text-xl">
               {topic.name}
-            </h3>
-            <span className="whitespace-nowrap text-[11px] font-semibold text-muted-foreground">
+            </h3>              <span className="whitespace-nowrap text-xs font-semibold text-muted-foreground">
               {topic.subtopics.length} sub-topics
             </span>
           </div>

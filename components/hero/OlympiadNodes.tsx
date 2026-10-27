@@ -96,7 +96,7 @@ export function OlympiadNodes({
                 <span className="block whitespace-nowrap font-heading text-[11px] font-bold uppercase tracking-[0.12em] text-[#f3f6fb]">
                   {o.name}
                 </span>
-                <span className="mt-0.5 block text-[10px] font-medium text-[#28b8f2]">
+                <span className="mt-0.5 block text-xs font-medium text-[#28b8f2]">
                   Explore →
                 </span>
               </span>

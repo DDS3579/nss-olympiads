@@ -150,7 +150,7 @@ export default function Home() {
                     </svg>
                     <div className="mt-4 flex items-center gap-3">
                       <span className="h-px w-8 bg-primary/40" />
-                      <span className="text-xs font-medium text-muted-foreground/70">
+                      <span className="text-xs font-medium text-muted-foreground">
                         Four reasons. Zero cost.
                       </span>
                     </div>
@@ -189,7 +189,7 @@ export default function Home() {
                       {/* copy */}
                       <div className="min-w-0 flex-1 pb-1">
                         <span
-                          className="text-[10px] font-semibold uppercase tracking-[0.2em]"
+                          className="text-[11px] font-semibold uppercase tracking-[0.2em]"
                           style={{ color: strong(row.colorVar) }}
                         >
                           {row.tag}
@@ -276,7 +276,7 @@ export default function Home() {
                     className="group relative flex items-center gap-4 border-b border-border px-2 py-6 transition-colors duration-300 hover:bg-[color:var(--c-soft)] sm:gap-6 sm:px-3 sm:py-7"
                   >
                     {/* index */}
-                    <span className="hidden w-7 flex-shrink-0 font-heading text-xs font-bold tabular-nums text-muted-foreground/50 transition-colors duration-300 group-hover:text-[color:var(--c)] sm:block">
+                    <span aria-hidden className="hidden w-7 flex-shrink-0 font-heading text-xs font-bold tabular-nums text-muted-foreground/50 transition-colors duration-300 group-hover:text-[color:var(--c)] sm:block">
                       {String(i + 1).padStart(2, "0")}
                     </span>
 
@@ -352,7 +352,7 @@ export default function Home() {
                 <FadeIn key={i} delay={i * 0.08} y={14}>
                   <div className="group border-t border-border pt-5">
                     <div className="flex items-center justify-between">
-                      <span className="font-heading text-[11px] font-bold tabular-nums text-muted-foreground/40">
+                      <span aria-hidden className="font-heading text-[11px] font-bold tabular-nums text-muted-foreground/40">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       <span className="h-1 w-1 rounded-full bg-primary/40 transition-transform duration-300 group-hover:scale-150" />

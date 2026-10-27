@@ -133,7 +133,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                   </span>
                   <span
                     className={
-                      "whitespace-nowrap font-heading text-[11px] font-semibold tracking-wide transition-colors " +
+                      "whitespace-nowrap font-heading text-xs font-semibold tracking-wide transition-colors " +
                       (active || t.featured ? "text-foreground" : "text-muted-foreground")
                     }
                   >
@@ -146,7 +146,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
 
           <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-[11px] text-muted-foreground">
             <span className="uppercase tracking-[0.2em]">Skill map · {topics.length} nodes</span>
-            <span>{focusedTopicId ? "Click the node again to unfocus" : "Click a node to focus its topic"}</span>
+            <span className="text-xs">{focusedTopicId ? "Click the node again to unfocus" : "Click a node to focus its topic"}</span>
           </div>
         </div>
 

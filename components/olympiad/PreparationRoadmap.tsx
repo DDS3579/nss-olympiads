@@ -74,19 +74,19 @@ function RoadmapStageRow({
             </span>
             {status === "current" && (
               <span
-                className="rounded-full px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider"
+                className="rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider"
                 style={{ background: strong(colorVar), color: onStrong }}
               >
                 You are here
               </span>
             )}
         {status === "completed" && (
-          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             Done
           </span>
         )}
         {stage.placeholder && (
-          <span className="rounded-full border border-dashed border-border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+          <span className="rounded-full border border-dashed border-border px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
             Draft roadmap
           </span>
         )}

@@ -40,7 +40,7 @@ export function OlympiadHero({ subjects }: { subjects: SubjectIndexItem[] }) {
         <FadeIn delay={0.05} y={8}>
           <div className="mb-7 inline-flex items-center gap-3">
             <span className="h-px w-10 bg-gradient-to-r from-transparent to-primary/50" />
-            <span className="font-heading text-[10px] font-semibold uppercase tracking-[0.32em] text-muted-foreground">
+            <span className="font-heading text-[11px] font-semibold uppercase tracking-[0.32em] text-muted-foreground">
               7 Olympiads · NSS STEM Club
             </span>
             <span className="h-px w-10 bg-gradient-to-l from-transparent to-primary/50" />
@@ -96,7 +96,7 @@ export function OlympiadHero({ subjects }: { subjects: SubjectIndexItem[] }) {
                 <div className="font-heading text-xl font-bold text-foreground sm:text-[1.7rem]">
                   {s.countUp ? <CountUp to={subjects.length} /> : s.value}
                 </div>
-                <div className="mt-1.5 text-[9px] font-semibold uppercase tracking-[0.22em] text-muted-foreground sm:text-[10px]">
+                <div className="mt-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
                   {s.label}
                 </div>
               </div>

@@ -60,7 +60,7 @@ export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
                       {unit.unit}
                     </h3>
                     <span
-                      className="flex-shrink-0 rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider"
+                      className="flex-shrink-0 rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider"
                       style={{
                         background: `hsl(var(${c}) / 0.12)`,
                         color: strong(c),
