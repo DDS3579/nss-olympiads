@@ -46,3 +46,8 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T1.8: placeholder roadmap kept verbatim (incl. "Compete at nationals", U-25) until T4.13 replaces it with dated stages.
 - T1.8: astronomy/ai featured topicId left "" pending their topics.json completion.
 - T1.8: `components/olympiad/legacy.ts` imports only `MotifKey`/`SubjectData` from `@/lib/types` — the plan's snippet also imported `Level`/`Topic`, which collide with the adapter's own `Topic` interface (TS2440) and were unused.
+- T2.2/T2.4: validate:data not yet wired into prebuild — drafts carry needsReview:true (and 42 hasSolutions:null on Physics) so strict validation would red-line every build. Wired after owner M-04/M-05 review pass (plan itself schedules strict at T10.5).
+- T2.4: draft JSONs stay in content-src/ until curation — splitting into data/subjects/ publishes rows live via the legacy adapter (R-G1 curation + M-05 hasSolutions must come first).
+- T2.1: Chemistry's IChO archive tables (Volumes 1–5, direct 2020–25 exam PDFs, prep series D) are skipped by K.1's row-id rule — extend ingest needles at Chemistry split time.
+- Chemistry F5 (olimpicos.net/icho/) conflicts with the denylist — owner decision pending (from T1.2).
+- T2.1: Physics pilot reproduced the Appendix K.1 counts on every line except missingWhy (21 vs the plan's 29) — the local physics.md resolves a why-column on 8 more rows. No effect on the 95/44/51/9 record counts.
