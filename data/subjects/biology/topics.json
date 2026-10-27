@@ -1,0 +1,73 @@
+[
+  {
+    "id": "animal-anatomy-physiology",
+    "name": "Animal Anatomy & Physiology",
+    "blurb": "IBO domain III — 25% of the theory exam; the heaviest single domain.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Body systems", "Homeostasis", "Human biology (NEB Gr.12 Unit 8)"],
+    "featured": true,
+    "officialWeight": 25
+  },
+  {
+    "id": "cell-biology",
+    "name": "Cell Biology",
+    "blurb": "IBO domain I — 20% of the theory exam; Nepal's weakest IBO lab component (16% of gold-medal level in 2026).",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Biomolecules", "Cell structure", "Membranes & transport", "Cell cycle", "Mitosis & meiosis"],
+    "officialWeight": 20
+  },
+  {
+    "id": "genetics-evolution",
+    "name": "Genetics & Evolution",
+    "blurb": "IBO domain V — 20% of the theory exam.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Mendel's laws", "Linkage & crossing over", "Mutation & polyploidy", "DNA & RNA", "Evolution"],
+    "officialWeight": 20
+  },
+  {
+    "id": "plant-anatomy-physiology",
+    "name": "Plant Anatomy & Physiology",
+    "blurb": "IBO domain II — 15% of the theory exam. Omitted from the old site taxonomy.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Plant anatomy", "Water relations", "Photosynthesis", "Respiration", "Plant hormones", "Growth & movement"],
+    "officialWeight": 15,
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "ecology",
+    "name": "Ecology",
+    "blurb": "IBO domain VI — 10% of the theory exam; well matched by the NEB curriculum.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Ecosystems", "Food chains & trophic levels", "Biogeochemical cycles", "Succession", "Conservation biology"],
+    "officialWeight": 10
+  },
+  {
+    "id": "ethology",
+    "name": "Ethology",
+    "blurb": "IBO domain IV — 5% of the theory exam; only ~3 teaching hours in the entire NEB curriculum.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Reflex action", "Taxes", "Migration", "Dominance & leadership"],
+    "officialWeight": 5,
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "biosystematics",
+    "name": "Biosystematics",
+    "blurb": "IBO domain VII — 5% of the theory exam, yet 28.6% of NEB biology teaching hours.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Classification & nomenclature", "Floral diversity", "Faunal diversity"],
+    "officialWeight": 5
+  },
+  {
+    "id": "practical-skills",
+    "name": "IBO Practical Skills",
+    "blurb": "IBO Appendix 2 skills — 4 labs × 1.5 h is half the IBO; NEB fully covers 0 of the 7 sections.",
+    "levels": ["national", "international"],
+    "subtopics": ["Gel electrophoresis", "Micropipetting", "Chromatography", "Aseptic technique", "Statistics (t-test, chi-square, standard error)", "Bioinformatics", "Dichotomous keys", "Stereomicroscopy", "Free-hand sectioning"],
+    "officialWeight": null,
+    "gap": true,
+    "gapSubstituteId": null
+  }
+]
