@@ -40,3 +40,9 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T1.4: chemistry topics = 12 IChO theory sections + practical-skills + molecular-orbital-theory node; the four traditional divisions are kept as grouping for syllabus.json.
 - T1.6: plan's example used `kind` on Paper records; Appendix A type has `kindHosting` — used the real field.
 - T1.6: Maths paper format facts derived from MAN's published DMO spec (50 MCQ / 100 min / −0.25 / 25 marks = 50% ⇒ 50 marks); provenance of the hosted PDFs still OWNER-TO-CONFIRM (needsReview:true).
+- T1.8: old invented syllabus cards (U-23) intentionally not ported — section shows honest empty state + syllabus PDF button until syllabus.json is transcribed (GS-6, Lane B).
+- T1.8: featured problems hidden site-wide (verified:false) until M-10; the maths problem is ill-posed (U-24) and must be replaced, not just verified.
+- T1.8: hero "disciplines" line derives from first 5 official topic names; "Level" chip shows the international contest short-name — both replaced by computed stats in T4.15.
+- T1.8: placeholder roadmap kept verbatim (incl. "Compete at nationals", U-25) until T4.13 replaces it with dated stages.
+- T1.8: astronomy/ai featured topicId left "" pending their topics.json completion.
+- T1.8: `components/olympiad/legacy.ts` imports only `MotifKey`/`SubjectData` from `@/lib/types` — the plan's snippet also imported `Level`/`Topic`, which collide with the adapter's own `Topic` interface (TS2440) and were unused.
