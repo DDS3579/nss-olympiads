@@ -1,6 +1,6 @@
 "use client"
 import React, { useRef, useState } from 'react'
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 
 export function MagneticButton({ 
   children, 
@@ -13,6 +13,7 @@ export function MagneticButton({
 }) {
   const ref = useRef<HTMLDivElement>(null)
   const [position, setPosition] = useState({ x: 0, y: 0 })
+  const reduce = useReducedMotion()
 
   const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return
@@ -30,6 +31,9 @@ export function MagneticButton({
   }
 
   const reset = () => setPosition({ x: 0, y: 0 })
+
+  // Reduced motion: render a plain wrapper, no magnetic tween (R0.8)
+  if (reduce) return <div className={className}>{children}</div>
 
   return (
     <motion.div

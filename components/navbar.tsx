@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { motion, useScroll, useMotionValueEvent } from "motion/react"
+import { motion, useScroll, useMotionValueEvent, useReducedMotion } from "motion/react"
 import { Menu, ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -31,6 +31,7 @@ export function Navbar() {
   const [activeHash, setActiveHash] = useState("")
   const pathname = usePathname()
   const { scrollY } = useScroll()
+  const reduce = useReducedMotion()
 
   // Track hash changes for active link highlighting
   useEffect(() => {
@@ -62,9 +63,9 @@ export function Navbar() {
 
   return ( <motion.header
       id="site-header"
-      initial={{ opacity: 0, y: -20 }}
+      initial={reduce ? false : { opacity: 0, y: -20 }}
       animate={hidden ? { y: "-100%", opacity: 1 } : { y: 0, opacity: 1 }}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
+      transition={{ duration: reduce ? 0 : 0.35, ease: "easeInOut" }}
       className={cn(
         "sticky top-0 inset-x-0 z-50 h-[var(--nav-h)] border-b border-border bg-background/90 backdrop-blur-md transition-colors duration-300",
         pathname === "/" && atTop && "dark"

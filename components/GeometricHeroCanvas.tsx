@@ -23,6 +23,8 @@ export function GeometricHeroCanvas({
 
   useEffect(() => {
     if (!containerRef.current) return
+    // Reduced motion: static shapes only (R0.8)
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
 
     const targets = containerRef.current.querySelectorAll('.shape')
     

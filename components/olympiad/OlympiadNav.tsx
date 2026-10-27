@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { ChevronDown, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { SubjectIndexItem } from "@/lib/types";
@@ -26,6 +26,7 @@ const ALL_SECTIONS = [...PRIMARY_SECTIONS, ...SECONDARY_SECTIONS];
 
 export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: SubjectIndexItem[] }) {
   const [active, setActive] = useState("library");
+  const reduce = useReducedMotion();
   const [switcherOpen, setSwitcherOpen] = useState(false);
   const switcherRef = useRef<HTMLDivElement>(null);
   const subnavRef = useRef<HTMLDivElement>(null);
@@ -158,11 +159,11 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
 
             <AnimatePresence>
               {switcherOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -8, scale: 0.96 }}
-                  transition={{ duration: 0.18, ease: "easeOut" }}
+            <motion.div
+              initial={reduce ? false : { opacity: 0, y: -8, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={reduce ? { opacity: 0 } : { opacity: 0, y: -8, scale: 0.96 }}
+              transition={{ duration: reduce ? 0 : 0.18, ease: "easeOut" }}
                   className="absolute right-0 top-full mt-2 w-64 overflow-hidden rounded-2xl border border-border bg-card shadow-xl"
                 >
                   <div className="border-b border-border px-4 py-2.5">

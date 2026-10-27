@@ -1,7 +1,7 @@
 "use client";
 
 import { X } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
 import type { Olympiad } from "@/components/olympiad/legacy";
@@ -9,6 +9,7 @@ import { strong } from "@/lib/color";
 
 export function TopicFocusBar({ olympiad }: { olympiad: Olympiad }) {
   const { focusedTopic, clearFocus, matchesFocus } = useOlympiadProgress();
+  const reduce = useReducedMotion();
 
   if (!focusedTopic) return null;
 
@@ -18,10 +19,10 @@ export function TopicFocusBar({ olympiad }: { olympiad: Olympiad }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: -12 }}
+      initial={reduce ? false : { opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -12 }}
-      transition={{ duration: 0.25, ease: "easeOut" }}data-no-print
+      exit={reduce ? { opacity: 0 } : { opacity: 0, y: -12 }}
+      transition={{ duration: reduce ? 0 : 0.25, ease: "easeOut" }}data-no-print
       className="sticky z-30 border-b border-border bg-background/95 backdrop-blur-md"
 style={{ top: "calc(var(--nav-offset) + var(--subnav-h))" }}
     >

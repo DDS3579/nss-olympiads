@@ -366,3 +366,14 @@ html.lenis body {
     --primary-foreground: 0 0% 100%;
   }
 }
+
+/* Reduced motion: clamp Radix/Tailwind enter-exit animations (sheets, dialogs) (T3.8) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in,
+  .animate-out {
+    animation-duration: 1ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
