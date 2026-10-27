@@ -84,10 +84,13 @@ export default function RootLayout({
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-primary focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-primary-foreground"
-        >
-          Skip to content
-        </a>
-        <SmoothScroll>
+        >Skip to content
+      </a>
+
+      {/* Screen-reader announcements (filter results, timer cues) — written by T4.5/T4.8 */}
+      <div id="sr-status" role="status" aria-live="polite" className="sr-only" />
+
+      <SmoothScroll>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -95,7 +98,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <main id="main" className="flex-grow">
+            <main id="main" tabIndex={-1} className="flex-grow">
               {children}
             </main>
             <Footer />

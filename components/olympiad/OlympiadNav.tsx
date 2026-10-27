@@ -28,8 +28,24 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
   const [active, setActive] = useState("library");
   const [switcherOpen, setSwitcherOpen] = useState(false);
   const switcherRef = useRef<HTMLDivElement>(null);
+  const subnavRef = useRef<HTMLDivElement>(null);
   const Icon = olympiad.icon;
   const c = olympiad.colorVar;
+
+  // Publish this bar's real height so TopicFocusBar/anchors can stack under it (T3.4)
+  useEffect(() => {
+    const el = subnavRef.current;
+    if (!el) return;
+    const set = () =>
+      document.documentElement.style.setProperty("--subnav-h", `${el.offsetHeight}px`);
+    set();
+    const ro = new ResizeObserver(set);
+    ro.observe(el);
+    return () => {
+      ro.disconnect();
+      document.documentElement.style.setProperty("--subnav-h", "0px");
+    };
+  }, []);
 
   // Scroll-spy
   useEffect(() => {
@@ -69,11 +85,12 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
   }, [switcherOpen]);
 
   const renderTab = (s: { id: string; label: string }, primary: boolean) => (
-    <a
-      key={s.id}
-      href={`#${s.id}`}
-      className={cn(
-        "relative whitespace-nowrap rounded-full px-3 py-1.5 transition-colors",
+  <a
+    key={s.id}
+    href={`#${s.id}`}
+    aria-current={active === s.id ? "true" : undefined}
+    className={cn(
+      "relative whitespace-nowrap rounded-full px-3 py-1.5 transition-colors",
         primary
           ? "font-heading text-sm font-bold"
           : "text-sm font-medium",
@@ -92,8 +109,12 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
     </a>
   );
 
-  return (
-    <div className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md">
+  return ( <div
+  id="olympiad-subnav"
+  ref={subnavRef}
+  style={{ top: "var(--nav-offset)" }}
+  className="sticky z-40 border-b border-border bg-background/90 backdrop-blur-md transition-[top] duration-300 motion-reduce:transition-none"
+>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex items-center gap-4 py-3">
           {/* Identity */}
@@ -115,7 +136,7 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
           </div>
 
           {/* Desktop tabs */}
-          <nav className="no-scrollbar hidden min-w-0 flex-1 items-center justify-center gap-1 overflow-x-auto lg:flex">
+          <nav aria-label={`Sections of ${olympiad.name}`} className="no-scrollbar hidden min-w-0 flex-1 items-center justify-center gap-1 overflow-x-auto lg:flex">
             {PRIMARY_SECTIONS.map((s) => renderTab(s, true))}
             <span className="mx-2 h-4 w-px flex-shrink-0 bg-border" />
             {SECONDARY_SECTIONS.map((s) => renderTab(s, false))}
@@ -127,7 +148,7 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
               onClick={() => setSwitcherOpen((o) => !o)}
               aria-expanded={switcherOpen}
               aria-haspopup="listbox"
-              className="flex items-center gap-1.5 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
+              className="flex min-h-10 items-center gap-1.5 rounded-full border border-border bg-background px-3 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
             >
               Switch
               <ChevronDown
@@ -183,13 +204,14 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
         </div>
 
         {/* Mobile tabs */}
-        <nav className="no-scrollbar -mx-6 flex items-center gap-1 overflow-x-auto px-6 pb-3 lg:hidden">
+        <nav aria-label={`Sections of ${olympiad.name}`} className="no-scrollbar -mx-6 flex items-center gap-1 overflow-x-auto px-6 pb-3 lg:hidden">
           {PRIMARY_SECTIONS.map((s) => (
             <a
               key={s.id}
               href={`#${s.id}`}
+              aria-current={active === s.id ? "true" : undefined}
               className={cn(
-                "whitespace-nowrap rounded-full px-3 py-1.5 font-heading text-sm font-bold transition-colors",
+                "inline-flex min-h-10 items-center whitespace-nowrap rounded-full px-3 font-heading text-sm font-bold transition-colors",
                 active === s.id ? "bg-secondary text-foreground" : "text-muted-foreground hover:text-foreground"
               )}
             >
@@ -201,8 +223,9 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
             <a
               key={s.id}
               href={`#${s.id}`}
+              aria-current={active === s.id ? "true" : undefined}
               className={cn(
-                "whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-medium transition-colors",
+                "inline-flex min-h-10 items-center whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors",
                 active === s.id ? "bg-secondary text-foreground" : "text-muted-foreground hover:text-foreground"
               )}
             >

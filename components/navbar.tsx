@@ -27,6 +27,7 @@ const navLinks = [
 
 export function Navbar() {
   const [hidden, setHidden] = useState(false)
+  const [atTop, setAtTop] = useState(true)
   const [activeHash, setActiveHash] = useState("")
   const pathname = usePathname()
   const { scrollY } = useScroll()
@@ -41,11 +42,11 @@ export function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0
-    if (latest > previous && latest > 150) {
-      setHidden(true)
-    } else {
-      setHidden(false)
-    }
+    const hide = latest > previous && latest > 150
+    setHidden(hide)
+    setAtTop(latest < 40)
+    // Publish visibility so every sticky element below stacks correctly (T3.4)
+    document.documentElement.style.setProperty("--nav-offset", hide ? "0px" : "var(--nav-h)")
   })
 
   const isActive = (href: string) => {
@@ -59,14 +60,17 @@ export function Navbar() {
     return baseMatch && activeHash === `#${hash}`
   }
 
-  return (
-    <motion.header
+  return ( <motion.header
+      id="site-header"
       initial={{ opacity: 0, y: -20 }}
       animate={hidden ? { y: "-100%", opacity: 1 } : { y: 0, opacity: 1 }}
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="sticky top-0 inset-x-0 z-50 h-20 border-b border-border bg-background/90 backdrop-blur-md transition-colors duration-300"
+      className={cn(
+        "sticky top-0 inset-x-0 z-50 h-[var(--nav-h)] border-b border-border bg-background/90 backdrop-blur-md transition-colors duration-300",
+        pathname === "/" && atTop && "dark"
+      )}
     >
-      <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-8">
+      <nav aria-label="Primary" className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-2.5">
           <Image
@@ -86,9 +90,10 @@ export function Navbar() {
           {navLinks.map((link) => (
             <Link
               key={link.href}
-              href={link.href}
-              className={cn(
-                "relative text-sm font-medium transition-colors duration-200 py-1",
+            href={link.href}
+            aria-current={isActive(link.href) ? "page" : undefined}
+            className={cn(
+              "relative text-sm font-medium transition-colors duration-200 py-1",
                 isActive(link.href)
                   ? "text-foreground"
                   : "text-foreground/70 hover:text-foreground"
@@ -131,10 +136,11 @@ export function Navbar() {
               <div className="flex flex-col gap-4 mt-8">
                 {navLinks.map((link) => (
                   <SheetClose asChild key={link.href}>
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        "text-lg font-medium py-2 border-b border-border transition-colors",
+                <Link
+                  href={link.href}
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                  className={cn(
+                    "text-lg font-medium py-2 border-b border-border transition-colors",
                         isActive(link.href) ? "text-primary" : "text-foreground"
                       )}
                     >
