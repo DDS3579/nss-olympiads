@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "gen:registry": "node scripts/gen-registry.mjs",
+    "ingest": "node scripts/ingest-md.mjs",
     "predev": "npm run gen:registry",
     "prebuild": "npm run gen:registry"
   },
