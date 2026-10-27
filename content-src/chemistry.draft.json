@@ -1,0 +1,1969 @@
+{
+  "slug": "chemistry",
+  "generatedFrom": "chemistry.md",
+  "generatedAt": "2026-10-27T13:11:42.489Z",
+  "fileCompiledOn": "2026-10-22",
+  "counts": {
+    "tablesFound": 33,
+    "rawRows": 62,
+    "afterDedupe": 54,
+    "resources": 29,
+    "papers": 25,
+    "paperSets": 0,
+    "nepalSpecificFlagged": 9,
+    "byStatus": {
+      "caveat": 18,
+      "ok": 26,
+      "dead": 1,
+      "unknown": 9
+    },
+    "missingWhy": 12,
+    "gaps": 12,
+    "contacts": 10,
+    "rejected": 8
+  },
+  "resources": [
+    {
+      "id": "chemistry-sajha-notes-neb-grade-11-chemistry",
+      "title": "Sajha Notes — NEB Grade 11 Chemistry",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://sajhanotes.com/grade-11-chemistry/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "LIVE ⚠️ read-only online (site disables print/PDF)",
+      "verified": "2026-10-22",
+      "why": "39 topics in the exact NEB structure: Physical (15) · Inorganic (14) · Applied (2) · Organic (8). The best free Nepali-curriculum chemistry resource found anywhere.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-neb-grade-11-chemistry-syllabus-sajha-notes-write-up-of-the-",
+      "title": "NEB Grade 11 Chemistry Syllabus (Sajha Notes' write-up of the CDC curriculum)",
+      "type": "official",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://sajhanotes.com/neb-grade-11-chemistry-syllabus/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Know the boundary before you study past it.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-sajha-notes-chemistry-practicals-lab-grade-11",
+      "title": "Sajha Notes — Chemistry Practicals (Lab), Grade 11",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://sajhanotes.com/chemistry-lab/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "NEB board practicals. The only free Nepali lab resource found.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-sajha-notes-model-question-papers",
+      "title": "Sajha Notes — Model Question Papers",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://sajhanotes.com/question-papers/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "NEB-format papers; useful timing drill",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-openstax",
+      "title": "OpenStax",
+      "type": "book",
+      "levels": [
+        "district",
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://openstax.org/details/books/chemistry-2e",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Full general chemistry, calculus-free, IChO-adjacent rigour. The free equivalent of Zumdahl.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S5",
+        "S24"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-libretexts-chemistry",
+      "title": "LibreTexts Chemistry",
+      "type": "book",
+      "levels": [
+        "district",
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://chem.libretexts.org/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Modular; excellent for filling single-topic holes fast",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S6",
+        "S23"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-khan-academy-high-school-chemistry",
+      "title": "Khan Academy — High School Chemistry",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.khanacademy.org/science/hs-chemistry",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Recommended by Dr. Chen's Academy as the Level-1 companion",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-uci-opencourseware-preparation-for-chemistry",
+      "title": "UCI OpenCourseWare — Preparation for Chemistry",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://ocw.uci.edu/courses/chem_1p_preparation_for_chemistry.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Pre-general-chemistry bridge",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-hyperphysics-chemistry",
+      "title": "HyperPhysics — Chemistry",
+      "type": "tool",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://hyperphysics.phy-astr.gsu.edu/hbase/index.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Fast cross-referencing",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-sajha-notes-neb-grade-12-chemistry",
+      "title": "Sajha Notes — NEB Grade 12 Chemistry",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://sajhanotes.com/grade-12-chemistry/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "LIVE ⚠️ read-only",
+      "verified": "2026-10-22",
+      "why": "34 topics: Physical (11) · Inorganic (6) · Organic (10) · Organic Conversion Reactions (3) · Applied (4). The Organic Conversion Reactions section (aliphatic conversions, aromatic conversions, conversion practice questions with solutions) is directly the format of olympiad synthesis problems.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-neb-grade-12-chemistry-syllabus",
+      "title": "NEB Grade 12 Chemistry Syllabus",
+      "type": "official",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://sajhanotes.com/neb-grade-12-chemistry-syllabus/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-sajha-notes-chemistry-practicals-lab-grade-12",
+      "title": "Sajha Notes — Chemistry Practicals (Lab), Grade 12",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://sajhanotes.com/chemistry-lab-12/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Includes volumetric analysis, titration, gravimetric analysis — which are also named NEB Grade 12 physical-chemistry topics.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S12"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-neb-syllabus-2076-updated-downloadable-group-pdf",
+      "title": "NEB Syllabus 2076 (updated) — downloadable group PDF",
+      "type": "official",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://blog.bed.com.np/neb-syllabus-2076-updated-version-download/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "NEB grades 11–12 syllabus bundle",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S13"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-secondary-education-curriculum-2076-chemistry-grades-11-12-o",
+      "title": "Secondary Education Curriculum 2076 — Chemistry, Grades 11 & 12 (official CDC)",
+      "type": "official",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://moecdc.gov.np/",
+      "extraLinks": [
+        {
+          "label": "Link 2",
+          "url": "http://lib.moecdc.gov.np/elibrary/pages/home.php?login=true"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "Government server, very slow / times out from outside Nepal",
+      "verified": "2026-10-22",
+      "why": "The source document STAN's rounds are based on",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S14"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-zumdahl-zumdahl-decoste-11th-ed-cengage-isbn-9780357850671",
+      "title": "— Zumdahl, Zumdahl & DeCoste, 11th ed., Cengage, ISBN 9780357850671",
+      "type": "book",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.amazon.com/dp/035785067X",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-22",
+      "why": "The classic general-chemistry text used for AP and college. Strong thermodynamics and equilibrium — the two heaviest olympiad-physical-chemistry blocks.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S15"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-david-r-klein-4th-ed-wiley-isbn-9781119659594",
+      "title": "— David R. Klein, 4th ed., Wiley, ISBN 9781119659594",
+      "type": "book",
+      "levels": [
+        "province",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.dcho.us/textbooks",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-22",
+      "why": "Best-in-class for building mechanistic thinking — the skill olympiad organic questions actually test. SkillBuilder exercises.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S16",
+        "S18",
+        "S35"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-klein-vol-1-isbn-9781119837091-vol-2-isbn-9781119837053-6th-",
+      "title": "— Klein, Vol. 1 (ISBN 9781119837091) & Vol. 2 (ISBN 9781119837053), 6th ed.",
+      "type": "book",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.amazon.com/dp/111983709X",
+      "extraLinks": [
+        {
+          "label": "Link 2",
+          "url": "https://www.amazon.com/dp/1119837057"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-22",
+      "why": "The famous thin companion. Vol. 2 covers aromatics + IR and NMR spectroscopy — both IChO Level 3 and absent from NEB. Highest value-per-rupee book on this list.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S17"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-atkins-jones-laverman-7th-ed-w-h-freeman-isbn-9781464183959",
+      "title": "— Atkins, Jones & Laverman, 7th ed., W. H. Freeman, ISBN 9781464183959",
+      "type": "book",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.amazon.com/dp/1464183953",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-22",
+      "why": "\"A rigorous treatment of chemistry from a physical chemistry perspective. Essential for students aiming for Study Camp and beyond.\" Deeper thermodynamics + quantum than any general text.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S19"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-clayden-greeves-warren-2nd-ed-oup-isbn-9780199270293",
+      "title": "— Clayden, Greeves & Warren, 2nd ed., OUP, ISBN 9780199270293",
+      "type": "book",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.amazon.com/dp/0199270295",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-22",
+      "why": "The gold standard. \"Exceptional mechanism explanations with curved arrows… advanced synthesis planning and retrosynthetic analysis.\" Required for IChO organic, which NEB does not reach.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S20"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-keeler-wothers-2nd-ed-oup-isbn-9780199604135",
+      "title": "— Keeler & Wothers, 2nd ed., OUP, ISBN 9780199604135",
+      "type": "book",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.amazon.com/dp/0199604134",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-22",
+      "why": "Integrated organic + inorganic + physical, with strong molecular orbital theory. \"Ideal for advanced IChO-level preparation.\" MO theory is IChO Level 3 and completely absent from NEB.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S21"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-david-harvey-depauw-university",
+      "title": "— David Harvey, DePauw University",
+      "type": "book",
+      "levels": [
+        "national",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://sites.google.com/depauw.edu/dth/analytical-curriculum-projects/analytical-chemistry-2-1",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Covers modern instrumental analysis — IChO §12 Analytical chemistry and §8 Spectroscopy, both entirely outside NEB. The best free route into the largest Nepali syllabus gap.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S22",
+        "S31"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-acs-usnco-exam-reference-page",
+      "title": "ACS USNCO Exam Reference Page",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.acs.org/education/olympiad/prepare-for-exams/reference-page.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "bot-walled",
+      "verified": "2026-10-22",
+      "why": "Exactly what constants/equations you are given vs must know",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S25"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-acs-accessible-periodic-table",
+      "title": "ACS Accessible Periodic Table",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.acs.org/education/olympiad/prepare-for-exams/accessible-periodic-table.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "bot-walled",
+      "verified": "2026-10-22",
+      "why": "Screen-reader-friendly periodic table for practice",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S26"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-omegalearn-usnco-prep-guide",
+      "title": "OmegaLearn — USNCO Prep Guide",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.omegalearn.org/usnco",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Points to the ACS archive plus annotated solutions for free-response and lab sections",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S27"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-official-icho-syllabus-theoretical-part",
+      "title": "Official IChO Syllabus — Theoretical Part",
+      "type": "official",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.icho.sk/files/syllabus%20for%20the%20theoretical%20part%20of%20the%20icho%20competition.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "12 sections, 326 entries, each tagged Level 1/2/3. §1 The atom · §2 Chemical bonding · §3 Chemical calculations · §4 Periodic trends · §5 Inorganic Chemistry · §6 Physical chemistry · §7 Chemical kinetics (homogeneous) · §8 Spectroscopy · §9 Organic Chemistry · §10 Polymers · §11 Biochemistry · §12 Analytical chemistry. This is the contract you train against.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S28"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-official-icho-syllabus-practical-part",
+      "title": "Official IChO Syllabus — Practical Part",
+      "type": "official",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.icho.sk/files/syllabus%20for%20the%20practical%20part%20of%20the%20icho%20competition.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "5 sections: ① Synthesis of inorganic & organic compounds (33+ tagged techniques) ② Identification of inorganic & organic compounds ③ Determination of some inorganic & organic compounds ④ Special measurements and procedures ⑤ Evaluation of results. Level tags work the same way — and the rule is explicit: \"If the organizer wants to apply a technique which is not mentioned in the above syllabus, this technique is set to level 3 automatically.\"",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S29"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-clayden-s20",
+      "title": "— Clayden (= S20)",
+      "type": "book",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕",
+      "verified": "2026-10-22",
+      "why": "IChO §9 + §10",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S32"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-keeler-wothers-s21",
+      "title": "— Keeler & Wothers (= S21)",
+      "type": "book",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕",
+      "verified": "2026-10-22",
+      "why": "IChO §2 (MO theory, Level 3) + §5 + §6",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S33"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-atkins-s19",
+      "title": "— Atkins (= S19)",
+      "type": "book",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕",
+      "verified": "2026-10-22",
+      "why": "IChO §6 + §7",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S34"
+      ],
+      "needsReview": true
+    }
+  ],
+  "papers": [
+    {
+      "id": "chemistry-usnco-local-section-exam-2026",
+      "title": "USNCO Local Section Exam 2026",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.acs.org/content/dam/acsorg/education/students/highschool/olympiad/pastexams/2026-usnco-local-exam.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "ACS is bot-walled to scripts; loads fine in a browser — content verified by extraction",
+      "verified": "2026-10-22",
+      "why": "The cleanest analogue anywhere: a wide, fast, school-syllabus MCQ screening round. Periodic table + constants + 3 key equations supplied on p.2. Full mark-scheme logic is published.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "D1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-usnco-local-exam-archive-2000-2026-26-papers-2010-2022-with-",
+      "title": "USNCO Local Exam archive 2000 → 2026 (26 papers; 2010–2022 with annotated solutions)",
+      "type": "pastpaper",
+      "levels": [
+        "district",
+        "province",
+        "national"
+      ],
+      "year": 2000,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.acs.org/education/olympiad/prepare-for-exams.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "same",
+      "verified": "2026-10-22",
+      "why": "The single largest free district-tier chemistry problem bank in existence",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D2",
+        "P5",
+        "N1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-rsc-uk-chemistry-olympiad-introductory-questions",
+      "title": "RSC UK Chemistry Olympiad — Introductory Questions",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://edu.rsc.org/uk-chemistry-olympiad/chemistry-olympiad-introductory-questions/4014380.article",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "RSC returns 202 to scripts; works in a browser (content verified)",
+      "verified": "2026-10-22",
+      "why": "Deliberately designed as the on-ramp for students new to olympiad format. Exactly what a district-tier entrant needs first.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-rsc-how-to-prepare-for-the-chemistry-olympiad",
+      "title": "RSC \"How to prepare for the Chemistry Olympiad\"",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://edu.rsc.org/uk-chemistry-olympiad/how-to-prepare-for-the-chemistry-olympiad/4012809.article",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "same",
+      "verified": "2026-10-22",
+      "why": "Orientation document",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-neso-tier-ii-model-question-multi-subject-section-a-20-5-che",
+      "title": "NeSO Tier II Model Question (multi-subject; Section A = 20 + 5 Chemistry)",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "http://nepalscienceolympiad.org.np/wp-content/uploads/2015/12/Tier-II-model-question.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Nepal's own multi-subject school olympiad — nearest domestic difficulty calibration",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-rsc-uk-chemistry-olympiad-past-papers-2003-2026",
+      "title": "RSC UK Chemistry Olympiad past papers, 2003 → 2026",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2003,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://edu.rsc.org/uk-chemistry-olympiad/chemistry-olympiad-past-papers/1641.article",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "bot-walled to scripts; works in browser (verified by extraction)",
+      "verified": "2026-10-22",
+      "why": "The best provincial-tier resource on the internet. Every year ships with paper + supporting materials + answer booklet + mark scheme + examiners' report, plus a published topic list. The examiners' reports are irreplaceable — they show exactly where strong students lose marks.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-ukcho-past-paper-index-2003-2026-mirror-with-direct-links",
+      "title": "UKChO past-paper index 2003 → 2026 (mirror with direct links)",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2003,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://en.ukcho.org.cn/past-papers",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Handy alternate route to P1",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-rsc-chemistry-olympiad-support-booklet",
+      "title": "RSC Chemistry Olympiad Support Booklet",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://edu.rsc.org/uk-chemistry-olympiad/chemistry-olympiad-support-booklet/1149.article",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "same",
+      "verified": "2026-10-22",
+      "why": "Nine past questions with guidance and explanatory notes, incl. an extended worked example",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-rsc-chemistry-olympiad-worked-answers",
+      "title": "RSC Chemistry Olympiad Worked Answers",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://edu.rsc.org/uk-chemistry-olympiad/chemistry-olympiad-worked-answers/4014037.article",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "same",
+      "verified": "2026-10-22",
+      "why": "Step-by-step build-up to whole papers, for students new to the format",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-nepho-style-analogue-bdcho-bangladesh-chemistry-olympiad",
+      "title": "NePhO-style analogue — BdChO (Bangladesh Chemistry Olympiad)",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.scribd.com/document/984844894/Q-CheO-CU-14th-2025",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "dead",
+      "accessNote": "paywall — low value, listed for completeness",
+      "verified": "2026-10-22",
+      "why": "Bangladesh runs a similar school-tier structure. Archive is thin and Scribd-gated.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-usnco-national-exam-part-i-solutions-2022-2021-2020",
+      "title": "USNCO National Exam Part I + solutions, 2022 / 2021 / 2020",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2022,
+      "topics": [],
+      "files": [],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Annotated by ACS volunteers",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-incho-2008-2025-question-paper-english-and-hindi-model-solut",
+      "title": "INChO 2008 → 2025 — Question Paper (English and Hindi) + Model Solutions + Answer Booklet",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2008,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "Index live; individual PDFs 404 from non-Indian IPs (geo-restricted)",
+      "verified": "2026-10-22",
+      "why": "India's national round with official model solutions. Difficulty sits just above NChO and just below IChO — the ideal calibration point for Nepali students. Hindi versions help students more comfortable in Devanagari.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "N3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-incho-2025-qp-en",
+      "title": "INChO 2025 QP (EN)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2025/02/INChO2025-Question.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "geo-blocked",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-incho-2025-qp-hindi",
+      "title": "INChO 2025 QP (Hindi)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2025/02/INChO2025-Question-hi.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "geo-blocked",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-incho-2025-model-solutions",
+      "title": "INChO 2025 Model Solutions",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2025/02/INChO2025-Solution-20250219.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "geo-blocked",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-incho-2023-qp-en",
+      "title": "INChO 2023 QP (EN)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2023,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2023/01/INChO2023-Question.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "geo-blocked",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-hbcse-olympiad-books-catalogue-incl-ladage-narvekar-160",
+      "title": "HBCSE Olympiad Books catalogue (incl. , Ladage & Narvekar, ₹160)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://library.hbcse.tifr.res.in/olympiads/olympiad-books",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Cheap official compilations, postable",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-icho-preparatory-problems-2001-2019-see-4-2",
+      "title": "IChO Preparatory Problems 2001–2019 (see §4.2)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2001,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://icho.sk/preparatory-problems/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "The single most important national-tier resource. By IChO regulation, Level-3 topics can only appear if they're in the preparatory set — so working the prep problems is syllabus coverage.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-icho-official-results-database-per-country-per-year-per-stud",
+      "title": "IChO official results database — per-country, per-year, per-student, with original scripts",
+      "type": "official",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.icho-official.org/results/country_info.php?country=Nepal",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "F1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-icho-2026-results-58th-tashkent",
+      "title": "IChO 2026 results (58th, Tashkent)",
+      "type": "official",
+      "levels": [
+        "international"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.icho-official.org/results/results.php?id=58&year=2026",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "F2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-icho-steering-committee-official-governing-body",
+      "title": "IChO Steering Committee (official governing body)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ichosc.org/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "F3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-icho-iic-bratislava-regulations-syllabus-theoretical-part-pr",
+      "title": "IChO IIC, Bratislava — Regulations · Syllabus · Theoretical part · Practical part · Archive sheets",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://icho.sk/regulations-of-icho/",
+          "kind": "questions"
+        },
+        {
+          "label": "File 2",
+          "url": "https://icho.sk/syllabus/",
+          "kind": "questions"
+        },
+        {
+          "label": "File 3",
+          "url": "https://icho.sk/theoretical-part-of-icho/",
+          "kind": "questions"
+        },
+        {
+          "label": "File 4",
+          "url": "https://icho.sk/practical-part-of-icho/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "F4",
+        "S30"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-olimpicos-icho-problems-solutions-2015-2026",
+      "title": "Olimpicos — IChO Problems & Solutions 2015 → 2026",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2015,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olimpicos.net/icho/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "F5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-ttcho-past-icho-exams-and-solutions-2001-2019-2022-2023-theo",
+      "title": "TTCHO — Past IChO Exams and Solutions (2001–2019 + 2022/2023 theory + practical)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2001,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ttcho.com/past-icho-exams-and-solutions",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "F6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "chemistry-pianetachimica-icho-archive-by-edition-italian-icho-team-sit",
+      "title": "PianetaChimica — IChO archive by edition (Italian IChO team site; hosts prep problems + syllabi for many years, incl. the 39th IChO syllabus)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.pianetachimica.it/olimpiadi/39icho/39icho_Syllabus.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "F7"
+      ],
+      "needsReview": true
+    }
+  ],
+  "paperSets": [],
+  "gaps": [
+    {
+      "id": "C-1",
+      "level": "ALL",
+      "missing": "⭐⭐ STAN has no website. Nepal's chemistry olympiad national organiser exists only as a Facebook page and a Facebook group. There is no syllabus page, no results archive, no past-paper repository, no registration portal, no durable record of anything.",
+      "evidence": "MoEST दफा ४(१)(ग) *requires* a recognised olympiad body to have its \"सबै विवरण खुलेको मापदण्ड वा निर्देशिका वा प्रवन्ध… सार्वजनिक\" (a published criteria/guideline document). STAN publishes none. Facebook posts are ephemeral, unindexed and unsearchable.",
+      "aiSpec": "Build it yourself — this is the single highest-leverage action available to NSS Olympiad Hub. Create a static ncho.nepal / GitHub-Pages site with: ① the reconstructed ladder (Part 0B.3), ② all STAN Facebook notices mirrored + archived with permalinks, ③ results tables by year, ④ the syllabi generated in C-3/C-4, ⑤ the past-paper bank from C-2, ⑥ registration deadlines calendar, ⑦ STAN and STEM Foundation Nepal contacts. Then email STAN offering to hand it over.",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "C-2",
+      "level": "ALL",
+      "missing": "⭐⭐ Zero published NChO past papers — at district, provincial or national level. Not one.",
+      "evidence": "Contrast Physics: 6 real NePhO papers exist publicly. Chemistry has *nothing*. Students across all 7 provinces are preparing blind, and cannot calibrate difficulty at all.",
+      "aiSpec": "Retrieve first: request papers from STAN via Facebook; ask the 20 IChO alumni (all 20 names are in Part 0A — they are reachable via LinkedIn/Nepal's STEM networks); ask the +2 colleges whose students won (NIST/National School of Sciences publicly celebrated its IBO/IChO students). If unretrievable, generate a full NChO Mock Series: 3 District papers (40 MCQ / 60 min, NEB Gr.11 only), 3 Provincial papers (50 MCQ + 5 structured / 2 h, NEB Gr.11+12), 3 National papers (Part I 60 MCQ + Part II 8 free-response + Part III 1 practical / spread over 2 sittings, mirroring the verified 16–17 April two-day format). Calibrate Part I to USNCO Local, Part II to INChO, Part III to USNCO National Part III. Include full solutions + a mark-allocation rubric.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "C-3",
+      "level": "District / Province",
+      "missing": "⭐ No published NChO syllabus. A student cannot know what the district or provincial round covers.",
+      "evidence": "Physics solved this: NPS prints the syllabus *on the exam paper*. STAN prints nothing.",
+      "aiSpec": "Generate a \"NChO District & Provincial Round Syllabus\" derived by intersecting (a) the verified NEB Grade 11 & 12 Chemistry curricula (73 topics total, enumerated in §1.4 and §2.3) against (b) the IChO Level 1 + Level 2 entries (150 of 326 — extracted from the official syllabus PDF). Publish as a two-column table: *NEB chapter → IChO clause → Level tag → in/out of scope for District → in/out for Province.* This is mechanically derivable and would be the first such document in Nepal.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "C-4",
+      "level": "National / International",
+      "missing": "⭐⭐ No NEB → IChO gap map. This is the decisive document for Nepal, and nobody has written it.",
+      "evidence": "The IChO syllabus has 326 entries across 12 sections. NEB Grade 11+12 has 73 topics across 5 sections. Cross-referencing them by hand shows entire IChO sections with no NEB counterpart at all: §8 Spectroscopy (IR, NMR, UV-vis, mass spec), §10 Polymers, §11 Biochemistry, §12 Analytical chemistry (instrumental), plus §2.4 Molecular orbital theory, §2.2 delocalization/resonance and §1.2.5–1.2.7 Schrödinger/quantum numbers — all Level 3.",
+      "aiSpec": "Generate \"NEB → IChO Gap Map\": all 326 IChO syllabus entries, each tagged *Level 1/2/3*, with three columns — ① covered by NEB Gr.11? ② covered by NEB Gr.12? ③ what to study instead (name the exact free resource: Harvey *Analytical Chemistry 2.1* ch. X for §12; Klein *OC as a Second Language* Vol. 2 for NMR/IR; LibreTexts for §10/§11; Clayden ch. Y for §9). Output = a self-study curriculum for the 176 Level-3 entries, which is where every Nepali medal will come from.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "C-5",
+      "level": "International",
+      "missing": "⭐⭐ No system for working the IChO Preparatory Problems. Nepal receives ~30 theoretical + 7 practical problems with full solutions every January — and by IChO regulation these are the *only* route to Level-3 content (54 % of the syllabus). Nobody in Nepal organises the work.",
+      "evidence": "IChO Regulations ¶10 (quoted verbatim in §4.1). Verified: the 2026 set is 30 theoretical + 7 practical with detailed solutions, on the official Drive. The 2001–2019 archive is complete on icho.sk.",
+      "aiSpec": "Generate a \"Preparatory Problems Working Programme\": ① take the 19 archived sets (2001–2019) + 2024 + 2026 = 21 sets; ② tag every problem by IChO syllabus section (§1–§12) and Level; ③ produce a 12-month study calendar that walks all 21 sets in syllabus order, ~2 problems/week; ④ for each of the 12 sections, a \"first 5 problems to do\" shortlist; ⑤ a running Level-3 topic index so a student can see which prep-problem years taught, e.g., MO theory or NMR. This turns a pile of PDFs into a curriculum.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "C-6",
+      "level": "National / International",
+      "missing": "⭐⭐ NO PRACTICAL / EXPERIMENTAL CHEMISTRY TRAINING MATERIAL FOR NEPAL AT OLYMPIAD LEVEL. IChO has a 5-hour practical examination worth a substantial share of total marks. Nepal has never had one published resource for it.",
+      "evidence": "The official IChO practical syllabus lists 33+ tagged techniques in §1 alone, many at Level 2–3: magnetic stirrer, reflux apparatus, distillation at reduced pressure, steam distillation, microscale synthesis, Büchner filtration with a water vacuum pump, recrystallisation from an unknown organic solvent, desiccator drying, gas-washing bottles, solvent extraction — plus §2 Identification, §3 Determination, §4 Special measurements, §5 Evaluation of results. Sajha Notes' NEB labs (Gr. 11 & 12) are board-level: titration, gravimetric analysis, salt analysis. The jump is enormous and unbridged. Aggravating factor: Nepal's only IChO medal (2022) was won in a remote IChO with no experimental part. The practical is now back and Nepal is unprepared for it.",
+      "aiSpec": "Generate \"Practical Chemistry for NChO & IChO — a Nepal Manual\" in 5 parts matching the official syllabus sections: (1) Apparatus & technique literacy — analytical balance, burette/pipette/measuring cylinder, dropping funnel, reflux, simple + fractional + reduced-pressure distillation, steam distillation, Büchner funnel + water vacuum pump, recrystallisation, desiccator, magnetic stirrer, gas-washing bottle, separatory funnel; for each: purpose, setup diagram, procedure, common failure modes, safety. (2) Qualitative identification — cation/anion systematic analysis, flame tests, functional-group tests, melting/boiling-point determination, mixed-unknown schemes. (3) Quantitative determination — acid–base, redox (permanganometry, iodometry, dichromatometry), complexometric (EDTA), precipitation (argentometry), back-titrations; error propagation and % yield. (4) Instrumental/special — colourimetry & UV-vis calibration curves, potentiometry & pH-metric titration, conductivity, simple chromatography (TLC/paper), refractometry, polarimetry; plus PhET / virtual-lab / at-home substitutes for every technique a district school cannot perform (this is essential — most Nepali schools lack reduced-pressure distillation entirely). (5) Evaluation of results — significant figures, standard deviation, linearisation, least-squares fit with slope/intercept uncertainty, reporting a final value ± uncertainty. Anchor every item to the official IChO practical syllabus Level tags and to USNCO National Exam Part III (the only free published olympiad lab-practical archive) + the IChO 2026 Practical Exam and its solutions.",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "C-7",
+      "level": "ALL",
+      "missing": "No Nepali-language (नेपाली) chemistry olympiad material whatsoever.",
+      "evidence": "Physics has the same gap, but chemistry is worse: IChO permits translation, INChO publishes papers in Hindi, and Devanagari-script chemistry vocabulary (e.g. *अनुमापन* for titration, *सान्द्रता* for concentration) is not standardised anywhere in Nepal. Sajha Notes is English-only.",
+      "aiSpec": "Generate a bilingual नेपाली/English Chemistry Olympiad glossary: ~500 terms covering all 12 IChO sections, each with *Nepali term · English term · symbol · SI unit · governing equation*. Then translate the summary/key-concept boxes only (not full problems) of the C-4 gap map. Reference INChO's Hindi papers for consistent Devanagari scientific terminology.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "C-8",
+      "level": "National",
+      "missing": "No documented selection criteria or training pathway. STAN announces \"top 32 → interview → top 4\" but publishes no rubric: what is the interview? Who sits on it? How is the Top-4 decided? How long is the Learning Camp? What does it cover?",
+      "evidence": "MoEST दफा ४(१)(ग) requires the criteria to be published. Verified: no such document exists on any Nepali site.",
+      "aiSpec": "Generate a \"Path to Team Nepal: NChO Selection Guide\" documenting the reconstructed funnel with dates from verified STAN notices (2026: provincial from 6 Apr, national 16–17 Apr), plus: ① a proposed transparent Top-32→Top-4 rubric (60 % written national score / 25 % practical assessment / 15 % interview), ② a Learning Camp syllabus (10 days: 5 days theory across the 12 IChO sections weighted by Level-3 count, 4 days practical per C-6, 1 day mock IChO), ③ an alumni-mentorship roster using the 20 verified IChO participants in Part 0A. Offer it to STAN as a draft policy document.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "C-9",
+      "level": "Province",
+      "missing": "No calibrated difficulty ladder. Because no NChO paper exists, a student cannot tell whether they are performing at district, provincial, national or international standard.",
+      "evidence": "Physics has the *A Guide*'s Level 1 → Level 2 → IPhO progression built in. Chemistry has no equivalent.",
+      "aiSpec": "Generate a 240-problem calibrated bank, 60 per level, tagged by IChO syllabus section (§1–§12) and Level (1/2/3): Level D = NEB Gr.11, USNCO-Local difficulty; Level P = NEB Gr.11+12, UKChO-Round-1 difficulty; Level N = beyond-NEB Level 2, INChO difficulty; Level I = Level 3, IChO-preparatory difficulty. Full solutions + mark values for all. Publish as the NSS Olympiad Hub Chemistry problem set.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "C-10",
+      "level": "International",
+      "missing": "No AChO / regional-tier target. Unlike Physics (which has APhO), Chemistry has no Asian regional olympiad that Nepal could realistically enter as a stepping stone — and no Nepali document discusses this.",
+      "evidence": "Verified: the Asian Chemistry Olympiad exists but Nepal does not participate.",
+      "aiSpec": "Generate a short \"Regional Options Brief\": map AChO (Asian Chemistry Olympiad) eligibility, cost, and the case for Nepal's first entry — plus a cheaper alternative pathway of entering online international contests (e.g. virtual olympiads) to give the Top 4 competition reps before IChO.",
+      "priority": "🟡 P3"
+    },
+    {
+      "id": "C-11",
+      "level": "ALL",
+      "missing": "stemnepal.org is dead. STEM Foundation Nepal — the designated *International Event Partner* that receives the IChO team list — has a broken website returning a cPanel server-error stub.",
+      "evidence": "Verified 22 Oct 2026: HTTP 200 but the body is the cPanel *\"Default Web Site Page — SORRY!\"* error. The domain resolves to a misconfigured host.",
+      "aiSpec": "Do not link stemnepal.org anywhere on your site. Record the correct contact route (via STAN's Facebook) and flag to STAN that their international partner's web presence is down.",
+      "priority": "🟠 P2 (action, not authoring)"
+    },
+    {
+      "id": "C-12",
+      "level": "Site",
+      "missing": "Re-base your Chemistry topic tree on the IChO's 12 sections. Your current site shows a generic 5-topic taxonomy. The IChO syllabus is 12 sections with a 3-level difficulty tag on all 326 entries — a ready-made, official, machine-readable taxonomy you can adopt directly.",
+      "evidence": "Verified structure: §1 The atom · §2 Chemical bonding · §3 Chemical calculations · §4 Periodic trends · §5 Inorganic · §6 Physical chemistry · §7 Chemical kinetics · §8 Spectroscopy · §9 Organic · §10 Polymers · §11 Biochemistry · §12 Analytical. Level counts: L1 = 95, L2 = 55, L3 = 176.",
+      "aiSpec": "Restructure the Chemistry page into a 12-node constellation, each node showing its Level 1/2/3 sub-entry counts, and add a \"Level 3 — outside NEB\" badge so students can see at a glance which nodes need self-study. Highest-value nodes by Level-3 density: §8 Spectroscopy, §9 Organic, §11 Biochemistry, §12 Analytical, §2 Chemical bonding.",
+      "priority": "🟠 P2"
+    }
+  ],
+  "contacts": [
+    {
+      "body": "Science Teachers' Association of Nepal (STAN)",
+      "role": "National Organiser — runs the NOoN district, provincial and national rounds for Chemistry",
+      "channels": "https://www.facebook.com/scienceteachersnepal/ · Group: https://www.facebook.com/groups/1942336182687088/ · ❌ no website",
+      "urls": [
+        "https://www.facebook.com/scienceteachersnepal/",
+        "https://www.facebook.com/groups/1942336182687088/"
+      ]
+    },
+    {
+      "body": "STEM Foundation Nepal",
+      "role": "International Event Partner — receives the IChO team list",
+      "channels": "⚠️ stemnepal.org dead — contact only via STAN",
+      "urls": []
+    },
+    {
+      "body": "NOoN — National Olympiads of Nepal",
+      "role": "Programme umbrella (Senior Chemistry NChO · Senior Biology NBO · Junior Science NJSO)",
+      "channels": "Announced only via STAN's Facebook",
+      "urls": []
+    },
+    {
+      "body": "MoEST",
+      "role": "National recognition & funding (कार्यविधि २०८२)",
+      "channels": "https://moest.gov.np/content/13499/in-procedure-of-olmpiad-operations-related-to/ (mirror: https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf)",
+      "urls": [
+        "https://moest.gov.np/content/13499/in-procedure-of-olmpiad-operations-related-to/",
+        "https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf"
+      ]
+    },
+    {
+      "body": "Curriculum Development Centre (CDC)",
+      "role": "NEB Grade 11–12 Chemistry curriculum & textbooks",
+      "channels": "https://moecdc.gov.np/ · info@moecdc.gov.np · http://lib.moecdc.gov.np/",
+      "urls": [
+        "https://moecdc.gov.np/",
+        "http://lib.moecdc.gov.np/"
+      ]
+    },
+    {
+      "body": "IChO Steering Committee",
+      "role": "International governing body",
+      "channels": "https://www.ichosc.org/",
+      "urls": [
+        "https://www.ichosc.org/"
+      ]
+    },
+    {
+      "body": "IChO International Information Centre (Bratislava)",
+      "role": "Mandated archive of all IChO documentation since 1968",
+      "channels": "Dr. Anton Sirota, anton.sirota@stuba.sk · Dr. Martin Putala, putala@fns.uniba.sk · https://icho.sk/",
+      "urls": [
+        "https://icho.sk/"
+      ]
+    },
+    {
+      "body": "IChO 2027 (59th)",
+      "role": "Next international target — Chinese Taipei, 19–28 July 2027",
+      "channels": "https://www.ichosc.org/",
+      "urls": [
+        "https://www.ichosc.org/"
+      ]
+    },
+    {
+      "body": "IChO 2028 (60th)",
+      "role": "Messina, Italy, 2–11 July 2028",
+      "channels": "https://www.ichosc.org/",
+      "urls": [
+        "https://www.ichosc.org/"
+      ]
+    },
+    {
+      "body": "Nepal's 20 IChO alumni (2022–2026)",
+      "role": "The untapped mentor pool — all 20 names listed in Part 0A",
+      "channels": "Reachable via STAN and LinkedIn",
+      "urls": []
+    }
+  ],
+  "rejected": [
+    {
+      "what": "stemnepal.org / www.stemnepal.org — STEM Foundation Nepal, the designated International Event Partner for IChO",
+      "why": "DEAD. Returns HTTP 200 but the body is the cPanel *\"Default Web Site Page — SORRY! … The IP address has changed / There has been a server misconfiguration.\"* error stub (163 bytes). The international partner has no working web presence. → Gap C-11",
+      "urls": [
+        "stemnepal.org",
+        "www.stemnepal.org"
+      ]
+    },
+    {
+      "what": "stan.org.np · www.stan.org.np · noon.org.np · www.noon.org.np",
+      "why": "DNS does not resolve. STAN and NOoN have no registered web domain. Facebook only. → Gap C-1",
+      "urls": [
+        "stan.org.np",
+        "www.stan.org.np",
+        "noon.org.np",
+        "www.noon.org.np"
+      ]
+    },
+    {
+      "what": "chem.hbcse.tifr.res.in/resources-old/past-icho-resources/",
+      "why": "HTTP 500 Internal Server Error",
+      "urls": [
+        "chem.hbcse.tifr.res.in/resources-old/past-icho-resources/"
+      ]
+    },
+    {
+      "what": "olymped.com (Physics Initiatives Nepal's \"OlympEd\")",
+      "why": "DNS does not resolve. Defunct. (Also rejected in the Physics file.)",
+      "urls": [
+        "olymped.com"
+      ]
+    },
+    {
+      "what": "scribd.com/document/984844894/Q-CheO-CU-14th-2025 (BdChO 2025)",
+      "why": "Login/paywall. Bangladesh's chemistry archive is far weaker than its physics archive (bdpho.org). Low value.",
+      "urls": [
+        "scribd.com/document/984844894/Q-CheO-CU-14th-2025"
+      ]
+    },
+    {
+      "what": "crazy-cat-crypto.github.io/nepal-olympiad-hub/",
+      "why": "Loads, but its Chemistry card literally reads \"Organizer: Nepal Chemistry Society · Contact: TBD — verification needed · Fee: TBD · Next Deadline: TBD · Nepal Performance: Participation status — verify with organization.\" That is wrong: the organiser is STAN, not a \"Nepal Chemistry Society\" (which does not appear to exist), and Nepal's record is fully documented in Part 0A. Do not copy from it.",
+      "urls": [
+        "crazy-cat-crypto.github.io/nepal-olympiad-hub/"
+      ]
+    },
+    {
+      "what": "*\"Nepal Chemistry Society\"* as IChO organiser",
+      "why": "Could not be verified to exist. Every primary source — STAN's own notices and the IChO 2026 team announcement — names STAN as national organiser and STEM Foundation Nepal as international event partner. Treat \"Nepal Chemistry Society\" as an unverified/erroneous claim circulating in secondary sources.",
+      "urls": []
+    },
+    {
+      "what": "icho.sk/list-of-previous-icho/ — dates for IChO 55",
+      "why": "Page mis-dates Zürich as \"July 16–25, 2003\"; it was 2023. The list also stops at the 55th and omits 2024–2028. Use ichosc.org for the forward calendar.",
+      "urls": [
+        "icho.sk/list-of-previous-icho/"
+      ]
+    }
+  ],
+  "warnings": [
+    "no status: S15 \"*Chemistry* — Zumdahl, Zumdahl & DeCoste, 11th ed., Cengage, ISBN 9780357850671\"",
+    "no status: S16 \"*Organic Chemistry* — David R. Klein, 4th ed., Wiley, ISBN 9781119659594\"",
+    "no status: S17 \"*Organic Chemistry as a Second Language* — Klein, Vol. 1 (ISBN 9781119837091) & Vol. 2 (ISBN 9781119837053), 6th ed.\"",
+    "no URL: N2 \"USNCO National Exam Part I + solutions, 2022 / 2021 / 2020\" (3.2 Past Papers — National tier)",
+    "no status: S19 \"⭐ *Chemical Principles* — Atkins, Jones & Laverman, 7th ed., W. H. Freeman, ISBN 9781464183959\"",
+    "no status: S20 \"⭐ *Organic Chemistry* — Clayden, Greeves & Warren, 2nd ed., OUP, ISBN 9780199270293\"",
+    "no status: S21 \"*Chemical Structure and Reactivity* — Keeler & Wothers, 2nd ed., OUP, ISBN 9780199604135\"",
+    "no URL: S32 \"*Organic Chemistry* — Clayden (= S20)\" (4.3 Study Materials — International tier)",
+    "no status: S32 \"*Organic Chemistry* — Clayden (= S20)\"",
+    "no URL: S33 \"*Chemical Structure and Reactivity* — Keeler & Wothers (= S21)\" (4.3 Study Materials — International tier)",
+    "no status: S33 \"*Chemical Structure and Reactivity* — Keeler & Wothers (= S21)\"",
+    "no URL: S34 \"*Chemical Principles* — Atkins (= S19)\" (4.3 Study Materials — International tier)",
+    "no status: S34 \"*Chemical Principles* — Atkins (= S19)\""
+  ]
+}

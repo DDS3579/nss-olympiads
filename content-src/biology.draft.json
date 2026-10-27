@@ -1,0 +1,2587 @@
+{
+  "slug": "biology",
+  "generatedFrom": "biology.md",
+  "generatedAt": "2026-10-27T13:11:42.803Z",
+  "fileCompiledOn": "2026-10-23",
+  "counts": {
+    "tablesFound": 41,
+    "rawRows": 78,
+    "afterDedupe": 71,
+    "resources": 24,
+    "papers": 47,
+    "paperSets": 0,
+    "nepalSpecificFlagged": 6,
+    "byStatus": {
+      "caveat": 7,
+      "ok": 62,
+      "unknown": 2
+    },
+    "missingWhy": 36,
+    "gaps": 13,
+    "contacts": 8,
+    "rejected": 7
+  },
+  "resources": [
+    {
+      "id": "biology-nn-education-neb-grade-11-12-biology-syllabus-complete-unit-",
+      "title": "NN Education — NEB Grade 11 & 12 Biology syllabus, complete unit-by-unit",
+      "type": "official",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://nneducation.com/neb-grade-11-12-new-syllabus-biology/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The most complete free transcription of the CDC Biology curriculum found: all 20 units, exact teaching hours, every sub-topic, exam structure (75 + 25), and Grade-11-vs-12 differentiation. This is the document to build District prep from.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-nepalnotes-class-12-biology-botany-zoology-chapter-wise",
+      "title": "NepalNotes — Class 12 Biology (Botany & Zoology, chapter-wise)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://nepalenotes.com/2022/02/class-12-biology-notes/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"Explore Botany and Zoology chapter-wise notes and learning materials. 27 Topics — Part A: Botany 01 Plant Anatomy, 02 Water Relation, 03 Photosynthesis…\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-meronotes-neb-class-12-biology-notes-pdf",
+      "title": "MeroNotes — NEB Class 12 Biology Notes (PDF)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://meroenotes.com/neb-class-12-biology-notes-in-pdf/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Free handwritten notes + question papers, downloadable as PDF (unlike Sajha Notes)",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-sajha-notes-neb-grade-11-biology",
+      "title": "Sajha Notes — NEB Grade 11 Biology",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://sajhanotes.com/grade-11-biology/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "⚠️ Badly incomplete. Verified content: one section \"Biomolecules and Cell Biology — 4 topics\", of which two are literally labelled \"Coming soon\" (only Biomolecules and Carbohydrates and Amino Acids and Proteins are written). Contrast with Sajha's excellent Chemistry coverage. → Gap B-6",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-openstax",
+      "title": "OpenStax",
+      "type": "book",
+      "levels": [
+        "district",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://openstax.org/details/books/biology-2e",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Full university-track general biology, free. The direct upgrade path from NEB.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S5",
+        "S23"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-openstax-2",
+      "title": "OpenStax",
+      "type": "book",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://openstax.org/details/books/concepts-biology",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Lighter, non-majors route — good for Grades 10–11 entry",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-neb-biology-solution-in-nepali-youtube-playlist-class-12-bot",
+      "title": "NEB Biology Solution in Nepali — YouTube playlist (Class 12 Botany)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://www.youtube.com/playlist?list=PLztdBcd3--U3igIij1NT-WaDp3Zy7AaDV",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Chapter-by-chapter NEB Botany solutions in Nepali — the only Nepali-language biology video resource found",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-nepal-online-school-class-11-neb-biology-zoology-notes-video",
+      "title": "Nepal Online School — Class 11 NEB Biology & Zoology notes/videos",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://www.facebook.com/NepalOnlineSchool/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Free Nepali non-profit video lessons",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-bioly-guide-free-usabo-ibo-handout-library-400-pages",
+      "title": "Bioly.guide — free USABO/IBO handout library (400+ pages)",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bioly.guide/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"Learn advanced concepts for the Biology Olympiad — for free. 400+ pages of written handouts & practice problems.\" Its handouts are organised into exactly the IBO's seven official §3.7.3 domains — see §2.4. The single best free resource in this subject.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-cell-biology-handouts",
+      "title": "↳ Cell Biology handouts",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bioly.guide/handouts/cell-biology",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "IBO domain I — 20 % of the exam",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-plant-biology-handouts",
+      "title": "↳ Plant Biology handouts",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bioly.guide/handouts/plant-biology",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "IBO domain II — 15 %",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-animal-anatomy-and-physiology-handouts",
+      "title": "↳ Animal Anatomy and Physiology handouts",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bioly.guide/handouts/animal-anatomy-and-physiology",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "IBO domain III — 25 %, the heaviest single domain",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S12"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ecology-and-ethology-handouts",
+      "title": "↳ Ecology and Ethology handouts",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bioly.guide/handouts/ecology-and-ethology",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "IBO domains VI + IV — 10 % + 5 %",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S13"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-genetics-and-evolution-handouts",
+      "title": "↳ Genetics and Evolution handouts",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bioly.guide/handouts/genetics-and-evolution",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "IBO domain V — 20 %",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S14"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-biosystematics-handouts",
+      "title": "↳ Biosystematics handouts",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bioly.guide/handouts/biosystematics",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "IBO domain VII — 5 %",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S15"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-handouts-index",
+      "title": "↳ Handouts index",
+      "type": "handout",
+      "levels": [
+        "province",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bioly.guide/handouts",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "All six domain libraries",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S16",
+        "S21"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-biolympiads-where-to-start",
+      "title": "Biolympiads — \"Where to Start\"",
+      "type": "handout",
+      "levels": [
+        "province",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://biolympiads.com/where-to-start/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "On-ramp guide, textbook list, study group",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S17",
+        "S26"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-bioguide-world-biology-olympiad-preparation",
+      "title": "Bioguide.world — Biology Olympiad Preparation",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://bioguide.world/biology-olympiad-preparation/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Study plans, books, topic roadmaps, practice questions for IBO/USABO/INBO",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S18"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-omegalearn-high-school-competition-biology",
+      "title": "OmegaLearn — High School Competition Biology",
+      "type": "tool",
+      "levels": [
+        "province",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.omegalearn.org/high-competition-biology",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Official study materials, past papers, community study groups for USABO & IBO",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S19",
+        "S25"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-usabo-student-corner",
+      "title": "USABO Student Corner",
+      "type": "official",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://usabo-trc.org/usabo-student-corner",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Exam instructions, honor code, apps, current-cycle materials",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S20"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-urry-cain-wasserman-minorsky-orr",
+      "title": "(Urry, Cain, Wasserman, Minorsky, Orr)",
+      "type": "book",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-23",
+      "why": "The universal IBO text; explicitly what \"many countries use university level general biology textbooks\" means",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S22"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-bioguide-world-ibo-preparation",
+      "title": "Bioguide.world — IBO Preparation",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://bioguide.world/ibo-preparation/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Format, what gets tested, recommended resources, past papers, strategy",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S24"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-characteristics-of-exams-used-at-the-ibo",
+      "title": "— \"Characteristics of Exams Used at the IBO\"",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.lifescied.org/doi/10.1187/cbe.19-10-0215",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "403 to scripts (publisher bot-wall); resolves in a browser. Also reachable via DOI 10.1187/cbe.19-10-0215",
+      "verified": "2026-10-23",
+      "why": "Academic analysis of how IBO assessments are actually constructed. Useful for anyone writing Nepali mock papers.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S27"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2026-official-site",
+      "title": "IBO 2026 official site",
+      "type": "official",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ibo2026.lt/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S28"
+      ],
+      "needsReview": true
+    }
+  ],
+  "papers": [
+    {
+      "id": "biology-usabo-open-exam-archive-2003-2018-answer-keys",
+      "title": "USABO Open Exam archive 2003 → 2018 + answer keys",
+      "type": "pastpaper",
+      "levels": [
+        "district",
+        "province"
+      ],
+      "year": 2003,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usabo-trc.org/sites/default/files/allfiles/USABO%20Past%20Exams_0.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "File 2",
+          "url": "https://usabo-trc.org/usabo-about-exams",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "LIVE ⚠️ proprietary — CEE states exams \"may not be distributed or stored electronically without permission.\" Link, never mirror.",
+      "verified": "2026-10-23",
+      "why": "The cleanest district-tier analogue anywhere: fast, wide, MCQ, school-syllabus-plus. Exactly the NBO Round 1–2 register.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "D1",
+        "P1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-toronto-biology-competition-national-biology-competition-uni",
+      "title": "Toronto Biology Competition (National Biology Competition, Univ. of Toronto) — exams",
+      "type": "pastpaper",
+      "levels": [
+        "district",
+        "province",
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://biocomp.utoronto.ca/exams/",
+          "kind": "questions"
+        },
+        {
+          "label": "File 2",
+          "url": "https://biocomp.utoronto.ca/exam-content/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Long-running school-level biology contest; 46 past-paper PDFs freely hosted",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D2",
+        "P2",
+        "E3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2003-theory-parts-a-b",
+      "title": "IBO 2003 Theory (parts A & B)",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": 2003,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "http://biolympiads.com/wp-content/uploads/2016/08/IBO-2003-Theory_CCL.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The only individual IBO paper freely hosted outside ibo-info.org",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-neso-tier-ii-model-question-multi-subject-biology-component",
+      "title": "NeSO Tier II Model Question (multi-subject; Biology component)",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "http://nepalscienceolympiad.org.np/wp-content/uploads/2015/12/Tier-II-model-question.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Nepal's own multi-subject school olympiad",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2021-portugal-ibo-challenge-ii-theoretical",
+      "title": "IBO 2021 (Portugal, IBO Challenge II) — Theoretical",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2021,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2021%20Portugal%20%28IBO%20Challenge%20II%29/IBO%20CHALLENGE%20II%20-%20Theoretical.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Freely downloadable, NOT password-protected. The exact IBO theory format (≈100 closed-ended tasks). Above provincial level but the target to aim at.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2021-theoretical-answer-key",
+      "title": "IBO 2021 Theoretical — ANSWER KEY",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2021,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2021%20Portugal%20%28IBO%20Challenge%20II%29/IBO%20CHALLENGE%20II%20-%20Theoretical%20%28Answer%20key%29.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Freely downloadable. Organised by IBO domain — opens with \"I. Cell Biology — Q1 A. F B…\". The only freely available IBO theory answer key.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2020-japan-ibo-challenge-i-theory-exam-1-2",
+      "title": "IBO 2020 (Japan, IBO Challenge I) — Theory Exam 1 & 2",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Exam 1",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2020%20Japan%20%28IBO%20Challenge%20I%29/IBO%202020_Theory%20Exam%201.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Exam 2",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2020%20Japan%20%28IBO%20Challenge%20I%29/IBO%202020_Theory%20Exam%202.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Freely downloadable",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2020-theory-exam-1-answer-key",
+      "title": "IBO 2020 Theory Exam 1 — Answer key",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2020%20Japan%20%28IBO%20Challenge%20I%29/IBO%202020_Theory%20Exam%201%20-%20Answer%20key.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "encrypted",
+      "verified": "2026-10-23",
+      "why": "🔒 password-protected",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2024-astana-kazakhstan-complete-set-all-6-files",
+      "title": "IBO 2024 (Astana, Kazakhstan) — COMPLETE SET, all 6 files",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2024,
+      "topics": [],
+      "files": [],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "N1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2021-challenge-ii-theoretical-answer-key",
+      "title": "IBO 2021 (Challenge II) Theoretical + Answer Key",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2021,
+      "topics": [],
+      "files": [],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2020-challenge-i-theory-1-2-practical-2-bioinformatics",
+      "title": "IBO 2020 (Challenge I) Theory 1 & 2 + Practical 2 Bioinformatics",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-ibo-2022-yerevan-2023-al-ain-full-sets-with-answer-keys",
+      "title": "IBO 2022 (Yerevan) + 2023 (Al Ain) full sets, WITH answer keys",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2022,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/en/info/papers.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "Password is obtainable only from the National Biology Olympiad coordinator — for Nepal that is STAN / Manoj Acharya. → Gap B-7",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-inbo-indian-national-biology-olympiad-2009-2017-q-s-plus-8-s",
+      "title": "INBO (Indian National Biology Olympiad) 2009 → 2017, Q + S, plus 8 sample papers",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2009,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "HBCSE requires email for the IBO-paper password: olybio[at]hbcse[dot]tifr[dot]res[dot]in",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-any-nbo-nepal-past-paper-rounds-1-2-3-4-or-practical",
+      "title": "❌ Any NBO Nepal past paper — Rounds 1, 2, 3, 4 or Practical",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "unknown",
+      "accessNote": "NOT PUBLISHED, EVER. → Gap B-5",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2024%20Kazakhstan/IBO2024%20Theory%20A.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--2",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2024%20Kazakhstan/IBO2024%20Theory%20B.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--3",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2024%20Kazakhstan/IBO2024%20Practical%201%20Animal%20anatomy%20and%20physiology.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--4",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2024%20Kazakhstan/IBO2024%20Practical%202%20Biochemistry.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--5",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2024%20Kazakhstan/IBO2024%20Practical%203%20Molecular%20biology.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--6",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/papers/2024%20Kazakhstan/IBO2024%20Practical%204%20Bioinformatics.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--7",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/rules/IBO%20Operational%20Guidelines_v.7.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "§3.5 eligibility · §3.7.3 the seven theory domains and their binding percentage weights · §3.9.5 ranking procedure · Appendix 2 the full practical-skills list · Appendix 3 Setting up a National Biology Olympiad · Appendix 4 penalties",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--8",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/rules/Designing%20a%20reliable%20IBO%20Theory.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "How the IBO's assessment experts construct and calibrate items. The best available guide to what the setters are doing — invaluable for writing Nepali mocks.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--9",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/rules/IBO%20Laboratory%20Health%20and%20Safety%20Regulations%20v1.0.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Required reading before any lab; the IBO week devotes Day 2 to laboratory safety instructions",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--10",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/rules/Articles%20of%20Association.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Legal/governance",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--11",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/rules/Guidelines%20for%20the%20host%20country_20201111.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--12",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/rules/IBO%20Workflow%20charts_5.0.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I12"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--13",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/en/info/rules-guidelines.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I13"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--14",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/en/contest/participation.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I14"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--15",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/en/contest/past-ibos.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I15"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--16",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO_2026_Individual_Results_Final.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--17",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO2025%20Ranking.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--18",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO2024%20results%20-%20amended%20version%20January%202025.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--19",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO2023.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--20",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO2022.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--21",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO%202021%20-%20IBO%20Challenge%20II%20-%20results.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--22",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO%202020%20-%20IBO%20Challenge%20-%20Results.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--23",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO2019-IBO-Ranking_web.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--24",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO2018-IBO-Ranking_web.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--25",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/files/downloads/results-reports/results/IBO2017Full.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--26",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/en/info/results-reports.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--27",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/en/countries/nbo/np-nepal-biology-olympiad-8.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R12"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology--28",
+      "title": "",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ibo-info.org/en/list-of-countries-regions.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "R13"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-usabo-open-r1-semifinal-r2-exams-2003-2024-with-keys",
+      "title": "USABO — Open (R1) + Semifinal (R2) exams 2003 → 2024, with keys",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2003,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usabo-trc.org/usabo-about-exams",
+          "kind": "questions"
+        },
+        {
+          "label": "File 2",
+          "url": "https://usabo-trc.org/whats-new-2027-usabo",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "⚠️ proprietary",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "E1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-usabo-ibo-preparation-page",
+      "title": "USABO — IBO preparation page",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usabo-trc.org/international-biology-olympiad-ibo",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "E2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-bangladesh-biology-olympiad-bdbo-ibo-member-since-2012-with-",
+      "title": "Bangladesh Biology Olympiad (BDBO) — IBO member since 2012, with a real website",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2012,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://bdbo.org/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "E4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-biolympiads-past-papers-hub",
+      "title": "Biolympiads — Past Papers hub",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://biolympiads.com/past-papers/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "LIVE but see §8.4 — most individual file links are cosmetic",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "E5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "biology-biolympiads-most-popular-biology-olympiads-worldwide",
+      "title": "Biolympiads — Most popular biology olympiads worldwide",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://biolympiads.com/most-popular-biology-olympiads-from-around-the-world/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "E6"
+      ],
+      "needsReview": true
+    }
+  ],
+  "paperSets": [],
+  "gaps": [
+    {
+      "id": "B-1",
+      "level": "ALL",
+      "missing": "⭐⭐ STAN/NBO has no website. Nepal's IBO-registered \"Official website\" is literally facebook.com/scienceteachersnepal/. There is no syllabus page, no results archive, no past-paper repository, no registration portal, no durable record.",
+      "evidence": "Verified directly from Nepal's IBO delegation profile: the \"Website: Official website\" link resolves to the STAN Facebook page. Nepal is the only subject in this series whose international body lists a social-media page as the national olympiad's official website. Compare Mathematics, which has a 23-page site with a Drive archive.",
+      "aiSpec": "Build it. A static NBO Nepal site (GitHub Pages) with: ① the five-tier ladder from §0C.2 rendered as a diagram; ② the 77-district / 7-province / 753-local committee structure; ③ an exam calendar (Round 1 → Round 2 → Round 3 → camp → Round 4 → Practical → IBO in July); ④ every STAN Facebook notice mirrored with a permalink and date; ⑤ results tables by year; ⑥ the syllabi from B-4; ⑦ the past-paper bank from B-5; ⑧ contacts (Manoj Acharya, stannationalolympiads@gmail.com, 984-1346504). Then offer it to STAN and ask them to update the IBO delegation profile.",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "B-2",
+      "level": "International",
+      "missing": "Nepal's participation record is undocumented and partly unreconciled. Nepal appears in the official IBO rankings for 2019, 2020, 2021 and 2026 only. It is absent from 2017, 2018, 2022, 2023, 2024, 2025 — yet Nepal has been an IBO member since 2017 and a Nepali college publicly celebrated sending students to IBO-2025 Quezon City.",
+      "evidence": "I parsed all 10 ranking PDFs (2017–2026) for \"Nepal\", \"NPL\", \"NEP\" and 20 common Nepali surnames. Zero hits for 2017/2018/2022/2023/2024/2025.",
+      "aiSpec": "Retrieve, don't generate. Email stannationalolympiads@gmail.com and the IBO Office (office@ibo-info.org) requesting the delegation lists for the six missing years. Publish a verified \"Nepal at the IBO: Complete Delegation Record 2017–2026\" with names, ranks, scores and awards, and submit corrections to the IBO via their feedback form. Meanwhile publish the verified 4-year record from PART 0A and clearly mark the other years \"participation unconfirmed.\"",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "B-3",
+      "level": "National → International",
+      "missing": "⭐⭐ No standard-raising pathway between NBO and IBO. Nepal's 2026 national champion placed 301st of 302 at the IBO with a final score of 4.72, against a bronze cut-off of 38.56. The national round and the international round are not calibrated to each other at all.",
+      "evidence": "Verified: Ronish Aryal = \"1st Rank & National Winner, NBO 2026\" (public LinkedIn record) = IBO 2026 rank 301/302. Nepal's team average final score 10.90 vs gold-medal top-10 average 88.99 = 12 %.",
+      "aiSpec": "Generate a \"NBO → IBO Calibration Bridge\": ① publish the PART 0B component table publicly — it is the clearest possible statement of the gap; ② set an explicit national target of reaching the bronze threshold (final score ≥ 39), which requires a 2.16× improvement in the top student; ③ decompose that target by component using the verified 2026 data — e.g. LAB 1 Molecular Biology must go from 14.00 to ≥ 40 (a 2.9× gain), Theory A+B from 45.55 to ≥ 60 (1.3×); ④ propose that NBO Round 4 and the Practical Round be re-set to IBO proportions (§3.7.3 weights) so the national champion is actually the student best prepared for the IBO; ⑤ build a 3-year progression target: bronze by 2029, using the verified participation growth curve (169 → 1,200 students, 7.1× in 7 years).",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "B-4",
+      "level": "ALL",
+      "missing": "⭐⭐ No NBO syllabus has ever been published at any of the five tiers.",
+      "evidence": "Verified across STAN's Facebook presence and Nepal's IBO filing. The filing says only *\"High School Textbooks and reference books from University.\"* Contrast Mathematics, which publishes a DMO syllabus PDF; and Physics, which prints both its syllabi on the exam paper.",
+      "aiSpec": "Generate four tier-specific syllabi, derived by intersecting the verified NEB Grade 11 & 12 Biology curriculum (20 units, 256 h) with the IBO's §3.7.3 domain weights: ① Local (Round 1) — NEB Grade 11 only, MCQ, recognition & recall; ② District (Round 2) — NEB Grade 11 + 12, MCQ, application; ③ Province (Round 3) — NEB + Campbell-level extensions in the under-taught domains, MCQ + subjective; ④ National (Round 4 + Practical) — full IBO domain proportions, closed-ended theory plus a laboratory component built from Appendix 2. Each syllabus must include a domain-weight table, a topic list, a \"beyond NEB\" column naming what must be self-studied, and the recommended text per domain (§4.3).",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "B-5",
+      "level": "ALL",
+      "missing": "⭐⭐ Zero published NBO past papers — Rounds 1, 2, 3, 4 and the Practical Round.",
+      "evidence": "Verified. Nothing exists publicly. With ≈2,500 students entering Round 1 and 1,200 in 2025, this affects more Nepali students than any other subject gap in this series.",
+      "aiSpec": "Retrieve first from STAN. If unretrievable, generate an NBO Mock Series: ① Local — 3 × 40-MCQ / 45 min, NEB Grade 11; ② District — 3 × 50-MCQ / 60 min, NEB Grade 11 + 12; ③ Province — 3 × (40 MCQ + 6 subjective) / 2 h; ④ National — 2 × (≈50 closed-ended tasks, IBO multiple-true-false style) / 3 h each, weighted exactly to §3.7.3: Cell biology 20 %, Animal A&P 25 %, Genetics & Evolution 20 %, Plant 15 %, Ecology 10 %, Ethology 5 %, Biosystematics 5 %; ⑤ Practical — 4 × 1.5 h stations (Molecular biology, Biochemistry, Animal morphology & physiology, Plant comparative biology / Ecology & ethology) with data sheets, answer keys and marking schemes. Model item style on the IBO's own *\"Designing a reliable IBO Theory exam\"* (I8) and calibrate to IBO 2024 (the one fully open set).",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "B-6",
+      "level": "District",
+      "missing": "Sajha Notes' Grade 11 Biology is abandoned. Verified: the page lists one section, *\"Biomolecules and Cell Biology — 4 topics\"*, of which two are labelled \"Coming soon\". Only *Biomolecules and Carbohydrates* and *Amino Acids and Proteins* are written. There is no Grade 12 Biology page at all (/grade-12-biology/ returns 404) — though Grade 12 Chemistry, Physics and Maths all exist.",
+      "evidence": "Direct inspection of sajhanotes.com/grade-11-biology/. Compare with the same site's Chemistry coverage (39 + 34 complete topics), which is excellent.",
+      "aiSpec": "Don't wait for Sajha Notes. Generate \"NEB Biology Complete — Grades 11 & 12\": all 20 units from the verified CDC grid, each with a full concept summary, labelled-diagram descriptions, a formula/process table, 10 MCQs and 5 subjective questions with model answers, and a \"beyond NEB\" box listing the IBO extension topics. Publish it as the NSS Olympiad Hub Biology core text. This single document would be the most complete free NEB Biology resource on the internet.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "B-7",
+      "level": "International",
+      "missing": "⭐⭐ Nepal cannot access most IBO past papers. IBO 2022 and 2023 — the two most recent full in-person sets, including answer keys — are password-protected. The IBO states: *\"most papers are password protected to prevent automated indexing. Please contact the coordinator of your National Biology Olympiad to obtain the password.\"* For Nepal that coordinator is Manoj Acharya / STAN. There is no evidence the password has ever been requested or distributed to Nepali students.",
+      "evidence": "Verified by attempting to parse each PDF: IBO 2022 and 2023 files fail with *\"File has not been decrypted\"*; IBO 2024, 2021 and 2020 papers open freely.",
+      "aiSpec": "Two actions, both free. ① Email STAN and Manoj Acharya requesting the IBO paper password and ask them to publish it to registered NBO candidates — this immediately unlocks the complete 2022 and 2023 sets with answer keys. ② Meanwhile, build the national programme on the fully open set: IBO 2024 complete (358 pp, 6 files, CC BY-NC-SA) + IBO 2021 complete with answer key + IBO 2020 papers + IBO 2003 theory. Because IBO papers are CC BY-NC-SA, NSS may legally host, translate into Nepali and adapt them with attribution — no permission needed. Publish a mirrored, Nepali-annotated IBO 2024 set.",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "B-8",
+      "level": "National / International",
+      "missing": "⭐⭐⭐ NO PRACTICAL BIOLOGY TRAINING MATERIAL EXISTS FOR NEPAL — and the practical is precisely where Nepal loses. Nepal scores 25 % of gold-medal level across the four IBO labs versus 53 % on theory. LAB 1 Molecular Biology = 16 %. NEB fully covers 0 of 7 IBO Appendix 2 practical-skills sections.",
+      "evidence": "Original analysis of the IBO 2026 results (PART 0B) cross-referenced against the full IBO Appendix 2 skills list and the full NEB curriculum (§3.3). Nine named IBO-required techniques have zero NEB coverage: gel electrophoresis, micropipetting & counting chambers, chromatography/filtration/centrifugation, aseptic & inoculation technique, t-test/chi-square/standard error, the entire Bioinformatics section (VII A–H), dichotomous-key construction, stereomicroscopy, free-hand sectioning & staining.",
+      "aiSpec": "Generate \"Practical Biology for NBO & IBO — a Nepal Manual\", structured on the seven sections of IBO Appendix 2: (I) Science Process skills — hypothesis formulation, operational definitions, variable identification & control, experimental design, data presentation, appropriate numerical accuracy; (II) Basic biological skills — light microscopy to 45×, stereomicroscopy, scientific biological drawing to competition standard with coded terminology tables; (III) Biological methods — A cytological (maceration & squash, smear, staining, slide prep) · B plant (flower dissection & flower formula, free-hand sectioning of root/stem/leaf, lignin staining, measuring photosynthesis, measuring transpiration) · C animal (invertebrate dissection, whole-mount preparation, respirometry) · D ethological (behaviour determination & interpretation) · E ecological (population density estimation, biomass estimation, water & air quality assays) · F taxonomic (using and constructing dichotomous keys, identifying common flowering-plant families, insect orders, phyla and classes); (IV) Physical & chemical methods — chromatography, filtration, centrifugation, Fehling / I₂-KI / biuret food tests, titration, drip & strip methods, dilution series, micropipetting, haemocytometer counting chambers, colorimetry / light absorption, gel electrophoresis; (V) Microbiological methods — preparing nutrient media, aseptic technique (flaming, glassware heating), inoculation; (VI) Statistical methods — probability & distributions, mean, median, variance, standard deviation, standard error, t-test, chi-square, all worked on biological datasets; (VII) Bioinformatics — A sequence alignment & indel/point-mutation identification · B phylogenetic tree interpretation, orthologues vs paralogues · C database querying with accession numbers · D interpreting sequencing output & gene-expression comparison · E protein structure inspection (secondary structure, H-bonds, hydrophobic regions) · F virtual cloning: restriction sites, plasmid constructs, PCR primer design · G model-output interpretation · H integrating multiple datasets. For every single technique, include a NO-LAB SUBSTITUTE — because most of Nepal's 753 local committees are ordinary schools: specify free tools (NCBI BLAST, MEGA, ProtScale, RCSB Mol*, PhET, BioMan, Virtual Labs (India), Foldscope paper microscope, smartphone-camera colorimetry) and household-substitute protocols. Anchor all four stations to the IBO 2024 Practicals 1–4 (the only fully open set) and include the IBO Laboratory Health & Safety Regulations (I9) in full.",
+      "priority": "🔴 P1 — HIGHEST PRIORITY ITEM IN THIS DOCUMENT"
+    },
+    {
+      "id": "B-9",
+      "level": "National",
+      "missing": "NBO Round 4 and the Practical Round are not weighted to the IBO. Without a published syllabus there is no evidence the national round uses the IBO's §3.7.3 proportions — and given the selection is from the NEB curriculum, it almost certainly over-weights biosystematics (5.7× over-represented in NEB hours).",
+      "evidence": "§3.2 analysis: NEB devotes 28.6 % of hours to a domain the IBO weights at 5 %, and 30.8 % to the two domains the IBO weights at 45 %.",
+      "aiSpec": "Generate a re-weighted NBO Round 4 blueprint: a specification stating exactly how many items from each of the seven IBO domains, at what mark value, in what format (multiple-true-false as the IBO uses), with a worked example paper. Offer it to STAN as a draft reform proposal. Also generate a \"NEB → IBO Re-weighting Study Guide\" telling students *which NEB units to skim* (Floral Diversity, Faunal Diversity) and *which to over-study* (Cell Biology, Human Biology, Genetics, Plant Physiology) — a two-page document that would immediately improve every Nepali candidate's allocation of study time.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "B-10",
+      "level": "ALL",
+      "missing": "No Nepali-language (नेपाली) biology olympiad material. The only Nepali-language resources found are board-exam YouTube playlists. Nothing olympiad-level, and no bilingual scientific glossary.",
+      "evidence": "Verified across STAN's channels, Sajha Notes, NepalNotes, MeroNotes and NN Education. Contrast: HBCSE publishes INChO papers in Hindi; Kalda's IPhO formula sheet exists in six languages.",
+      "aiSpec": "Generate a bilingual नेपाली/English Biology Olympiad glossary: ~600 terms across the seven IBO domains + all Appendix 2 techniques (e.g. *gel electrophoresis* → जेल इलेक्ट्रोफोरेसिस, *chi-square test* → काई-वर्ग परीक्षण, *dichotomous key* → द्विविभाजी कुञ्जी, *orthologous genes* → समजात जीन, *aseptic technique* → जीवाणुरहित प्रविधि), each with a one-line definition. Then translate the Bioly.guide handout headings and summary boxes (not full text) into Nepali, and translate the IBO 2024 Theory A item stems — permitted under CC BY-NC-SA with attribution.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "B-11",
+      "level": "ALL",
+      "missing": "No calibrated difficulty ladder. With no published papers, a student cannot tell whether they are at Local, District, Province, National or IBO standard.",
+      "evidence": "Verified.",
+      "aiSpec": "Generate a 280-problem calibrated bank, 40 per tier across the seven IBO domains, tagged tier × domain × IBO weight: Local = NEB Gr.11 recall MCQ; District = NEB Gr.11+12 application MCQ; Province = MCQ + short subjective, Campbell-level; National = IBO multiple-true-false at §3.7.3 proportions; IBO = real IBO 2020/2021/2024 items. Plus a self-diagnostic 30-question placement test that tells a student which tier to start at.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "B-12",
+      "level": "District",
+      "missing": "Participation is the binding constraint, and nothing addresses it. Nepal's own IBO filing states *\"We have to increase the volume of Participating Students\"* — 98.5 % of eligible schools do not enter (1.5 % in 2025). Yet promotion is described only as *\"By Social Media, different pages.\"*",
+      "evidence": "Verified from Nepal's IBO delegation profile. Growth is real (169 → 1,200 in 7 years) but the ceiling is school reach, not student ability.",
+      "aiSpec": "Generate a \"753 Local Committees Activation Kit\" — because the 753 Local Committees *are* school science teachers, this is a teacher-facing pack: a 1-page NBO explainer, a registration walkthrough, a printable A3 poster (Nepali + English), a 20-minute classroom taster session using 10 free MCQs, a suggested 8-week after-school club plan, and a low-cost practical starter list (see B-8 no-lab substitutes). Target: move school participation from 1.5 % → 10 %, which at current ratios means ~8,000 students.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "B-13",
+      "level": "Site",
+      "missing": "Re-base your Biology topic tree on the IBO's seven §3.7.3 domains with their official weights. Your site currently uses a generic taxonomy. The IBO's domain weights are binding on the exam setters, published, stable, and directly usable as a topic tree with percentages.",
+      "evidence": "Verified from Operational Guidelines v.7 §3.7.3.",
+      "aiSpec": "Build a 7-node constellation: Animal A&P 25 % · Cell biology 20 % · Genetics & Evolution 20 % · Plant anat & phys 15 % · Ecology 10 % · Ethology 5 % · Biosystematics 5 %. Show each node's weight, its NEB teaching-hour equivalent, and the gap in percentage points — so a student can see at a glance that Biosystematics is over-studied and Molecular Biology is under-studied. Add a separate 4-node Practical tree (LAB 1–4) with Nepal's verified 2026 performance against gold.",
+      "priority": "🟠 P2"
+    }
+  ],
+  "contacts": [
+    {
+      "body": "Science Teachers' Association of Nepal (STAN)",
+      "role": "Hosting & appointing institution for the National Biology Olympiad of Nepal; runs NOoN",
+      "channels": "Bhimsensthan, KMPC 20, Kathmandu 44600, Bagmati · stannationalolympiads@gmail.com · 984-1346504 · https://www.facebook.com/scienceteachersnepal/ · Group: https://www.facebook.com/groups/1942336182687088/",
+      "urls": [
+        "https://www.facebook.com/scienceteachersnepal/",
+        "https://www.facebook.com/groups/1942336182687088/"
+      ]
+    },
+    {
+      "body": "Teacher Scientist Manoj Acharya",
+      "role": "IBO Country Coordinator for Nepal — the person to ask for the IBO paper password (Gap B-7) and for NBO past papers (Gap B-5)",
+      "channels": "via stannationalolympiads@gmail.com",
+      "urls": []
+    },
+    {
+      "body": "National Biology Olympiad of Nepal (NBO)",
+      "role": "The domestic competition; IBO member since 2017",
+      "channels": "Profile: https://www.ibo-info.org/en/countries/nbo/np-nepal-biology-olympiad-8.html",
+      "urls": [
+        "https://www.ibo-info.org/en/countries/nbo/np-nepal-biology-olympiad-8.html"
+      ]
+    },
+    {
+      "body": "IBO Office",
+      "role": "International governing body",
+      "channels": "office@ibo-info.org · Olshausenstr. 62, 24118 Kiel, Germany · https://www.ibo-info.org/en/",
+      "urls": [
+        "https://www.ibo-info.org/en/"
+      ]
+    },
+    {
+      "body": "HBCSE (India)",
+      "role": "INBO papers + IBO paper passwords",
+      "channels": "olybio[at]hbcse[dot]tifr[dot]res[dot]in · https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "urls": [
+        "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/"
+      ]
+    },
+    {
+      "body": "MoEST",
+      "role": "National olympiad recognition (कार्यविधि २०८२)",
+      "channels": "https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf",
+      "urls": [
+        "https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf"
+      ]
+    },
+    {
+      "body": "CDC",
+      "role": "NEB Grade 11–12 Biology curriculum",
+      "channels": "https://moecdc.gov.np/ · http://lib.moecdc.gov.np/",
+      "urls": [
+        "https://moecdc.gov.np/",
+        "http://lib.moecdc.gov.np/"
+      ]
+    },
+    {
+      "body": "Nepal's 13 known IBO alumni (2019–2026)",
+      "role": "The untapped mentor pool",
+      "channels": "2019: Dixit Timilsina, Sushil Bohara, Shristi Kunwar, Siddhartha Gaihre · 2020: Awahan Sapkota 🥉 · 2021: Sagar Gupta, Purnima Raut, Sanjay Chaudhary, Krish Rauniyar · 2026: Ahmon Gurung, Manasi Gyawali, Prajwal Dhakal, Ronish Aryal",
+      "urls": []
+    }
+  ],
+  "rejected": [
+    {
+      "what": "⭐ biolympiads.com/past-papers/ — the IBO / INBO / USABO / NZIBO / South African tables",
+      "why": "The individual file links are cosmetic. I parsed all 310 anchor tags on that page: only 1 actual biology-olympiad PDF is hosted there (IBO-2003-Theory_CCL.pdf). Every \"IBO 2000 Theory part A/B\", \"IBO 2009 Theory Answers\", etc. link resolves to the generic index ibo-info.org/en/contest/past-ibos.html, and every inbo2009-Q / inbo2009-S link resolves to the generic index olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/. The remaining 309 PDFs point to science.energy.gov (US DOE Science Bowl — a quiz competition, not a biology olympiad, 263 files) and biocomp.utoronto.ca (Toronto Biology Competition, 46 files). Link the page as a directory, but send students to ibo-info.org and HBCSE directly for the actual files.",
+      "urls": [
+        "biolympiads.com/past-papers/"
+      ]
+    },
+    {
+      "what": "biocomp.utoronto.ca/past-exams/ · biolympiads.com/textbook-list/",
+      "why": "HTTP 404. Correct paths are /exams/ and /exam-content/; the textbook list lives under /where-to-start/",
+      "urls": [
+        "biocomp.utoronto.ca/past-exams/",
+        "biolympiads.com/textbook-list/"
+      ]
+    },
+    {
+      "what": "sajhanotes.com/grade-12-biology/",
+      "why": "HTTP 404 — the page does not exist (whereas Grade 12 Chemistry and Physics do)",
+      "urls": [
+        "sajhanotes.com/grade-12-biology/"
+      ]
+    },
+    {
+      "what": "microbenotes.com/class-12-biology-syllabus-nepal/",
+      "why": "HTTP 403 to scripts; content unverified — excluded rather than listed on reputation",
+      "urls": [
+        "microbenotes.com/class-12-biology-syllabus-nepal/"
+      ]
+    },
+    {
+      "what": "olymped.com · stemnepal.org · stan.org.np · noon.org.np",
+      "why": "All dead (DNS failure or cPanel server-error stub). Verified in subjects 01–02.",
+      "urls": [
+        "olymped.com",
+        "stemnepal.org",
+        "stan.org.np",
+        "noon.org.np"
+      ]
+    },
+    {
+      "what": "crazy-cat-crypto.github.io/nepal-olympiad-hub/",
+      "why": "Its Biology card reads \"Organizer: Science Teachers Association of Nepal · Contact: TBD · Fee: TBD · Next Deadline: TBD · Nepal Performance: 'Established participation'\". All of it is now known: the coordinator is Manoj Acharya, the email is stannationalolympiads@gmail.com, the phone is 984-1346504, and the record is 1 Bronze, 0 HM, 4 ranked appearances. Do not copy from it.",
+      "urls": [
+        "crazy-cat-crypto.github.io/nepal-olympiad-hub/"
+      ]
+    },
+    {
+      "what": "Any claim that Nepal won medals at IBO 2025",
+      "why": "Unverified. Nepal does not appear anywhere in the official IBO 2025 ranking (302 competitors listed). A Nepali college did publicise sending students to IBO-2025 Quezon City. Report the IBO 2025 participation as unconfirmed pending B-2.",
+      "urls": []
+    }
+  ],
+  "warnings": [
+    "no URL: N1 \"⭐⭐ IBO 2024 (Astana, Kazakhstan) — COMPLETE SET, all 6 files\" (3.4 Past Papers — National tier)",
+    "no URL: N2 \"IBO 2021 (Challenge II) Theoretical + Answer Key\" (3.4 Past Papers — National tier)",
+    "no URL: N3 \"IBO 2020 (Challenge I) Theory 1 & 2 + Practical 2 Bioinformatics\" (3.4 Past Papers — National tier)",
+    "no URL: N6 \"❌ Any NBO Nepal past paper — Rounds 1, 2, 3, 4 or Practical\" (3.4 Past Papers — National tier)",
+    "no status: N6 \"❌ Any NBO Nepal past paper — Rounds 1, 2, 3, 4 or Practical\"",
+    "no URL: S22 \"⭐ *Campbell Biology* (Urry, Cain, Wasserman, Minorsky, Orr)\" (4.3 Study Materials — International tier)",
+    "no status: S22 \"⭐ *Campbell Biology* (Urry, Cain, Wasserman, Minorsky, Orr)\""
+  ]
+}
