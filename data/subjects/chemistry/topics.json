@@ -1,0 +1,113 @@
+[
+  {
+    "id": "the-atom",
+    "name": "§1 The Atom",
+    "blurb": "IChO theory section 1. Quantum-number level detail is Level 3 — beyond NEB.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Atomic structure", "Electronic theory of valency"]
+  },
+  {
+    "id": "chemical-bonding",
+    "name": "§2 Chemical Bonding",
+    "blurb": "IChO theory section 2. MO theory within it is Level 3 and absent from NEB.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Resonance & VSEPR", "Hybridization", "Delocalization"]
+  },
+  {
+    "id": "chemical-calculations",
+    "name": "§3 Chemical Calculations",
+    "blurb": "IChO theory section 3 — stoichiometry and the mole concept.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Laws of stoichiometry", "Mole concept", "Oxidation & reduction"]
+  },
+  {
+    "id": "periodic-trends",
+    "name": "§4 Periodic Trends",
+    "blurb": "IChO theory section 4.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Periodic classification"]
+  },
+  {
+    "id": "inorganic-chemistry",
+    "name": "§5 Inorganic Chemistry",
+    "blurb": "IChO theory section 5 — descriptive chemistry of the elements.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Hydrogen", "Nitrogen & ammonia", "Halogens", "Sulphur", "Phosphorus", "Metals & metallurgy", "Alkali metals", "Alkaline earth metals", "Transition metals"]
+  },
+  {
+    "id": "physical-chemistry",
+    "name": "§6 Physical Chemistry",
+    "blurb": "IChO theory section 6 — the heaviest NEB-overlapping block.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Gaseous state", "Chemical equilibrium", "Electrochemistry", "Thermodynamics", "Enthalpy", "Volumetric analysis", "Titration", "Gravimetric analysis"],
+    "featured": true
+  },
+  {
+    "id": "chemical-kinetics",
+    "name": "§7 Chemical Kinetics",
+    "blurb": "IChO theory section 7 (homogeneous kinetics).",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": []
+  },
+  {
+    "id": "spectroscopy",
+    "name": "§8 Spectroscopy",
+    "blurb": "IChO theory section 8 — entirely outside NEB; highest Level-3 density.",
+    "levels": ["national", "international"],
+    "subtopics": ["IR", "NMR", "UV-vis", "Mass spectrometry"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "organic-chemistry",
+    "name": "§9 Organic Chemistry",
+    "blurb": "IChO theory section 9 — mechanisms and synthesis.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": ["Nomenclature", "Isomerism", "Alkanes", "Alkenes", "Alkynes", "Aromatic hydrocarbons", "Haloalkanes & haloarenes", "Alcohols, phenol & ethers", "Aldehydes & ketones", "Carboxylic acids", "Amines", "Organic conversions"]
+  },
+  {
+    "id": "polymers",
+    "name": "§10 Polymers",
+    "blurb": "IChO theory section 10 — no NEB counterpart.",
+    "levels": ["national", "international"],
+    "subtopics": [],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "biochemistry",
+    "name": "§11 Biochemistry",
+    "blurb": "IChO theory section 11 — no NEB counterpart.",
+    "levels": ["national", "international"],
+    "subtopics": [],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "analytical-chemistry",
+    "name": "§12 Analytical Chemistry",
+    "blurb": "IChO theory section 12 — instrumental analysis, outside NEB.",
+    "levels": ["national", "international"],
+    "subtopics": ["Instrumental analysis"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "molecular-orbital-theory",
+    "name": "Molecular Orbital Theory",
+    "blurb": "IChO §2.4 — Level 3, completely absent from NEB (Gap C-4).",
+    "levels": ["national", "international"],
+    "subtopics": [],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "practical-skills",
+    "name": "Practical Skills (IChO Experimental)",
+    "blurb": "The 5 sections of the official IChO practical syllabus. No Nepali material exists (Gap C-6).",
+    "levels": ["national", "international"],
+    "subtopics": ["Synthesis of inorganic & organic compounds", "Identification of inorganic & organic compounds", "Determination of inorganic & organic compounds", "Special measurements and procedures", "Evaluation of results"],
+    "gap": true,
+    "gapSubstituteId": null
+  }
+]
