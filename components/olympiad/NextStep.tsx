@@ -5,7 +5,7 @@ import { X, ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
-import type { Olympiad } from "@/lib/data/olympiads";
+import type { Olympiad } from "@/components/olympiad/legacy";
 
 const TYPE_LABEL: Record<string, string> = {
   topic: "Topic",

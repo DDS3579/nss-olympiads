@@ -4,7 +4,7 @@ import { ArrowDownToLine, FileText, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading, scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
-import type { Olympiad, Resource } from "@/lib/data/olympiads";
+import type { Olympiad, Resource } from "@/components/olympiad/legacy";
 
 function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; colorVar: string }) {
   const { isResourceOpened, markResourceOpened } = useOlympiadProgress();

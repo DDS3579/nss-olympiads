@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { cn } from "@/lib/utils";
 import { Motif, SectionHeading, scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
-import type { Olympiad, RoadmapStage } from "@/lib/data/olympiads";
+import type { Olympiad, RoadmapStage } from "@/components/olympiad/legacy";
 
 type StageStatus = "completed" | "current" | "upcoming";
 
@@ -79,11 +79,16 @@ function RoadmapStageRow({
                 You are here
               </span>
             )}
-            {status === "completed" && (
-              <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Done
-              </span>
-            )}
+        {status === "completed" && (
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+            Done
+          </span>
+        )}
+        {stage.placeholder && (
+          <span className="rounded-full border border-dashed border-border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
+            Draft roadmap
+          </span>
+        )}
           </div>
           <h3 className="mt-2 font-heading text-xl font-bold text-foreground">{stage.stage}</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{stage.description}</p>

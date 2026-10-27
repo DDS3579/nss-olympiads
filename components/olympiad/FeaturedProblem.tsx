@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { FadeIn } from "@/components/FadeIn";
 import { DifficultyMeter, SectionHeading } from "./primitives";
-import type { Olympiad } from "@/lib/data/olympiads";
+import type { Olympiad } from "@/components/olympiad/legacy";
 import { useOlympiadProgress } from "./context";
 
 
@@ -21,10 +21,38 @@ function Meta({ label, value }: { label: string; value: string }) {
 export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
+  const { focusTopic } = useOlympiadProgress();
   const p = olympiad.featuredProblem;
   const c = olympiad.colorVar;
 
-  const { focusTopic } = useOlympiadProgress();
+  // Unverified problems never render (T4.12 rule) — honest empty state instead.
+  if (!p) {
+    return (
+      <section id="problem" className="section-anchor py-20 lg:py-28">
+        <div className="mx-auto max-w-5xl px-6">
+          <SectionHeading
+            index="06"
+            label="Featured Problem"
+            title="This week's challenge"
+            description={`A representative problem from ${olympiad.name}.`}
+            colorVar={c}
+          />
+          <FadeIn>
+            <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
+              <p className="font-heading text-lg font-semibold text-foreground">
+                Featured problem coming soon
+              </p>
+              <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">
+                We verify every statement against an official source before it
+                appears here. No fabricated problems ship to production.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+    );
+  }
+
   const linkedTopic = olympiad.topics.find((t) => t.name === p.topic);
   
   return (

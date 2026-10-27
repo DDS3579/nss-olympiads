@@ -5,7 +5,7 @@ import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import { FadeIn } from "@/components/FadeIn";
 import { getLenis } from "@/components/SmoothScroll";
-import type { MotifKey } from "@/lib/data/olympiads";
+import type { MotifKey } from "@/lib/types";
 
 // ---------------------------------------------------------------------------
 // Scroll helper (uses Lenis when available)

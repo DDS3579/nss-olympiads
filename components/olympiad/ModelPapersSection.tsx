@@ -4,7 +4,7 @@ import { Calendar, ArrowDownToLine } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { DifficultyMeter, SectionHeading } from "./primitives";
 import { useOlympiadProgress } from "./context";
-import type { ModelPaper, Olympiad } from "@/lib/data/olympiads";
+import type { ModelPaper, Olympiad } from "@/components/olympiad/legacy";
 
 function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) {
   const { isPaperAccessed, markPaperAccessed } = useOlympiadProgress();

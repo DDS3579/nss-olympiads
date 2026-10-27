@@ -5,7 +5,7 @@ import { motion, useInView, useReducedMotion } from "motion/react";
 import { FadeIn } from "@/components/FadeIn";
 import { Motif, SectionHeading } from "./primitives";
 import { useOlympiadProgress } from "./context";
-import type { Olympiad } from "@/lib/data/olympiads";
+import type { Olympiad } from "@/components/olympiad/legacy";
 
 export function Constellation({ olympiad }: { olympiad: Olympiad }) {
   const reduce = useReducedMotion();

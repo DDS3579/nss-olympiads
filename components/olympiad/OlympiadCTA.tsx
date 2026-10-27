@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { MagneticButton } from "@/components/MagneticButton";
 import { StarField } from "./primitives";
-import type { Olympiad } from "@/lib/data/olympiads";
+import type { Olympiad } from "@/components/olympiad/legacy";
 
 export function OlympiadCTA({ olympiad }: { olympiad: Olympiad }) {
   const c = olympiad.colorVar;

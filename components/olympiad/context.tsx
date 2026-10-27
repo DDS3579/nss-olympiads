@@ -8,7 +8,7 @@ import {
   useMemo,
   useState,
 } from "react";
-import type { Topic, Resource, ModelPaper } from "@/lib/data/olympiads";
+import type { Topic, Resource, ModelPaper } from "@/components/olympiad/legacy";
 
 export interface LastActivity {
   label: string;

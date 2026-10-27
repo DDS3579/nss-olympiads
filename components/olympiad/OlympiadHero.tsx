@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { MagneticButton } from "@/components/MagneticButton";
 import { Motif, StarField, StatChip } from "./primitives";
-import { getOlympiadStats, type Olympiad } from "@/lib/data/olympiads";
+import { getOlympiadStats, type Olympiad } from "@/components/olympiad/legacy";
 
 export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
   const Icon = olympiad.icon;

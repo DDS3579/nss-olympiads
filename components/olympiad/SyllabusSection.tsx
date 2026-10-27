@@ -3,7 +3,7 @@
 import { ArrowDownToLine } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading } from "./primitives";
-import type { Olympiad } from "@/lib/data/olympiads";
+import type { Olympiad } from "@/components/olympiad/legacy";
 
 export function SyllabusSection({ olympiad }: { olympiad: Olympiad }) {
   const c = olympiad.colorVar;

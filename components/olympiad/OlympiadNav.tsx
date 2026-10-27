@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { olympiads, type Olympiad } from "@/lib/data/olympiads";
+import { olympiads, type Olympiad } from "@/components/olympiad/legacy";
 
 const PRIMARY_SECTIONS = [
   { id: "library", label: "Materials" },

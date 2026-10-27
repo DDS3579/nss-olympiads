@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "./primitives";
 import { useOlympiadProgress } from "./context";
-import type { Olympiad, Topic } from "@/lib/data/olympiads";
+import type { Olympiad, Topic } from "@/components/olympiad/legacy";
 
 export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
   const c = olympiad.colorVar;

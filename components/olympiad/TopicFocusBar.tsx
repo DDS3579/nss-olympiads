@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 import { motion } from "motion/react";
 import { scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
-import type { Olympiad } from "@/lib/data/olympiads";
+import type { Olympiad } from "@/components/olympiad/legacy";
 
 export function TopicFocusBar({ olympiad }: { olympiad: Olympiad }) {
   const { focusedTopic, clearFocus, matchesFocus } = useOlympiadProgress();
