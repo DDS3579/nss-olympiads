@@ -11,6 +11,7 @@ import type { Olympiad } from "./legacy";
 import { strong } from "@/lib/color";
 
 const PRIMARY_SECTIONS = [
+  { id: "start", label: "Start" },
   { id: "library", label: "Materials" },
   { id: "papers", label: "Past Papers" },
   { id: "syllabus", label: "Syllabus" },
