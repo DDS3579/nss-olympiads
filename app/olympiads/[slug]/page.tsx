@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getAllSubjects, getSubject, getSubjectIndex } from "@/lib/data";
-import { OlympiadExperience } from "@/components/olympiad/OlympiadExperience";
+import { SubjectExperience } from "@/components/olympiad/SubjectExperience";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -24,5 +24,5 @@ export default async function OlympiadDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const data = getSubject(slug);
   if (!data) notFound();
-  return <OlympiadExperience data={data} index={getSubjectIndex()} />;
+  return <SubjectExperience data={data} index={getSubjectIndex()} />;
 }
