@@ -56,3 +56,5 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - Heads-up: astronomy (15), chemistry (14) and informatics (13) topics render through the legacy constellation, which was hand-tuned for ≤7 nodes — expect crowding until the T4.10 rebuild.
 - T3.7: print block extended with a light-palette token override so dark-mode users print clean white pages (plan block alone would print navy in dark theme).
 - T3.8: reduced-motion gating extended to MagneticButton, GeometricHeroCanvas and Radix sheet/tab keyframes (plan named Constellation/Roadmap/Navbar — Constellation and Roadmap were already compliant; the extensions follow R0.8's "every animated component").
+- T4.1/T4.2: legacy sections filter level+topic from the URL now; q/type/nepal/sol parse and persist but take effect when ResourceCard/PaperCard rebuild lands (T4.5/T4.6). FilterBar UI itself is T4.5.
+- T4.2: old focus* context deleted ahead of T5.1 (T4.5's "old focusTopic context is deleted" executed now); percent/currentStage/nextAction stay until the T5.1 store rewrite.
