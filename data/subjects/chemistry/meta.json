@@ -74,6 +74,6 @@
     { "body": "IChO International Information Centre (Bratislava)", "role": "Mandated archive of all IChO documentation since 1968", "links": [ { "label": "Website", "url": "https://icho.sk/" } ], "email": "anton.sirota@stuba.sk" }
   ],
   "syllabusFileUrl": "/materials/chemistry/syllabus.pdf",
-  "syllabusMeta": { "officialVerified": false },
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true, "levelCounts": { "L1": 95, "L2": 55, "L3": 176 } },
   "updatedAt": "2026-10-24"
 }
