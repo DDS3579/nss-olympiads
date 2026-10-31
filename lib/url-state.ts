@@ -41,6 +41,15 @@ export function filtersToSearch(f: Filters): string {
   return p.toString();
 }
 
+/** Persist the student's chosen level per subject (T4.3). UrlStateProvider reads it on mount. */
+export function persistLevel(slug: string, level: string) {
+  try {
+    window.localStorage.setItem(`nss:v2:level:${slug}`, level);
+  } catch {
+    /* ignore */
+  }
+}
+
 export function countActive(f: Filters): number {
   return [f.level !== "all", !!f.topic, !!f.type, !!f.q, f.nepal, f.sol].filter(Boolean).length;
 }
