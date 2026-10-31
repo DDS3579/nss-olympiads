@@ -97,7 +97,7 @@ export function SubjectExperience({
               <StudyMaterialSection data={data} />
               <ModelPapersSection data={data} />
             </div>
-            <SyllabusSection olympiad={olympiad} />
+            <SyllabusSection data={data} />
 
             {/* ── Transition into the exploration layer ── */}
             <GoDeeper colorVar={olympiad.colorVar} />
