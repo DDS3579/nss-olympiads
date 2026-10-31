@@ -1,16 +1,20 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { cn } from "@/lib/utils";
-import { SectionHeading } from "./primitives";
-import { useOlympiadProgress } from "./context";
+import { strong } from "@/lib/color";
+import { actions, useProgress } from "@/lib/progress/store";
+import { SectionHeading, scrollToId } from "./primitives";
 import { useFilters } from "./UrlStateProvider";
-import type { Olympiad, Topic } from "@/components/olympiad/legacy";
-import { strong, onStrong } from "@/lib/color";
+import type { Level, SubjectData, Topic } from "@/lib/types";
 
-export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
-  const c = olympiad.colorVar;
+const LEVELS: Level[] = ["district", "province", "national", "international"];
+
+export function OlympiadTopics({ data }: { data: SubjectData }) {
+  const c = data.meta.colorVar;
+  const { meta, topics } = data;
+  const featuredId = topics.find((t) => t.featured)?.id;
 
   return (
     <section id="topics" aria-labelledby="topics-title" className="section-anchor py-20 lg:py-28">
@@ -20,93 +24,193 @@ export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
           label="Topics"
           title="The territory you'll master"
           titleId="topics-title"
-          description="Select a topic to focus its materials, or start it to track progress."
+          description="Track a topic to prioritise it, or focus one to filter the library and papers."
           colorVar={c}
         />
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-          {olympiad.topics.map((t, i) => (
-            <FadeIn
-              key={t.id}
-              delay={i * 0.06}
-              scale={0.97}
-              className={cn(t.featured && "sm:col-span-2 lg:col-span-2 lg:row-span-2")}
-            >
-              <TopicCard topic={t} colorVar={c} />
-            </FadeIn>
+        {/* histogram legend — subject-specific level labels */}
+        <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
+          <span className="font-semibold uppercase tracking-[0.18em]">Examined at:</span>
+          {LEVELS.map((lv) => (
+            <span key={lv} className="inline-flex items-center gap-1.5">
+              <span className="inline-flex h-5 min-w-8 items-center justify-center rounded border border-border bg-secondary/50 px-1 font-heading text-xs font-bold text-foreground">
+                {lv[0].toUpperCase()}
+              </span>
+              {meta.levels[lv].label}
+            </span>
           ))}
         </div>
+
+        {topics.length === 0 ? (
+          <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
+            <p className="font-heading text-lg font-semibold text-foreground">Topics coming soon</p>
+            <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
+              The official {meta.name} topic list is being transcribed. The syllabus table below
+              already shows every examined item.
+            </p>
+            <button
+              onClick={() => scrollToId("syllabus")}
+              className="mt-6 inline-flex min-h-10 items-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground"
+            >
+              See the syllabus
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+            {topics.map((t, i) => (
+              <FadeIn
+                key={t.id}
+                delay={Math.min(i * 0.04, 0.3)}
+                scale={0.98}
+                className={cn(t.id === featuredId && "sm:col-span-2 lg:col-span-2")}
+              >
+                <TopicCard t={t} data={data} />
+              </FadeIn>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
 }
 
-function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
-  const { isStarted, toggleTopic } = useOlympiadProgress();
+function TopicCard({ t, data }: { t: Topic; data: SubjectData }) {
+  const { meta } = data;
+  const c = meta.colorVar;
   const { f, set } = useFilters();
-  const started = isStarted(topic.id);
-  const focused = f.topic === topic.id;
+  const prog = useProgress(meta.slug);
+  const tracked = prog.tracked.includes(t.id);
+  const focused = f.topic === t.id;
+
+  const resCount = data.resources.filter(
+    (r) => r.access !== "dead" && r.topics.includes(t.id)
+  ).length;
+  const papCount = data.papers.filter((p) => p.access !== "dead" && p.topics.includes(t.id)).length;
 
   return (
     <article
-      id={`topic-${topic.id}`}
+      id={`topic-${t.id}`}
       className={cn(
-        "section-anchor group relative flex h-full flex-col justify-between rounded-2xl border bg-card p-6 transition-all",
+        "section-anchor relative flex h-full flex-col rounded-2xl border bg-card p-6 transition-all",
         focused ? "" : "border-border hover:border-primary/40",
-        topic.featured && "p-7 lg:p-8"
+        t.featured && "p-7"
       )}
-      style={focused ? { borderColor: `hsl(var(${colorVar}) / 0.6)`, boxShadow: `0 0 0 1px hsl(var(${colorVar}) / 0.3)` } : undefined}
+      style={
+        focused
+          ? {
+              borderColor: `hsl(var(${c}-strong) / 0.6)`,
+              boxShadow: `0 0 0 1px hsl(var(${c}-strong) / 0.3)`,
+            }
+          : undefined
+      }
     >
-      <div>
-        {/* Focus trigger — the header is clickable */}
-        <button
-          onClick={() => set({ topic: focused ? "" : topic.id }, "push")}
-          aria-pressed={focused}
-          className="w-full text-left"
-        >
-          <div className="flex items-start justify-between gap-3">
-            <h3 className="font-heading text-lg font-bold uppercase tracking-wide text-foreground lg:text-xl">
-              {topic.name}
-            </h3>              <span className="whitespace-nowrap text-xs font-semibold text-muted-foreground">
-              {topic.subtopics.length} sub-topics
-            </span>
-          </div>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {focused ? "Focused — showing related content below" : topic.blurb}
-          </p>
-        </button>
-
-        {topic.featured && topic.subtopics.length > 0 && (
-          <ul className="mt-4 grid grid-cols-1 gap-x-4 gap-y-1.5 sm:grid-cols-2">
-            {topic.subtopics.map((s) => (
-              <li key={s} className="flex items-center gap-2 text-sm text-foreground/80">
-                <span className="h-1 w-1 rounded-full" style={{ background: `hsl(var(${colorVar}))` }} />
-                {s}
-              </li>
-            ))}
-          </ul>
+      <div className="flex items-start justify-between gap-3">
+        <h3 className="font-heading text-lg font-bold text-foreground">{t.name}</h3>
+        {t.featured && (
+          <span className="flex-shrink-0 rounded-full bg-secondary px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-secondary-foreground">
+            Core
+          </span>
         )}
       </div>
 
-      <div className="mt-5 flex items-center justify-between">
-        <button
-          onClick={() => toggleTopic(topic.id, topic.name)}
-          className={cn(
-            "inline-flex min-h-10 items-center rounded-full border px-4 text-xs font-semibold transition-colors",
-        started
-          ? "border-transparent"
-          : "border-border bg-background text-foreground hover:bg-secondary"
+      {/* gap badge — owner-confirmed via Appendix G (T4.11 rule) */}
+      {t.gap && (
+        <div className="mt-2 rounded-lg border border-dashed border-amber-500/50 bg-amber-500/10 px-3 py-2">
+          <p
+            className="text-xs font-semibold text-amber-700 dark:text-amber-400"
+            title="No Nepali-language or Nepal-authored resource in our verified library covers this."
+          >
+            ⚠ No Nepali material — self-study required
+          </p>
+          <button
+            onClick={() => {
+              set({ topic: t.id }, "push");
+              scrollToId("library");
+            }}
+            className="mt-1 text-xs font-semibold underline-offset-2 hover:underline"
+            style={{ color: strong(c) }}
+          >
+            Start here →
+          </button>
+        </div>
       )}
-      style={started ? { backgroundColor: strong(colorVar), color: onStrong } : undefined}
-        >
-          {started ? "In progress" : "Start topic"}
-        </button>
 
+      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t.blurb}</p>
+
+      {/* level histogram */}
+      <div className="mt-3">
+        <span className="sr-only">
+          Examined at: {t.levels.map((lv) => meta.levels[lv].label).join(", ")}
+        </span>
+        <div aria-hidden className="flex items-center gap-1">
+          {LEVELS.map((lv) => {
+            const on = t.levels.includes(lv);
+            return (
+              <span
+                key={lv}
+                title={meta.levels[lv].label}
+                className={cn(
+                  "inline-flex h-5 min-w-8 items-center justify-center rounded border px-1 font-heading text-xs font-bold",
+                  on ? "border-transparent" : "border-dashed border-border text-muted-foreground/50"
+                )}
+                style={
+                  on
+                    ? { background: `hsl(var(${c}-strong) / 0.14)`, color: `hsl(var(${c}-strong))` }
+                    : undefined
+                }
+              >
+                {lv[0].toUpperCase()}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+
+      {t.featured && t.subtopics.length > 0 && (
+        <ul className="mt-4 grid grid-cols-1 gap-x-4 gap-y-1.5 sm:grid-cols-2">
+          {t.subtopics.map((s) => (
+            <li key={s} className="flex items-center gap-2 text-sm text-foreground/80">
+              <span
+                aria-hidden
+                className="h-1 w-1 flex-shrink-0 rounded-full"
+                style={{ background: `hsl(var(${c}))` }}
+              />
+              {s}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <div className="mt-3 text-xs text-muted-foreground">
+        {t.subtopics.length} sub-topics ·{" "}
+        {resCount + papCount > 0
+          ? `${resCount} ${resCount === 1 ? "resource" : "resources"} · ${papCount} ${
+              papCount === 1 ? "paper" : "papers"
+            }`
+          : "None tagged yet"}
+      </div>
+
+      <div className="mt-auto flex items-center justify-between gap-2 pt-5">
         <button
-          onClick={() => set({ topic: focused ? "" : topic.id }, "push")}
-          aria-label={`Focus ${topic.name} materials`}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
-          style={focused ? { borderColor: strong(colorVar), color: strong(colorVar) } : undefined}
+          onClick={() => actions.toggleTracked(meta.slug, t.id)}
+          aria-pressed={tracked}
+          className={cn(
+            "inline-flex min-h-10 items-center gap-1.5 rounded-full border px-4 text-xs font-semibold transition-colors",
+            tracked
+              ? "border-transparent"
+              : "border-border bg-background text-foreground hover:bg-secondary"
+          )}
+          style={tracked ? { background: strong(c), color: "hsl(var(--on-strong))" } : undefined}
+        >
+          {tracked && <Check aria-hidden className="h-3.5 w-3.5" />}
+          {tracked ? "Tracking" : "Track this topic"}
+        </button>
+        <button
+          onClick={() => set({ topic: focused ? "" : t.id }, "push")}
+          aria-pressed={focused}
+          aria-label={focused ? `Clear focus from ${t.name}` : `Focus library and papers on ${t.name}`}
+          className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
+          style={focused ? { borderColor: strong(c), color: strong(c) } : undefined}
         >
           <ArrowUpRight className="h-4 w-4" />
         </button>
