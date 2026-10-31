@@ -186,17 +186,6 @@ export function toOlympiad(data: SubjectData): Olympiad {
   };
 }
 
-/** Legacy bridge to URL filters (T4.2): level + topic. Full FilterBar lands in T4.5. */
-export function legacyMatches(
-  item: { levels?: string[]; topicIds?: string[] },
-  f: { level: string; topic: string }
-): boolean {
-  if (f.level !== "all" && !(item.levels ?? []).includes(f.level)) return false;
-  // untagged items are shown only when the topic filter is off (T4.5 rule)
-  if (f.topic && !(item.topicIds ?? []).includes(f.topic)) return false;
-  return true;
-}
-
 export function getOlympiadStats(o: Olympiad) {
   return {
     topics: o.topics.length,
