@@ -69,3 +69,7 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T4.7: "Start timed attempt" + score input land with PaperTimer (T4.8, next); PaperCard renders status chips only — no dead buttons.
 - T4.7: J.2 papers empty-state link "See what we're building → #contacts" activates at T4.14 (Contacts section).
 - FilterBar paper counts now exclude answer-key records so the count matches the visible card list.
+- T4.8: Reset = restart full countdown while staying running (standard timer UX). Switch to "reset → setup screen" if preferred.
+- T4.8: timer lives in its own localStorage slot (nss:v2:timer) as a single active timer; attempts are still recorded in the main progress store keyed by paper id.
+- T4.8: "Sound on time-up" creates the AudioContext on the Start click (autoplay-safe); beep is a short 880 Hz sine, no asset loaded.
+- T4.8: PaperCard keeps the T4.7 dual-write (actions.opened + markPaperAccessed) on opening the questions file, so NextStep's nextAction does not regress before T5.2.
