@@ -16,6 +16,7 @@ export interface Resource {
   type: "PDF" | "Video" | "Link" | "Doc";
   fileUrl: string;
   topicIds?: string[];
+  levels?: string[]; // bridge to the URL level filter (T4.2) until T4.6
 }
 
 export interface ModelPaper {
@@ -26,6 +27,7 @@ export interface ModelPaper {
   problems?: number;
   difficulty?: number;
   topicIds?: string[];
+  levels?: string[]; // bridge to the URL level filter (T4.2) until T4.7
 }
 
 export interface RoadmapStage {
@@ -139,6 +141,7 @@ export function toOlympiad(data: SubjectData): Olympiad {
       type: LEGACY_TYPE[r.type] ?? "Link",
       fileUrl: r.url,
       topicIds: r.topics,
+      levels: r.levels,
     }));
 
   const modelPapers: ModelPaper[] = data.papers
@@ -151,6 +154,7 @@ export function toOlympiad(data: SubjectData): Olympiad {
       problems: undefined,
       difficulty: undefined,
       topicIds: p.topics,
+      levels: p.levels,
     }));
 
   const roadmap: RoadmapStage[] = data.roadmap.map((s) => ({
@@ -180,6 +184,17 @@ export function toOlympiad(data: SubjectData): Olympiad {
     roadmap,
     syllabusFileUrl: meta.syllabusFileUrl,
   };
+}
+
+/** Legacy bridge to URL filters (T4.2): level + topic. Full FilterBar lands in T4.5. */
+export function legacyMatches(
+  item: { levels?: string[]; topicIds?: string[] },
+  f: { level: string; topic: string }
+): boolean {
+  if (f.level !== "all" && !(item.levels ?? []).includes(f.level)) return false;
+  // untagged items are shown only when the topic filter is off (T4.5 rule)
+  if (f.topic && !(item.topicIds ?? []).includes(f.topic)) return false;
+  return true;
 }
 
 export function getOlympiadStats(o: Olympiad) {
