@@ -5,27 +5,33 @@ import roadmap_0 from "@/data/subjects/ai/roadmap.json";
 import featured_0 from "@/data/subjects/ai/featured.json";
 import meta_1 from "@/data/subjects/astronomy/meta.json";
 import topics_1 from "@/data/subjects/astronomy/topics.json";
+import syllabus_1 from "@/data/subjects/astronomy/syllabus.json";
 import roadmap_1 from "@/data/subjects/astronomy/roadmap.json";
 import featured_1 from "@/data/subjects/astronomy/featured.json";
 import meta_2 from "@/data/subjects/biology/meta.json";
 import topics_2 from "@/data/subjects/biology/topics.json";
+import syllabus_2 from "@/data/subjects/biology/syllabus.json";
 import roadmap_2 from "@/data/subjects/biology/roadmap.json";
 import featured_2 from "@/data/subjects/biology/featured.json";
 import meta_3 from "@/data/subjects/chemistry/meta.json";
 import topics_3 from "@/data/subjects/chemistry/topics.json";
+import syllabus_3 from "@/data/subjects/chemistry/syllabus.json";
 import roadmap_3 from "@/data/subjects/chemistry/roadmap.json";
 import featured_3 from "@/data/subjects/chemistry/featured.json";
 import meta_4 from "@/data/subjects/informatics/meta.json";
 import topics_4 from "@/data/subjects/informatics/topics.json";
+import syllabus_4 from "@/data/subjects/informatics/syllabus.json";
 import roadmap_4 from "@/data/subjects/informatics/roadmap.json";
 import featured_4 from "@/data/subjects/informatics/featured.json";
 import meta_5 from "@/data/subjects/mathematics/meta.json";
 import topics_5 from "@/data/subjects/mathematics/topics.json";
 import papers_5 from "@/data/subjects/mathematics/papers.json";
+import syllabus_5 from "@/data/subjects/mathematics/syllabus.json";
 import roadmap_5 from "@/data/subjects/mathematics/roadmap.json";
 import featured_5 from "@/data/subjects/mathematics/featured.json";
 import meta_6 from "@/data/subjects/physics/meta.json";
 import topics_6 from "@/data/subjects/physics/topics.json";
+import syllabus_6 from "@/data/subjects/physics/syllabus.json";
 import roadmap_6 from "@/data/subjects/physics/roadmap.json";
 import featured_6 from "@/data/subjects/physics/featured.json";
 
@@ -47,7 +53,7 @@ export const RAW = {
     resources: [] as unknown,
     papers: [] as unknown,
     originals: [] as unknown,
-    syllabus: [] as unknown,
+    syllabus: syllabus_1 as unknown,
     roadmap: roadmap_1 as unknown,
     featured: featured_1 as unknown,
     gaps: [] as unknown,
@@ -58,7 +64,7 @@ export const RAW = {
     resources: [] as unknown,
     papers: [] as unknown,
     originals: [] as unknown,
-    syllabus: [] as unknown,
+    syllabus: syllabus_2 as unknown,
     roadmap: roadmap_2 as unknown,
     featured: featured_2 as unknown,
     gaps: [] as unknown,
@@ -69,7 +75,7 @@ export const RAW = {
     resources: [] as unknown,
     papers: [] as unknown,
     originals: [] as unknown,
-    syllabus: [] as unknown,
+    syllabus: syllabus_3 as unknown,
     roadmap: roadmap_3 as unknown,
     featured: featured_3 as unknown,
     gaps: [] as unknown,
@@ -80,7 +86,7 @@ export const RAW = {
     resources: [] as unknown,
     papers: [] as unknown,
     originals: [] as unknown,
-    syllabus: [] as unknown,
+    syllabus: syllabus_4 as unknown,
     roadmap: roadmap_4 as unknown,
     featured: featured_4 as unknown,
     gaps: [] as unknown,
@@ -91,7 +97,7 @@ export const RAW = {
     resources: [] as unknown,
     papers: papers_5 as unknown,
     originals: [] as unknown,
-    syllabus: [] as unknown,
+    syllabus: syllabus_5 as unknown,
     roadmap: roadmap_5 as unknown,
     featured: featured_5 as unknown,
     gaps: [] as unknown,
@@ -102,7 +108,7 @@ export const RAW = {
     resources: [] as unknown,
     papers: [] as unknown,
     originals: [] as unknown,
-    syllabus: [] as unknown,
+    syllabus: syllabus_6 as unknown,
     roadmap: roadmap_6 as unknown,
     featured: featured_6 as unknown,
     gaps: [] as unknown,
