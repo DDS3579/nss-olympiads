@@ -5,7 +5,7 @@ import type { RefObject } from "react";
 import { Search, SlidersHorizontal } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { onStrong, strong } from "@/lib/color";
-import { matchPaper, matchResource } from "@/lib/filter";
+import { isAnswerSet, matchPaper, matchResource } from "@/lib/filter";
 import { persistLevel } from "@/lib/url-state";
 import { useFilters } from "./UrlStateProvider";
 import {
@@ -193,14 +193,21 @@ export function FilterBar({ data }: { data: SubjectData }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const resTotal = data.resources.length;
-  const papTotal = data.papers.length;
+  const resTotal = useMemo(
+    () => data.resources.filter((r) => r.access !== "dead").length,
+    [data.resources]
+  );
+  // Answer-key records live in the soft-gated Answers block, not the paper list (T4.7)
+  const papTotal = useMemo(
+    () => data.papers.filter((p) => p.access !== "dead" && !isAnswerSet(p)).length,
+    [data.papers]
+  );
   const resVisible = useMemo(
     () => data.resources.filter((r) => r.access !== "dead" && matchResource(r, f)).length,
     [data.resources, f]
   );
   const papVisible = useMemo(
-    () => data.papers.filter((p) => p.access !== "dead" && matchPaper(p, f)).length,
+    () => data.papers.filter((p) => p.access !== "dead" && !isAnswerSet(p) && matchPaper(p, f)).length,
     [data.papers, f]
   );
 
