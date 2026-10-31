@@ -73,6 +73,6 @@
     { "body": "A Guide to Nepal Physics Olympiad", "role": "Nepali olympiad book — open to contributors (CC BY-NC-SA 4.0)", "links": [ { "label": "GitHub", "url": "https://github.com/nkalauni/physics-olympiad-book" } ] }
   ],
   "syllabusFileUrl": "/materials/physics/syllabus.pdf",
-  "syllabusMeta": { "officialVerified": false },
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true },
   "updatedAt": "2026-10-24"
 }
