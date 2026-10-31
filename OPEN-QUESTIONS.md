@@ -73,3 +73,9 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T4.8: timer lives in its own localStorage slot (nss:v2:timer) as a single active timer; attempts are still recorded in the main progress store keyed by paper id.
 - T4.8: "Sound on time-up" creates the AudioContext on the Start click (autoplay-safe); beep is a short 880 Hz sine, no asset loaded.
 - T4.8: PaperCard keeps the T4.7 dual-write (actions.opened + markPaperAccessed) on opening the questions file, so NextStep's nextAction does not regress before T5.2.
+- T4.9: syllabusMeta.pdfUnderReview=true for all six transcribed subjects until M-01/M-02 complete; heading flips to "Official syllabus" per subject when the owner sets officialVerified=true after reading it live.
+- T4.9: NEB coverage filled only where the research files contain the analysis (biology B-9, chemistry C-4, astronomy A-5, maths M-1); everything else "Not yet mapped" (GS-5 pending). Physics experimental nepalMaterialExists=true conflicts with Appendix G — physics.md evidences Guide ch.6–7 + 3 Kafle handouts; owner to settle.
+- T4.9: informatics syllabus rendered as the IOI's 8 groups + Excluded/Outside-focus sections; the 148/85/24 strip reads from syllabusMeta.levelCounts (validator cross-check not wired yet).
+- T4.9: types.ts syllabusMeta gained optional pdfUnderReview + weightSource (additive; plan sanctions pdfUnderReview explicitly). lib/types.ts already carried ioiCategory, so only these two keys were added.
+- T4.9: SyllabusSection.tsx and SubjectExperience.tsx swap the prop contract in one step, so the commit between them does not typecheck (same unavoidable window as T4.6/T4.7).
+- T4.9: the "Print checklist" button calls window.print() and relies on the T3.7 print stylesheet hiding [data-no-print] chrome.
