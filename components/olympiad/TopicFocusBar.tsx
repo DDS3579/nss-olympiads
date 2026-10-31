@@ -3,28 +3,30 @@
 import { X } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
 import { scrollToId } from "./primitives";
-import { useOlympiadProgress } from "./context";
+import { legacyMatches } from "./legacy";
+import { useFilters } from "./UrlStateProvider";
 import type { Olympiad } from "@/components/olympiad/legacy";
 import { strong } from "@/lib/color";
 
 export function TopicFocusBar({ olympiad }: { olympiad: Olympiad }) {
-  const { focusedTopic, clearFocus, matchesFocus } = useOlympiadProgress();
   const reduce = useReducedMotion();
-
-  if (!focusedTopic) return null;
+  const { f, set } = useFilters();
+  if (!f.topic) return null;
 
   const c = olympiad.colorVar;
-  const resourceCount = olympiad.studyMaterial.filter((r) => matchesFocus(r.topicIds)).length;
-  const paperCount = olympiad.modelPapers.filter((p) => matchesFocus(p.topicIds)).length;
+  const topic = olympiad.topics.find((t) => t.id === f.topic);
+  const resourceCount = olympiad.studyMaterial.filter((r) => legacyMatches(r, f)).length;
+  const paperCount = olympiad.modelPapers.filter((p) => legacyMatches(p, f)).length;
 
   return (
     <motion.div
       initial={reduce ? false : { opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
       exit={reduce ? { opacity: 0 } : { opacity: 0, y: -12 }}
-      transition={{ duration: reduce ? 0 : 0.25, ease: "easeOut" }}data-no-print
+      transition={{ duration: reduce ? 0 : 0.25, ease: "easeOut" }}
+      data-no-print
       className="sticky z-30 border-b border-border bg-background/95 backdrop-blur-md"
-style={{ top: "calc(var(--nav-offset) + var(--subnav-h))" }}
+      style={{ top: "calc(var(--nav-offset) + var(--subnav-h))" }}
     >
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-6 py-2.5 lg:px-8">
         <span
@@ -32,13 +34,12 @@ style={{ top: "calc(var(--nav-offset) + var(--subnav-h))" }}
           style={{ background: strong(c), boxShadow: `0 0 10px hsl(var(${c}) / 0.6)` }}
         />
         <span className="truncate font-heading text-sm font-bold text-foreground">
-          {focusedTopic.name}
+          {topic?.name ?? f.topic}
         </span>
         <span className="hidden text-xs text-muted-foreground sm:inline">
           {resourceCount} {resourceCount === 1 ? "resource" : "resources"} · {paperCount}{" "}
           {paperCount === 1 ? "paper" : "papers"}
         </span>
-
         <div className="ml-auto flex flex-shrink-0 items-center gap-1.5">
           <button
             onClick={() => scrollToId("library")}
@@ -53,8 +54,8 @@ style={{ top: "calc(var(--nav-offset) + var(--subnav-h))" }}
             Papers
           </button>
           <button
-            onClick={clearFocus}
-            aria-label="Clear topic focus"
+            onClick={() => set({ topic: "" }, "push")}
+            aria-label="Clear topic filter"
             className="flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
           >
             <X className="h-4 w-4" />
