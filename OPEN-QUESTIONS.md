@@ -65,3 +65,7 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T4.5: Level renders as a <select> in the bar at all sizes (the full radiogroup already sits directly above as LevelTabs); Type renders as a labelled <select> (11 chip options don't fit one row).
 - T4.5: "Has solutions" stays enabled with an sr-only "(applies to past papers only)" note — one shared bar serves both lists.
 - T4.5: Materials & Papers sections now consume SubjectData records directly; the legacy bridge no longer carries studyMaterial/modelPapers consumers. Progress still keys on titles until the T5.1 store rewrite.
+- T4.6/T4.7: T5.1 progress store pulled forward (cards key Save/Done/attempts on record ids per plan rule 7); legacy context kept running for NextStep/percent until T5.2, with dual-writes in the cards meanwhile.
+- T4.7: "Start timed attempt" + score input land with PaperTimer (T4.8, next); PaperCard renders status chips only — no dead buttons.
+- T4.7: J.2 papers empty-state link "See what we're building → #contacts" activates at T4.14 (Contacts section).
+- FilterBar paper counts now exclude answer-key records so the count matches the visible card list.
