@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "motion/react";
 import { FadeIn } from "@/components/FadeIn";
 import { Motif, SectionHeading } from "./primitives";
-import { useOlympiadProgress } from "./context";
+import { useFilters } from "./UrlStateProvider";
 import type { Olympiad } from "@/components/olympiad/legacy";
 import { strong } from "@/lib/color";
 
@@ -13,7 +13,8 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
   const [hovered, setHovered] = useState<string | null>(null);
-  const { focusedTopicId, focusTopic } = useOlympiadProgress();
+  const { f, set } = useFilters();
+  const focusedTopicId = f.topic || null;
 
   const { topics, edges, colorVar, motif } = olympiad;
   const byId = Object.fromEntries(topics.map((t) => [t.id, t]));
@@ -104,7 +105,7 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                   onMouseLeave={() => setHovered(null)}
                   onFocus={() => setHovered(t.id)}
                   onBlur={() => setHovered(null)}
-                  onClick={() => focusTopic(t.id)}
+                  onClick={() => set({ topic: focusedTopicId === t.id ? "" : t.id }, "push")}
                   aria-label={`Focus topic ${t.name}`}
                   aria-pressed={focusedTopicId === t.id}
                   className="group absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1.5 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2 focus-visible:ring-offset-background before:absolute before:-inset-2 before:content-['']"
@@ -167,7 +168,11 @@ export function Constellation({ olympiad }: { olympiad: Olympiad }) {
                         boxShadow: isFocused ? `0 0 12px hsl(var(${colorVar}) / 0.8)` : "none",
                       }}
                     />
-                    <button onClick={() => focusTopic(t.id)} className="group min-h-10 w-full rounded-lg text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2" aria-pressed={isFocused}>
+                    <button
+                      onClick={() => set({ topic: focusedTopicId === t.id ? "" : t.id }, "push")}
+                      className="group min-h-10 w-full rounded-lg text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2"
+                      aria-pressed={isFocused}
+                    >
                       <div className="flex items-center justify-between">
                         <span className="font-heading font-semibold text-foreground transition-colors group-hover:text-primary">
                           {t.name}
