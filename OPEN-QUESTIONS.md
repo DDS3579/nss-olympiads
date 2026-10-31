@@ -79,3 +79,9 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T4.9: types.ts syllabusMeta gained optional pdfUnderReview + weightSource (additive; plan sanctions pdfUnderReview explicitly). lib/types.ts already carried ioiCategory, so only these two keys were added.
 - T4.9: SyllabusSection.tsx and SubjectExperience.tsx swap the prop contract in one step, so the commit between them does not typecheck (same unavoidable window as T4.6/T4.7).
 - T4.9: the "Print checklist" button calls window.print() and relies on the T3.7 print stylesheet hiding [data-no-print] chrome.
+- T4.10: node dimming only applies when the subject has prereq edges (otherwise focusing a topic would dim the entire map, since edges are prereq-only by rule).
+- T4.10: rings with ≥7 nodes (astronomy province: 14) use alternating inside/outside radial labels; labels are line-clamped at 3 lines with the full name in title/aria-label.
+- T4.10: ?hl=<id> card-flash for gapSubstituteId deferred — all gapSubstituteId values are null until curation (M-04).
+- T4.10: Constellation now reads SubjectData directly and recomputes edges from topic.prereqs; lib/layout.ts additionally exports RING_R and firstLevel (layoutTopics keeps its signature for legacy.ts).
+- T4.11: "Start topic" renamed "Track this topic" and rewired to the v2 store's tracked[] (the legacy context's focus* helpers were deleted back in T4.2).
+- T4.10/T4.11: Constellation and OlympiadTopics both swap to the data prop, healed by the SubjectExperience commit — so two intermediate commits do not typecheck individually.
