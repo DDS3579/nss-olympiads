@@ -4,10 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { FadeIn } from "@/components/FadeIn";
-import { DifficultyMeter, SectionHeading } from "./primitives";
+import { DifficultyMeter, SectionHeading, scrollToId } from "./primitives";
 import type { Olympiad } from "@/components/olympiad/legacy";
 import { strong } from "@/lib/color";
-import { useOlympiadProgress } from "./context";
+import { useFilters } from "./UrlStateProvider";
 
 
 function Meta({ label, value }: { label: string; value: string }) {
@@ -22,7 +22,7 @@ function Meta({ label, value }: { label: string; value: string }) {
 export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
   const [open, setOpen] = useState(false);
   const reduce = useReducedMotion();
-  const { focusTopic } = useOlympiadProgress();
+  const { set } = useFilters();
   const p = olympiad.featuredProblem;
   const c = olympiad.colorVar;
 
@@ -134,7 +134,10 @@ export function FeaturedProblem({ olympiad }: { olympiad: Olympiad }) {
                 </Link>
                 {linkedTopic && (
                   <button
-                    onClick={() => focusTopic(linkedTopic.id)}
+                    onClick={() => {
+                      set({ topic: linkedTopic.id }, "push");
+                      scrollToId("library");
+                    }}
                     className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
                   >
                     Focus {linkedTopic.name}
