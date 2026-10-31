@@ -123,6 +123,6 @@
     { "body": "MoEST", "role": "National olympiad recognition (कार्यविधि २०८२)", "links": [ { "label": "Olympiad procedure (NPS mirror)", "url": "https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf" } ] }
   ],
   "syllabusFileUrl": "/materials/astronomy/syllabus.pdf",
-  "syllabusMeta": { "officialVerified": false },
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true },
   "updatedAt": "2026-10-27"
 }
