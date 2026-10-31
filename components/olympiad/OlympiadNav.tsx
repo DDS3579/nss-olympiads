@@ -34,7 +34,7 @@ export function OlympiadNav({ olympiad, index }: { olympiad: Olympiad; index: Su
   const Icon = olympiad.icon;
   const c = olympiad.colorVar;
 
-  // Publish this bar's real height so TopicFocusBar/anchors can stack under it (T3.4)
+  // Publish this bar's real height so the FilterBar/anchors can stack under it (T3.4/T4.5)
   useEffect(() => {
     const el = subnavRef.current;
     if (!el) return;
