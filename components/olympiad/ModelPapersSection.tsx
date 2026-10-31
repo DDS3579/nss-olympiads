@@ -8,6 +8,8 @@ import { useProgress } from "@/lib/progress/store";
 import { useFilters } from "./UrlStateProvider";
 import { SectionHeading } from "./primitives";
 import { AnswerSetCard, PaperCard } from "./PaperCard";
+import { PaperTimer } from "./PaperTimer";
+import { MiniTimer } from "./MiniTimer";
 import type { Level, Paper, SubjectData } from "@/lib/types";
 
 const LEVEL_ORDER: Level[] = ["district", "province", "national", "international"];
@@ -26,6 +28,13 @@ export function ModelPapersSection({ data }: { data: SubjectData }) {
   const cardPapers = papers.filter((p) => !isAnswerSet(p));
 
   const visible = cardPapers.filter((p) => matchPaper(p, f)).sort(byYearDesc);
+
+  const [timerPaper, setTimerPaper] = useState<Paper | null>(null);
+  const allPapersForTimer = [...cardPapers, ...answerSets];
+  const openTimerById = (id: string) => {
+    const found = allPapersForTimer.find((x) => x.id === id);
+    if (found) setTimerPaper(found);
+  };
   const topicNames = Object.fromEntries(data.topics.map((t) => [t.id, t.name]));
 
   const levelFilterOn = f.level !== "all";
@@ -71,7 +80,7 @@ export function ModelPapersSection({ data }: { data: SubjectData }) {
         </div>
         <div className="space-y-3">
           {list.map((p) => (
-            <PaperCard key={p.id} p={p} meta={meta} topicNames={topicNames} />
+            <PaperCard key={p.id} p={p} meta={meta} topicNames={topicNames} onStartTimer={setTimerPaper} />
           ))}
         </div>
       </div>
@@ -124,7 +133,7 @@ export function ModelPapersSection({ data }: { data: SubjectData }) {
                     .sort(byYearDesc)
                     .slice(0, 2)
                     .map((p) => (
-                      <PaperCard key={p.id} p={p} meta={meta} topicNames={topicNames} />
+                      <PaperCard key={p.id} p={p} meta={meta} topicNames={topicNames} onStartTimer={setTimerPaper} />
                     ))}
                 </div>
               </>
@@ -225,6 +234,17 @@ export function ModelPapersSection({ data }: { data: SubjectData }) {
           </div>
         )}
       </div>
+
+      <PaperTimer
+        paper={timerPaper}
+        open={!!timerPaper}
+        onOpenChange={(o) => {
+          if (!o) setTimerPaper(null);
+        }}
+        slug={meta.slug}
+        colorVar={c}
+      />
+      <MiniTimer onOpen={openTimerById} />
     </section>
   );
 }
