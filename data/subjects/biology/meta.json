@@ -72,6 +72,6 @@
     { "body": "Curriculum Development Centre (CDC)", "role": "NEB Grade 11–12 Biology curriculum", "links": [ { "label": "Website", "url": "https://moecdc.gov.np/" }, { "label": "Digital library", "url": "http://lib.moecdc.gov.np/" } ] }
   ],
   "syllabusFileUrl": "/materials/biology/syllabus.pdf",
-  "syllabusMeta": { "officialVerified": false },
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true, "weightSource": { "label": "IBO Operational Guidelines v.7 §3.7.3", "url": "https://www.ibo-info.org/files/downloads/rules/IBO%20Operational%20Guidelines_v.7.pdf" } },
   "updatedAt": "2026-10-24"
 }
