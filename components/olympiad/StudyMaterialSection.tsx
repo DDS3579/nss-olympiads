@@ -4,6 +4,8 @@ import { ArrowDownToLine, FileText, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { SectionHeading, scrollToId } from "./primitives";
 import { useOlympiadProgress } from "./context";
+import { useFilters } from "./UrlStateProvider";
+import { legacyMatches } from "./legacy";
 import type { Olympiad, Resource } from "@/components/olympiad/legacy";
 import { strong } from "@/lib/color";
 
@@ -51,12 +53,14 @@ function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; color
 }
 
 export function StudyMaterialSection({ olympiad }: { olympiad: Olympiad }) {
-  const { focusedTopic, matchesFocus, clearFocus } = useOlympiadProgress();
+  const { f, set } = useFilters();
   const resources = olympiad.studyMaterial;
   const c = olympiad.colorVar;
-
-  const visible = resources.filter((r) => matchesFocus(r.topicIds));
-  const isFocused = !!focusedTopic;
+  const visible = resources.filter((r) => legacyMatches(r, f));
+  const filtered = f.topic !== "" || f.level !== "all";
+  const topicName = f.topic
+    ? olympiad.topics.find((t) => t.id === f.topic)?.name
+    : undefined;
 
   return (
     <section id="library" aria-labelledby="library-title" className="section-anchor border-y border-border bg-secondary/20 py-20 lg:py-28">
@@ -67,8 +71,8 @@ export function StudyMaterialSection({ olympiad }: { olympiad: Olympiad }) {
           title="Study material"
           titleId="library-title"
           description={
-            isFocused
-              ? `Materials for ${focusedTopic.name}, plus general resources.`
+            f.topic
+              ? `Materials matching ${topicName ?? "the selected topic"}.`
               : `Curated resources for ${olympiad.name}.`
           }
           colorVar={c}
@@ -87,22 +91,22 @@ export function StudyMaterialSection({ olympiad }: { olympiad: Olympiad }) {
               Explore Topics
             </button>
           </div>
-        ) : isFocused && visible.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
-            <p className="font-heading text-lg font-semibold text-foreground">
-              No {focusedTopic.name} materials yet
-            </p>
-            <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
-              Nothing is tagged to this topic yet. Clear the focus to see all materials.
-            </p>
-            <button
-              onClick={clearFocus}
-              className="mt-6 inline-flex items-center rounded-full border border-border bg-background px-6 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-            >
-              View all materials
-            </button>
-          </div>
-        ) : (
+      ) : filtered && visible.length === 0 ? (
+        <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
+          <p className="font-heading text-lg font-semibold text-foreground">
+            No {topicName ? `${topicName} ` : ""}materials match these filters
+          </p>
+          <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
+            Nothing is tagged this way yet. Clear the filters to see everything.
+          </p>
+          <button
+            onClick={() => set({ topic: "", level: "all" }, "push")}
+            className="mt-6 inline-flex items-center rounded-full border border-border bg-background px-6 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            Clear filters
+          </button>
+        </div>
+      ) : (
           <div className="divide-y divide-border border-y border-border">
             {visible.map((r, i) => (
               <ResourceRow key={`${r.title}-${i}`} r={r} index={i} colorVar={c} />
