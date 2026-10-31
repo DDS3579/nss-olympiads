@@ -18,6 +18,8 @@ import { FeaturedProblem } from "./FeaturedProblem";
 import { PreparationRoadmap } from "./PreparationRoadmap";
 import { NextStep } from "./NextStep";
 import { OlympiadCTA } from "./OlympiadCTA";
+import { LevelTabs } from "./LevelTabs";
+import { StartHere } from "./StartHere";
 
 function GoDeeper({ colorVar }: { colorVar: string }) {
   return (
@@ -50,6 +52,17 @@ export function SubjectExperience({
 }) {
   const olympiad = useMemo(() => toOlympiad(data), [data]);
 
+  const levelCounts = useMemo(() => {
+    const counts: Record<string, number> = {
+      all: 0, district: 0, province: 0, national: 0, international: 0,
+    };
+    for (const it of [...data.resources, ...data.papers]) {
+      counts.all += 1;
+      for (const l of it.levels) if (l in counts) counts[l] += 1;
+    }
+    return counts;
+  }, [data]);
+
   return (
     <UrlStateProvider slug={data.meta.slug}>
       <ProgressProvider
@@ -64,6 +77,19 @@ export function SubjectExperience({
           <TopicFocusBar olympiad={olympiad} />
 
           <div className="relative">
+            {/* ── 00 Start Here (T4.4) ── */}
+            <StartHere data={data} />
+
+            {/* ── Level control: "Which exam are you sitting?" (T4.3) ── */}
+            <div className="mx-auto max-w-6xl px-6 pt-12 lg:pt-16">
+              <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                Which exam are you sitting?
+              </p>
+              <div className="mt-4">
+                <LevelTabs meta={data.meta} counts={levelCounts} colorVar={data.meta.colorVar} />
+              </div>
+            </div>
+
             {/* ── Core resources: what the student came for ── */}
             <StudyMaterialSection olympiad={olympiad} />
             <ModelPapersSection olympiad={olympiad} />
