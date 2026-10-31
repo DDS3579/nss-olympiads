@@ -1,102 +1,50 @@
 "use client";
 
-import { ArrowUpRight, CheckCircle2, FileText } from "lucide-react";
-import Link from "next/link";
 import { FadeIn } from "@/components/FadeIn";
-import { strong } from "@/lib/color";
 import { matchResource } from "@/lib/filter";
 import { mailto } from "@/lib/site-config";
-import { SectionHeading, scrollToId } from "./primitives";
-import { useOlympiadProgress } from "./context";
 import { useFilters } from "./UrlStateProvider";
-import type { Resource, SubjectData } from "@/lib/types";
+import { SectionHeading, scrollToId } from "./primitives";
+import { ResourceCard } from "./ResourceCard";
+import type { Level, Resource, SubjectData } from "@/lib/types";
 
-const TYPE_LABEL: Record<string, string> = {
-  book: "Book",
-  handout: "Handout",
-  course: "Course",
-  video: "Video",
-  tool: "Tool",
-  dataset: "Dataset",
-  official: "Official",
-  problemset: "Problem set",
-  mock: "Mock exam",
-  pastpaper: "Past paper",
-};
+const LEVEL_ORDER: Level[] = ["district", "province", "national", "international"];
 
-const BTN =
-  "inline-flex min-h-10 flex-shrink-0 items-center gap-2 rounded-full border border-border bg-background px-4 text-xs font-semibold text-foreground transition-colors hover:bg-secondary";
-
-function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; colorVar: string }) {
-  const { isResourceOpened, markResourceOpened } = useOlympiadProgress();
-  const opened = isResourceOpened(r.title); // keyed on title until the T5.1 store rewrite
-  const hosted = r.url.startsWith("/");
-
-  return (
-    <FadeIn delay={index * 0.05}>
-      <div className="flex items-center justify-between gap-4 py-5">
-        <div className="flex min-w-0 items-center gap-4">
-          <div
-            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl"
-            style={{ background: `hsl(var(${colorVar}) / 0.1)` }}
-          >
-            <FileText className="h-5 w-5" style={{ color: strong(colorVar) }} />
-          </div>
-          <div className="min-w-0">
-            <div className="flex items-center gap-2">
-              <h3 className="truncate font-heading font-semibold text-foreground">{r.title}</h3>
-              {opened && (
-                <CheckCircle2
-                  className="h-3.5 w-3.5 flex-shrink-0"
-                  style={{ color: strong(colorVar) }}
-                />
-              )}
-            </div>
-            <div className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-              <span className="rounded-full bg-secondary px-2 py-0.5 font-semibold text-secondary-foreground">
-                {TYPE_LABEL[r.type] ?? r.type}
-              </span>
-              {r.nepalSpecific && <span>🇳🇵 Nepal-specific</span>}
-              {r.topics.length > 0 && <span>· topic-specific</span>}
-            </div>
-          </div>
-        </div>
-
-        {/* Primary action by kind (B-13): no `download` on external URLs, everything
-            that leaves the page opens in a new tab and says so. */}
-        {r.kind === "page" && !hosted ? (
-          <Link href={r.url} onClick={() => markResourceOpened(r.title, r.title)} className={BTN}>
-            <ArrowUpRight className="h-3.5 w-3.5" style={{ color: strong(colorVar) }} />
-            <span className="hidden sm:inline">{opened ? "Opened" : "Read"}</span>
-          </Link>
-        ) : (
-          <a
-            href={r.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => markResourceOpened(r.title, r.title)}
-            className={BTN}
-          >
-            <ArrowUpRight className="h-3.5 w-3.5" style={{ color: strong(colorVar) }} />
-            <span className="hidden sm:inline">
-              {opened ? "Opened" : hosted ? "View PDF" : "Open"}
-            </span>
-            <span className="sr-only">(opens in new tab)</span>
-          </a>
-        )}
-      </div>
-    </FadeIn>
-  );
-}
+const byPriority = (a: Resource, b: Resource) =>
+  Number(b.highlight ?? false) - Number(a.highlight ?? false) ||
+  Number(b.nepalSpecific) - Number(a.nepalSpecific) ||
+  a.title.localeCompare(b.title);
 
 export function StudyMaterialSection({ data }: { data: SubjectData }) {
   const { f, reset } = useFilters();
-  const c = data.meta.colorVar;
+  const { meta } = data;
+  const c = meta.colorVar;
+
   const resources = data.resources.filter((r) => r.access !== "dead");
-  const visible = resources.filter((r) => matchResource(r, f));
+  const visible = resources.filter((r) => matchResource(r, f)).sort(byPriority);
+  const topicNames = Object.fromEntries(data.topics.map((t) => [t.id, t.name]));
+
+  const levelFilterOn = f.level !== "all";
   const filtered =
-    f.topic !== "" || f.level !== "all" || f.type !== "" || f.q !== "" || f.nepal || f.sol;
-  const topicName = f.topic ? data.topics.find((t) => t.id === f.topic)?.name : undefined;
+    f.topic !== "" || levelFilterOn || f.type !== "" || f.q !== "" || f.nepal || f.sol;
+
+  // level = all → grouped by level (subject-specific labels); else flat (T4.6)
+  const groups = LEVEL_ORDER.map((lv) => ({
+    lv,
+    items: visible.filter((r) => r.levels.includes(lv)),
+  })).filter((g) => g.items.length > 0);
+
+  // Honest empty state for non-existent levels (J.2): nearest real level's top 2
+  const chosenMeta = levelFilterOn ? meta.levels[f.level as Level] : null;
+  const nearest = (() => {
+    if (!levelFilterOn) return null;
+    const idx = LEVEL_ORDER.indexOf(f.level as Level);
+    for (const step of [1, -1, 2, -2, 3, -3]) {
+      const lv = LEVEL_ORDER[idx + step];
+      if (lv && meta.levels[lv].exists && resources.some((r) => r.levels.includes(lv))) return lv;
+    }
+    return null;
+  })();
 
   return (
     <section
@@ -112,8 +60,8 @@ export function StudyMaterialSection({ data }: { data: SubjectData }) {
           titleId="library-title"
           description={
             f.topic
-              ? `Materials matching ${topicName ?? "the selected topic"}.`
-              : `Curated resources for ${data.meta.name}.`
+              ? `Materials matching ${topicNames[f.topic] ?? "the selected topic"}.`
+              : `Curated resources for ${meta.name}.`
           }
           colorVar={c}
         />
@@ -124,7 +72,7 @@ export function StudyMaterialSection({ data }: { data: SubjectData }) {
               Your library is quiet for now
             </p>
             <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
-              Study materials will appear here as the {data.meta.name} library is curated and
+              Study materials will appear here as the {meta.name} library is curated and
               verified.
             </p>
             <button
@@ -132,6 +80,39 @@ export function StudyMaterialSection({ data }: { data: SubjectData }) {
               className="mt-6 inline-flex min-h-10 items-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground"
             >
               Explore Topics
+            </button>
+          </div>
+        ) : filtered && visible.length === 0 && chosenMeta && !chosenMeta.exists ? (
+          <div className="rounded-2xl border border-dashed border-border p-8 lg:p-12">
+            <p className="font-heading text-lg font-semibold text-foreground">
+              No official {chosenMeta.label} round
+            </p>
+            {chosenMeta.honestNote && (
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                {chosenMeta.honestNote}
+              </p>
+            )}
+            {nearest && (
+              <>
+                <p className="mt-6 text-sm font-semibold text-foreground">
+                  Here&apos;s the closest level instead:
+                </p>
+                <div className="mt-3 space-y-3">
+                  {resources
+                    .filter((r) => r.levels.includes(nearest))
+                    .sort(byPriority)
+                    .slice(0, 2)
+                    .map((r) => (
+                      <ResourceCard key={r.id} r={r} meta={meta} topicNames={topicNames} />
+                    ))}
+                </div>
+              </>
+            )}
+            <button
+              onClick={reset}
+              className="mt-6 inline-flex min-h-10 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+            >
+              Clear filters
             </button>
           </div>
         ) : filtered && visible.length === 0 ? (
@@ -143,18 +124,47 @@ export function StudyMaterialSection({ data }: { data: SubjectData }) {
               Try removing a filter, or search all levels.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <button onClick={reset} className={BTN}>
+              <button
+                onClick={reset}
+                className="inline-flex min-h-10 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              >
                 Clear filters
               </button>
-              <a href={mailto(`Resource suggestion for ${data.meta.name}`)} className={BTN}>
+              <a
+                href={mailto(`Resource suggestion for ${meta.name}`)}
+                className="inline-flex min-h-10 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              >
                 Suggest a resource
               </a>
             </div>
           </div>
+        ) : levelFilterOn ? (
+          <div className="space-y-3">
+            {visible.map((r) => (
+              <ResourceCard key={r.id} r={r} meta={meta} topicNames={topicNames} />
+            ))}
+          </div>
         ) : (
-          <div className="divide-y divide-border border-y border-border">
-            {visible.map((r, i) => (
-              <ResourceRow key={r.id} r={r} index={i} colorVar={c} />
+          <div className="space-y-10">
+            {groups.map((g) => (
+              <FadeIn key={g.lv}>
+                <div>
+                  <div className="mb-4 flex items-center gap-3">
+                    <h3 className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-foreground">
+                      {meta.levels[g.lv].label}
+                    </h3>
+                    <span className="h-px flex-1 bg-border" />
+                    <span className="text-xs text-muted-foreground">
+                      {g.items.length} {g.items.length === 1 ? "resource" : "resources"}
+                    </span>
+                  </div>
+                  <div className="space-y-3">
+                    {g.items.map((r) => (
+                      <ResourceCard key={r.id} r={r} meta={meta} topicNames={topicNames} />
+                    ))}
+                  </div>
+                </div>
+              </FadeIn>
             ))}
           </div>
         )}
