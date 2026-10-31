@@ -4,6 +4,8 @@ import { Calendar, ArrowDownToLine } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { DifficultyMeter, SectionHeading } from "./primitives";
 import { useOlympiadProgress } from "./context";
+import { useFilters } from "./UrlStateProvider";
+import { legacyMatches } from "./legacy";
 import type { ModelPaper, Olympiad } from "@/components/olympiad/legacy";
 import { strong, onStrong } from "@/lib/color";
 
@@ -54,12 +56,14 @@ function PaperRow({ paper, colorVar }: { paper: ModelPaper; colorVar: string }) 
 }
 
 export function ModelPapersSection({ olympiad }: { olympiad: Olympiad }) {
-  const { focusedTopic, matchesFocus, clearFocus } = useOlympiadProgress();
+  const { f, set } = useFilters();
   const papers = olympiad.modelPapers;
   const c = olympiad.colorVar;
-
-  const visible = papers.filter((p) => matchesFocus(p.topicIds));
-  const isFocused = !!focusedTopic;
+  const visible = papers.filter((p) => legacyMatches(p, f));
+  const filtered = f.topic !== "" || f.level !== "all";
+  const topicName = f.topic
+    ? olympiad.topics.find((t) => t.id === f.topic)?.name
+    : undefined;
 
   const grouped = visible.reduce((acc, paper) => {
     const year = paper.year || "General";
@@ -79,8 +83,8 @@ export function ModelPapersSection({ olympiad }: { olympiad: Olympiad }) {
           title="Simulate the real thing"
           titleId="papers-title"
           description={
-            isFocused
-              ? `Papers relevant to ${focusedTopic.name}.`
+            f.topic
+              ? `Papers matching ${topicName ?? "the selected topic"}.`
               : "Timed, competition-format papers. Treat each one like the real round."
           }
           colorVar={c}
@@ -93,19 +97,19 @@ export function ModelPapersSection({ olympiad }: { olympiad: Olympiad }) {
               Model question papers will appear here as they are released.
             </p>
           </div>
-        ) : isFocused && visible.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
-            <p className="font-heading text-lg font-semibold text-foreground">
-              No {focusedTopic.name} papers yet
-            </p>
-            <button
-              onClick={clearFocus}
-              className="mt-6 inline-flex items-center rounded-full border border-border bg-background px-6 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-            >
-              View all papers
-            </button>
-          </div>
-        ) : (
+      ) : filtered && visible.length === 0 ? (
+        <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
+          <p className="font-heading text-lg font-semibold text-foreground">
+            No {topicName ? `${topicName} ` : ""}papers match these filters
+          </p>
+          <button
+            onClick={() => set({ topic: "", level: "all" }, "push")}
+            className="mt-6 inline-flex items-center rounded-full border border-border bg-background px-6 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+          >
+            Clear filters
+          </button>
+        </div>
+      ) : (
           <div className="space-y-10">
             {sortedYears.map((year) => (
               <div key={year}>
