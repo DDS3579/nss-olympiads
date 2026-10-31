@@ -5,6 +5,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { cn } from "@/lib/utils";
 import { SectionHeading } from "./primitives";
 import { useOlympiadProgress } from "./context";
+import { useFilters } from "./UrlStateProvider";
 import type { Olympiad, Topic } from "@/components/olympiad/legacy";
 import { strong, onStrong } from "@/lib/color";
 
@@ -41,9 +42,10 @@ export function OlympiadTopics({ olympiad }: { olympiad: Olympiad }) {
 }
 
 function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
-  const { isStarted, toggleTopic, focusedTopicId, focusTopic } = useOlympiadProgress();
+  const { isStarted, toggleTopic } = useOlympiadProgress();
+  const { f, set } = useFilters();
   const started = isStarted(topic.id);
-  const focused = focusedTopicId === topic.id;
+  const focused = f.topic === topic.id;
 
   return (
     <article
@@ -58,7 +60,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
       <div>
         {/* Focus trigger — the header is clickable */}
         <button
-          onClick={() => focusTopic(topic.id)}
+          onClick={() => set({ topic: focused ? "" : topic.id }, "push")}
           aria-pressed={focused}
           className="w-full text-left"
         >
@@ -101,7 +103,7 @@ function TopicCard({ topic, colorVar }: { topic: Topic; colorVar: string }) {
         </button>
 
         <button
-          onClick={() => focusTopic(topic.id)}
+          onClick={() => set({ topic: focused ? "" : topic.id }, "push")}
           aria-label={`Focus ${topic.name} materials`}
           className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
           style={focused ? { borderColor: strong(colorVar), color: strong(colorVar) } : undefined}
