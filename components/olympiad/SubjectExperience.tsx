@@ -20,6 +20,7 @@ import { NextStep } from "./NextStep";
 import { OlympiadCTA } from "./OlympiadCTA";
 import { LevelTabs } from "./LevelTabs";
 import { StartHere } from "./StartHere";
+import { TopicToast } from "./TopicToast";
 
 function GoDeeper({ colorVar }: { colorVar: string }) {
   return (
@@ -103,14 +104,15 @@ export function SubjectExperience({
             <GoDeeper colorVar={olympiad.colorVar} />
 
             {/* ── Supplementary: map, topics, problem, roadmap ── */}
-            <Constellation olympiad={olympiad} />
-            <OlympiadTopics olympiad={olympiad} />
+            <Constellation data={data} />
+            <OlympiadTopics data={data} />
             <FeaturedProblem olympiad={olympiad} />
             <PreparationRoadmap olympiad={olympiad} />
             <OlympiadCTA olympiad={olympiad} />
           </div>
 
-          <NextStep olympiad={olympiad} />
+          <TopicToast data={data} />
+        <NextStep olympiad={olympiad} />
         </div>
       </ProgressProvider>
     </UrlStateProvider>
