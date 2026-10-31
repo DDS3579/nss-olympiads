@@ -51,12 +51,7 @@ interface OlympiadState {
   markPaperAccessed: (id: string, label: string) => void;
   nextTopic: Topic | null;
   nextAction: NextAction | null;
-  // focus / connectivity (ephemeral)
-  focusedTopicId: string | null;
-  focusedTopic: Topic | null;
-  focusTopic: (id: string | null) => void;
-  clearFocus: () => void;
-  matchesFocus: (topicIds?: string[]) => boolean;
+  // NOTE: focus/filter state moved to the URL — see useFilters() (T4.2)
 }
 
 const OlympiadContext = createContext<OlympiadState | null>(null);
@@ -90,14 +85,6 @@ export function ProgressProvider({
     lastActivity: null,
   });
   const [hydrated, setHydrated] = useState(false);
-
-  // Focus is view-state only — never persisted
-  const [focusedTopicId, setFocusedTopicId] = useState<string | null>(null);
-
-  // Reset focus whenever we switch Olympiad
-  useEffect(() => {
-    setFocusedTopicId(null);
-  }, [slug]);
 
   useEffect(() => {
     try {
@@ -172,31 +159,6 @@ export function ProgressProvider({
     });
   }, []);
 
-  // Focus controls (toggle on re-click)
-  const focusTopic = useCallback((id: string | null) => {
-    setFocusedTopicId((prev) => {
-      if (id === null) return null;
-      return prev === id ? null : id;
-    });
-  }, []);
-
-  const clearFocus = useCallback(() => setFocusedTopicId(null), []);
-
-  const focusedTopic = useMemo(
-    () => topics.find((t) => t.id === focusedTopicId) ?? null,
-    [topics, focusedTopicId]
-  );
-
-  // The heart of connectivity: does this content belong to the focused topic?
-  const matchesFocus = useCallback(
-    (topicIds?: string[]) => {
-      if (!focusedTopicId) return true;
-      if (!topicIds || topicIds.length === 0) return true; // general content
-      return topicIds.includes(focusedTopicId);
-    },
-    [focusedTopicId]
-  );
-
   const total = topics.length + resources.length + papers.length;
   const done =
     data.startedTopics.length + data.openedResources.length + data.accessedPapers.length;
@@ -222,7 +184,6 @@ export function ProgressProvider({
     () => topics.find((t) => !data.startedTopics.includes(t.id)) ?? null,
     [topics, data.startedTopics]
   );
-
   const nextAction = useMemo<NextAction | null>(() => {
     const nt = topics.find((t) => !data.startedTopics.includes(t.id));
     if (nt) return { type: "topic", id: nt.id, label: nt.name };
@@ -249,11 +210,6 @@ export function ProgressProvider({
         markPaperAccessed,
         nextTopic,
         nextAction,
-        focusedTopicId,
-        focusedTopic,
-        focusTopic,
-        clearFocus,
-        matchesFocus,
       }}
     >
       {children}
