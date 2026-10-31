@@ -33,3 +33,7 @@ export const matchResource = (r: Resource, f: Filters) => matchesBase(r, f);
 export function matchPaper(p: Paper, f: Filters): boolean {
   return matchesBase(p, f) && (!f.sol || p.hasSolutions);
 }
+
+/** Records whose files are all solutions — rendered as the soft-gated Answers block, never as paper cards (T1.6/T4.7). */
+export const isAnswerSet = (p: Paper) =>
+  p.files.length > 0 && p.files.every((f) => f.kind === "solutions");
