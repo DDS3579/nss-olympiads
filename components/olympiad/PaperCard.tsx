@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   ArrowDownToLine,
   ArrowUpRight,
@@ -9,11 +10,13 @@ import {
   FileText,
   FileX,
   ListChecks,
+  Timer as TimerIcon,
   Trophy,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { FileKind, Paper, SubjectMeta } from "@/lib/types";
 import { strong } from "@/lib/color";
+import { parseDurationMs } from "@/lib/progress/timer";
 import { actions, useProgress } from "@/lib/progress/store";
 import { useOlympiadProgress } from "./context"; // dual-write until T5.2
 import { Badge, Chip } from "@/components/system/Chips";
@@ -80,22 +83,34 @@ export function PaperCard({
   p,
   meta,
   topicNames,
+  onStartTimer,
 }: {
   p: Paper;
   meta: SubjectMeta;
   topicNames: Record<string, string>;
+  onStartTimer?: (p: Paper) => void;
 }) {
   const c = meta.colorVar;
   const prog = useProgress(meta.slug);
   const legacy = useOlympiadProgress(); // dual-write until T5.2
+  const [revealed, setRevealed] = useState(false);
+
   const st = prog.paper[p.id];
+  const attempted = !!st;
   const bestScore = st?.attempts
     .map((a) => a.score)
     .filter((s): s is number => s != null)
     .sort((a, b) => b - a)[0];
 
-  const qFile = p.files.find((f) => f.kind === "questions") ?? p.files[0];
-  const otherFiles = p.files.filter((f) => f !== qFile);
+  const durationMs = parseDurationMs(p.format.duration);
+  const questionsFile = p.files.find((f) => f.kind === "questions") ?? p.files[0];
+  const solutionFiles = p.files.filter((f) => f.kind !== "questions");
+  const solutionsOpen = attempted || revealed;
+
+  const openQuestions = () => {
+    actions.opened(meta.slug, p.id, p.title);
+    legacy.markPaperAccessed(p.title, p.title); // keeps NextStep alive until T5.2
+  };
 
   const fmtChips: string[] = [];
   if (p.format.duration) fmtChips.push(p.format.duration);
@@ -105,11 +120,6 @@ export function PaperCard({
   if (p.format.negativeMarking === false) fmtChips.push("No negative marking");
   else if (typeof p.format.negativeMarking === "string" && p.format.negativeMarking)
     fmtChips.push(p.format.negativeMarking);
-
-  const openQuestions = () => {
-    actions.opened(meta.slug, p.id, p.title);
-    legacy.markPaperAccessed(p.title, p.title); // keeps NextStep/percent alive until T5.2
-  };
 
   return (
     <article className="rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40">
@@ -160,14 +170,47 @@ export function PaperCard({
           </div>
         </div>
 
-        {/* files: one button each; 2×2 grid for paper sets (EuPhO-style, T4.7) */}
+        {/* actions */}
         <div className={p.files.length >= 4 ? "grid grid-cols-2 gap-2" : "flex flex-wrap gap-2"}>
-          <FileButton file={qFile} primary colorVar={c} onOpen={openQuestions} />
-          {otherFiles.map((file) => (
-            <FileButton key={file.url} file={file} colorVar={c} />
-          ))}
+          {questionsFile && (
+            <FileButton file={questionsFile} primary colorVar={c} onOpen={openQuestions} />
+          )}
+          {durationMs != null && onStartTimer && (
+            <button
+              onClick={() => onStartTimer(p)}
+              className="inline-flex min-h-10 items-center gap-2 rounded-full border border-border bg-background px-4 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
+            >
+              <TimerIcon aria-hidden className="h-3.5 w-3.5" />
+              Start timed attempt
+            </button>
+          )}
         </div>
       </div>
+
+      {/* solutions / extra files — soft-gated until an attempt is saved */}
+      {solutionFiles.length > 0 && (
+        <div className="mt-3 border-t border-border pt-3">
+          {solutionsOpen ? (
+            <div className="flex flex-wrap gap-2">
+              {solutionFiles.map((file) => (
+                <FileButton key={file.url} file={file} colorVar={c} />
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="text-xs text-muted-foreground">
+                Solutions are hidden until you attempt the paper.
+              </span>
+              <button
+                onClick={() => setRevealed(true)}
+                className="text-xs font-semibold underline underline-offset-2 hover:text-foreground"
+              >
+                Show anyway
+              </button>
+            </div>
+          )}
+        </div>
+      )}
 
       {p.access === "caveat" && <AccessNote note={p.accessNote} />}
 
@@ -194,7 +237,7 @@ export function PaperCard({
   );
 }
 
-/** Soft-gated answers record (Q3 default): reachable, never styled as a paper. */
+/** Soft-gated answers record (Q3 default) — reachable, never styled as a paper. */
 export function AnswerSetCard({
   p,
   meta,
