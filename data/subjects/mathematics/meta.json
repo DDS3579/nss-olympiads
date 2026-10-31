@@ -74,6 +74,6 @@
     { "body": "IMO official", "role": "Problems, shortlists, results, country profiles", "links": [ { "label": "Website", "url": "https://www.imo-official.org/" } ] }
   ],
   "syllabusFileUrl": "/materials/mathematics/syllabus.pdf",
-  "syllabusMeta": { "officialVerified": false },
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true },
   "updatedAt": "2026-10-24"
 }
