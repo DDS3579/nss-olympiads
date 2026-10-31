@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { RefObject } from "react";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { Search, SlidersHorizontal, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { onStrong, strong } from "@/lib/color";
 import { isAnswerSet, matchPaper, matchResource } from "@/lib/filter";
@@ -173,8 +173,9 @@ function FilterControls({
 }
 
 export function FilterBar({ data }: { data: SubjectData }) {
-  const { f, active } = useFilters();
+  const { f, set, active } = useFilters();
   const searchRef = useRef<HTMLInputElement>(null);
+  const topicName = f.topic ? data.topics.find((t) => t.id === f.topic)?.name : undefined;
 
   // "/" focuses the search box (T5.7 lands the full shortcut set)
   useEffect(() => {
@@ -227,6 +228,18 @@ export function FilterBar({ data }: { data: SubjectData }) {
       <div className="mx-auto max-w-6xl px-6 py-3">
         {/* Desktop: one wrapping row */}
         <div className="hidden flex-wrap items-center gap-2.5 md:flex">
+          {f.topic && (
+            <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-border bg-secondary px-3 py-1.5 text-xs font-semibold text-foreground">
+              Topic: {topicName ?? f.topic}
+              <button
+                onClick={() => set({ topic: "" }, "push")}
+                aria-label="Clear topic filter"
+                className="rounded-full p-1 text-muted-foreground transition-colors hover:text-foreground"
+              >
+                <X className="h-3.5 w-3.5" />
+              </button>
+            </span>
+          )}
           <FilterControls data={data} searchRef={searchRef} />
         </div>
 
@@ -244,6 +257,18 @@ export function FilterBar({ data }: { data: SubjectData }) {
                 <SheetTitle className="text-left font-heading">Filters</SheetTitle>
               </SheetHeader>
               <div className="mt-4 flex flex-col gap-3">
+                {f.topic && (
+                  <span className="inline-flex w-fit items-center gap-1.5 whitespace-nowrap rounded-full border border-border bg-secondary px-3 py-1.5 text-xs font-semibold text-foreground">
+                    Topic: {topicName ?? f.topic}
+                    <button
+                      onClick={() => set({ topic: "" }, "push")}
+                      aria-label="Clear topic filter"
+                      className="rounded-full p-1 text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  </span>
+                )}
                 <FilterControls data={data} wide />
               </div>
               <SheetClose asChild>
