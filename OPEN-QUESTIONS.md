@@ -61,3 +61,7 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T4.4: StartHere facts use the first round per level where several exist (astronomy national/international); the date row merges all rounds of that level (upcoming first, max 3).
 - T4.4: "Facts verified … /about#verification" renders as plain text until /about ships (T6.4).
 - T4.4: "Beginner path" sets type=handout in the URL; legacy sections apply level+topic only — type filtering activates with ResourceCard (T4.6).
+- T4.5: sticky behaviour achieved with CSS containment (FilterBar sticky inside the Materials+Papers wrapper) instead of an IntersectionObserver — same UX, no observer lifecycle to manage.
+- T4.5: Level renders as a <select> in the bar at all sizes (the full radiogroup already sits directly above as LevelTabs); Type renders as a labelled <select> (11 chip options don't fit one row).
+- T4.5: "Has solutions" stays enabled with an sr-only "(applies to past papers only)" note — one shared bar serves both lists.
+- T4.5: Materials & Papers sections now consume SubjectData records directly; the legacy bridge no longer carries studyMaterial/modelPapers consumers. Progress still keys on titles until the T5.1 store rewrite.
