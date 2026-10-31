@@ -58,3 +58,6 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T3.8: reduced-motion gating extended to MagneticButton, GeometricHeroCanvas and Radix sheet/tab keyframes (plan named Constellation/Roadmap/Navbar — Constellation and Roadmap were already compliant; the extensions follow R0.8's "every animated component").
 - T4.1/T4.2: legacy sections filter level+topic from the URL now; q/type/nepal/sol parse and persist but take effect when ResourceCard/PaperCard rebuild lands (T4.5/T4.6). FilterBar UI itself is T4.5.
 - T4.2: old focus* context deleted ahead of T5.1 (T4.5's "old focusTopic context is deleted" executed now); percent/currentStage/nextAction stay until the T5.1 store rewrite.
+- T4.4: StartHere facts use the first round per level where several exist (astronomy national/international); the date row merges all rounds of that level (upcoming first, max 3).
+- T4.4: "Facts verified … /about#verification" renders as plain text until /about ships (T6.4).
+- T4.4: "Beginner path" sets type=handout in the URL; legacy sections apply level+topic only — type filtering activates with ResourceCard (T4.6).
