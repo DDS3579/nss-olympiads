@@ -113,7 +113,13 @@ export interface SubjectMeta {
   levels: Record<Level, { exists: boolean; label: string; officialName: string | null; honestNote?: string }>;
   rounds: Round[]; contacts: Contact[];
   syllabusFileUrl: string;
-  syllabusMeta?: { officialVerified: boolean; verifiedOn?: string; levelCounts?: Record<string, number> };
+  syllabusMeta?: {
+    officialVerified: boolean;
+    verifiedOn?: string;
+    levelCounts?: Record<string, number>;
+    pdfUnderReview?: boolean;                       // T4.9 — "Syllabus PDF is being re-checked"
+    weightSource?: { label: string; url: string };  // T4.9 — whose weights these are (IBO etc.)
+  };
   updatedAt: string;
 }
 
