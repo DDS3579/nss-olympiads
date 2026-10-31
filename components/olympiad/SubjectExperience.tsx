@@ -8,7 +8,7 @@ import { UrlStateProvider } from "./UrlStateProvider";
 import { ProgressProvider } from "./context";
 import { OlympiadHero } from "./OlympiadHero";
 import { OlympiadNav } from "./OlympiadNav";
-import { TopicFocusBar } from "./TopicFocusBar";
+import { FilterBar } from "./FilterBar";
 import { StudyMaterialSection } from "./StudyMaterialSection";
 import { ModelPapersSection } from "./ModelPapersSection";
 import { SyllabusSection } from "./SyllabusSection";
@@ -74,7 +74,6 @@ export function SubjectExperience({
         <div className="relative bg-background text-foreground">
           <OlympiadHero olympiad={olympiad} />
           <OlympiadNav olympiad={olympiad} index={index} />
-          <TopicFocusBar olympiad={olympiad} />
 
           <div className="relative">
             {/* ── 00 Start Here (T4.4) ── */}
@@ -90,9 +89,14 @@ export function SubjectExperience({
               </div>
             </div>
 
-            {/* ── Core resources: what the student came for ── */}
-            <StudyMaterialSection olympiad={olympiad} />
-            <ModelPapersSection olympiad={olympiad} />
+            {/* ── Core resources: what the student came for ──
+                FilterBar is sticky inside this wrapper, so it follows the
+                reader only while Materials + Papers are on screen (T4.5). */}
+            <div>
+              <FilterBar data={data} />
+              <StudyMaterialSection data={data} />
+              <ModelPapersSection data={data} />
+            </div>
             <SyllabusSection olympiad={olympiad} />
 
             {/* ── Transition into the exploration layer ── */}
