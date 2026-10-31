@@ -81,6 +81,6 @@
     { "body": "Mathematical Association of Nepal (MAN)", "role": "Cross-subject partner — NPLIMO overlaps with MAN's IMO pipeline", "links": [ { "label": "Website", "url": "https://www.mathassociationnepal.org.np/" } ], "email": "imonepal22@gmail.com" }
   ],
   "syllabusFileUrl": "/materials/informatics/syllabus.pdf",
-  "syllabusMeta": { "officialVerified": false },
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true, "levelCounts": { "included": 148, "excluded": 85, "outsideOfFocus": 24 } },
   "updatedAt": "2026-10-24"
 }
