@@ -89,3 +89,9 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T4.13: astronomy roadmap filled from Appendix E with all dates verified against astronomy.md; other subjects keep placeholder:true stages — PART 7 exists in all six pasted research files and can be transcribed on request.
 - T4.13: "You are here" = first stage matching the chosen level; levels with several stages (astronomy national: 4) highlight the entry stage. Percent-derived stage state deleted entirely.
 - T4.13: types.ts RoadmapStage gained optional dates[] (additive) for multi-milestone stages.
+
+- T4.14: physics gaps.json carries the 15 subject gaps; ALL-1 (problem bank, out of launch scope) and ALL-2 (taxonomy rebase, done in code) excluded per plan M.2-8. Other subjects keep their "all"-level gaps (they are real subject gaps).
+- T4.14: aiSpec is verbatim-intent for physics, one-sentence condensed for the other five subjects; full briefs remain in content-src/<slug>.md PART 6.
+- T4.15: hero "Levels" chip renders "{n} + {slot}" for subjects with an exists:false slot (Foundation/Entry/Round 1/IOI); lastVerified shows "—" until a subject has records.
+- T4.14: OlympiadNav's secondary strip had no "problem" entry before this stage; the spec's replacement block re-added it alongside "contacts", so the sub-nav now reads Map · Topics · Problem · Roadmap · Contacts.
+- T4.14/T4.15: SubjectExperience is one file edited for both stages (ContactsSection mount + hero data prop), so it carries a single commit covering both.
