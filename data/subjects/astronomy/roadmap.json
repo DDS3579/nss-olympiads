@@ -1,47 +1,116 @@
 [
   {
-    "id": "foundations",
+    "id": "entry",
     "level": "district",
-    "title": "Foundations",
-    "what": "Build core concepts from your school syllabus before touching Olympiad-level problems. Focus on accuracy over speed.",
-    "actions": [],
-    "outcome": "Confident with fundamentals",
-    "placeholder": true
+    "title": "Entry — Scored Application",
+    "what": "Apply with a scored file worth 10 marks: motivation statement (5) + SEE for Seniors / last final exam for Juniors (5). The only Nepali olympiad where the application itself is graded.",
+    "facts": [
+      "Registration NRs 1,000 (non-refundable); 50% waiver with a local-government letter",
+      "Senior = classes 11–12 · Junior = classes 8–10",
+      "Documents: application form, marksheet, character certificate, birth certificate, payment slip"
+    ],
+    "when": { "label": "NAO2026 registration closed", "iso": "2026-01-09", "status": "past" },
+    "actions": [
+      { "label": "See the provincial syllabus", "kind": "filter", "filters": { "level": "province" }, "scroll": "syllabus" },
+      { "label": "Email NASO", "kind": "link", "url": "mailto:nasonepal@gmail.com" }
+    ],
+    "outcome": "Application scored; eligible for the Provincial Round"
   },
   {
-    "id": "intermediate",
+    "id": "provincial",
     "level": "province",
-    "title": "Intermediate",
-    "what": "Work through Olympiad problems by topic. Start recognising the patterns that sit behind the problems.",
-    "actions": [],
-    "outcome": "Topic-level fluency",
-    "placeholder": true
+    "title": "Provincial Round",
+    "what": "Two-hour entrance exam at 7 provincial centres: 30 MCQ × 2 + 3 long questions × 10 = 90 marks, plus your 10 application marks.",
+    "facts": ["No negative marking", "Non-programmable scientific calculator only", "Subjective and objective questions from the official syllabus"],
+    "when": { "label": "NAO2026 Provincial Round", "iso": "2026-01-17", "status": "past" },
+    "actions": [
+      { "label": "Study province-level material", "kind": "filter", "filters": { "level": "province" }, "scroll": "library" },
+      { "label": "Browse province-level papers", "kind": "filter", "filters": { "level": "province", "type": "pastpaper" }, "scroll": "papers" }
+    ],
+    "outcome": "Qualify for the National Round"
   },
   {
-    "id": "advanced",
+    "id": "national",
     "level": "national",
-    "title": "Advanced",
-    "what": "Tackle multi-concept and proof-based problems. Develop rigorous, competition-grade arguments.",
-    "actions": [],
-    "outcome": "Solves hard problems",
-    "placeholder": true
+    "title": "National Round",
+    "what": "Assignments, projects and basic data-analysis tasks. Small reports; simple observational tools such as paper telescopes.",
+    "facts": ["Emphasis on understanding, originality and clarity rather than competition"],
+    "when": { "label": "NAO2026 Second Round", "iso": null, "status": "unknown" },
+    "actions": [
+      { "label": "National-level material", "kind": "filter", "filters": { "level": "national" }, "scroll": "library" }
+    ],
+    "outcome": "Assessed; ready for the closed camp"
   },
   {
-    "id": "simulation",
+    "id": "closed-camp",
     "level": "national",
-    "title": "Simulation",
-    "what": "Attempt full-length past papers under real timing. Build stamina and exam temperament.",
-    "actions": [],
-    "outcome": "Exam-ready speed",
-    "placeholder": true
+    "title": "Final Round — Closed Camp",
+    "what": "Seven-day national closed camp in Kathmandu: theoretical tests, data analysis and observational astronomy (often paper-based), following the IOAA syllabus structure.",
+    "facts": [
+      "Lectures: stellar physics, celestial mechanics, coordinate systems, data processing",
+      "Mock exams before final selection"
+    ],
+    "when": { "label": "NAO2026 closed camp (Kathmandu)", "iso": "2026-06-01/2026-06-07", "status": "past" },
+    "actions": [
+      { "label": "Train on the IOAA syllabus", "kind": "filter", "filters": { "level": "international" }, "scroll": "syllabus" },
+      { "label": "International-level material", "kind": "filter", "filters": { "level": "international" }, "scroll": "library" }
+    ],
+    "outcome": "Trained on the IOAA syllabus; mock exams completed"
   },
   {
-    "id": "olympiad",
+    "id": "merit-list",
+    "level": "national",
+    "title": "National Merit List",
+    "what": "Merit lists of 40 students each (Senior and Junior) are published.",
+    "facts": ["NAO2026 lists published 15 June 2026"],
+    "when": { "label": "NAO2026 Merit Lists published", "iso": "2026-06-15", "status": "past" },
+    "actions": [],
+    "outcome": "On the National Merit List"
+  },
+  {
+    "id": "delegation",
+    "level": "national",
+    "title": "Delegation Selection",
+    "what": "Selection for IOAA, IOAA-jr, IAO, OWAO and APAO as per the invitations received — based on merit plus interviews with students and their parents.",
+    "facts": ["Five international contests: IOAA · IAO · IOAA-jr · OWAO · APAO"],
+    "when": { "label": "Delegation selection", "iso": null, "status": "unknown" },
+    "actions": [
+      { "label": "NASO olympiad page", "kind": "link", "url": "https://www.nepalastronomicalsociety.org/projects/olympiad/" }
+    ],
+    "outcome": "Named to a national delegation"
+  },
+  {
+    "id": "pre-departure",
     "level": "international",
-    "title": "Olympiad",
-    "what": "Final refinement. Light practice, weak-area review, and peak taper before the national round.",
-    "actions": [],
-    "outcome": "Compete at nationals",
-    "placeholder": true
+    "title": "Pre-departure Training",
+    "what": "Hybrid training covering advanced problem-solving in theoretical and observational astronomy, data analysis, telescope handling and the practical skills needed to compete.",
+    "facts": ["NAO2026: online orientation 31 July; structured training from 6 August, running in phases until each team departs"],
+    "when": { "label": "NAO2026 pre-departure training began", "iso": "2026-08-06", "status": "past" },
+    "actions": [
+      { "label": "Practical handouts by a Nepal IOAA 2025 team member", "kind": "link", "url": "https://drive.google.com/drive/u/0/folders/1Nft4B755uvtxfaSGLp2ZsVuHQGZ9pEt-" }
+    ],
+    "outcome": "Prepared for international competition"
+  },
+  {
+    "id": "international",
+    "level": "international",
+    "title": "International Olympiads",
+    "what": "Represent Nepal. The IOAA is 600 marks: 300 theory + 300 practical (Data Analysis 150 · Telescope 50 · Sky Map 50 · Planetarium 50).",
+    "facts": [
+      "Nepal since 2014: 3 bronze (IAO) · 5 HM · 1 special award",
+      "Nepal hosted IOAA-jr 2024 in Kathmandu — the first international olympiad hosted by Nepal"
+    ],
+    "when": { "label": "IAO 2026 — Andizhan, Uzbekistan", "iso": "2026-12-06/2026-12-14", "status": "upcoming" },
+    "dates": [
+      { "label": "IOAA-jr 2026 — Ubon Ratchathani, Thailand", "iso": "2026-11-01/2026-11-08", "status": "upcoming" },
+      { "label": "OWAO 2026 — Sirius, Russia", "iso": "2026-11-06/2026-11-14", "status": "upcoming" },
+      { "label": "IOAA 2026 — Hanoi, Vietnam (held)", "iso": "2026-09-25/2026-10-05", "status": "past" },
+      { "label": "IOAA 2027 — Türkiye", "iso": null, "status": "upcoming" }
+    ],
+    "actions": [
+      { "label": "IOAA 2025 full paper set (free, official)", "kind": "link", "url": "https://ioaa2025.in/final-ioaa-2025-problems-and-solutions/" },
+      { "label": "IOAA official site", "kind": "link", "url": "https://ioaastrophysics.org/" }
+    ],
+    "outcome": "IOAA · IAO · IOAA-jr · OWAO · APAO"
   }
 ]
