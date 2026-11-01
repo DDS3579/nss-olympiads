@@ -20,7 +20,9 @@ const PRIMARY_SECTIONS = [
 const SECONDARY_SECTIONS = [
   { id: "constellation", label: "Map" },
   { id: "topics", label: "Topics" },
+  { id: "problem", label: "Problem" },
   { id: "roadmap", label: "Roadmap" },
+  { id: "contacts", label: "Contacts" },
 ];
 
 const ALL_SECTIONS = [...PRIMARY_SECTIONS, ...SECONDARY_SECTIONS];
