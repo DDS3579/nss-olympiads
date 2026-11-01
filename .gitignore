@@ -45,3 +45,6 @@ repomix-output.xml
 
 # link check output
 link-report.json
+
+
+.cloud-attachments/
