@@ -16,6 +16,7 @@ import { Constellation } from "./Constellation";
 import { OlympiadTopics } from "./OlympiadTopics";
 import { FeaturedProblem } from "./FeaturedProblem";
 import { PreparationRoadmap } from "./PreparationRoadmap";
+import { ContactsSection } from "./ContactsSection";
 import { NextStep } from "./NextStep";
 import { OlympiadCTA } from "./OlympiadCTA";
 import { LevelTabs } from "./LevelTabs";
@@ -73,7 +74,7 @@ export function SubjectExperience({
         papers={olympiad.modelPapers}
       >
         <div className="relative bg-background text-foreground">
-          <OlympiadHero olympiad={olympiad} />
+          <OlympiadHero olympiad={olympiad} data={data} />
           <OlympiadNav olympiad={olympiad} index={index} />
 
           <div className="relative">
@@ -108,6 +109,7 @@ export function SubjectExperience({
             <OlympiadTopics data={data} />
             <FeaturedProblem data={data} />
             <PreparationRoadmap data={data} />
+            <ContactsSection data={data} />
             <OlympiadCTA olympiad={olympiad} />
           </div>
 
