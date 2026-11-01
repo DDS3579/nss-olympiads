@@ -86,6 +86,7 @@ export interface Round {
 export interface RoadmapStage {
   id: string; level: Level; title: string; what: string; facts?: string[];
   when?: RoundDate;
+  dates?: RoundDate[]; // extra dated milestones for a stage (e.g. the international stage)
   actions: ({ label: string; kind: "resource"; ref: string } | { label: string; kind: "filter"; filters: Partial<Record<"level"|"topic"|"type"|"q", string>>; scroll: "library" | "papers" | "syllabus" } | { label: string; kind: "link"; url: string })[];
   outcome: string;
   placeholder?: boolean;
