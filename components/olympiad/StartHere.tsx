@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { onStrong, strong } from "@/lib/color";
+import { dateStatus } from "@/lib/date";
 import { persistLevel } from "@/lib/url-state";
 import { useFilters } from "./UrlStateProvider";
 import { scrollToId, SectionHeading } from "./primitives";
@@ -10,13 +11,6 @@ import type { Level, RoundDate, SubjectData } from "@/lib/types";
 
 const LEVEL_ORDER: Level[] = ["district", "province", "national", "international"];
 
-/** Upcoming/Last-held computed from the ISO date at render time, not the typed status (U-26). */
-function dateState(d: RoundDate, now: number | null): "upcoming" | "past" | "unknown" {
-  if (!d.iso) return d.status;
-  if (now == null) return d.status; // first render (SSR-safe) trusts the data
-  const end = new Date(`${d.iso.split("/").pop()}T23:59:59`).getTime();
-  return Number.isNaN(end) ? d.status : end >= now ? "upcoming" : "past";
-}
 
 function Fact({ k, v }: { k: string; v: string }) {
   return (
@@ -41,7 +35,11 @@ function LevelCard({ data, k, now }: { data: SubjectData; k: Level; now: number 
     .flatMap((r) => r.dates ?? [])
     .sort((a, b) => {
       const rank = (x: RoundDate) =>
-        dateState(x, now) === "upcoming" ? 0 : dateState(x, now) === "past" ? 1 : 2;
+        dateStatus(x.iso, x.status, now) === "upcoming"
+          ? 0
+          : dateStatus(x.iso, x.status, now) === "past"
+            ? 1
+            : 2;
       return rank(a) - rank(b);
     })
     .slice(0, 3);
@@ -98,7 +96,7 @@ function LevelCard({ data, k, now }: { data: SubjectData; k: Level; now: number 
       {dates.length > 0 && (
         <ul className="mt-3 space-y-1.5 border-t border-border pt-3">
           {dates.map((d) => {
-            const s = dateState(d, now);
+            const s = dateStatus(d.iso, d.status, now);
             return (
               <li key={d.label} className="flex items-start gap-2 text-xs">
                 <span
