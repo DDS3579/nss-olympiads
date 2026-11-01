@@ -185,12 +185,3 @@ export function toOlympiad(data: SubjectData): Olympiad {
     syllabusFileUrl: meta.syllabusFileUrl,
   };
 }
-
-export function getOlympiadStats(o: Olympiad) {
-  return {
-    topics: o.topics.length,
-    papers: o.modelPapers.length,
-    resources: o.studyMaterial.length,
-    subtopics: o.topics.reduce((n, t) => n + t.subtopics.length, 0),
-  };
-}
