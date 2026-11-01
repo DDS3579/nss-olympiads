@@ -106,8 +106,8 @@ export function SubjectExperience({
             {/* ── Supplementary: map, topics, problem, roadmap ── */}
             <Constellation data={data} />
             <OlympiadTopics data={data} />
-            <FeaturedProblem olympiad={olympiad} />
-            <PreparationRoadmap olympiad={olympiad} />
+            <FeaturedProblem data={data} />
+            <PreparationRoadmap data={data} />
             <OlympiadCTA olympiad={olympiad} />
           </div>
 
