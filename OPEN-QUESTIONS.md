@@ -85,3 +85,7 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T4.10: Constellation now reads SubjectData directly and recomputes edges from topic.prereqs; lib/layout.ts additionally exports RING_R and firstLevel (layoutTopics keeps its signature for legacy.ts).
 - T4.11: "Start topic" renamed "Track this topic" and rewired to the v2 store's tracked[] (the legacy context's focus* helpers were deleted back in T4.2).
 - T4.10/T4.11: Constellation and OlympiadTopics both swap to the data prop, healed by the SubjectExperience commit — so two intermediate commits do not typecheck individually.
+- T4.12: all 7 subjects render the honest featured-problem empty state — every seeded entry is verified:false pending M-10; the maths entry must be REPLACED (ill-posed, U-24), not verified. Weekly rotation (ISO week) and the "This week's challenge" heading activate automatically once ≥1 entry is verified.
+- T4.13: astronomy roadmap filled from Appendix E with all dates verified against astronomy.md; other subjects keep placeholder:true stages — PART 7 exists in all six pasted research files and can be transcribed on request.
+- T4.13: "You are here" = first stage matching the chosen level; levels with several stages (astronomy national: 4) highlight the entry stage. Percent-derived stage state deleted entirely.
+- T4.13: types.ts RoadmapStage gained optional dates[] (additive) for multi-milestone stages.
