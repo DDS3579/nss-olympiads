@@ -5,8 +5,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { motion, useScroll, useMotionValueEvent, useReducedMotion } from "motion/react"
-import { Menu, ArrowRight } from "lucide-react"
+import { Menu, ArrowRight, Search } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { SearchPalette } from "@/components/nav/SearchPalette"
 import { ThemeToggle } from "@/components/theme-toggle"
 import {
   Sheet,
@@ -29,6 +30,7 @@ export function Navbar() {
   const [hidden, setHidden] = useState(false)
   const [atTop, setAtTop] = useState(true)
   const [activeHash, setActiveHash] = useState("")
+  const [searchOpen, setSearchOpen] = useState(false)
   const pathname = usePathname()
   const { scrollY } = useScroll()
   const reduce = useReducedMotion()
@@ -113,7 +115,20 @@ export function Navbar() {
         </div>
 
         {/* Right: Actions */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search"
+            className="flex h-10 items-center gap-2 rounded-full border border-border bg-background px-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+          >
+            <Search className="h-4 w-4" />
+            <span className="hidden lg:inline">Search</span>
+            {!pathname.startsWith("/olympiads/") && (
+              <kbd className="hidden rounded border border-border bg-secondary px-1.5 py-0.5 text-[11px] text-muted-foreground lg:inline">
+                /
+              </kbd>
+            )}
+          </button>
           <ThemeToggle />
           
           <Link
@@ -162,6 +177,7 @@ export function Navbar() {
           </Sheet>
         </div>
       </nav>
+      <SearchPalette open={searchOpen} onOpenChange={setSearchOpen} />
     </motion.header>
   )
 }
