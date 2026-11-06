@@ -5,7 +5,6 @@ import type { SubjectData, SubjectIndexItem } from "@/lib/types";
 import { toOlympiad } from "./legacy";
 import { strong } from "@/lib/color";
 import { UrlStateProvider } from "./UrlStateProvider";
-import { ProgressProvider } from "./context";
 import { OlympiadHero } from "./OlympiadHero";
 import { OlympiadNav } from "./OlympiadNav";
 import { FilterBar } from "./FilterBar";
@@ -17,7 +16,6 @@ import { OlympiadTopics } from "./OlympiadTopics";
 import { FeaturedProblem } from "./FeaturedProblem";
 import { PreparationRoadmap } from "./PreparationRoadmap";
 import { ContactsSection } from "./ContactsSection";
-import { NextStep } from "./NextStep";
 import { OlympiadCTA } from "./OlympiadCTA";
 import { LevelTabs } from "./LevelTabs";
 import { StartHere } from "./StartHere";
@@ -67,56 +65,48 @@ export function SubjectExperience({
 
   return (
     <UrlStateProvider slug={data.meta.slug}>
-      <ProgressProvider
-        slug={data.meta.slug}
-        topics={olympiad.topics}
-        resources={olympiad.studyMaterial}
-        papers={olympiad.modelPapers}
-      >
-        <div className="relative bg-background text-foreground">
-          <OlympiadHero olympiad={olympiad} data={data} />
-          <OlympiadNav olympiad={olympiad} index={index} />
+      <div className="relative bg-background text-foreground">
+        <OlympiadHero olympiad={olympiad} data={data} />
+        <OlympiadNav olympiad={olympiad} index={index} />
 
-          <div className="relative">
-            {/* ── 00 Start Here (T4.4) ── */}
-            <StartHere data={data} />
+        <div className="relative">
+          {/* ── 00 Start Here (T4.4) ── */}
+          <StartHere data={data} />
 
-            {/* ── Level control: "Which exam are you sitting?" (T4.3) ── */}
-            <div className="mx-auto max-w-6xl px-6 pt-12 lg:pt-16">
-              <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-                Which exam are you sitting?
-              </p>
-              <div className="mt-4">
-                <LevelTabs meta={data.meta} counts={levelCounts} colorVar={data.meta.colorVar} />
-              </div>
+          {/* ── Level control: "Which exam are you sitting?" (T4.3) ── */}
+          <div className="mx-auto max-w-6xl px-6 pt-12 lg:pt-16">
+            <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+              Which exam are you sitting?
+            </p>
+            <div className="mt-4">
+              <LevelTabs meta={data.meta} counts={levelCounts} colorVar={data.meta.colorVar} />
             </div>
-
-            {/* ── Core resources: what the student came for ──
-                FilterBar is sticky inside this wrapper, so it follows the
-                reader only while Materials + Papers are on screen (T4.5). */}
-            <div>
-              <FilterBar data={data} />
-              <StudyMaterialSection data={data} />
-              <ModelPapersSection data={data} />
-            </div>
-            <SyllabusSection data={data} />
-
-            {/* ── Transition into the exploration layer ── */}
-            <GoDeeper colorVar={olympiad.colorVar} />
-
-            {/* ── Supplementary: map, topics, problem, roadmap ── */}
-            <Constellation data={data} />
-            <OlympiadTopics data={data} />
-            <FeaturedProblem data={data} />
-            <PreparationRoadmap data={data} />
-            <ContactsSection data={data} />
-            <OlympiadCTA olympiad={olympiad} />
           </div>
 
-          <TopicToast data={data} />
-        <NextStep olympiad={olympiad} />
+          {/* ── Core resources: what the student came for ──
+              FilterBar is sticky inside this wrapper, so it follows the
+              reader only while Materials + Papers are on screen (T4.5). */}
+          <div>
+            <FilterBar data={data} />
+            <StudyMaterialSection data={data} />
+            <ModelPapersSection data={data} />
+          </div>
+          <SyllabusSection data={data} />
+
+          {/* ── Transition into the exploration layer ── */}
+          <GoDeeper colorVar={olympiad.colorVar} />
+
+          {/* ── Supplementary: map, topics, problem, roadmap ── */}
+          <Constellation data={data} />
+          <OlympiadTopics data={data} />
+          <FeaturedProblem data={data} />
+          <PreparationRoadmap data={data} />
+          <ContactsSection data={data} />
+          <OlympiadCTA olympiad={olympiad} />
         </div>
-      </ProgressProvider>
+
+        <TopicToast data={data} />
+      </div>
     </UrlStateProvider>
   );
 }
