@@ -71,6 +71,7 @@ function FilterControls({
         />
         <input
           ref={searchRef}
+          data-filter-search
           type="search"
           value={qLocal}
           onChange={(e) => setQLocal(e.target.value)}
