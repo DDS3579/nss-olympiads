@@ -18,7 +18,6 @@ import type { FileKind, Paper, SubjectMeta } from "@/lib/types";
 import { strong } from "@/lib/color";
 import { parseDurationMs } from "@/lib/progress/timer";
 import { actions, useProgress } from "@/lib/progress/store";
-import { useOlympiadProgress } from "./context"; // dual-write until T5.2
 import { Badge, Chip } from "@/components/system/Chips";
 import { LevelChip } from "@/components/system/LevelChip";
 import { AccessNote } from "@/components/system/AccessNote";
@@ -92,7 +91,6 @@ export function PaperCard({
 }) {
   const c = meta.colorVar;
   const prog = useProgress(meta.slug);
-  const legacy = useOlympiadProgress(); // dual-write until T5.2
   const [revealed, setRevealed] = useState(false);
 
   const st = prog.paper[p.id];
@@ -109,7 +107,6 @@ export function PaperCard({
 
   const openQuestions = () => {
     actions.opened(meta.slug, p.id, p.title);
-    legacy.markPaperAccessed(p.title, p.title); // keeps NextStep alive until T5.2
   };
 
   const fmtChips: string[] = [];
