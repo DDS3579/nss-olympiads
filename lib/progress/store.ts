@@ -63,7 +63,9 @@ export const subscribe = (l: () => void) => {
   };
 };
 export const getSnapshot = () => state; // immutable updates → new object each change
-export const getServerSnapshot = () => ({ v: 2, subjects: {} } as State);
+// Stable identity: returning a fresh object here makes useSyncExternalStore loop.
+const SERVER_SNAPSHOT: State = Object.freeze({ v: 2, subjects: Object.freeze({}) }) as State;
+export const getServerSnapshot = () => SERVER_SNAPSHOT;
 
 const upd = (slug: string, fn: (s: SubjectProgress) => SubjectProgress) => {
   const cur = state.subjects[slug] ?? empty();
