@@ -95,3 +95,15 @@ Per PLAN.md R0.12. Agent proceeds with the stated default until the owner answer
 - T4.15: hero "Levels" chip renders "{n} + {slot}" for subjects with an exists:false slot (Foundation/Entry/Round 1/IOI); lastVerified shows "—" until a subject has records.
 - T4.14: OlympiadNav's secondary strip had no "problem" entry before this stage; the spec's replacement block re-added it alongside "contacts", so the sub-nav now reads Map · Topics · Problem · Roadmap · Contacts.
 - T4.14/T4.15: SubjectExperience is one file edited for both stages (ContactsSection mount + hero data prop), so it carries a single commit covering both.
+
+- T5.2: legacy progress context + NextStep deleted entirely (B-12 closed); ContinueCard mounts at top of #start; homepage//olympiads reuse arrives with T6.1/T6.2. Export/Import move to /my-plan (T5.4, next).
+- T5.3: search index carries cv (colorVar) beyond the plan's field list — needed for the subject colour dot in results.
+- T5.3: "/" ownership split — FilterBar owns it on subject pages (data-filter-search marker), palette owns it everywhere else; Ctrl/⌘+K always opens the palette. g-then-key and ? help dialog land with T5.7.
+- T5.3: hl= param is emitted by search deep links; the card flash-highlight consumer arrives with the T4.6 card polish (param is a no-op until then).
+- T5.3: route uses `export const dynamic = "force-static"` — flag name must be verified against Next 16 route-handler docs (R0.1); paste the error if the build rejects it.
+- T5.3: force-static verified in node_modules/next/dist/docs/01-app/01-getting-started/15-route-handlers.md ("Caching"); /search-index.json is emitted as a static body in the build output.
+- T5.3: the index currently contains 65 topics + 10 papers and 0 resources — no subject has resources.json yet, so material/dataset hits appear only once those datasets land.
+
+- T5.3 fix: the palette now only yields "/" to the FilterBar when that input is actually on screen (below md it lives in the hidden desktop row, so "/" was dead on phones); pasted code checked mere presence.
+- T5.3 fix: /search writes ?q= only after the initial read, otherwise the mount-time replaceState stripped a shared /search?q=… link before it was applied (verified: ?q=optics now prefills and returns 2 results).
+- T5.2 fix (pre-existing): store getServerSnapshot returned a fresh object on every call, which React reports as "should be cached to avoid an infinite loop"; it now returns a frozen singleton. Surfaced by ContinueCard's SSR pass, verified clear in the console afterwards.
