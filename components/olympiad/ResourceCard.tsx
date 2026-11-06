@@ -24,7 +24,6 @@ import { strong } from "@/lib/color";
 import { mailto } from "@/lib/site-config";
 import { actions, useProgress } from "@/lib/progress/store";
 import { useFilters } from "./UrlStateProvider";
-import { useOlympiadProgress } from "./context"; // dual-write until T5.2 retires it
 import { Badge } from "@/components/system/Chips";
 import { LevelChip } from "@/components/system/LevelChip";
 import { AccessNote } from "@/components/system/AccessNote";
@@ -63,7 +62,6 @@ export function ResourceCard({
   const c = meta.colorVar;
   const { set } = useFilters();
   const prog = useProgress(meta.slug);
-  const legacy = useOlympiadProgress(); // dual-write until T5.2
   const saved = prog.saved.includes(r.id);
   const done = prog.done.includes(r.id);
 
@@ -72,7 +70,6 @@ export function ResourceCard({
 
   const markOpened = () => {
     actions.opened(meta.slug, r.id, r.title);
-    legacy.markResourceOpened(r.title, r.title); // keeps NextStep/percent alive until T5.2
   };
 
   const reportHref = mailto(
