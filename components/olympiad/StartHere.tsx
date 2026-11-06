@@ -7,6 +7,7 @@ import { dateStatus } from "@/lib/date";
 import { persistLevel } from "@/lib/url-state";
 import { useFilters } from "./UrlStateProvider";
 import { scrollToId, SectionHeading } from "./primitives";
+import { ContinueCard } from "./ContinueCard";
 import type { Level, RoundDate, SubjectData } from "@/lib/types";
 
 const LEVEL_ORDER: Level[] = ["district", "province", "national", "international"];
@@ -178,6 +179,8 @@ export function StartHere({ data }: { data: SubjectData }) {
           colorVar={c}
           titleId="start-title"
         />
+
+        <ContinueCard data={data} />
 
         {/* The ladder */}
         <div className="relative">
