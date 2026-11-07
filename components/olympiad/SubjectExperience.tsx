@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
-import type { SubjectData, SubjectIndexItem } from "@/lib/types";
+import type { SubjectData } from "@/lib/types";
 import { toOlympiad } from "./legacy";
 import { strong } from "@/lib/color";
 import { UrlStateProvider } from "./UrlStateProvider";
@@ -45,10 +45,8 @@ function GoDeeper({ colorVar }: { colorVar: string }) {
 
 export function SubjectExperience({
   data,
-  index,
 }: {
   data: SubjectData;
-  index: SubjectIndexItem[];
 }) {
   const olympiad = useMemo(() => toOlympiad(data), [data]);
 
@@ -67,7 +65,7 @@ export function SubjectExperience({
     <UrlStateProvider slug={data.meta.slug}>
       <div className="relative bg-background text-foreground">
         <OlympiadHero olympiad={olympiad} data={data} />
-        <OlympiadNav olympiad={olympiad} index={index} />
+        <OlympiadNav olympiad={olympiad} />
 
         <div className="relative">
           {/* ── 00 Start Here (T4.4) ── */}

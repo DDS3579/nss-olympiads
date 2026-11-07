@@ -14,7 +14,7 @@ export function Breadcrumbs({ items, className }: { items: BreadcrumbItem[]; cla
         <li className="flex items-center gap-1.5">
           <Link href="/" className="flex items-center gap-1 hover:text-foreground transition-colors">
             <Home className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">Home</span>
+            <span>Home</span>
           </Link>
         </li>
         {items.map((item, i) => (
