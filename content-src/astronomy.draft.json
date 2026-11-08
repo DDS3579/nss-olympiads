@@ -1,0 +1,1946 @@
+{
+  "slug": "astronomy",
+  "generatedFrom": "astronomy.md",
+  "generatedAt": "2026-11-08T08:18:25.248Z",
+  "fileCompiledOn": "2026-10-23",
+  "counts": {
+    "tablesFound": 33,
+    "rawRows": 57,
+    "afterDedupe": 56,
+    "resources": 31,
+    "papers": 25,
+    "paperSets": 0,
+    "nepalSpecificFlagged": 2,
+    "byStatus": {
+      "dead": 3,
+      "ok": 48,
+      "caveat": 4,
+      "unknown": 1
+    },
+    "missingWhy": 28,
+    "gaps": 13,
+    "contacts": 0,
+    "rejected": 11
+  },
+  "resources": [
+    {
+      "id": "astronomy-ao-guide-full-free-astronomy-olympiad-textbook",
+      "title": "AO Guide — full free astronomy-olympiad textbook",
+      "type": "book",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.aoguide.app/guide/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"The guide goes over pretty much all of the theoretical concepts needed for astronomy olympiads.\" Prerequisites: \"basic understanding of high school level mathematics and physics. Familiarity with calculus and basic mechanics is required.\" Units: Positional Astronomy (The Sphere · Coordinate Systems · Time · Perturbation in Astronomical Observations · Sun, Moon and Planets) · Photometry (Radiometry · Magnitude Systems · Radiation Mechanism · Detectors · Types of Telescopes) · Celestial Mechanics (Kepler's Laws · Bound Orbits · Unbound Orbits · Orbital Elements · Three Body Systems · Orbital Maneuvers · General Relativity) · Stellar Astrophysics (Stellar Structure · Classification · Binary Systems · Stellar Evolution · Solar System) · Galactic Astrophysics (Galaxies · The Milky Way) · Cosmology (Our Universe · Geometry of the Universe · The Friedmann Equations) · Practical Astronomy. Each unit has an \"Advanced Topics\" section and a Recommended Reading list.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-ao-guide-resources-page",
+      "title": "AO Guide — Resources page",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.aoguide.app/guide/resources/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The single densest index of free astronomy-olympiad material found anywhere (30+ items, all verified in §4.3)",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-stellarium-desktop-mobile",
+      "title": "Stellarium (desktop + mobile)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://stellarium.org/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The IAO/IOAA observational standard. Named in both the official IOAA syllabus (software may be used in practical problems, announced 3 months ahead) and Osish Niraula's Nepal advice document.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-celestia",
+      "title": "Celestia",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://github.com/CelestiaProject/Celestia",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "3D universe exploration; recommended in Nepal's advice document",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-stellar-guesser",
+      "title": "Stellar Guesser",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://stellarguesser.github.io/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"a tool for learning the sky in a game-like manner\" — the cheapest route to the IAO Sky Map round",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-skychart-tasks",
+      "title": "Skychart Tasks",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://anatolieursu.github.io/sky-chart-practice/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"import your skycharts and practice them online\" — direct training for the Observation Round",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-celestial-sphere-webapp",
+      "title": "Celestial Sphere webapp",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://bunchofcellulose.github.io/celestialsphere/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"A webapp to play with spherical diagrams\" — spherical trigonometry is the core of Positional Astronomy",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-learn-the-sky-youtube",
+      "title": "Learn the Sky (YouTube)",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.youtube.com/@learnthesky",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"videos on finding constellations, planets and navigating the sky\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-sky-academy-android",
+      "title": "Sky Academy (Android)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://play.google.com/store/apps/details?id=digital.dong.skyacademy",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"learn constellations, stars and Messier objects\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-star-maps-101-and-practices-fahim-rajit-hossain",
+      "title": "Star Maps 101 and Practices (Fahim Rajit Hossain)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://github.com/Rajit13/Star-Maps-101-and-Practices",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Named in Nepal's advice document as a core practical resource",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-openstax",
+      "title": "OpenStax",
+      "type": "book",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://openstax.org/details/books/astronomy",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Legal open-access general astronomy; the free equivalent of the Kutner text",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-neb-grade-11-12-physics-from-this-series-physics-file",
+      "title": "NEB Grade 11 & 12 Physics (from this series' Physics file)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The IOAA syllabus's physics prerequisite is a subset of NEB Physics: mechanics, gravitation, SHM, thermodynamics & black-body radiation, waves & optics, E&M, nuclear. Nepal's own NAO Senior syllabus lists these explicitly (§2.4). A student who has done the Physics file has already covered the physics half of astronomy olympiad.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S12"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-nasa-exoplanet-archive",
+      "title": "NASA Exoplanet Archive",
+      "type": "tool",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://exoplanetarchive.ipac.caltech.edu/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Recommended in Nepal's advice document. Real datasets for data-analysis practice.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S13"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-practical-handouts-for-olympiad-ayush-tiwari",
+      "title": "Practical Handouts for Olympiad — Ayush Tiwari",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://drive.google.com/drive/u/0/folders/1Nft4B755uvtxfaSGLp2ZsVuHQGZ9pEt-",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"Covers all aspects of data analysis and most observation skills required for IOAA.\" Written by a member of Nepal's own IOAA 2025 team. The closest thing that exists to a Nepal-authored IOAA practical manual.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S14"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-lee-yiu-sing-s-comprehensive-ioaa-resource",
+      "title": "Lee Yiu Sing's comprehensive IOAA resource",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://drive.google.com/file/d/13bRXOBf5ri0Q-ipmvBewzgD4ETMWo_xW/view",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"A really awesome and comprehensive resource for IOAA… Can be followed alongside the guide for a different perspective on topics.\"",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S15"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-usaaao-guide-handouts",
+      "title": "USAAAO Guide — Handouts",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.usaaao.guide/handouts",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"Handouts for USAAAO and IOAA preparation\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S16"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-sean-ken-m-galanza-s-astronomy-handouts",
+      "title": "Sean Ken M. Galanza's astronomy handouts",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://drive.google.com/drive/folders/1i7HR025iR4HO7PHhx7RmDCRa5aRi14hX",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S17"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-baao-observational-handouts",
+      "title": "BAAO Observational Handouts",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://drive.google.com/drive/folders/141B0qiKer2hnpNKzf0yNuLKOqcTA2Cpf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Bangladesh Astronomy & Astrophysics Olympiad — the South-Asian analogue",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S18"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-bdoaa-preparation-material",
+      "title": "BDOAA Preparation Material",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://drive.google.com/drive/folders/0BxnDs515DNddbWg1VTBRZktZODA",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Bangladesh",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S19"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-ao-guide-master-drive-all-sources-national-international-oly",
+      "title": "AO Guide master Drive — all sources + national & international olympiad papers",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://drive.google.com/drive/folders/1gZDmKb3n2vXHpVZMwFaUJ1ukUccCfYKD",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"contains all the sources used, and more. Many national and international olympiad papers too are available here.\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S20"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-astronomy-olympiad-archives-mega-by-stefan-ivanov",
+      "title": "Astronomy Olympiad Archives (Mega, by Stefan Ivanov)",
+      "type": "tool",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://mega.nz/folder/3ZBWDbTL#U8-utZdSD-6URDjXS1t9Ag",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "not re-verified (Mega)",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S21"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-kevin-zhou-s-physics-olympiad-handouts-esp-m6-and-x3",
+      "title": "Kevin Zhou's Physics Olympiad Handouts — esp. M6 and X3",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://knzhou.github.io/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Recommended specifically for astronomy in the AO Guide",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S22"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-astronomy-olympiad-potd-problem-of-the-day-archive-fahim-raj",
+      "title": "Astronomy Olympiad POTD (Problem of the Day) Archive — Fahim Rajit Hossain",
+      "type": "tool",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://rajit13.github.io/website_docs/Astro_POTD.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Daily-problem compendium from the Astronomy Olympiad Discord",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S23"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-analemma-primer-fahim-rajit-hossain",
+      "title": "Analemma Primer — Fahim Rajit Hossain",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://rajit13.github.io/website_docs/Analemma_Primer.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"A very comprehensive analysis of the analemma\" — the equation of time is an explicit IOAA A.2.2 syllabus item",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S24"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-astronomy-via-latex-a-guide-to-problem-writing-for-astronomy",
+      "title": "Astronomy via LaTeX — a guide to problem writing for Astronomy Olympiads",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://rajit13.github.io/website_docs/Astronomy_via_LaTeX.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Directly usable by NSS STEM Club to write Nepali mock papers with correct astronomical typesetting",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S25"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-kepler-s-equation-the-unsolvable-equation-of-celestial-mecha",
+      "title": "Kepler's Equation: The Unsolvable Equation of Celestial Mechanics — Rajarshi",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://github.com/RajarshiNeel/Kepler-s-Equation-/releases/download/Keplers_Equation/Keplars_Equation.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Bound-orbit mechanics (AO Guide / IOAA A.2.1)",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S26"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-kaiwen-s-astronomy-notes-notion",
+      "title": "Kaiwen's astronomy notes (Notion)",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://apochrome.notion.site/Astronomy-c2080a4c5b464868a99f5cddec3e0bbb",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S27"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-astronomy-olympiad-discord-server-aods",
+      "title": "Astronomy Olympiad Discord Server (AODS)",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://discord.gg/cuVC54FksD",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"a community of astronomy enthusiasts and olympiad participants. Great place to ask questions, share resources\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S28"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-ao-guide-astrophysics-challenge-aoac",
+      "title": "AO Guide Astrophysics Challenge (AOAC)",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://aoac.aoguide.app/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"original problems designed to test your physics and astrophysics problem-solving skills\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S29"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-aoxiv",
+      "title": "aoXiv",
+      "type": "tool",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://aoxiv.aoguide.app/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"an archive of problems from various astronomy olympiads throughout the globe. Community-driven and open source\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S30"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-country-advice-documents-india-romania-singapore-bangladesh",
+      "title": "Country advice documents — India, Romania, Singapore, Bangladesh",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.aoguide.app/assets/advice/IND1.pdf",
+      "extraLinks": [
+        {
+          "label": "🇷🇴 ROU1",
+          "url": "https://www.aoguide.app/assets/advice/ROU1.pdf"
+        },
+        {
+          "label": "🇸🇬 SGP1",
+          "url": "https://www.aoguide.app/assets/advice/SGP1.pdf"
+        },
+        {
+          "label": "🇧🇩 BGL1",
+          "url": "https://www.aoguide.app/assets/advice/BGL1.pdf"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Useful comparators for Nepal's own advice doc (NEP1). ⚠️ The AO Guide also lists a second India article at bunchofcells.vercel.app/blog/indian-astronomy-olympiads — that URL returns HTTP 404; use the IND1.pdf below.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S31"
+      ],
+      "needsReview": true
+    }
+  ],
+  "papers": [
+    {
+      "id": "astronomy-nao-2019-questions-senior-category-final",
+      "title": "NAO 2019 Questions — Senior Category (Final)",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.nepalastronomicalsociety.org/wp-content/uploads/2019-12-NAO2019_Questions_Senior_Final.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "dead",
+      "accessNote": "DEAD — HTTP 404. The bit.ly/38UAncP short link still resolves to this URL (HTTP 200 redirect) but the file has been deleted from NASO's server. → Gap A-4",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-nao-2019-questions-junior-category-final",
+      "title": "NAO 2019 Questions — Junior Category (Final)",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.nepalastronomicalsociety.org/wp-content/uploads/2019-12-NAO2019_Questions_Junior_Final.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "dead",
+      "accessNote": "DEAD — HTTP 404. bit.ly/2tsBcZT still resolves here. → Gap A-4",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-ioaa-2016-questions-10th-ioaa-bhubaneswar-the-ioaa-nepal-fir",
+      "title": "IOAA 2016 Questions (10th IOAA, Bhubaneswar) — the IOAA Nepal first won an award at",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": 2016,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioaa2025.in/wp-content/uploads/2024/12/IOAA_Q_2016-min.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-gecaa-2020-1st-theory-data-analysis-observation-round-team-c",
+      "title": "GeCAA 2020 (1st) — Theory, Data Analysis, Observation Round, Team Competition — all with problem/solution sheets",
+      "type": "pastpaper",
+      "levels": [
+        "district",
+        "national"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://astroarena.github.io/astroarena/olympiads/gecaa.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D4",
+        "N10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-nao-syllabus-senior-category-official-pdf",
+      "title": "NAO Syllabus — Senior Category (official PDF)",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/1FsbMUNAHD2Pp6IxodYgWnxY1xxL5pHr2/view",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-nao-syllabus-junior-category-official-pdf",
+      "title": "NAO Syllabus — Junior Category (official PDF)",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/17xjd8NHPjd6S-xRmzMuIMJZyGlcUKpl-/view",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-guidelines-for-the-12th-national-astronomy-olympiad-2025-off",
+      "title": "Guidelines for the 12th National Astronomy Olympiad 2025 (official, 3 pp)",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/1t1-iNZ6whL9i80irCUhuFqMRsvwI5IE5/view",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-national-astronomy-olympiad-nepal-country-advice-document-7-",
+      "title": "\"National Astronomy Olympiad (Nepal)\" — country advice document (7 pp) by Osish Niraula, IOAA 2024 & 2025",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2024,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.aoguide.app/assets/advice/NEP1.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": true,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-nao2019-senior-junior-question-papers",
+      "title": "NAO2019 Senior / Junior question papers",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "dead",
+      "accessNote": "404 — deleted",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-nao2026-results-first-round-provincial",
+      "title": "NAO2026 results — First Round (Provincial)",
+      "type": "official",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/1yvMiCwQggBE5XHCroFZaFg_9Jnvld6s7/view",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-nao2026-results-second-round-national-senior-junior",
+      "title": "NAO2026 results — Second Round (National), Senior & Junior",
+      "type": "official",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Senior",
+          "url": "https://drive.google.com/file/d/1SX-nrHBOiAlBjHxShtkdtNmE7Me7CBYx/view",
+          "kind": "questions"
+        },
+        {
+          "label": "Junior",
+          "url": "https://drive.google.com/file/d/1jJgmd4-upHEqHYhMZarNROGhaCiSQhUz/view",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-nao2026-results-final-round-closed-camp-senior-junior",
+      "title": "NAO2026 results — Final Round (Closed Camp), Senior & Junior",
+      "type": "official",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Senior",
+          "url": "https://drive.google.com/file/d/1BIuWSg8mnfRBBsWaG830FuHGigZD_Q5f/view",
+          "kind": "questions"
+        },
+        {
+          "label": "Junior",
+          "url": "https://drive.google.com/file/d/1IWvWy5wOj3dbgrb4YtLzO2mfZ1lW_-Sb/view",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-inao-indian-national-astronomy-olympiad-past-papers-hbcse",
+      "title": "INAO — Indian National Astronomy Olympiad past papers (HBCSE)",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "index live; PDFs geo-restricted",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-usaaao-past-exams-first-round-nac",
+      "title": "USAAAO past exams (First Round + NAC)",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usaaao.org/resources/past-exams/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "403 to scripts; works in a browser",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-ioaa-problem-book-2007-2025-14-subject-chapters-latex-transc",
+      "title": "IOAA Problem Book — 2007 → 2025, 14 subject chapters, LaTeX-transcribed (compiled by Dr. Ioana Zelko, CITA, University of Toronto)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2007,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioaastrophysics.org/resources/ioaa-publications",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "403 to scripts; works in a browser. Mirror PDF: https://www.dmfa.si/_CmsFiles/2020/11/ioaa-book-.pdf ✅ LIVE (254 pp, downloaded, contains the full official IOAA Syllabus as Appendix A)",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "N1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-ioaa-2025-18th-mumbai-complete-official-set-39-pdfs",
+      "title": "IOAA 2025 (18th, Mumbai) — COMPLETE official set, 39 PDFs",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioaa2025.in/final-ioaa-2025-problems-and-solutions/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "N2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-ioaa-past-question-papers-2016-2017-2018-2019-2020-2021",
+      "title": "IOAA past question papers 2016, 2017, 2018, 2019, 2020, 2021",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2016,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioaa2025.in/past-question-papers-solutions/question-papers/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-ioaa-data-analysis-solutions-2016-2017-2018-2019",
+      "title": "IOAA Data Analysis solutions 2016, 2017, 2018, 2019",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2016,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioaa2025.in/past-question-papers-solutions/solutions/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-official-ioaa-syllabus-appendix-a-of-the-ioaa-problem-book",
+      "title": "Official IOAA Syllabus (Appendix A of the IOAA Problem Book)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.dmfa.si/_CmsFiles/2020/11/ioaa-book-.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "File 2",
+          "url": "https://ioaa2025.in/ioaa-syllabus/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-official-ioaa-statutes",
+      "title": "Official IOAA Statutes",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioaa2025.in/ioaa-statutes/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-astroarena-ioaa-2011-2019-per-year-theory-data-analysis-nigh",
+      "title": "Astroarena — IOAA 2011 → 2019, per year: Theory / Data Analysis / Night Observation / Planetarium / Day Observation / Team Competition, each with problem + solution + answer sheets",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2011,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://astroarena.github.io/astroarena/olympiads/ioaa.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-astroarena-compilation-of-ioaa-problems-2007-2012-single-pdf",
+      "title": "Astroarena — Compilation of IOAA problems 2007–2012 (single PDF)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2007,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://astroarena.github.io/astroarena/olympiads/ioaa/compilation%202007-2012/ioaa_2007-2012.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-astroarena-iao-international-astronomy-olympiad-2013-2021-th",
+      "title": "Astroarena — IAO (International Astronomy Olympiad) 2013 → 2021, Theory / Data Analysis / Observation Round, with problem + solution sheets · 85 PDFs · plus",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2013,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://astroarena.github.io/astroarena/olympiads/iao.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"IAO for people in a hurry\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-astroarena-usaaao",
+      "title": "Astroarena — USAAAO",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://astroarena.github.io/astroarena/olympiads/usaaao.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "astronomy-any-nao-round-2-or-round-3-closed-camp-paper",
+      "title": "❌ Any NAO Round 2 or Round 3 (Closed Camp) paper",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "unknown",
+      "accessNote": "NOT PUBLISHED. NASO publishes *results* for all three rounds but has never published a Round-2 or Round-3 *paper*. → Gap A-7",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N12"
+      ],
+      "needsReview": true
+    }
+  ],
+  "paperSets": [],
+  "gaps": [
+    {
+      "id": "A-1",
+      "level": "District",
+      "missing": "There is no district tier, and no feeder below the Provincial Round. NAO starts at Province with 7 centres. A student in a remote district must travel to a provincial capital to sit Round 1.",
+      "evidence": "Verified from NASO's published 3-stage ladder and the 7-centre list. Contrast Biology's 753 Local Committees and Maths' 77-district DMO. Astronomy — which produced 3 bronzes, Nepal's second-best tally — reaches the fewest students at entry.",
+      "aiSpec": "Generate a \"NAO School-Level Feeder Kit\" that any school science teacher can run without NASO involvement: ① a 4-week after-school astronomy club plan (Stellarium + naked-eye sessions + one paper-telescope build); ② a 30-question school-level diagnostic in the exact NAO Round-1 proportion (20 MCQ + 2 long) drawn from the 12 Senior / 11 Junior syllabus sections; ③ a one-page guide to writing the 5-mark motivation statement (see A-2); ④ a low-cost equipment list. Then propose to NASO that this become an official \"Round 0 (School)\" feeding the Provincial Round, mirroring Biology's Local tier.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "A-2",
+      "level": "Province",
+      "missing": "⭐ Nobody teaches students how to score the 5-mark motivation statement. The NAO application file is worth 10 of 100 marks, of which 5 marks are for *\"the question in the application form\"* — the motivation statement. No guidance on it exists anywhere: not on NASO's site, not in the Guidelines PDF, not in Osish Niraula's 7-page advice document (which mentions it exists but not how to write one).",
+      "evidence": "Verified: NAO Syllabus PDF *\"Application file itself consist of 10 marks (question in the application form=5 marks and SEE=5 marks)\"*; NAO2025 Guidelines *\"Fill it carefully, including a short motivation statement (this section carries 5 marks!)\"*; NEP1.pdf §4.2 repeats it. No source explains how to earn the marks. For a student from a government school with a modest SEE score, these 5 marks are 5 % of the Round-1 total and are entirely within their control.",
+      "aiSpec": "Generate \"The NAO Motivation Statement — a 5-mark guide\": ① what the 5 marks are actually assessing (genuine interest, specificity, evidence of self-directed learning, clarity of writing — inferable from the fact that NASO's own guidelines emphasise *\"understanding, originality and clarity\"* at Stage 2); ② a 400-word model statement with an annotated mark-by-mark breakdown; ③ three anti-patterns with rewrites (generic enthusiasm; list-of-achievements; copied text); ④ a 20-point self-check rubric; ⑤ prompts that force specificity — *name the constellation you learned to find, the paper telescope you built, the IOAA problem you could not solve, the night sky in your district*. Publish in both English and Nepali.",
+      "priority": "🔴 P1 — highest value per word of any gap in this series"
+    },
+    {
+      "id": "A-3",
+      "level": "Province",
+      "missing": "No negative marking at NAO — but students who also sit the Maths DMO carry the wrong instinct across. NAO: *\"There will be no negative marking.\"* Maths DMO: −0.25 per incorrect response. The two Nepali olympiads with overlapping cohorts have opposite guessing strategies and neither is documented for students.",
+      "evidence": "Verified from both official syllabi.",
+      "aiSpec": "Generate a one-page \"Nepal Olympiad Marking-Rules Comparison\" across all seven subjects: for each, state negative marking Y/N, permitted calculator, duration, question mix, and the resulting optimal guessing strategy (NAO/IBO: attempt everything; DMO: guess only when ≥1 option eliminated). Trivial to produce, prevents a systematic loss.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "A-4",
+      "level": "ALL",
+      "missing": "⭐⭐ NASO's only two published past papers are dead links. Both bit.ly short links on NASO's live olympiad page still resolve (HTTP 200) to …/2019-12-NAO2019_Questions_{Senior,Junior}_Final.pdf, but both files return HTTP 404 — they have been deleted from NASO's WordPress uploads. NASO's page still advertises them as *\"Click here to download the past paper for Junior/Senior Category.\"*",
+      "evidence": "Verified 23 Oct 2026: bit.ly/2tsBcZT → 200 redirect → 404; bit.ly/38UAncP → 200 redirect → 404.",
+      "aiSpec": "Two actions. ① Retrieve: email info@nepalastronomicalsociety.org and nasonepal@gmail.com, and ask the 7 provincial coordinators directly — the 2019 files are almost certainly still on someone's machine or in the Wayback Machine. Check web.archive.org for the two URLs. ② Tell NASO the links are broken — this is a 2-minute fix for them and they will likely welcome the report. ③ Then generate Gap A-7 to replace them permanently.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "A-5",
+      "level": "Province / Site",
+      "missing": "⭐ Your site does not cross-link Astronomy and Physics, though ~40 % of the NAO Senior syllabus is NEB Physics. Sections 1–5 (Mechanics, Heat & Thermodynamics, Nuclear Physics, Wave & Optics, Electricity & Magnetism) are pure NEB physics — the same five topics your Physics page already lists as its constellation. Sections 6–11 are astronomy-specific.",
+      "evidence": "Verified by direct comparison of the NAO Senior syllabus PDF against the Physics page's topic tree at nss-olympiads.vercel.app/olympiads/physics.",
+      "aiSpec": "Add a cross-subject link layer. On the Astronomy page, mark syllabus sections 1–5 as *\"covered by the Physics Olympiad roadmap →\"* with deep links. On the Physics page, add an *\"Also applies to: Astronomy Olympiad (NAO sections 1–5)\"* badge. Then publish a \"Physics → Astronomy fast-track\": a two-page document telling a Physics-prepared student exactly which seven additional topics they need (The Sun · The Earth · The Solar System · The Stars incl. HR Diagram, Bayer Designation, Hand Measurement/Sky Navigation · Universe incl. Hubble–Lemaître · Space Exploration · the Mathematics section) to be NAO-ready. This is the cheapest route to growing Nepal's astronomy cohort, because it converts existing physics students.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "A-6",
+      "level": "Province",
+      "missing": "No Nepali material teaches the three NAO-unique topics. The Senior syllabus names Hand Measurement / Sky Navigation (Altitude/Azimuth), Bayer Designation, and the HR Diagram. These appear in no other Nepali olympiad syllabus and there is no Nepali-language treatment of any of them. All three are cheap to master and are guaranteed marks in both the NAO MCQ section and the IOAA Sky Map round.",
+      "evidence": "Verified by cross-referencing the NAO syllabus against every Nepali resource found (Sajha Notes, NepalNotes, MeroNotes, NN Education) — none covers them.",
+      "aiSpec": "Generate \"NAO-Specific Skills — a 30-page Nepali/English module\": (a) Hand Measurement & Sky Navigation — the fist/hand-span angular-scale system (1 fist ≈ 10°, little finger ≈ 1°, three middle fingers ≈ 5°, thumb-to-little-finger span ≈ 20°), converting between horizontal (Altitude/Azimuth) and equatorial (RA/Dec) coordinates, finding the meridian, estimating altitude of a star from latitude and declination, circumpolar-star conditions, with 15 worked problems and 10 practice sky diagrams for Kathmandu's latitude 27.7° N; (b) Bayer Designation — Greek-letter ordering by brightness within a constellation, the exceptions (Orion, Ursa Major), Flamsteed numbers, variable-star designations, HD/HIP/SAO catalogue numbers, with a 40-star identification drill; (c) HR Diagram — axes (absolute magnitude / luminosity vs spectral class / temperature), the main sequence, giants, supergiants, white dwarfs, reading the Sun's position, the mass–luminosity relation L ∝ M³·⁵, using the diagram with the period–luminosity relation for Cepheids to determine distance, plus 12 plotted-data exercises. Anchor to IOAA syllabus §A.2.2 and §A.2.4.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "A-7",
+      "level": "National",
+      "missing": "⭐⭐ Zero NAO Round-2 or Round-3 papers have ever been published. NASO publishes *results* for all three rounds on Drive but has never published a single *question paper* beyond the two 2019 files, which are now deleted (A-4). Students therefore have no idea what the National Round or the Closed Camp exam looks like — despite the Closed Camp being explicitly stated to *\"follow the IOAA syllabus structure.\"*",
+      "evidence": "Verified by enumerating every PDF and Drive link on nepalastronomicalsociety.org/projects/olympiad/.",
+      "aiSpec": "Generate an \"NAO Mock Series\" in three tiers: ① Provincial (Round 1) — 3 papers, each 2 hours, 90 marks: 30 MCQ × 2 + 3 long × 10, no negative marking, drawn from the 12 Senior syllabus sections in proportion, with a supplied constants sheet (c, G, h, σ, k_B, N_A, M☉, R☉, L☉, 1 AU, 1 pc, H₀) and full solutions. ② National (Round 2) — 3 assignment packs mirroring the documented Stage-2 task types: stellar magnitudes & distances, celestial coordinate systems, spherical trigonometry for stellar altitude, star/constellation identification, plotting Hubble's relation — each with a report template, a rubric weighting *understanding / originality / clarity*, and a paper-telescope build sheet. ③ Closed Camp (Round 3) — 3 full mock exams in IOAA structure: Theory (2 papers) + Data Analysis + Observational (Sky Map, Telescope description, Planetarium), with marking schemes scaled to the verified IOAA 2025 distribution (Theory 300 · Data Analysis 150 · Telescope 50 · Sky Map 50 · Planetarium 50 = 600). Calibrate all items against IOAA 2016–2019 (free on ioaa2025.in) and IAO 2013–2019 (free on Astroarena).",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "A-8",
+      "level": "National / International",
+      "missing": "⭐⭐ No Nepali data-analysis training material — despite Data Analysis being 150 of the IOAA's 600 marks (25 %), more than Telescope + Sky Map + Planetarium combined. NASO's own Stage-3 description reduces it to *\"mean, median, regression, and error estimation.\"* The official IOAA Syllabus A.3 demands far more: error-source identification, error calculation and influence estimation, polar and logarithmic graph papers, linearisation and best-fit lines, and basic statistical analysis of observational data.",
+      "evidence": "Verified IOAA 2025 mark scheme (300 theory / 150 data analysis / 50 / 50 / 50) against NASO's Stage-3 description and IOAA Syllabus A.3.",
+      "aiSpec": "Generate \"Data Analysis for NAO & IOAA — a Nepal Manual\" in 5 parts, each with a worked astronomical dataset: (1) Error treatment — error sources, absolute/relative/percentage error, propagation through addition/subtraction/multiplication/division/powers, standard deviation, standard error of the mean, reporting a result ± uncertainty with correct significant figures (IOAA A.1 clause 6 explicitly requires this). (2) Graphing — choosing scales, linear / log-linear / log-log / polar paper, converting a power law y = axᵇ into a straight line by taking logs, best-fit by eye vs least squares, gradient and intercept with uncertainties, residual plots. (3) The six canonical astronomy plots — Hubble diagram (v vs d → H₀), Cepheid period–luminosity (log P vs M → distance modulus), HR diagram (colour index vs absolute magnitude), light curves of eclipsing binaries (→ radii, inclination), radial-velocity curves (→ mass function), 21 cm line profiles (→ rotation curves, dark matter). Each with real open data (NASA Exoplanet Archive, Gaia, SIMBAD) and a full worked solution. (4) Statistics — mean, median, mode, variance, χ² goodness-of-fit for a model light curve, t-test for comparing two samples, weighted means for repeated measurements. (5) The IOAA answer-sheet discipline — how marks are allocated on the official Summary Answersheets (all four are free in the IOAA 2025 set), units, significant digits, and how to earn partial credit. Anchor everything to the freely available IOAA 2025 Data Analysis Questions + Solutions and the 2016–2019 DA solutions. Also point students to Ayush Tiwari's Practical Handouts (S14), written by a Nepali IOAA 2025 team member, which already covers much of this.",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "A-9",
+      "level": "International",
+      "missing": "⭐ No Nepali observational-astronomy training. Half the IOAA is practical, and its Observation component has three distinct sub-rounds — Telescope, Sky Map, Planetarium — each worth 50 marks and each requiring a different skill. Nepal has no telescope access programme, and NASO's own Stage-3 description concedes the observational exam is *\"often paper-based.\"* Nepal has never won an IOAA medal (3 HMs, 0 medals), and the Observation rounds are the most likely explanation.",
+      "evidence": "Verified: IOAA 2025 published separate Question/Solution/Instructions/Summary-Answersheet sets for Telescope, Sky Map and Planetarium; NASO's Stage-3 text says *\"observational astronomy (often paper-based)\"*; IOAA Syllabus A.3 requires *\"usage of basic astronomical instruments — telescopes and various detectors\"*, *\"naked-eye observations\"*, *\"sky maps and catalogues\"*, *\"magnitude estimation, estimation of angular separation.\"*",
+      "aiSpec": "Generate \"Observational Astronomy for Nepal — a no-telescope training programme\": (a) Sky Map round — a 30-session naked-eye curriculum using Stellarium set to Kathmandu 27.7° N plus Stellar Guesser and Skychart Tasks; constellation-by-constellation identification drills; magnitude estimation by comparison against known stars; angular separation by hand measurement; the A3 star maps from IOAA 2025 (Map-OM01/OM02/OP01/OP02/OT01, all free with solutions) as the practice bank. (b) Planetarium round — since Nepal has no planetarium, build a virtual planetarium protocol using Stellarium's planetarium-mode projection plus the free IOAA 2025 Observation-Planetarium Questions and Solutions; drill the four standard task types (identify the object, give coordinates, predict rising/setting time, interpret a simulated view). (c) Telescope round — a low-cost hardware programme: specify a ₹/Rs-budget build (a 60 mm refractor or a Dobsonian from local materials), plus paper-and-simulation substitutes — the IOAA Telescope round is largely about *reading* an instrument and *interpreting* an eyepiece view, which can be trained entirely from the free IOAA 2025 Telescope Questions/Solutions plus Stellarium's eyepiece-view simulator. (d) A \"Nepal Dark-Sky Sessions\" calendar — new-moon dates, Kathmandu-valley light-pollution advice, and 6 accessible dark sites by province. (e) Ask NASO for one shared telescope per province — 7 instruments would cover all 7 provincial centres; cost this proposal and hand it to NASO.",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "A-10",
+      "level": "ALL",
+      "missing": "No Nepali-language (नेपाली) astronomy material. All NASO documentation is English-only. The NAO syllabus, guidelines, advice document and every resource are in English.",
+      "evidence": "Verified across NASO's site, both syllabus PDFs, the Guidelines PDF and NEP1.pdf.",
+      "aiSpec": "Generate a bilingual नेपाली/English Astronomy Olympiad glossary + formula booklet: ~300 terms across the IOAA's seven A.2 domains plus all 12 NAO Senior sections (e.g. *sidereal time* → नक्षत्र समय, *magnitude* → कान्तिमान, *circumpolar* → परिक्रान्त, *Roche limit* → रोश सीमा, *dispersion measure* → विक्षेपण मापन, *light-gathering power* → प्रकाश-संग्रहण क्षमता), each with symbol, SI unit and governing equation. Include the verified formula set from NEP1.pdf (Newton's gravitation, Kepler's 3rd, Pogson's magnitude relation m₁−m₂ = −2.5 log(B₁/B₂), distance modulus m−M = 5 log d − 5, Hubble–Lemaître v = H₀d) and the constants (c, G, h, σ).",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "A-11",
+      "level": "ALL",
+      "missing": "Nepal's four contest pathways are not explained to students. NASO's Step 5 says delegation selection covers IOAA, IOAA-jr, IAO and APAO *\"as per the invitation received from the organizers\"* — but nothing tells a student which contest they are being prepared for, what each tests, or how the four differ. Nepal also fields a fifth team (OWAO 2026, Sirius) that is not mentioned in the Step-5 list at all.",
+      "evidence": "Verified: NASO's Step-5 text names 4 contests; NASO's 2026 announcement names three teams (IOAA, IOAA-jr, OWAO); the IAO 2026 selection is announced separately.",
+      "aiSpec": "Generate \"Nepal's Five Astronomy Pathways — a student guide\": one page per contest — IOAA (600 marks: 300 theory + 300 practical split 150/50/50/50; senior; Nepal's 3 HMs), IAO (theory + data analysis + observation round; where Nepal's 3 bronzes came from; junior and senior age groups), IOAA-jr (junior; Nepal hosted 2024), OWAO (Sirius, Russia; 6 students in 2026), APAO (Asia-Pacific regional) — with format, syllabus emphasis, age eligibility, historical Nepali results, and which of the free archives to drill for each. Then map the merit-list ranks to likely contest allocation using the verified 2026 outcome (top Senior merit-list students → IOAA; Junior → IOAA-jr; a separate 6 → OWAO).",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "A-12",
+      "level": "Site",
+      "missing": "Re-base your Astronomy topic tree on the two official syllabi. Your site's current taxonomy is generic. Astronomy has two authoritative, published, downloadable syllabi — the 12-section NAO Senior, the 11-section NAO Junior — plus the 7-domain official IOAA A.2 and the 2-section IOAA A.3 practical.",
+      "evidence": "Verified from all four primary documents.",
+      "aiSpec": "Build a three-mode topic tree: Mode A \"NAO Junior\" (11 sections) · Mode B \"NAO Senior\" (12 sections) · Mode C \"IOAA / International\" (A.2.1 Basic Astrophysics · A.2.2 Coordinates & Times · A.2.3 Solar System · A.2.4 Stars · A.2.5 Stellar Systems · A.2.6 Cosmology · A.2.7 Instrumentation, plus A.3 Observations and A.3 Data Analysis). Show each node's source document, mark the (Q) = qualitative-only items so students don't over-study them, and mark which nodes are already covered by the Physics roadmap (see A-5).",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "A-13",
+      "level": "National",
+      "missing": "The Closed Camp is 7 days and there is no published curriculum for it. NASO states it covers *\"theoretical tests, data analysis, and observational astronomy\"* with lectures on *\"stellar physics, celestial mechanics, coordinate systems, and data processing\"* — but no day-by-day syllabus, reading list, or mock-exam schedule is published, and the merit list of 40 students per category is far larger than the 4–6 who travel.",
+      "evidence": "Verified from NEP1.pdf §2.3 and §9, and the NAO2026 announcements.",
+      "aiSpec": "Generate a \"7-Day Closed Camp Curriculum\" that any student can self-run, and that NSS STEM Club could deliver as a parallel camp: Day 1 Positional Astronomy (sphere, coordinates, time) · Day 2 Photometry & magnitudes · Day 3 Celestial Mechanics · Day 4 Stellar Astrophysics & HR diagram · Day 5 Galactic + Cosmology · Day 6 Practical: Data Analysis + Sky Map + Telescope/Planetarium simulation · Day 7 full mock IOAA (600-mark structure). Each day: 2 h reading (AO Guide chapter), 2 h problems (IOAA Problem Book chapter), 1 h practical, 1 h debrief. Include the 14 IOAA Problem Book chapters as the problem spine.",
+      "priority": "🟡 P3"
+    }
+  ],
+  "contacts": [],
+  "rejected": [
+    {
+      "what": "⭐ nepalastronomicalsociety.org/wp-content/uploads/2019-12-NAO2019_Questions_Senior_Final.pdf and …NAO2019_Questions_Junior_Final.pdf",
+      "why": "HTTP 404 — deleted from NASO's server. These are the destinations of NASO's own live bit.ly/38UAncP and bit.ly/2tsBcZT links, which still return 200 redirects to a dead file. NASO's page still advertises them as downloadable. → Gap A-4",
+      "urls": [
+        "nepalastronomicalsociety.org/wp-content/uploads/2019-12-NAO2019_Questions_Senior_Final.pdf",
+        "Final.pdf"
+      ]
+    },
+    {
+      "what": "⭐ naso.edu.np — cited inside Nepal's own advice document (NEP1.pdf §10) as *\"NAO Nepal (NASO)\"*",
+      "why": "DNS does not resolve. The correct URL is nepalastronomicalsociety.org. Nepal's flagship advice document contains a dead link to its own organisation. Worth reporting to Osish Niraula / aoguide.app.",
+      "urls": [
+        "naso.edu.np",
+        "NEP1.pdf"
+      ]
+    },
+    {
+      "what": "rajit13.github.io/website_docs/problems_Pho.pdf",
+      "why": "HTTP 404 — the \"Relevant Physics Olympiad Problems for IOAA\" compilation has moved",
+      "urls": [
+        "rajit13.github.io/website_docs/problems_Pho.pdf"
+      ]
+    },
+    {
+      "what": "bunchofcells.vercel.app/blog/indian-astronomy-olympiads",
+      "why": "HTTP 404. Listed by the AO Guide as a country-advice document for India, but dead. Use aoguide.app/assets/advice/IND1.pdf instead (✅ verified).",
+      "urls": [
+        "bunchofcells.vercel.app/blog/indian-astronomy-olympiads"
+      ]
+    },
+    {
+      "what": "celestia.space",
+      "why": "Returns an anomalous HTTP 445 to non-browser clients. Use the official repo github.com/CelestiaProject/Celestia (✅ verified)",
+      "urls": [
+        "celestia.space"
+      ]
+    },
+    {
+      "what": "celestia-project.github.io",
+      "why": "HTTP 404",
+      "urls": [
+        "celestia-project.github.io"
+      ]
+    },
+    {
+      "what": "astrolemma.com",
+      "why": "DNS does not resolve (\"No address associated with hostname\")",
+      "urls": [
+        "astrolemma.com"
+      ]
+    },
+    {
+      "what": "oaaoinfo.org",
+      "why": "DNS does not resolve (the Online Astronomy and Astrophysics Olympiad)",
+      "urls": [
+        "oaaoinfo.org"
+      ]
+    },
+    {
+      "what": "ioaa2025.in/wp-content/uploads/2024-12-IOAA_Q_2019-min.pdf (as an absolute URL)",
+      "why": "HTTP 404 — the correct path is /wp-content/uploads/2024/12/IOAA_Q_2019-min.pdf (slashes, not hyphens). Use the index page links.",
+      "urls": [
+        "ioaa2025.in/wp-content/uploads/2024-12-IOAA_Q_2019-min.pdf"
+      ]
+    },
+    {
+      "what": "crazy-cat-crypto.github.io/nepal-olympiad-hub/",
+      "why": "Its Astronomy card claims *\"Bronze Medal 2023 (Drishant Kumar Maharjan)\"* at \"IOAA 2023, Beijing\". Wrong contest. Drishant Kumar Maharjan's bronze was at the 27th IAO 2023 in China, not IOAA 2023 — which was the 16th IOAA in Poland, where Nepal's award was Sudip Rokaya's Honourable Mention. Its one correct claim is that Nepal hosted the IOAA-Jr in October 2024.",
+      "urls": [
+        "crazy-cat-crypto.github.io/nepal-olympiad-hub/"
+      ]
+    },
+    {
+      "what": "Any claim that Nepal has won an IOAA medal",
+      "why": "Unverified. NASO's own announcements record three IOAA Honourable Mentions (2016, 2023, 2025) and no IOAA medals. All three Nepali bronzes are IAO medals (2019, 2023, 2025). Do not conflate the two contests.",
+      "urls": []
+    }
+  ],
+  "warnings": [
+    "no URL: S12 \"NEB Grade 11 & 12 Physics (from this series' Physics file)\" (1.3 Study Materials — District / entry tier)",
+    "no URL: P5 \"NAO2019 Senior / Junior question papers\" (2.5 Past Papers & Study Materials — Province tier)",
+    "no URL: N12 \"❌ Any NAO Round 2 or Round 3 (Closed Camp) paper\" (3.3 Past Papers — National tier)",
+    "no status: N12 \"❌ Any NAO Round 2 or Round 3 (Closed Camp) paper\""
+  ]
+}
