@@ -377,3 +377,16 @@ html.lenis body {
     scroll-behavior: auto;
   }
 }
+
+/* ───────── Hero lifecycle: pause off-screen, honour data-saver ───────── */
+[data-paused="true"] .hero-motion,
+[data-paused="true"] .hero-breathe {
+  animation-play-state: paused !important;
+}
+.no-heavy .hero-motion,
+.no-heavy .hero-breathe {
+  animation: none !important;
+}
+.no-heavy [data-heavy] {
+  display: none !important;
+}
