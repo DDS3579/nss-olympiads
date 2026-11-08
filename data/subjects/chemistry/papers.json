@@ -1,0 +1,804 @@
+[
+  {
+    "id": "chemistry-usnco-local-section-exam-2026",
+    "title": "USNCO Local Section Exam 2026",
+    "type": "pastpaper",
+    "levels": [
+      "district"
+    ],
+    "year": 2026,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.acs.org/content/dam/acsorg/education/students/highschool/olympiad/pastexams/2026-usnco-local-exam.pdf",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "ACS is bot-walled to scripts; loads fine in a browser — content verified by extraction",
+    "verified": "2026-10-22",
+    "why": "The cleanest analogue anywhere: a wide, fast, school-syllabus MCQ screening round. Periodic table + constants + 3 key equations supplied on p.2. Full mark-scheme logic is published.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "D1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-usnco-local-exam-archive-2000-2026-26-papers-2010-2022-with-",
+    "title": "USNCO Local Exam archive 2000 → 2026 (26 papers; 2010–2022 with annotated solutions)",
+    "type": "pastpaper",
+    "levels": [
+      "district",
+      "province",
+      "national"
+    ],
+    "year": 2000,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.acs.org/education/olympiad/prepare-for-exams.html",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": true,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "same",
+    "verified": "2026-10-22",
+    "why": "The single largest free district-tier chemistry problem bank in existence",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D2",
+      "P5",
+      "N1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-rsc-uk-chemistry-olympiad-introductory-questions",
+    "title": "RSC UK Chemistry Olympiad — Introductory Questions",
+    "type": "pastpaper",
+    "levels": [
+      "district"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://edu.rsc.org/uk-chemistry-olympiad/chemistry-olympiad-introductory-questions/4014380.article",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "RSC returns 202 to scripts; works in a browser (content verified)",
+    "verified": "2026-10-22",
+    "why": "Deliberately designed as the on-ramp for students new to olympiad format. Exactly what a district-tier entrant needs first.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-rsc-how-to-prepare-for-the-chemistry-olympiad",
+    "title": "RSC \"How to prepare for the Chemistry Olympiad\"",
+    "type": "pastpaper",
+    "levels": [
+      "district"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://edu.rsc.org/uk-chemistry-olympiad/how-to-prepare-for-the-chemistry-olympiad/4012809.article",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "same",
+    "verified": "2026-10-22",
+    "why": "Orientation document",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-neso-tier-ii-model-question-multi-subject-section-a-20-5-che",
+    "title": "NeSO Tier II Model Question (multi-subject; Section A = 20 + 5 Chemistry)",
+    "type": "pastpaper",
+    "levels": [
+      "district"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "http://nepalscienceolympiad.org.np/wp-content/uploads/2015/12/Tier-II-model-question.pdf",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Nepal's own multi-subject school olympiad — nearest domestic difficulty calibration",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D5"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-rsc-uk-chemistry-olympiad-past-papers-2003-2026",
+    "title": "RSC UK Chemistry Olympiad past papers, 2003 → 2026",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": 2003,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://edu.rsc.org/uk-chemistry-olympiad/chemistry-olympiad-past-papers/1641.article",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "bot-walled to scripts; works in browser (verified by extraction)",
+    "verified": "2026-10-22",
+    "why": "The best provincial-tier resource on the internet. Every year ships with paper + supporting materials + answer booklet + mark scheme + examiners' report, plus a published topic list. The examiners' reports are irreplaceable — they show exactly where strong students lose marks.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "P1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-ukcho-past-paper-index-2003-2026-mirror-with-direct-links",
+    "title": "UKChO past-paper index 2003 → 2026 (mirror with direct links)",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": 2003,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://en.ukcho.org.cn/past-papers",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Handy alternate route to P1",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "P2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-rsc-chemistry-olympiad-support-booklet",
+    "title": "RSC Chemistry Olympiad Support Booklet",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://edu.rsc.org/uk-chemistry-olympiad/chemistry-olympiad-support-booklet/1149.article",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "same",
+    "verified": "2026-10-22",
+    "why": "Nine past questions with guidance and explanatory notes, incl. an extended worked example",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "P3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-rsc-chemistry-olympiad-worked-answers",
+    "title": "RSC Chemistry Olympiad Worked Answers",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://edu.rsc.org/uk-chemistry-olympiad/chemistry-olympiad-worked-answers/4014037.article",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": true,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "same",
+    "verified": "2026-10-22",
+    "why": "Step-by-step build-up to whole papers, for students new to the format",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "P4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-incho-2008-2025-question-paper-english-and-hindi-model-solut",
+    "title": "INChO 2008 → 2025 — Question Paper (English and Hindi) + Model Solutions + Answer Booklet",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": 2008,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": true,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "Index live; individual PDFs 404 from non-Indian IPs (geo-restricted)",
+    "verified": "2026-10-22",
+    "why": "India's national round with official model solutions. Difficulty sits just above NChO and just below IChO — the ideal calibration point for Nepali students. Hindi versions help students more comfortable in Devanagari.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "N3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-incho-2025-qp-en",
+    "title": "INChO 2025 QP (EN)",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": 2025,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2025/02/INChO2025-Question.pdf",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "geo-blocked",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-incho-2025-qp-hindi",
+    "title": "INChO 2025 QP (Hindi)",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": 2025,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2025/02/INChO2025-Question-hi.pdf",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "geo-blocked",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N5"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-incho-2025-model-solutions",
+    "title": "INChO 2025 Model Solutions",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": 2025,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2025/02/INChO2025-Solution-20250219.pdf",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": true,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "geo-blocked",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-incho-2023-qp-en",
+    "title": "INChO 2023 QP (EN)",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": 2023,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://olympiads.hbcse.tifr.res.in/wp-content/uploads/2023/01/INChO2023-Question.pdf",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "geo-blocked",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N7"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-hbcse-olympiad-books-catalogue-incl-ladage-narvekar-160",
+    "title": "HBCSE Olympiad Books catalogue (incl. , Ladage & Narvekar, ₹160)",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://library.hbcse.tifr.res.in/olympiads/olympiad-books",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Cheap official compilations, postable",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N8"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-icho-preparatory-problems-2001-2019-see-4-2",
+    "title": "IChO Preparatory Problems 2001–2019 (see §4.2)",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": 2001,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://icho.sk/preparatory-problems/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The single most important national-tier resource. By IChO regulation, Level-3 topics can only appear if they're in the preparatory set — so working the prep problems is syllabus coverage.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N9"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-icho-official-results-database-per-country-per-year-per-stud",
+    "title": "IChO official results database — per-country, per-year, per-student, with original scripts",
+    "type": "official",
+    "levels": [
+      "international"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.icho-official.org/results/country_info.php?country=Nepal",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "F1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-icho-2026-results-58th-tashkent",
+    "title": "IChO 2026 results (58th, Tashkent)",
+    "type": "official",
+    "levels": [
+      "international"
+    ],
+    "year": 2026,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.icho-official.org/results/results.php?id=58&year=2026",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "F2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-icho-steering-committee-official-governing-body",
+    "title": "IChO Steering Committee (official governing body)",
+    "type": "pastpaper",
+    "levels": [
+      "international"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.ichosc.org/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "F3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-icho-iic-bratislava-regulations-syllabus-theoretical-part-pr",
+    "title": "IChO IIC, Bratislava — Regulations · Syllabus · Theoretical part · Practical part · Archive sheets",
+    "type": "pastpaper",
+    "levels": [
+      "international"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://icho.sk/regulations-of-icho/",
+        "kind": "questions"
+      },
+      {
+        "label": "File 2",
+        "url": "https://icho.sk/syllabus/",
+        "kind": "questions"
+      },
+      {
+        "label": "File 3",
+        "url": "https://icho.sk/theoretical-part-of-icho/",
+        "kind": "questions"
+      },
+      {
+        "label": "File 4",
+        "url": "https://icho.sk/practical-part-of-icho/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "F4",
+      "S30"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-ttcho-past-icho-exams-and-solutions-2001-2019-2022-2023-theo",
+    "title": "TTCHO — Past IChO Exams and Solutions (2001–2019 + 2022/2023 theory + practical)",
+    "type": "pastpaper",
+    "levels": [
+      "international"
+    ],
+    "year": 2001,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.ttcho.com/past-icho-exams-and-solutions",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": true,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "F6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-pianetachimica-icho-archive-by-edition-italian-icho-team-sit",
+    "title": "PianetaChimica — IChO archive by edition (Italian IChO team site; hosts prep problems + syllabi for many years, incl. the 39th IChO syllabus)",
+    "type": "pastpaper",
+    "levels": [
+      "international"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.pianetachimica.it/olimpiadi/39icho/39icho_Syllabus.pdf",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "F7"
+    ],
+    "needsReview": true
+  }
+]

@@ -1,0 +1,677 @@
+[
+  {
+    "id": "informatics-antti-laaksonen",
+    "title": "— Antti Laaksonen",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://cses.fi/book/book.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "NPLCoder's own #2 recommendation: \"This highly recommended beginner book for competitive programming covers various essential concepts, making it an excellent starting point for newcomers.\" Free 300-page PDF, and it is the official companion text to the CSES problem set (P4).",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S16"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-lehman-leighton-meyer-mit-free-full-textbook-the-companion-t",
+    "title": "— Lehman, Leighton, Meyer (MIT) — free full textbook, the companion to S8",
+    "type": "book",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://courses.csail.mit.edu/6.042/spring18/mcs.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Mathematics for Computer Science",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S9"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-cp-algorithms",
+    "title": "CP-Algorithms",
+    "type": "handout",
+    "levels": [
+      "province",
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://cp-algorithms.com/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "The canonical free algorithm reference — every Round-2 and Round-3 topic with working C++ implementations and complexity proofs. Not in NPLCoder's list; an addition by this document.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S19",
+      "S26"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-cs50-s-introduction-to-computer-science",
+    "title": "CS50's Introduction to Computer Science —",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://cs50.harvard.edu/x/2024/weeks/5/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"You can focus only on materials from Week 0–5\"",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S5"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-harvard-cs50-free-course-platform",
+    "title": "Harvard CS50 free course platform",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://cs50.harvard.edu/x/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-ioi-s-recommended-reading-list-official",
+    "title": "IOI's Recommended Reading List (official)",
+    "type": "official",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://ioinformatics.org/page/recommended-reading/11",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Curated by the IOI itself",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S36"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-learncpp-com",
+    "title": "LearnCpp.com",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.learncpp.com",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-programming-camp-syllabus",
+    "title": "Programming Camp Syllabus",
+    "type": "official",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://docs.google.com/document/d/1_dc3Ifg7Gg1LxhiqMMmE9UbTsXpdRiYh4pKILYG2eA4/edit",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"A list of important topics in competitive programming with exercise problems.\" A ready-made topic→problem map.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S17"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-visualalgo",
+    "title": "VisualAlgo —",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://visualgo.net/en",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"mainly useful for visualizing the concepts you've learned… especially since they can sometimes feel abstract\"",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S11"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-",
+    "title": "",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://a.co/d/hpeaU24",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"well-organized, featuring detailed explanations and excellent illustrations. It is even used as a textbook in some IOI training camps.\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S30"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-george-po-lya",
+    "title": "— George Pólya",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://a.co/d/8GstgHz",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"A timeless classic… a systematic approach to solving problems creatively.\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S31"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-rosen",
+    "title": "— Rosen",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://a.co/d/9o6QWUc",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"a solid option… rigorous definitions and proofs… otherwise you can safely skip it.\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S32"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-steven-skiena",
+    "title": "— Steven Skiena",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://a.co/d/4jNY3WA",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"written in a more readable style, and many find it more comprehensive… valuable resources, including the author's video lectures, can be accessed on its official website.\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S29"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-if-you-ask-me-how-to-improve-your-algorithm-competition-skil",
+    "title": "\"If you ask me how to improve your algorithm competition skill, I will give you this link\" (CF blog 16599)",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://codeforces.com/blog/entry/16599",
+    "extraLinks": [],
+    "access": "caveat",
+    "verified": "2026-10-23",
+    "why": "The most-shared CP advice post",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S25"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-clrs-cormen-leiserson-rivest-stein",
+    "title": "(CLRS) — Cormen, Leiserson, Rivest, Stein",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://a.co/d/3XkMJ48",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"often considered the 'bible' of algorithms and data structures… an in-depth and rigorous exploration.\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S28"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-c-tricks-codeforces-blog-15643",
+    "title": "C++ Tricks (Codeforces blog 15643)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://codeforces.com/blog/entry/15643",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "403 to scripts",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-codechef-data-structures-algorithms-list",
+    "title": "CodeChef — Data Structures & Algorithms list —",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://discuss.codechef.com/t/data-structures-and-algorithms/6599",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"a comprehensive list of the most commonly used data structures and algorithms, along with tutorials, implementations, and related problems… essential to bookmark\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S12"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-codeforces-blog-13529",
+    "title": "Codeforces blog 13529 —",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://codeforces.com/blog/entry/13529",
+    "extraLinks": [],
+    "access": "caveat",
+    "verified": "2026-10-23",
+    "why": "Curated tutorials",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S22"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-codeforces-blog-57282-second-such-collection",
+    "title": "Codeforces blog 57282 — second such collection",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://codeforces.com/blog/entry/57282",
+    "extraLinks": [],
+    "access": "caveat",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S23"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-comparing-floating-point-numbers-random-ascii",
+    "title": "Comparing Floating Point Numbers (Random ASCII)",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://randomascii.wordpress.com/2012-02-25/comparing-floating-point-numbers-2012-edition/",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "403 to scripts (WordPress bot-wall); opens in a browser",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"Everything you need to know about floating point numbers. A must read especially for geometry topics\" — directly serves Round 4's computational geometry",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S33"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-competitive-c-manifesto-codeforces-blog-64218",
+    "title": "Competitive C++ Manifesto (Codeforces blog 64218) —",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://codeforces.com/blog/entry/64218",
+    "extraLinks": [],
+    "access": "caveat",
+    "verified": "2026-10-23",
+    "why": "\"style guides you can follow to write correct, fast, clear and consistent code\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-cppreference",
+    "title": "CppReference",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://en.cppreference.com/w/",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "403 to scripts (bot-wall); opens normally in a browser",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-how-to-prepare-for-acm-icpc-geeksforgeeks",
+    "title": "How to prepare for ACM-ICPC? (GeeksforGeeks)",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.geeksforgeeks.org/how-to-prepare-for-acm-icpc/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"A comprehensive guide to preparing for the ACM-ICPC\" — useful for the team-competition format",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S35"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-hyperpolyglot-c-objective-c-java-c",
+    "title": "HyperPolyglot — C++ / Objective-C / Java / C# —",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://hyperpolyglot.org/cpp",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"a detailed side-by-side reference sheet for common syntaxes\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S13"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-ideone-pastebin",
+    "title": "ideone · pastebin —",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://ideone.com",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://pastebin.com"
+      }
+    ],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"semi-permanent pages for code sharing… especially useful when you need someone else to review your code\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S15"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-lecture-notes-on-discrete-mathematics-regev-nyu",
+    "title": "Lecture Notes on Discrete Mathematics (Regev, NYU) —",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://cims.nyu.edu/~regev/teaching/discrete_math_fall_2005/dmbook.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"a clear and approachable introduction… an excellent starting point compared to more formal texts\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S10"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-mit-ocw-6-006-introduction-to-algorithms",
+    "title": "MIT OCW 6.006 — Introduction to Algorithms",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S7"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-mit-ocw-6-042j-mathematics-for-computer-science",
+    "title": "MIT OCW 6.042J — Mathematics for Computer Science",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S8"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-stanford-cs97si-introduction-to-programming-contests",
+    "title": "Stanford CS97SI — Introduction to Programming Contests",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.stanford.edu/class/cs97si/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "NPLCoder: \"comprehensive lecture slides and a short set of exercises, introducing you to programming contests. It also revisits key concepts… showing how to apply them effectively in competitive programming.\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S18"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-the-science-of-training-in-competitive-programming-cf-blog-1",
+    "title": "The 'science' of training in competitive programming (CF blog 17842)",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://codeforces.com/blog/entry/17842",
+    "extraLinks": [],
+    "access": "caveat",
+    "verified": "2026-10-23",
+    "why": "Training methodology",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S24"
+    ],
+    "needsReview": true
+  }
+]

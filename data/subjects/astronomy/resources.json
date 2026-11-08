@@ -1,0 +1,676 @@
+[
+  {
+    "id": "astronomy-ao-guide-full-free-astronomy-olympiad-textbook",
+    "title": "AO Guide — full free astronomy-olympiad textbook",
+    "type": "book",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.aoguide.app/guide/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"The guide goes over pretty much all of the theoretical concepts needed for astronomy olympiads.\" Prerequisites: \"basic understanding of high school level mathematics and physics. Familiarity with calculus and basic mechanics is required.\" Units: Positional Astronomy (The Sphere · Coordinate Systems · Time · Perturbation in Astronomical Observations · Sun, Moon and Planets) · Photometry (Radiometry · Magnitude Systems · Radiation Mechanism · Detectors · Types of Telescopes) · Celestial Mechanics (Kepler's Laws · Bound Orbits · Unbound Orbits · Orbital Elements · Three Body Systems · Orbital Maneuvers · General Relativity) · Stellar Astrophysics (Stellar Structure · Classification · Binary Systems · Stellar Evolution · Solar System) · Galactic Astrophysics (Galaxies · The Milky Way) · Cosmology (Our Universe · Geometry of the Universe · The Friedmann Equations) · Practical Astronomy. Each unit has an \"Advanced Topics\" section and a Recommended Reading list.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-lee-yiu-sing-s-comprehensive-ioaa-resource",
+    "title": "Lee Yiu Sing's comprehensive IOAA resource",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://drive.google.com/file/d/13bRXOBf5ri0Q-ipmvBewzgD4ETMWo_xW/view",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"A really awesome and comprehensive resource for IOAA… Can be followed alongside the guide for a different perspective on topics.\"",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S15"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-practical-handouts-for-olympiad-ayush-tiwari",
+    "title": "Practical Handouts for Olympiad — Ayush Tiwari",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://drive.google.com/drive/u/0/folders/1Nft4B755uvtxfaSGLp2ZsVuHQGZ9pEt-",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"Covers all aspects of data analysis and most observation skills required for IOAA.\" Written by a member of Nepal's own IOAA 2025 team. The closest thing that exists to a Nepal-authored IOAA practical manual.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S14"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-stellarium-desktop-mobile",
+    "title": "Stellarium (desktop + mobile)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://stellarium.org/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "The IAO/IOAA observational standard. Named in both the official IOAA syllabus (software may be used in practical problems, announced 3 months ahead) and Osish Niraula's Nepal advice document.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-analemma-primer-fahim-rajit-hossain",
+    "title": "Analemma Primer — Fahim Rajit Hossain",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://rajit13.github.io/website_docs/Analemma_Primer.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"A very comprehensive analysis of the analemma\" — the equation of time is an explicit IOAA A.2.2 syllabus item",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S24"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-ao-guide-resources-page",
+    "title": "AO Guide — Resources page",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.aoguide.app/guide/resources/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "The single densest index of free astronomy-olympiad material found anywhere (30+ items, all verified in §4.3)",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-ao-guide-astrophysics-challenge-aoac",
+    "title": "AO Guide Astrophysics Challenge (AOAC)",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://aoac.aoguide.app/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"original problems designed to test your physics and astrophysics problem-solving skills\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S29"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-ao-guide-master-drive-all-sources-national-international-oly",
+    "title": "AO Guide master Drive — all sources + national & international olympiad papers",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://drive.google.com/drive/folders/1gZDmKb3n2vXHpVZMwFaUJ1ukUccCfYKD",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"contains all the sources used, and more. Many national and international olympiad papers too are available here.\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S20"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-aoxiv",
+    "title": "aoXiv",
+    "type": "tool",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://aoxiv.aoguide.app/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"an archive of problems from various astronomy olympiads throughout the globe. Community-driven and open source\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S30"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-astronomy-olympiad-archives-mega-by-stefan-ivanov",
+    "title": "Astronomy Olympiad Archives (Mega, by Stefan Ivanov)",
+    "type": "tool",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://mega.nz/folder/3ZBWDbTL#U8-utZdSD-6URDjXS1t9Ag",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "not re-verified (Mega)",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S21"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-astronomy-olympiad-discord-server-aods",
+    "title": "Astronomy Olympiad Discord Server (AODS)",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://discord.gg/cuVC54FksD",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"a community of astronomy enthusiasts and olympiad participants. Great place to ask questions, share resources\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S28"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-astronomy-olympiad-potd-problem-of-the-day-archive-fahim-raj",
+    "title": "Astronomy Olympiad POTD (Problem of the Day) Archive — Fahim Rajit Hossain",
+    "type": "tool",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://rajit13.github.io/website_docs/Astro_POTD.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Daily-problem compendium from the Astronomy Olympiad Discord",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S23"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-astronomy-via-latex-a-guide-to-problem-writing-for-astronomy",
+    "title": "Astronomy via LaTeX — a guide to problem writing for Astronomy Olympiads",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://rajit13.github.io/website_docs/Astronomy_via_LaTeX.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Directly usable by NSS STEM Club to write Nepali mock papers with correct astronomical typesetting",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S25"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-baao-observational-handouts",
+    "title": "BAAO Observational Handouts",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://drive.google.com/drive/folders/141B0qiKer2hnpNKzf0yNuLKOqcTA2Cpf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Bangladesh Astronomy & Astrophysics Olympiad — the South-Asian analogue",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S18"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-bdoaa-preparation-material",
+    "title": "BDOAA Preparation Material",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://drive.google.com/drive/folders/0BxnDs515DNddbWg1VTBRZktZODA",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Bangladesh",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S19"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-celestia",
+    "title": "Celestia",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://github.com/CelestiaProject/Celestia",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "3D universe exploration; recommended in Nepal's advice document",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-celestial-sphere-webapp",
+    "title": "Celestial Sphere webapp",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://bunchofcellulose.github.io/celestialsphere/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"A webapp to play with spherical diagrams\" — spherical trigonometry is the core of Positional Astronomy",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S7"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-country-advice-documents-india-romania-singapore-bangladesh",
+    "title": "Country advice documents — India, Romania, Singapore, Bangladesh",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.aoguide.app/assets/advice/IND1.pdf",
+    "extraLinks": [
+      {
+        "label": "🇷🇴 ROU1",
+        "url": "https://www.aoguide.app/assets/advice/ROU1.pdf"
+      },
+      {
+        "label": "🇸🇬 SGP1",
+        "url": "https://www.aoguide.app/assets/advice/SGP1.pdf"
+      },
+      {
+        "label": "🇧🇩 BGL1",
+        "url": "https://www.aoguide.app/assets/advice/BGL1.pdf"
+      }
+    ],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Useful comparators for Nepal's own advice doc (NEP1). ⚠️ The AO Guide also lists a second India article at bunchofcells.vercel.app/blog/indian-astronomy-olympiads — that URL returns HTTP 404; use the IND1.pdf below.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S31"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-kaiwen-s-astronomy-notes-notion",
+    "title": "Kaiwen's astronomy notes (Notion)",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://apochrome.notion.site/Astronomy-c2080a4c5b464868a99f5cddec3e0bbb",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S27"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-kepler-s-equation-the-unsolvable-equation-of-celestial-mecha",
+    "title": "Kepler's Equation: The Unsolvable Equation of Celestial Mechanics — Rajarshi",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://github.com/RajarshiNeel/Kepler-s-Equation-/releases/download/Keplers_Equation/Keplars_Equation.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Bound-orbit mechanics (AO Guide / IOAA A.2.1)",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S26"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-kevin-zhou-s-physics-olympiad-handouts-esp-m6-and-x3",
+    "title": "Kevin Zhou's Physics Olympiad Handouts — esp. M6 and X3",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://knzhou.github.io/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Recommended specifically for astronomy in the AO Guide",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S22"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-learn-the-sky-youtube",
+    "title": "Learn the Sky (YouTube)",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.youtube.com/@learnthesky",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"videos on finding constellations, planets and navigating the sky\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S8"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-nasa-exoplanet-archive",
+    "title": "NASA Exoplanet Archive",
+    "type": "tool",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://exoplanetarchive.ipac.caltech.edu/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Recommended in Nepal's advice document. Real datasets for data-analysis practice.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S13"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-openstax",
+    "title": "OpenStax",
+    "type": "book",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://openstax.org/details/books/astronomy",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Legal open-access general astronomy; the free equivalent of the Kutner text",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S11"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-sean-ken-m-galanza-s-astronomy-handouts",
+    "title": "Sean Ken M. Galanza's astronomy handouts",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://drive.google.com/drive/folders/1i7HR025iR4HO7PHhx7RmDCRa5aRi14hX",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S17"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-sky-academy-android",
+    "title": "Sky Academy (Android)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://play.google.com/store/apps/details?id=digital.dong.skyacademy",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"learn constellations, stars and Messier objects\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S9"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-skychart-tasks",
+    "title": "Skychart Tasks",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://anatolieursu.github.io/sky-chart-practice/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"import your skycharts and practice them online\" — direct training for the Observation Round",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-star-maps-101-and-practices-fahim-rajit-hossain",
+    "title": "Star Maps 101 and Practices (Fahim Rajit Hossain)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://github.com/Rajit13/Star-Maps-101-and-Practices",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Named in Nepal's advice document as a core practical resource",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S10"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-stellar-guesser",
+    "title": "Stellar Guesser",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://stellarguesser.github.io/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"a tool for learning the sky in a game-like manner\" — the cheapest route to the IAO Sky Map round",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S5"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "astronomy-usaaao-guide-handouts",
+    "title": "USAAAO Guide — Handouts",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.usaaao.guide/handouts",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"Handouts for USAAAO and IOAA preparation\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S16"
+    ],
+    "needsReview": true
+  }
+]
