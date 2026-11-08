@@ -6,6 +6,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import type { ReactNode } from "react";
@@ -31,30 +32,39 @@ export function UrlStateProvider({ slug, children }: { slug: string; children: R
   // Server + first client render use defaults → no hydration mismatch.
   const [f, setF] = useState<Filters>(DEFAULT_FILTERS);
 
+  // Mirrors `f` so `set` can compute the next filters inside the event
+  // handler. Doing that in a setState updater would run during React's render
+  // phase, and the writeFilters() → history.pushState() call there updates the
+  // Router mid-render ("Cannot update a component while rendering…").
+  const fRef = useRef<Filters>(DEFAULT_FILTERS);
+
+  const apply = useCallback((next: Filters) => {
+    fRef.current = next;
+    setF(next);
+  }, []);
+
   // The URL is the single source of truth. Re-read it on mount, when the
   // subject changes, and on Back/Forward.
   useEffect(() => {
-    setF(readFilters(window.location.search));
-    const onPop = () => setF(readFilters(window.location.search));
+    apply(readFilters(window.location.search));
+    const onPop = () => apply(readFilters(window.location.search));
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
-  }, [slug]);
+  }, [slug, apply]);
 
   const set = useCallback(
     (patch: Partial<Filters>, mode: "push" | "replace" = "replace") => {
-      setF((prev) => {
-        const next = { ...prev, ...patch };
-        writeFilters(next, mode);
-        return next;
-      });
+      const next = { ...fRef.current, ...patch };
+      apply(next);
+      writeFilters(next, mode);
     },
-    []
+    [apply]
   );
 
   const reset = useCallback(() => {
-    setF(DEFAULT_FILTERS);
+    apply(DEFAULT_FILTERS);
     writeFilters(DEFAULT_FILTERS, "push");
-  }, []);
+  }, [apply]);
 
   const active = useMemo(() => countActive(f), [f]);
 
