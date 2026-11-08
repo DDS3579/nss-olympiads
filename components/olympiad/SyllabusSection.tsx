@@ -14,7 +14,6 @@ import { strong } from "@/lib/color";
 import { SectionHeading, scrollToId } from "./primitives";
 import { LevelChip } from "@/components/system/LevelChip";
 import { useFilters } from "./UrlStateProvider";
-import { actions, useProgress } from "@/lib/progress/store";
 import type { Level, SubjectData, SyllabusSection as SyllabusSectionData } from "@/lib/types";
 
 const NEB_BADGE: Record<
@@ -29,15 +28,7 @@ const NEB_BADGE: Record<
 
 const roundKey = (s: SyllabusSectionData) => (Array.isArray(s.round) ? s.round.join("+") : s.round);
 
-function SectionRow({
-  s,
-  data,
-  checkedKeys,
-}: {
-  s: SyllabusSectionData;
-  data: SubjectData;
-  checkedKeys: Set<string>;
-}) {
+function SectionRow({ s, data }: { s: SyllabusSectionData; data: SubjectData }) {
   const { set } = useFilters();
   const c = data.meta.colorVar;
   const levels = (Array.isArray(s.round) ? s.round : [s.round]) as Level[];
@@ -111,8 +102,6 @@ function SectionRow({
                 <input
                   type="checkbox"
                   id={checkKey(i)}
-                  checked={checkedKeys.has(checkKey(i))}
-                  onChange={() => actions.toggleCheck(data.meta.slug, checkKey(i))}
                   className="mt-0.5 h-4 w-4 flex-shrink-0 accent-[hsl(var(--primary))]"
                 />
                 <label htmlFor={checkKey(i)} className="min-w-0 leading-snug">
@@ -140,8 +129,6 @@ function SectionRow({
 
 export function SyllabusSection({ data }: { data: SubjectData }) {
   const { f, set } = useFilters();
-  const prog = useProgress(data.meta.slug);
-  const checkedKeys = new Set(prog.checks);
   const c = data.meta.colorVar;
   const { meta } = data;
   const sm = meta.syllabusMeta;
@@ -176,7 +163,7 @@ export function SyllabusSection({ data }: { data: SubjectData }) {
           label="Syllabus"
           title={sm?.officialVerified ? "Official syllabus" : "Topic areas"}
           titleId="syllabus-title"
-          description={`What is examined in the ${meta.name} Olympiad, round by round.`}
+          description={`What is examined in the ${meta.name} Olympiad, round by round. Tick items as you revise, or print this page as a checklist (ticks are not saved).`}
           colorVar={c}
         />
 
@@ -297,7 +284,7 @@ export function SyllabusSection({ data }: { data: SubjectData }) {
                     </h3>
                   )}
                   {items.map((s) => (
-                    <SectionRow key={s.id} s={s} data={data} checkedKeys={checkedKeys} />
+                    <SectionRow key={s.id} s={s} data={data} />
                   ))}
                 </div>
               </FadeIn>
