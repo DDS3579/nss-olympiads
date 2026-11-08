@@ -20,7 +20,7 @@
     "sourceIds": [
       "S1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-sajha-notes-neb-grade-12-chemistry",
@@ -43,7 +43,7 @@
     "sourceIds": [
       "S10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-atkins-jones-laverman-7th-ed-w-h-freeman-isbn-9781464183959",
@@ -66,7 +66,7 @@
     "sourceIds": [
       "S19"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-clayden-greeves-warren-2nd-ed-oup-isbn-9780199270293",
@@ -89,7 +89,7 @@
     "sourceIds": [
       "S20"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-david-harvey-depauw-university",
@@ -113,7 +113,7 @@
       "S22",
       "S31"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-official-icho-syllabus-practical-part",
@@ -135,7 +135,7 @@
     "sourceIds": [
       "S29"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-official-icho-syllabus-theoretical-part",
@@ -157,7 +157,7 @@
     "sourceIds": [
       "S28"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-neb-grade-11-chemistry-syllabus-sajha-notes-write-up-of-the-",
@@ -179,7 +179,7 @@
     "sourceIds": [
       "S2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-neb-grade-12-chemistry-syllabus",
@@ -201,7 +201,7 @@
     "sourceIds": [
       "S11"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-neb-syllabus-2076-updated-downloadable-group-pdf",
@@ -223,7 +223,7 @@
     "sourceIds": [
       "S13"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-sajha-notes-chemistry-practicals-lab-grade-11",
@@ -245,7 +245,7 @@
     "sourceIds": [
       "S3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-sajha-notes-chemistry-practicals-lab-grade-12",
@@ -267,7 +267,7 @@
     "sourceIds": [
       "S12"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-sajha-notes-model-question-papers",
@@ -289,7 +289,7 @@
     "sourceIds": [
       "S4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-secondary-education-curriculum-2076-chemistry-grades-11-12-o",
@@ -317,7 +317,7 @@
     "sourceIds": [
       "S14"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-david-r-klein-4th-ed-wiley-isbn-9781119659594",
@@ -343,7 +343,7 @@
       "S18",
       "S35"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-keeler-wothers-2nd-ed-oup-isbn-9780199604135",
@@ -366,7 +366,7 @@
     "sourceIds": [
       "S21"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-klein-vol-1-isbn-9781119837091-vol-2-isbn-9781119837053-6th-",
@@ -394,7 +394,7 @@
     "sourceIds": [
       "S17"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-zumdahl-zumdahl-decoste-11th-ed-cengage-isbn-9780357850671",
@@ -417,7 +417,7 @@
     "sourceIds": [
       "S15"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-acs-accessible-periodic-table",
@@ -440,7 +440,7 @@
     "sourceIds": [
       "S26"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-acs-usnco-exam-reference-page",
@@ -463,7 +463,7 @@
     "sourceIds": [
       "S25"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-hyperphysics-chemistry",
@@ -485,7 +485,7 @@
     "sourceIds": [
       "S9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-khan-academy-high-school-chemistry",
@@ -507,7 +507,7 @@
     "sourceIds": [
       "S7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-libretexts-chemistry",
@@ -531,7 +531,7 @@
       "S6",
       "S23"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-omegalearn-usnco-prep-guide",
@@ -553,7 +553,7 @@
     "sourceIds": [
       "S27"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-openstax",
@@ -577,7 +577,7 @@
       "S5",
       "S24"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-uci-opencourseware-preparation-for-chemistry",
@@ -599,6 +599,6 @@
     "sourceIds": [
       "S8"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]

@@ -33,7 +33,7 @@
     "sourceIds": [
       "D1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-usnco-local-exam-archive-2000-2026-26-papers-2010-2022-with-",
@@ -73,7 +73,7 @@
       "P5",
       "N1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-rsc-uk-chemistry-olympiad-introductory-questions",
@@ -109,7 +109,7 @@
     "sourceIds": [
       "D3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-rsc-how-to-prepare-for-the-chemistry-olympiad",
@@ -145,7 +145,7 @@
     "sourceIds": [
       "D4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-neso-tier-ii-model-question-multi-subject-section-a-20-5-che",
@@ -180,7 +180,7 @@
     "sourceIds": [
       "D5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-rsc-uk-chemistry-olympiad-past-papers-2003-2026",
@@ -216,7 +216,7 @@
     "sourceIds": [
       "P1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-ukcho-past-paper-index-2003-2026-mirror-with-direct-links",
@@ -251,7 +251,7 @@
     "sourceIds": [
       "P2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-rsc-chemistry-olympiad-support-booklet",
@@ -287,7 +287,7 @@
     "sourceIds": [
       "P3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-rsc-chemistry-olympiad-worked-answers",
@@ -323,7 +323,7 @@
     "sourceIds": [
       "P4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-incho-2008-2025-question-paper-english-and-hindi-model-solut",
@@ -359,7 +359,7 @@
     "sourceIds": [
       "N3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-incho-2025-qp-en",
@@ -395,7 +395,7 @@
     "sourceIds": [
       "N4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-incho-2025-qp-hindi",
@@ -431,7 +431,7 @@
     "sourceIds": [
       "N5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-incho-2025-model-solutions",
@@ -467,7 +467,7 @@
     "sourceIds": [
       "N6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-incho-2023-qp-en",
@@ -503,7 +503,7 @@
     "sourceIds": [
       "N7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-hbcse-olympiad-books-catalogue-incl-ladage-narvekar-160",
@@ -538,7 +538,7 @@
     "sourceIds": [
       "N8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-icho-preparatory-problems-2001-2019-see-4-2",
@@ -573,7 +573,7 @@
     "sourceIds": [
       "N9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-icho-official-results-database-per-country-per-year-per-stud",
@@ -608,7 +608,7 @@
     "sourceIds": [
       "F1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-icho-2026-results-58th-tashkent",
@@ -643,7 +643,7 @@
     "sourceIds": [
       "F2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-icho-steering-committee-official-governing-body",
@@ -678,7 +678,7 @@
     "sourceIds": [
       "F3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-icho-iic-bratislava-regulations-syllabus-theoretical-part-pr",
@@ -729,7 +729,7 @@
       "F4",
       "S30"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-ttcho-past-icho-exams-and-solutions-2001-2019-2022-2023-theo",
@@ -764,7 +764,7 @@
     "sourceIds": [
       "F6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "chemistry-pianetachimica-icho-archive-by-edition-italian-icho-team-sit",
@@ -799,6 +799,6 @@
     "sourceIds": [
       "F7"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]
