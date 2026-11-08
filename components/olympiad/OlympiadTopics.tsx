@@ -1,10 +1,9 @@
 "use client";
 
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { cn } from "@/lib/utils";
 import { strong } from "@/lib/color";
-import { actions, useProgress } from "@/lib/progress/store";
 import { SectionHeading, scrollToId } from "./primitives";
 import { useFilters } from "./UrlStateProvider";
 import type { Level, SubjectData, Topic } from "@/lib/types";
@@ -24,7 +23,7 @@ export function OlympiadTopics({ data }: { data: SubjectData }) {
           label="Topics"
           title="The territory you'll master"
           titleId="topics-title"
-          description="Track a topic to prioritise it, or focus one to filter the library and papers."
+          description="Pick a topic to filter the study materials and past papers down to just that area."
           colorVar={c}
         />
 
@@ -78,8 +77,6 @@ function TopicCard({ t, data }: { t: Topic; data: SubjectData }) {
   const { meta } = data;
   const c = meta.colorVar;
   const { f, set } = useFilters();
-  const prog = useProgress(meta.slug);
-  const tracked = prog.tracked.includes(t.id);
   const focused = f.topic === t.id;
 
   const resCount = data.resources.filter(
@@ -190,29 +187,21 @@ function TopicCard({ t, data }: { t: Topic; data: SubjectData }) {
           : "None tagged yet"}
       </div>
 
-      <div className="mt-auto flex items-center justify-between gap-2 pt-5">
+      <div className="mt-auto pt-5">
         <button
-          onClick={() => actions.toggleTracked(meta.slug, t.id)}
-          aria-pressed={tracked}
-          className={cn(
-            "inline-flex min-h-10 items-center gap-1.5 rounded-full border px-4 text-xs font-semibold transition-colors",
-            tracked
-              ? "border-transparent"
-              : "border-border bg-background text-foreground hover:bg-secondary"
-          )}
-          style={tracked ? { background: strong(c), color: "hsl(var(--on-strong))" } : undefined}
-        >
-          {tracked && <Check aria-hidden className="h-3.5 w-3.5" />}
-          {tracked ? "Tracking" : "Track this topic"}
-        </button>
-        <button
-          onClick={() => set({ topic: focused ? "" : t.id }, "push")}
+          onClick={() => {
+            set({ topic: focused ? "" : t.id }, "push");
+            if (!focused) scrollToId("library");
+          }}
           aria-pressed={focused}
-          aria-label={focused ? `Clear focus from ${t.name}` : `Focus library and papers on ${t.name}`}
-          className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:text-foreground"
-          style={focused ? { borderColor: strong(c), color: strong(c) } : undefined}
+          className={cn(
+            "inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-full border px-4 text-xs font-semibold transition-colors sm:min-h-10 sm:w-auto",
+            focused ? "border-transparent" : "border-border bg-background text-foreground hover:bg-secondary"
+          )}
+          style={focused ? { background: strong(c), color: "hsl(var(--on-strong))" } : undefined}
         >
-          <ArrowUpRight className="h-4 w-4" />
+          {focused ? "Clear topic filter" : "Show materials & papers"}
+          <ArrowUpRight aria-hidden className="h-3.5 w-3.5" />
         </button>
       </div>
     </article>
