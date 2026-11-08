@@ -19,7 +19,7 @@
     "sourceIds": [
       "S16"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-lehman-leighton-meyer-mit-free-full-textbook-the-companion-t",
@@ -41,7 +41,7 @@
     "sourceIds": [
       "S9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-cp-algorithms",
@@ -65,7 +65,7 @@
       "S19",
       "S26"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-cs50-s-introduction-to-computer-science",
@@ -87,7 +87,7 @@
     "sourceIds": [
       "S5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-harvard-cs50-free-course-platform",
@@ -109,7 +109,7 @@
     "sourceIds": [
       "S6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-ioi-s-recommended-reading-list-official",
@@ -131,7 +131,7 @@
     "sourceIds": [
       "S36"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-learncpp-com",
@@ -153,7 +153,7 @@
     "sourceIds": [
       "S1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-programming-camp-syllabus",
@@ -175,7 +175,7 @@
     "sourceIds": [
       "S17"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-visualalgo",
@@ -197,7 +197,7 @@
     "sourceIds": [
       "S11"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-",
@@ -220,7 +220,7 @@
     "sourceIds": [
       "S30"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-george-po-lya",
@@ -243,7 +243,7 @@
     "sourceIds": [
       "S31"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-rosen",
@@ -266,7 +266,7 @@
     "sourceIds": [
       "S32"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-steven-skiena",
@@ -289,7 +289,7 @@
     "sourceIds": [
       "S29"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-if-you-ask-me-how-to-improve-your-algorithm-competition-skil",
@@ -312,7 +312,7 @@
     "sourceIds": [
       "S25"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-clrs-cormen-leiserson-rivest-stein",
@@ -335,7 +335,7 @@
     "sourceIds": [
       "S28"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-c-tricks-codeforces-blog-15643",
@@ -358,7 +358,7 @@
     "sourceIds": [
       "S3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-codechef-data-structures-algorithms-list",
@@ -380,7 +380,7 @@
     "sourceIds": [
       "S12"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-codeforces-blog-13529",
@@ -403,7 +403,7 @@
     "sourceIds": [
       "S22"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-codeforces-blog-57282-second-such-collection",
@@ -426,7 +426,7 @@
     "sourceIds": [
       "S23"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-comparing-floating-point-numbers-random-ascii",
@@ -449,7 +449,7 @@
     "sourceIds": [
       "S33"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-competitive-c-manifesto-codeforces-blog-64218",
@@ -472,7 +472,7 @@
     "sourceIds": [
       "S4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-cppreference",
@@ -495,7 +495,7 @@
     "sourceIds": [
       "S2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-how-to-prepare-for-acm-icpc-geeksforgeeks",
@@ -517,7 +517,7 @@
     "sourceIds": [
       "S35"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-hyperpolyglot-c-objective-c-java-c",
@@ -539,7 +539,7 @@
     "sourceIds": [
       "S13"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-ideone-pastebin",
@@ -566,7 +566,7 @@
     "sourceIds": [
       "S15"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-lecture-notes-on-discrete-mathematics-regev-nyu",
@@ -588,7 +588,7 @@
     "sourceIds": [
       "S10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-mit-ocw-6-006-introduction-to-algorithms",
@@ -610,7 +610,7 @@
     "sourceIds": [
       "S7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-mit-ocw-6-042j-mathematics-for-computer-science",
@@ -632,7 +632,7 @@
     "sourceIds": [
       "S8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-stanford-cs97si-introduction-to-programming-contests",
@@ -654,7 +654,7 @@
     "sourceIds": [
       "S18"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-the-science-of-training-in-competitive-programming-cf-blog-1",
@@ -677,6 +677,6 @@
     "sourceIds": [
       "S24"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]

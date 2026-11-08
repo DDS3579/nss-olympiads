@@ -32,7 +32,7 @@
     "sourceIds": [
       "D1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-usaco-guide-general-language-choice-ide-setup-practice-tips-",
@@ -67,7 +67,7 @@
     "sourceIds": [
       "D2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-cses-problem-set-intro-sorting-searching-sections",
@@ -106,7 +106,7 @@
       "P4",
       "N9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-atcoder-beginner-contest-abc-a-and-b-problems",
@@ -143,7 +143,7 @@
       "D4",
       "P5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-codeforces-problems-rated-800-1100",
@@ -181,7 +181,7 @@
       "D5",
       "P6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-ioi-official-past-tasks-1989-present",
@@ -223,7 +223,7 @@
       "D6",
       "N1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-usaco-guide-silver",
@@ -258,7 +258,7 @@
     "sourceIds": [
       "P1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-usaco-official-past-contests",
@@ -294,7 +294,7 @@
     "sourceIds": [
       "P2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-usaco-legacy-training-pages",
@@ -330,7 +330,7 @@
     "sourceIds": [
       "P3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-codechef",
@@ -365,7 +365,7 @@
     "sourceIds": [
       "P7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-hackerrank",
@@ -401,7 +401,7 @@
     "sourceIds": [
       "P8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-project-euler",
@@ -437,7 +437,7 @@
     "sourceIds": [
       "P9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-ioi-public-task-archive-official-github",
@@ -472,7 +472,7 @@
     "sourceIds": [
       "N2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-ioi-statistics-site-olympiads-members-tasks-hall-of-fame",
@@ -507,7 +507,7 @@
     "sourceIds": [
       "N3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-ioi-history-tu-eindhoven",
@@ -542,7 +542,7 @@
     "sourceIds": [
       "N4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-previous-contest-tasks-full-ioi-task-list-by-year-ioi-te-lv",
@@ -577,7 +577,7 @@
     "sourceIds": [
       "N5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-ioi-rankings-archive-2017-2026",
@@ -612,7 +612,7 @@
     "sourceIds": [
       "N6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-usaco-guide-gold",
@@ -647,7 +647,7 @@
     "sourceIds": [
       "N7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "informatics-usaco-guide-advanced",
@@ -682,6 +682,6 @@
     "sourceIds": [
       "N8"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]
