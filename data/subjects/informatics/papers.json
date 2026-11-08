@@ -393,6 +393,7 @@
     "hasSolutions": false,
     "nepalSpecific": false,
     "access": "caveat",
+    "accessNote": "A HackerRank account may be required to access practice problems",
     "verified": "2026-10-23",
     "why": "DSA drill",
     "highlight": false,
