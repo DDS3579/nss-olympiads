@@ -56,7 +56,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${inter.variable}`}
     >
-      <body className="font-body bg-background text-foreground antialiased min-h-screen flex flex-col">
+      {/* suppressHydrationWarning: browser extensions (e.g. ColorZilla's
+          cz-shortcut-listen) inject attributes onto <body> before React
+          hydrates, which is not something the app can control. */}
+      <body
+        suppressHydrationWarning
+        className="font-body bg-background text-foreground antialiased min-h-screen flex flex-col"
+      >
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-primary focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-primary-foreground"
