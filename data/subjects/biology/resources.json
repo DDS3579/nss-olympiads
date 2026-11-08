@@ -19,7 +19,7 @@
     "sourceIds": [
       "S1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-bioly-guide-free-usabo-ibo-handout-library-400-pages",
@@ -41,7 +41,7 @@
     "sourceIds": [
       "S9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-meronotes-neb-class-12-biology-notes-pdf",
@@ -63,7 +63,7 @@
     "sourceIds": [
       "S3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-neb-biology-solution-in-nepali-youtube-playlist-class-12-bot",
@@ -85,7 +85,7 @@
     "sourceIds": [
       "S7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-nepal-online-school-class-11-neb-biology-zoology-notes-video",
@@ -107,7 +107,7 @@
     "sourceIds": [
       "S8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-nepalnotes-class-12-biology-botany-zoology-chapter-wise",
@@ -129,7 +129,7 @@
     "sourceIds": [
       "S2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-sajha-notes-neb-grade-11-biology",
@@ -151,7 +151,7 @@
     "sourceIds": [
       "S4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-characteristics-of-exams-used-at-the-ibo",
@@ -174,7 +174,7 @@
     "sourceIds": [
       "S27"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-animal-anatomy-and-physiology-handouts",
@@ -196,7 +196,7 @@
     "sourceIds": [
       "S12"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-biosystematics-handouts",
@@ -218,7 +218,7 @@
     "sourceIds": [
       "S15"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-cell-biology-handouts",
@@ -240,7 +240,7 @@
     "sourceIds": [
       "S10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-ecology-and-ethology-handouts",
@@ -262,7 +262,7 @@
     "sourceIds": [
       "S13"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-genetics-and-evolution-handouts",
@@ -284,7 +284,7 @@
     "sourceIds": [
       "S14"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-handouts-index",
@@ -308,7 +308,7 @@
       "S16",
       "S21"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-plant-biology-handouts",
@@ -330,7 +330,7 @@
     "sourceIds": [
       "S11"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-bioguide-world-biology-olympiad-preparation",
@@ -352,7 +352,7 @@
     "sourceIds": [
       "S18"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-bioguide-world-ibo-preparation",
@@ -374,7 +374,7 @@
     "sourceIds": [
       "S24"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-biolympiads-where-to-start",
@@ -398,7 +398,7 @@
       "S17",
       "S26"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-ibo-2026-official-site",
@@ -420,7 +420,7 @@
     "sourceIds": [
       "S28"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-omegalearn-high-school-competition-biology",
@@ -444,7 +444,7 @@
       "S19",
       "S25"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-openstax",
@@ -468,7 +468,7 @@
       "S5",
       "S23"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-openstax-2",
@@ -490,7 +490,7 @@
     "sourceIds": [
       "S6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "biology-usabo-student-corner",
@@ -512,6 +512,6 @@
     "sourceIds": [
       "S20"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]
