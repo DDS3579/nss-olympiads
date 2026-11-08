@@ -1,9 +1,9 @@
 export function ScrollCue() {
   return (
     <a
-      href="#why"
-      aria-label="Scroll to Why Olympiads"
-      className="absolute inset-x-0 bottom-4 z-10 flex flex-col items-center gap-2.5 pb-1 transition-opacity duration-300 hover:opacity-70"
+      href="#how"
+      aria-label="Scroll to How it works"
+      className="absolute inset-x-0 bottom-4 z-10 hidden flex-col items-center gap-2.5 pb-1 transition-opacity duration-300 hover:opacity-70 md:flex"
     >
       <span className="font-heading text-[11px] font-semibold uppercase tracking-[0.4em] text-muted-foreground">
         Explore
@@ -15,5 +15,5 @@ export function ScrollCue() {
         />
       </span>
     </a>
-  )
+  );
 }
