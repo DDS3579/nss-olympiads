@@ -1,19 +1,22 @@
 import type { MetadataRoute } from "next";
 import { getAllSubjects } from "@/lib/data";
-import { siteConfig } from "@/lib/site-config";
+import { SITE_UPDATED, siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: siteConfig.url, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    { url: `${siteConfig.url}/olympiads`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-  ];
-
-const olympiadRoutes: MetadataRoute.Sitemap = getAllSubjects().map((s) => ({
-  url: `${siteConfig.url}/olympiads/${s.meta.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
+  const base = siteConfig.url;
+  const statics = ["", "/olympiads", "/exams", "/about", "/faq", "/privacy", "/terms"].map(
+    (p) => ({
+      url: `${base}${p}`,
+      lastModified: SITE_UPDATED,
+      changeFrequency: "monthly" as const,
+      priority: p === "" ? 1 : p === "/olympiads" ? 0.9 : 0.6,
+    })
+  );
+  const subjects = getAllSubjects().map((s) => ({
+    url: `${base}/olympiads/${s.meta.slug}`,
+    lastModified: s.meta.updatedAt,
+    changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
-
-  return [...staticRoutes, ...olympiadRoutes];
+  return [...statics, ...subjects];
 }
