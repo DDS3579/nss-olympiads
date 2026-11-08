@@ -20,6 +20,7 @@ import { OlympiadCTA } from "./OlympiadCTA";
 import { LevelTabs } from "./LevelTabs";
 import { StartHere } from "./StartHere";
 import { TopicToast } from "./TopicToast";
+import { JumpMenu } from "./JumpMenu";
 
 function GoDeeper({ colorVar }: { colorVar: string }) {
   return (
@@ -72,7 +73,7 @@ export function SubjectExperience({
           <StartHere data={data} />
 
           {/* ── Level control: "Which exam are you sitting?" (T4.3) ── */}
-          <div className="mx-auto max-w-6xl px-6 pt-12 lg:pt-16">
+          <div className="mx-auto max-w-6xl px-5 pt-10 sm:px-6 lg:pt-16">
             <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-muted-foreground">
               Which exam are you sitting?
             </p>
@@ -104,6 +105,7 @@ export function SubjectExperience({
         </div>
 
         <TopicToast data={data} />
+        <JumpMenu colorVar={olympiad.colorVar} />
       </div>
     </UrlStateProvider>
   );
