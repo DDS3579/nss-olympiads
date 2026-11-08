@@ -1,55 +1,58 @@
-import type { Metadata } from "next";
-import { mailto, siteConfig } from "@/lib/site-config";
+import { LegalPage, LegalSection } from "@/components/legal/LegalPage";
+import { siteConfig } from "@/lib/site-config";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-  description:
-    "The terms of service for the NSS Olympiad Hub — short, plain, and honest.",
-};
+export const metadata = pageMeta({
+  title: "Terms",
+  description: "Terms of use for the NSS Olympiad Hub.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 pb-24 pt-32">
-      <div className="mb-8 rounded-xl border border-dashed border-amber-500/60 bg-amber-500/10 px-4 py-3 text-sm font-medium text-amber-700 dark:text-amber-400">
-        Draft — pending owner review. This banner disappears once the text is
-        approved.
-      </div>
+    <LegalPage
+      title="Terms of use"
+      intro="Plain-language terms for using the hub."
+      updated="7 November 2026"
+    >
+      <LegalSection title="Information, not guarantees">
+        <p>
+          The hub provides educational information and links. We work hard to keep it accurate, but
+          we cannot guarantee dates, rules or fees. Always confirm with the official organiser — their
+          links are on each subject page.
+        </p>
+      </LegalSection>
 
-      <p className="font-heading text-[11px] font-semibold uppercase tracking-[0.3em] text-primary">
-        Legal
-      </p>
-      <h1 className="mt-3 font-heading text-4xl font-bold text-foreground">
-        Terms of Service
-      </h1>
+      <LegalSection title="Third-party material">
+        <p>
+          Materials we host are shared under the licence shown on each item. Third-party materials
+          remain the property of their owners; please follow their terms when you use them.
+        </p>
+      </LegalSection>
 
-      <ul className="mt-10 list-disc space-y-4 pl-6 leading-relaxed text-muted-foreground">
-        <li>
-          The site provides educational information and links; we try to keep
-          it accurate but can&apos;t guarantee dates, rules or fees — always
-          confirm with the official organiser (links provided).
-        </li>
-        <li>
-          Materials we host are used under the licence stated on each item;
-          third-party materials remain the property of their owners — follow
-          their terms.
-        </li>
-        <li>
-          You may not misuse the site (scraping at abusive rates,
-          impersonation).
-        </li>
-        <li>We may correct or remove content at any time.</li>
-      </ul>
+      <LegalSection title="Fair use of the site">
+        <p>
+          Please don&apos;t misuse the site — for example by scraping at abusive rates or
+          impersonating others.
+        </p>
+      </LegalSection>
 
-      <p className="mt-10 text-sm text-muted-foreground">
-        Contact:{" "}
-        <a
-          href={mailto("Terms question")}
-          className="font-medium text-foreground underline underline-offset-4 hover:text-primary"
-        >
-          {siteConfig.contact.emailAddress}
-        </a>
-        . Last updated: 24 October 2026 (draft).
-      </p>
-    </div>
+      <LegalSection title="Changes">
+        <p>We may correct, update or remove content at any time.</p>
+      </LegalSection>
+
+      <LegalSection title="Contact">
+        <p>
+          Questions or removal requests:{" "}
+          <a
+            href={`mailto:${siteConfig.contact.emailAddress}`}
+            className="font-medium text-foreground underline underline-offset-4"
+          >
+            {siteConfig.contact.emailAddress}
+          </a>
+          .
+        </p>
+      </LegalSection>
+    </LegalPage>
   );
 }
