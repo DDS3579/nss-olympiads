@@ -1,27 +1,30 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
+import type { CSSProperties } from "react";
+import type { SubjectIndexItem } from "@/lib/types";
 
-type NodeOlympiad = { slug: string; name: string }
+type Label =
+  | "bottom"
+  | "bottom-right"
+  | "bottom-left"
+  | "right"
+  | "left"
+  | "top-right"
+  | "top-left";
 
-type NodeDef = {
-  x: number
-  y: number
-  label: "bottom" | "bottom-right" | "bottom-left" | "right" | "left" | "top-right" | "top-left"
-}
-
-/* ring order: top-center → clockwise */
-const NODES: NodeDef[] = [
-  { x: 50, y: 8,  label: "bottom" },
+/* ring order: top-centre → clockwise (percent of the hero box) */
+const NODES: { x: number; y: number; label: Label }[] = [
+  { x: 50, y: 8, label: "bottom" },
   { x: 89, y: 23, label: "bottom-left" },
   { x: 94, y: 53, label: "left" },
   { x: 82, y: 84, label: "top-left" },
   { x: 20, y: 76, label: "top-right" },
-  { x: 6,  y: 55, label: "right" },
+  { x: 6, y: 55, label: "right" },
   { x: 11, y: 27, label: "bottom-right" },
-]
+];
 
-const LABEL_CLS: Record<NodeDef["label"], string> = {
+const LABEL_CLS: Record<Label, string> = {
   bottom: "left-1/2 top-full mt-2 -translate-x-1/2",
   "bottom-right": "left-3 top-full mt-2",
   "bottom-left": "right-3 top-full mt-2",
@@ -29,21 +32,21 @@ const LABEL_CLS: Record<NodeDef["label"], string> = {
   left: "right-full top-1/2 mr-2 -translate-y-1/2",
   "top-right": "left-3 bottom-full mb-2",
   "top-left": "right-3 bottom-full mb-2",
-}
+};
 
 export function OlympiadNodes({
-  olympiads,
+  subjects,
   onActivate,
 }: {
-  olympiads: NodeOlympiad[]
-  onActivate: (index: number | null) => void
+  subjects: SubjectIndexItem[];
+  onActivate: (slug: string | null) => void;
 }) {
-  const items = olympiads.slice(0, 7)
-  const pos = NODES.slice(0, items.length)
+  const items = subjects.slice(0, NODES.length);
+  const pos = NODES.slice(0, items.length);
 
   return (
     <div className="absolute inset-0 z-[2] hidden md:block">
-      {/* dotted ring connecting the seven worlds */}
+      {/* dotted ring joining the worlds */}
       <svg
         aria-hidden
         className="absolute inset-0 h-full w-full"
@@ -51,59 +54,71 @@ export function OlympiadNodes({
         preserveAspectRatio="none"
       >
         {pos.map((p, i) => {
-          const q = pos[(i + 1) % pos.length]
+          const q = pos[(i + 1) % pos.length];
           return (
             <line
               key={i}
-              x1={p.x} y1={p.y} x2={q.x} y2={q.y}
+              x1={p.x}
+              y1={p.y}
+              x2={q.x}
+              y2={q.y}
               stroke="rgba(40,184,242,0.12)"
               strokeWidth="1"
               strokeDasharray="1 7"
               strokeLinecap="round"
               vectorEffect="non-scaling-stroke"
             />
-          )
+          );
         })}
       </svg>
 
-      {/* the seven Olympiad nodes */}
       {items.map((o, i) => {
-        const p = pos[i]
+        const p = pos[i];
+        const col = `hsl(var(${o.colorVar}))`;
         return (
           <Link
             key={o.slug}
             href={`/olympiads/${o.slug}`}
             aria-label={`Explore ${o.name}`}
-            onMouseEnter={() => onActivate(i)}
+            onMouseEnter={() => onActivate(o.slug)}
             onMouseLeave={() => onActivate(null)}
-            onFocus={() => onActivate(i)}
+            onFocus={() => onActivate(o.slug)}
             onBlur={() => onActivate(null)}
             className="group absolute -translate-x-1/2 -translate-y-1/2 rounded-full p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            style={{ left: `${p.x}%`, top: `${p.y}%` }}
+            style={{ left: `${p.x}%`, top: `${p.y}%` } as CSSProperties}
           >
             {/* node */}
             <span className="relative block h-2.5 w-2.5">
-              <span className="absolute -inset-[7px] rounded-full border border-primary/20 transition-colors duration-300 group-hover:border-primary/60" />
-              <span className="absolute -inset-[3px] rounded-full bg-primary/20 blur-[3px] transition-colors duration-300 group-hover:bg-primary/50" />
-              <span className="absolute inset-0 rounded-full bg-[#7fdcfb] shadow-[0_0_10px_rgba(40,184,242,0.9)] transition-transform duration-300 group-hover:scale-125" />
+              <span
+                className="absolute -inset-[7px] rounded-full border opacity-40 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100"
+                style={{ borderColor: col }}
+              />
+              <span
+                className="absolute -inset-[3px] rounded-full opacity-30 blur-[3px] transition-opacity duration-300 group-hover:opacity-70"
+                style={{ background: col }}
+              />
+              <span
+                className="absolute inset-0 rounded-full transition-transform duration-300 group-hover:scale-125"
+                style={{ background: col, boxShadow: `0 0 10px ${col}` }}
+              />
             </span>
 
-            {/* hover label */}
+            {/* label */}
             <span
-              className={`pointer-events-none absolute z-10 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus:translate-y-0 group-focus:opacity-100 ${LABEL_CLS[p.label]}`}
+              className={`pointer-events-none absolute z-10 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 ${LABEL_CLS[p.label]}`}
             >
-              <span className="block rounded-lg border border-white/10 bg-[#0a1226]/95 px-3 py-2 text-left shadow-[0_8px_30px_rgba(0,0,0,0.5)] backdrop-blur">
-                <span className="block whitespace-nowrap font-heading text-[11px] font-bold uppercase tracking-[0.12em] text-[#f3f6fb]">
+              <span className="block w-max max-w-[220px] rounded-lg border border-white/10 bg-[#0a1226]/95 px-3 py-2 text-left shadow-[0_8px_30px_rgba(0,0,0,0.5)]">
+                <span className="block font-heading text-[11px] font-bold uppercase tracking-[0.12em] text-[#f3f6fb]">
                   {o.name}
                 </span>
-                <span className="mt-0.5 block text-xs font-medium text-[#28b8f2]">
+                <span className="mt-0.5 block text-xs font-medium" style={{ color: col }}>
                   Explore →
                 </span>
               </span>
             </span>
           </Link>
-        )
+        );
       })}
     </div>
-  )
+  );
 }
