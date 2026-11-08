@@ -7,7 +7,6 @@ import { dateStatus } from "@/lib/date";
 import { persistLevel } from "@/lib/url-state";
 import { useFilters } from "./UrlStateProvider";
 import { scrollToId, SectionHeading } from "./primitives";
-import { ContinueCard } from "./ContinueCard";
 import type { Level, RoundDate, SubjectData } from "@/lib/types";
 
 const LEVEL_ORDER: Level[] = ["district", "province", "national", "international"];
@@ -161,16 +160,15 @@ export function StartHere({ data }: { data: SubjectData }) {
   useEffect(() => setNow(Date.now()), []);
 
   const firstExisting = LEVEL_ORDER.find((k) => meta.levels[k].exists) ?? "province";
-  const timedPaper = data.papers.find((p) => p.format.duration);
   const sources = [...new Set(meta.rounds.map((r) => r.source.label).filter(Boolean))];
 
   return (
     <section
       id="start"
       aria-labelledby="start-title"
-      className="section-anchor border-b border-border py-16 lg:py-20"
+      className="section-anchor border-b border-border py-12 lg:py-20"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <SectionHeading
           index="00"
           label="Start here"
@@ -179,8 +177,6 @@ export function StartHere({ data }: { data: SubjectData }) {
           colorVar={c}
           titleId="start-title"
         />
-
-        <ContinueCard data={data} />
 
         {/* The ladder */}
         <div className="relative">
@@ -215,7 +211,7 @@ export function StartHere({ data }: { data: SubjectData }) {
               onClick={() => scrollToId("papers")}
               className="inline-flex min-h-10 items-center rounded-full border border-border bg-background px-4 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              {timedPaper ? "Take the timed paper" : "Browse past papers"}
+              Browse past papers
             </button>
             <button
               onClick={() => scrollToId("syllabus")}
