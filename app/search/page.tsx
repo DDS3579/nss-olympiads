@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { SearchPageClient } from "@/components/nav/SearchPageClient";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Search",
-  description: "Search study materials, past papers and topics across all 7 Olympiads.",
-  robots: { index: false },
-};
+  description: "Search every Olympiad's study materials, past papers and topics.",
+  path: "/search",
+  noindex: true,
+});
 
 export default function SearchPage() {
   return <SearchPageClient />;
