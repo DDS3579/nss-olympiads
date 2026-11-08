@@ -41,14 +41,12 @@ export function filtersToSearch(f: Filters): string {
   return p.toString();
 }
 
-/** Persist the student's chosen level per subject (T4.3). UrlStateProvider reads it on mount. */
-export function persistLevel(slug: string, level: string) {
-  try {
-    window.localStorage.setItem(`nss:v2:level:${slug}`, level);
-  } catch {
-    /* ignore */
-  }
-}
+/**
+ * Kept as a no-op so existing call sites compile. The site is stateless:
+ * the URL (?level=…) is the only place a chosen level lives.
+ */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function persistLevel(_slug: string, _level: string) {}
 
 export function countActive(f: Filters): number {
   return [f.level !== "all", !!f.topic, !!f.type, !!f.q, f.nepal, f.sol].filter(Boolean).length;
