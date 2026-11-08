@@ -142,7 +142,7 @@ for (const t of tables) {
   // --- Study/Past-paper tables with an id column (D1, S1, P1, N1, I1, A1, T1, C1…)
   if (isPapers || isStudy) {
     const iTitle = col(t.header, "paper", "resource", "item");
-    const iUrl = col(t.header, "url");
+    const iUrl = col(t.header, "url", "direct link");
     const iStatus = col(t.header, "status");
     const iType = col(t.header, "type");
     const iWhy = col(t.header, "why", "what it is", "verified content", "date / content", "level analogue", "level fit");
