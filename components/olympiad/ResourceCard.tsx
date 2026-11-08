@@ -1,12 +1,11 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import type { CSSProperties } from "react";
 import {
   ArrowDownToLine,
   ArrowUpRight,
   BookOpen,
-  Bookmark,
-  BookmarkCheck,
-  Check,
   Database,
   FileCheck,
   FileText,
@@ -21,8 +20,8 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import type { Resource, ResourceType, SubjectMeta } from "@/lib/types";
 import { strong } from "@/lib/color";
+import { cn } from "@/lib/utils";
 import { mailto } from "@/lib/site-config";
-import { actions, useProgress } from "@/lib/progress/store";
 import { useFilters } from "./UrlStateProvider";
 import { Badge } from "@/components/system/Chips";
 import { LevelChip } from "@/components/system/LevelChip";
@@ -46,9 +45,9 @@ const fmtSize = (b: number) =>
   b >= 1_048_576 ? `${(b / 1_048_576).toFixed(1)} MB` : `${Math.round(b / 1024)} KB`;
 
 const PRIMARY_BTN =
-  "inline-flex min-h-10 items-center gap-2 rounded-full px-5 text-xs font-semibold transition-all hover:brightness-110";
+  "inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition-all hover:brightness-110 sm:min-h-10 sm:flex-none sm:text-xs";
 const ICON_BTN =
-  "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground";
+  "inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:h-10 sm:w-10";
 
 export function ResourceCard({
   r,
@@ -61,38 +60,59 @@ export function ResourceCard({
 }) {
   const c = meta.colorVar;
   const { set } = useFilters();
-  const prog = useProgress(meta.slug);
-  const saved = prog.saved.includes(r.id);
-  const done = prog.done.includes(r.id);
+  const [flash, setFlash] = useState(false);
 
   const hosted = r.url.startsWith("/");
   const Icon = TYPE_ICONS[r.type] ?? FileText;
 
-  const markOpened = () => {
-    actions.opened(meta.slug, r.id, r.title);
-  };
+  // Deep link from search: /olympiads/<slug>?hl=<id>#library
+  useEffect(() => {
+    const hl = new URLSearchParams(window.location.search).get("hl");
+    if (hl !== r.id) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const t1 = setTimeout(() => {
+      document
+        .getElementById(`res-${r.id}`)
+        ?.scrollIntoView({ block: "center", behavior: reduce ? "auto" : "smooth" });
+      setFlash(true);
+    }, 450);
+    const t2 = setTimeout(() => setFlash(false), 3200);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
+  }, [r.id]);
 
   const reportHref = mailto(
     `Broken/incorrect link: ${r.id}`,
     `Subject: ${meta.slug}\nResource: ${r.title}\nURL: ${r.url}\nWhat's wrong: `
   );
 
+  const primaryStyle = { background: strong(c), color: "hsl(var(--on-strong))" };
+
   return (
     <article
       id={`res-${r.id}`}
-      className="rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
+      className={cn(
+        "section-anchor rounded-2xl border bg-card p-4 transition-all sm:p-5",
+        flash ? "border-transparent ring-2" : "border-border hover:border-primary/40"
+      )}
+      style={flash ? ({ ["--tw-ring-color" as string]: strong(c) } as CSSProperties) : undefined}
     >
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
         {/* icon · title · badges */}
         <div className="flex min-w-0 flex-1 items-start gap-3">
           <div
             className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl"
             style={{ background: `hsl(var(${c}) / 0.1)` }}
           >
-            <Icon className="h-5 w-5" style={{ color: strong(c) }} />
+            <Icon aria-hidden className="h-5 w-5" style={{ color: strong(c) }} />
           </div>
           <div className="min-w-0">
-            <h3 className="line-clamp-2 font-heading font-semibold leading-snug text-foreground" title={r.title}>
+            <h3
+              className="line-clamp-3 font-heading font-semibold leading-snug text-foreground sm:line-clamp-2"
+              title={r.title}
+            >
               {r.title}
             </h3>
             <div className="mt-1.5 flex flex-wrap items-center gap-1.5">
@@ -111,15 +131,10 @@ export function ResourceCard({
           </div>
         </div>
 
-        {/* primary action by kind (B-13 rules) */}
-        <div className="flex flex-shrink-0 items-center gap-1.5">
+        {/* primary action by kind */}
+        <div className="flex w-full flex-shrink-0 items-center gap-1.5 sm:w-auto">
           {r.kind === "page" && !hosted ? (
-            <Link
-              href={r.url}
-              onClick={markOpened}
-              className={PRIMARY_BTN}
-              style={{ background: strong(c), color: "hsl(var(--on-strong))" }}
-            >
+            <Link href={r.url} className={PRIMARY_BTN} style={primaryStyle}>
               Read
             </Link>
           ) : (
@@ -128,9 +143,8 @@ export function ResourceCard({
                 href={r.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={markOpened}
                 className={PRIMARY_BTN}
-                style={{ background: strong(c), color: "hsl(var(--on-strong))" }}
+                style={primaryStyle}
               >
                 {hosted ? "View PDF" : "Open"}
                 {!hosted && <ArrowUpRight aria-hidden className="h-3.5 w-3.5" />}
@@ -138,7 +152,7 @@ export function ResourceCard({
               </a>
               {hosted && (
                 <a href={r.url} download aria-label={`Download ${r.title}`} className={ICON_BTN}>
-                  <ArrowDownToLine className="h-4 w-4" />
+                  <ArrowDownToLine aria-hidden className="h-4 w-4" />
                 </a>
               )}
             </>
@@ -185,15 +199,15 @@ export function ResourceCard({
         )}
       </div>
 
-      {r.topics.length > 0 && (
-        <div className="mt-2 flex flex-wrap gap-1.5">
+      {r.topics.some((t) => topicNames[t]) && (
+        <div className="mt-2.5 flex flex-wrap gap-1.5">
           {r.topics
             .filter((t) => topicNames[t])
             .map((t) => (
               <button
                 key={t}
                 onClick={() => set({ topic: t }, "push")}
-                className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                className="inline-flex min-h-8 items-center rounded-full border border-border bg-background px-3 text-xs font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
               >
                 {topicNames[t]}
               </button>
@@ -218,40 +232,13 @@ export function ResourceCard({
             </a>
           ))}
         </div>
-        <div className="flex items-center gap-1.5">
-          <button
-            onClick={() => actions.toggleSaved(meta.slug, r.id)}
-            aria-pressed={saved}
-            aria-label={saved ? `Remove ${r.title} from saved` : `Save ${r.title} for later`}
-            className={ICON_BTN}
-          >
-            {saved ? (
-              <BookmarkCheck className="h-4 w-4" style={{ color: strong(c) }} />
-            ) : (
-              <Bookmark className="h-4 w-4" />
-            )}
-          </button>
-          <button
-            onClick={() => actions.toggleDone(meta.slug, r.id)}
-            aria-pressed={done}
-            className={
-              done
-                ? "inline-flex min-h-10 items-center gap-1.5 rounded-full border border-transparent px-3 text-xs font-semibold transition-colors"
-                : "inline-flex min-h-10 items-center gap-1.5 rounded-full border border-border bg-background px-3 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
-            }
-            style={done ? { background: strong(c), color: "hsl(var(--on-strong))" } : undefined}
-          >
-            <Check aria-hidden className="h-3.5 w-3.5" />
-            {done ? "Done" : "Mark done"}
-          </button>
-          <a
-            href={reportHref}
-            aria-label={`Report a problem with this link: ${r.title}`}
-            className={ICON_BTN}
-          >
-            <Flag className="h-4 w-4" />
-          </a>
-        </div>
+        <a
+          href={reportHref}
+          aria-label={`Report a problem with this link: ${r.title}`}
+          className="inline-flex min-h-10 items-center gap-1.5 rounded-full px-3 text-xs font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+        >
+          <Flag aria-hidden className="h-3.5 w-3.5" /> Report
+        </a>
       </div>
     </article>
   );
