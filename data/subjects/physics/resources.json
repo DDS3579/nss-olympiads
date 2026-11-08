@@ -26,7 +26,7 @@
       "S13",
       "S21"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-jaan-kalda-recommended-list-of-problems",
@@ -48,7 +48,7 @@
     "sourceIds": [
       "C1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-kalda-formulas-for-ipho-ver-1-1",
@@ -70,7 +70,7 @@
     "sourceIds": [
       "S32"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-official-ipho-syllabus-accepted-astana-2014-amended-mumbai-2",
@@ -97,7 +97,7 @@
     "sourceIds": [
       "S31"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-errors-and-their-propagation-kafle-limbu",
@@ -121,7 +121,7 @@
       "S9",
       "S17"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-graphing-for-nepho-prabhakar-kafle-sanam-limbu",
@@ -145,7 +145,7 @@
       "S7",
       "S15"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-mechanics-for-nepho-dinesh-kandel-ipho-2011-bronze-nepal",
@@ -167,7 +167,7 @@
     "sourceIds": [
       "S14"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-significant-figures-and-rounding-kafle-limbu",
@@ -191,7 +191,7 @@
       "S8",
       "S16"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-aapt-u-s-physics-team-exams-f-ma-usapho-usapho-plus-all-year",
@@ -213,7 +213,7 @@
     "sourceIds": [
       "C5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-an-introduction-to-error-analysis-john-r-taylor",
@@ -236,7 +236,7 @@
     "sourceIds": [
       "S18"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-bdpho-national-round-papers-category-c",
@@ -259,7 +259,7 @@
     "sourceIds": [
       "S26"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-bdpho-past-papers-13th-bdpho-category-c-higher-secondary",
@@ -287,7 +287,7 @@
     "sourceIds": [
       "S19"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-curriculum-development-centre-cdc-digital-library-portal",
@@ -315,7 +315,7 @@
     "sourceIds": [
       "S2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-gulf-physics-olympiads-gpho",
@@ -337,7 +337,7 @@
     "sourceIds": [
       "C4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-hbcse-india-past-papers-index-nsep-inpho-2008-2025-english-a",
@@ -362,7 +362,7 @@
       "S20",
       "S25"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-hrk-5th-ed-complete-mcq-answer-key-kevin-zhou-ch-1-17-physol",
@@ -385,7 +385,7 @@
     "sourceIds": [
       "S49"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-hyperphysics-georgia-state-university",
@@ -407,7 +407,7 @@
     "sourceIds": [
       "S6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-jaan-kalda-ver-0-5",
@@ -431,7 +431,7 @@
       "S29",
       "S37"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-jaan-kalda-ver-1-2",
@@ -455,7 +455,7 @@
       "S28",
       "S35"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-jaan-kalda-ver-1-2-2",
@@ -479,7 +479,7 @@
       "S30",
       "S34"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-jaan-kalda-study-guide-ver-0-87",
@@ -503,7 +503,7 @@
       "S27",
       "S36"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-kalda-a-short-introduction-to-nonlinear-waves",
@@ -525,7 +525,7 @@
     "sourceIds": [
       "S40"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-kalda-complete-study-guide-index-all-of-the-above-translatio",
@@ -547,7 +547,7 @@
     "sourceIds": [
       "S41"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-kalda-kinematics-ver-2-0",
@@ -569,7 +569,7 @@
     "sourceIds": [
       "S33"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-kalda-quantum-mechanics-ver-0-4",
@@ -591,7 +591,7 @@
     "sourceIds": [
       "S39"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-kalda-theory-of-relativity-siim-ainsaar-ver-0-6",
@@ -613,7 +613,7 @@
     "sourceIds": [
       "S38"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-mit-ocw-8-01sc-classical-mechanics",
@@ -635,7 +635,7 @@
     "sourceIds": [
       "S11"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-mit-ocw-8-02-physics-ii-electricity-magnetism",
@@ -657,7 +657,7 @@
     "sourceIds": [
       "S22"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-mit-ocw-8-03sc-physics-iii-vibrations-and-waves",
@@ -679,7 +679,7 @@
     "sourceIds": [
       "S23"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nordic-baltic-physics-olympiad-nbpho-problems",
@@ -701,6 +701,6 @@
     "sourceIds": [
       "C3"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]

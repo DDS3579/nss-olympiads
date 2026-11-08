@@ -32,7 +32,7 @@
     "sourceIds": [
       "D1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-e-mc2-hysics-lympiad-sample-question-set",
@@ -67,7 +67,7 @@
     "sourceIds": [
       "D2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepal-science-olympiad-neso-tier-ii-model-question",
@@ -102,7 +102,7 @@
     "sourceIds": [
       "D3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-neso-application-form-tier-i-ii-format-description",
@@ -137,7 +137,7 @@
     "sourceIds": [
       "D4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ccrc-mini-olympiad-for-physics",
@@ -172,7 +172,7 @@
     "sourceIds": [
       "D5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2022-pre-selection-test-for-ipho-2023",
@@ -207,7 +207,7 @@
     "sourceIds": [
       "P1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2018-pre-selection-first-round-ipho-49",
@@ -242,7 +242,7 @@
     "sourceIds": [
       "P2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2017-pre-selection",
@@ -277,7 +277,7 @@
     "sourceIds": [
       "P3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2017-model-question-pre-selection-format",
@@ -312,7 +312,7 @@
     "sourceIds": [
       "P4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2019-official-registration-form-admission-card-syllabu",
@@ -348,7 +348,7 @@
     "sourceIds": [
       "P5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2020-old-question",
@@ -384,7 +384,7 @@
     "sourceIds": [
       "P6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2013-pre-selection-test",
@@ -420,7 +420,7 @@
     "sourceIds": [
       "P7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-index-page-hosting-p2-p4-all-nepho-study-handouts",
@@ -455,7 +455,7 @@
     "sourceIds": [
       "P8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2018-final-round",
@@ -490,7 +490,7 @@
     "sourceIds": [
       "N1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2017-final-round",
@@ -525,7 +525,7 @@
     "sourceIds": [
       "N2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2016-final-round",
@@ -560,7 +560,7 @@
     "sourceIds": [
       "N3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2025-26-first-round-result-list-top-25-national-champi",
@@ -595,7 +595,7 @@
     "sourceIds": [
       "N4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-nepho-2025-26-final-round-result-image",
@@ -630,7 +630,7 @@
     "sourceIds": [
       "N5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-2026-theoretical-examination",
@@ -665,7 +665,7 @@
     "sourceIds": [
       "I1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-2026-theoretical-answer-sheet",
@@ -700,7 +700,7 @@
     "sourceIds": [
       "I2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-2026-experimental-examination",
@@ -735,7 +735,7 @@
     "sourceIds": [
       "I3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-2026-experimental-answer-sheet",
@@ -770,7 +770,7 @@
     "sourceIds": [
       "I4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-2026-official-questions-landing-page",
@@ -805,7 +805,7 @@
     "sourceIds": [
       "I5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-2026-final-results-nepal-s-silver-is-here",
@@ -840,7 +840,7 @@
     "sourceIds": [
       "I6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-past-problems-solutions-1967-present-ipho-singapore-per",
@@ -875,7 +875,7 @@
     "sourceIds": [
       "I7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-statutes-syllabus-official",
@@ -910,7 +910,7 @@
     "sourceIds": [
       "I8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-unofficial-results-statistics-portal-per-country-per-ye",
@@ -945,7 +945,7 @@
     "sourceIds": [
       "I9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-ipho-problems-solutions-curated-pdf-collection-physics-with-",
@@ -980,7 +980,7 @@
     "sourceIds": [
       "I10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-apho-2025-theoretical-exam",
@@ -1015,7 +1015,7 @@
     "sourceIds": [
       "A1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-apho-2025-theory-solutions",
@@ -1050,7 +1050,7 @@
     "sourceIds": [
       "A2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-apho-2025-experimental-exam",
@@ -1085,7 +1085,7 @@
     "sourceIds": [
       "A3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-apho-2025-experimental-solutions",
@@ -1120,7 +1120,7 @@
     "sourceIds": [
       "A4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-apho-2025-questions-landing-page",
@@ -1155,7 +1155,7 @@
     "sourceIds": [
       "A5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-apho-2026-busan-korea-theoretical-problems-experimental-prob",
@@ -1190,7 +1190,7 @@
     "sourceIds": [
       "A6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-apho-1st-8th-problems-solutions-compilation",
@@ -1226,7 +1226,7 @@
     "sourceIds": [
       "A7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2020-indonesian-national-olympiad-district-stage-selection",
@@ -1261,7 +1261,7 @@
     "sourceIds": [
       "T1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2019-indonesian-national-olympiad-district-stage-selection",
@@ -1296,7 +1296,7 @@
     "sourceIds": [
       "T2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-200-estonian-physics-olympiad-problems-2011-2018",
@@ -1331,7 +1331,7 @@
     "sourceIds": [
       "T3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2020-russian-physics-olympiad-grade-11-round-1",
@@ -1366,7 +1366,7 @@
     "sourceIds": [
       "T4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2020-russian-physics-olympiad-grade-11-round-2",
@@ -1401,7 +1401,7 @@
     "sourceIds": [
       "T5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2019-russian-physics-olympiad-grade-10",
@@ -1436,7 +1436,7 @@
     "sourceIds": [
       "T6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2018-chinese-physics-olympiad-finals",
@@ -1471,7 +1471,7 @@
     "sourceIds": [
       "T7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2018-chinese-physics-olympiad-finals-solutions",
@@ -1506,7 +1506,7 @@
     "sourceIds": [
       "T8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2019-chinese-physics-olympiad-finals-8-problems",
@@ -1541,7 +1541,7 @@
     "sourceIds": [
       "T9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2020-azerbaijan-physics-olympiad-finals",
@@ -1576,7 +1576,7 @@
     "sourceIds": [
       "T10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2020-azerbaijan-physics-olympiad-semi-finals",
@@ -1611,7 +1611,7 @@
     "sourceIds": [
       "T11"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2019-romanian-physics-olympiad",
@@ -1646,7 +1646,7 @@
     "sourceIds": [
       "T12"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2018-brazil-team-selection-test",
@@ -1681,7 +1681,7 @@
     "sourceIds": [
       "T13"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2019-2018-eo-tvo-s-competition-hungary",
@@ -1721,7 +1721,7 @@
     "sourceIds": [
       "T14"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2020-taiwan-ipho-apho-team-selection-3-4-hour-exams",
@@ -1756,7 +1756,7 @@
     "sourceIds": [
       "T15"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-2011-seagull-competition-estonia-model-building",
@@ -1791,7 +1791,7 @@
     "sourceIds": [
       "T16"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "physics-eupho-9th-2025-sofia-bulgaria",
@@ -1830,7 +1830,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
@@ -1876,7 +1876,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
@@ -1922,7 +1922,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
@@ -1968,7 +1968,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
@@ -2014,7 +2014,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
@@ -2060,7 +2060,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
@@ -2101,7 +2101,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
@@ -2147,7 +2147,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
@@ -2193,7 +2193,7 @@
     "verified": "2026-10-22",
     "why": "",
     "origin": "external",
-    "needsReview": true,
+    "needsReview": false,
     "format": {
       "duration": null,
       "marks": null,
