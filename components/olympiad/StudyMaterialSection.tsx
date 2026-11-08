@@ -50,9 +50,9 @@ export function StudyMaterialSection({ data }: { data: SubjectData }) {
     <section
       id="library"
       aria-labelledby="library-title"
-      className="section-anchor border-y border-border bg-secondary/20 py-20 lg:py-28"
+      className="section-anchor border-y border-border bg-secondary/20 py-16 lg:py-28"
     >
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-5xl px-5 sm:px-6">
         <SectionHeading
           index="01"
           label="Materials"
@@ -69,18 +69,32 @@ export function StudyMaterialSection({ data }: { data: SubjectData }) {
         {resources.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
             <p className="font-heading text-lg font-semibold text-foreground">
-              Your library is quiet for now
+              The {meta.name} library is being curated
             </p>
-            <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
-              Study materials will appear here as the {meta.name} library is curated and
-              verified.
+            <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+              We only publish links a person has opened and checked. While that happens, you can
+              already see the exam ladder, the official syllabus and the topic map below.
             </p>
-            <button
-              onClick={() => scrollToId("topics")}
-              className="mt-6 inline-flex min-h-10 items-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground"
-            >
-              Explore Topics
-            </button>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <button
+                onClick={() => scrollToId("syllabus")}
+                className="inline-flex min-h-11 items-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground sm:min-h-10"
+              >
+                Read the syllabus
+              </button>
+              <button
+                onClick={() => scrollToId("topics")}
+                className="inline-flex min-h-11 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary sm:min-h-10"
+              >
+                Explore topics
+              </button>
+              <a
+                href={mailto(`Resource suggestion for ${meta.name}`)}
+                className="inline-flex min-h-11 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary sm:min-h-10"
+              >
+                Suggest a resource
+              </a>
+            </div>
           </div>
         ) : filtered && visible.length === 0 && chosenMeta && !chosenMeta.exists ? (
           <div className="rounded-2xl border border-dashed border-border p-8 lg:p-12">
