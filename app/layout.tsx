@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getSubjectIndex } from "@/lib/data";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -23,56 +25,31 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`,
-  },
+  title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
-  keywords: [
-    "Olympiad",
-    "NSS",
-    "IMO",
-    "IPhO",
-    "IChO",
-    "IOI",
-    "IOAA",
-    "IBO",
-    "IOAI",
-    "Nepal",
-    "preparation",
-    "model papers",
-    "study material",
-    "STEM",
-  ],
+  applicationName: siteConfig.name,
   openGraph: {
     type: "website",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "en_US",
-    // TODO: create /public/og.png (1200×630) and uncomment:
-    // images: [{ url: "/og.png", width: 1200, height: 630, alt: siteConfig.name }],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    // images: ["/og.png"],
-  },
+  twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: light)", color: "#0a7aae" },
     { media: "(prefers-color-scheme: dark)", color: "#0b1220" },
   ],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const subjects = getSubjectIndex();
+
   return (
     <html
       lang="en"
@@ -80,25 +57,50 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable}`}
     >
       <body className="font-body bg-background text-foreground antialiased min-h-screen flex flex-col">
-        {/* Skip link (accessibility) */}
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-primary focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-primary-foreground"
-        >Skip to content
-      </a>
+        >
+          Skip to content
+        </a>
 
-      {/* Screen-reader announcements (filter results, timer cues) — written by T4.5/T4.8 */}
-      <div id="sr-status" role="status" aria-live="polite" className="sr-only" />
+        {/* Screen-reader announcements (filter result counts) */}
+        <div id="sr-status" role="status" aria-live="polite" className="sr-only" />
 
-      <SmoothScroll>
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                name: siteConfig.name,
+                url: siteConfig.url,
+                email: siteConfig.contact.emailAddress,
+                sameAs: [siteConfig.social.instagram],
+              },
+              {
+                "@type": "WebSite",
+                name: siteConfig.name,
+                url: siteConfig.url,
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: `${siteConfig.url}/search?q={search_term_string}`,
+                  "query-input": "required name=search_term_string",
+                },
+              },
+            ],
+          }}
+        />
+
+        <SmoothScroll>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar />
-            <main id="main" tabIndex={-1} className="flex-grow">
+            <Navbar subjects={subjects} />
+            <main id="main" tabIndex={-1} className="flex-grow outline-none">
               {children}
             </main>
             <Footer />
