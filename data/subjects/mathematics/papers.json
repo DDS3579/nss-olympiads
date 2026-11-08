@@ -32,7 +32,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-p2",
@@ -67,7 +67,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-p3",
@@ -102,7 +102,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-p4",
@@ -137,7 +137,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-p5",
@@ -172,7 +172,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-p6",
@@ -207,7 +207,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-p7",
@@ -242,7 +242,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-p8",
@@ -277,7 +277,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-p9",
@@ -312,7 +312,7 @@
     "why": "DMO-format district paper hosted by NSS Clubs. Provenance to confirm - MAN has not publicly released official DMO papers (M-4).",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-district-2026-answers",
@@ -347,7 +347,7 @@
     "why": "Single answers file for Papers 1-9; per-paper mapping unconfirmed (Q3). Offered after a timed attempt, never styled as a paper card.",
     "origin": "nss-original",
     "reviewedBy": "OWNER-TO-CONFIRM",
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-dmo-syllabus-official",
@@ -382,7 +382,7 @@
     "sourceIds": [
       "D1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-man-sample-and-syllabus-drive-folder",
@@ -417,7 +417,7 @@
     "sourceIds": [
       "D2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-man-dmo-sample-sets-video-walkthroughs",
@@ -464,7 +464,7 @@
       "D3",
       "S48"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-dmo-question-sets-drive-folder",
@@ -502,7 +502,7 @@
       "D4",
       "N5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-pmo-new-sample-set",
@@ -537,7 +537,7 @@
     "sourceIds": [
       "P1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-pmo-final-questions",
@@ -572,7 +572,7 @@
     "sourceIds": [
       "P2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-nepal-mathematics-olympiad-2021-second-round",
@@ -609,7 +609,7 @@
       "P3",
       "N3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-nepal-mathematics-olympiad-2020-second-round",
@@ -646,7 +646,7 @@
       "P4",
       "N2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-nepal-mathematics-olympiad-2022-second-round",
@@ -683,7 +683,7 @@
       "P5",
       "N4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-nepal-mathematics-olympiad-2021-final-round",
@@ -718,7 +718,7 @@
     "sourceIds": [
       "N1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-nmo-2024-pre-team-selection-test",
@@ -754,7 +754,7 @@
     "sourceIds": [
       "N6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-2022-second-round-nepal-mathematics-olympiad-duplicate-copy",
@@ -790,7 +790,7 @@
     "sourceIds": [
       "N7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-imo-nepal-country-profile-awards-tally-official-contact-nati",
@@ -825,7 +825,7 @@
     "sourceIds": [
       "I7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-imo-nepal-individual-results-all-60-contestant-results-with-",
@@ -860,7 +860,7 @@
     "sourceIds": [
       "I8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-imo-nepal-team-results",
@@ -895,7 +895,7 @@
     "sourceIds": [
       "I9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-imo-nepal-hall-of-fame",
@@ -930,7 +930,7 @@
     "sourceIds": [
       "I10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-egmo-official-site",
@@ -965,7 +965,7 @@
     "sourceIds": [
       "I17"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-egmo-all-editions-index",
@@ -1000,7 +1000,7 @@
     "sourceIds": [
       "I18"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-molympiad-master-list-of-mathematics-competitions-worldwide",
@@ -1036,6 +1036,6 @@
     "sourceIds": [
       "I20"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]

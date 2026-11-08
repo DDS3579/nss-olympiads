@@ -25,7 +25,7 @@
     "sourceIds": [
       "S1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-man-blog",
@@ -49,7 +49,7 @@
       "S24",
       "S43"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-baltic-way-official-problems-solutions-archive-estonian-math",
@@ -73,7 +73,7 @@
       "S13",
       "I13"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-math-olympiad-beginner-s-page",
@@ -95,7 +95,7 @@
     "sourceIds": [
       "S5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-imo-shortlist-with-solutions-2024",
@@ -119,7 +119,7 @@
       "S27",
       "I3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-imo-shortlist-with-solutions-2025",
@@ -143,7 +143,7 @@
       "S26",
       "I2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-junior-balkan-mathematical-olympiad-compendium-problems-and-",
@@ -167,7 +167,7 @@
       "S16",
       "I16"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-man-blog-2",
@@ -189,7 +189,7 @@
     "sourceIds": [
       "S25"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-man-official-notice-board",
@@ -212,7 +212,7 @@
     "sourceIds": [
       "S50"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-man-resources-hub-curriculum-past-papers",
@@ -235,7 +235,7 @@
     "sourceIds": [
       "S49"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-sajha-notes-model-question-papers-hub-all-subjects-grades",
@@ -257,7 +257,7 @@
     "sourceIds": [
       "S4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-sajha-notes-neb-grade-11-math-model-paper-with-solution-2078",
@@ -280,7 +280,7 @@
     "sourceIds": [
       "S2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-sajha-notes-neb-grade-12-mathematics-model-papers",
@@ -302,7 +302,7 @@
     "sourceIds": [
       "S3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-how-to-write-solutions-problemwrite",
@@ -324,7 +324,7 @@
     "sourceIds": [
       "S11"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-intro-to-proofs-for-the-morbidly-curious",
@@ -346,7 +346,7 @@
     "sourceIds": [
       "S9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-remarks-on-english-how-to-write-up-a-solution",
@@ -368,7 +368,7 @@
     "sourceIds": [
       "S10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-unofficial-syllabus-for-math-olympiads-pdf",
@@ -390,7 +390,7 @@
     "sourceIds": [
       "S6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-welcome-letter-junior-students-grades-9-10-solutions",
@@ -417,7 +417,7 @@
     "sourceIds": [
       "S8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-welcome-letter-older-students-grades-11-12-solutions",
@@ -444,7 +444,7 @@
     "sourceIds": [
       "S7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-art-of-problem-solving-aops-wiki-community",
@@ -472,7 +472,7 @@
     "sourceIds": [
       "S42"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-baltic-way-2025-official-site-univ-of-latvia",
@@ -496,7 +496,7 @@
       "S15",
       "I15"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-elmo-evan-chen-s-mock-olympiad",
@@ -520,7 +520,7 @@
       "S33",
       "I12"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-egmo",
@@ -544,7 +544,7 @@
       "S36",
       "S46"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-v1-6",
@@ -566,7 +566,7 @@
     "sourceIds": [
       "S37"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-barycentric-coordinates-full-abridged",
@@ -593,7 +593,7 @@
     "sourceIds": [
       "S22"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-complex-numbers-en-cmplx",
@@ -615,7 +615,7 @@
     "sourceIds": [
       "S21"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-directed-angles",
@@ -637,7 +637,7 @@
     "sourceIds": [
       "S20"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-for-coaches",
@@ -659,7 +659,7 @@
     "sourceIds": [
       "S47"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-full-handout-index-olympiad-articles",
@@ -688,7 +688,7 @@
       "S23",
       "S44"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "mathematics-evan-chen-functional-equations-intro",
@@ -710,6 +710,6 @@
     "sourceIds": [
       "S17"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]
