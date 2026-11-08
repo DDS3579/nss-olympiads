@@ -5,14 +5,21 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "NSS Olympiad Hub",
     short_name: "NSS Olympiads",
     description:
-      "Free Olympiad preparation for NSS students — materials, papers, and roadmaps.",
+      "Free, level-wise Olympiad preparation for Nepal — verified materials, past papers and roadmaps.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0b1220",
-    theme_color: "#28b8f2",
+    background_color: "#ffffff",
+    theme_color: "#0a7aae",
+    lang: "en",
+    categories: ["education"],
     icons: [
-      // Interim only — real 192/512/maskable icons are generated in T7.5
-      { src: "/logo.png", sizes: "512x512", type: "image/png" },
+      { src: "/icon", sizes: "512x512", type: "image/png", purpose: "any" },
+      { src: "/icon", sizes: "512x512", type: "image/png", purpose: "maskable" },
+    ],
+    shortcuts: [
+      { name: "All Olympiads", url: "/olympiads" },
+      { name: "Search", url: "/search" },
+      { name: "Exam comparison", url: "/exams" },
     ],
   };
 }
