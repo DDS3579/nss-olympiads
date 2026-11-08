@@ -19,6 +19,9 @@ export const siteConfig = {
   },
 } as const;
 
+/** Last time site-level content changed. Bump manually; never use `new Date()` in the sitemap. */
+export const SITE_UPDATED = "2026-11-07";
+
 export const mailto = (subject?: string, body?: string) => {
   const q = [
     subject && `subject=${encodeURIComponent(subject)}`,
