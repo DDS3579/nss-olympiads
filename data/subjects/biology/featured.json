@@ -1,0 +1,17 @@
+[
+  {
+    "id": "biology-dihybrid-cross",
+    "title": "Dihybrid Cross",
+    "topicId": "genetics-evolution",
+    "level": "international",
+    "difficulty": 2,
+    "statement": "In a dihybrid cross AaBb × AaBb, what fraction of offspring display both dominant phenotypes?",
+    "hint": "Independent assortment gives 9/16.",
+    "solutionUrl": null,
+    "source": {
+      "label": "IBO Theory — citation to verify (Appendix H suggests IBO 2024 Theory A, CC BY-NC-SA).",
+      "url": ""
+    },
+    "verified": false
+  }
+]

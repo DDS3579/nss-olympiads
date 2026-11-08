@@ -1,109 +1,184 @@
 "use client";
 
-import { ArrowDownToLine, FileText, CheckCircle2 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
+import { matchResource } from "@/lib/filter";
+import { mailto } from "@/lib/site-config";
+import { useFilters } from "./UrlStateProvider";
 import { SectionHeading, scrollToId } from "./primitives";
-import { useOlympiadProgress } from "./context";
-import type { Olympiad, Resource } from "@/lib/data/olympiads";
+import { ResourceCard } from "./ResourceCard";
+import type { Level, Resource, SubjectData } from "@/lib/types";
 
-function ResourceRow({ r, index, colorVar }: { r: Resource; index: number; colorVar: string }) {
-  const { isResourceOpened, markResourceOpened } = useOlympiadProgress();
-  const opened = isResourceOpened(r.title);
+const LEVEL_ORDER: Level[] = ["district", "province", "national", "international"];
 
-  return (
-    <FadeIn delay={index * 0.05}>
-      <div className="flex items-center justify-between gap-4 py-5">
-        <div className="flex min-w-0 items-center gap-4">
-          <div
-            className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl"
-            style={{ background: `hsl(var(${colorVar}) / 0.1)` }}
-          >
-            <FileText className="h-5 w-5" style={{ color: `hsl(var(${colorVar}))` }} />
-          </div>
-          <div className="min-w-0">
-            <div className="flex items-center gap-2">
-              <h3 className="truncate font-heading font-semibold text-foreground">{r.title}</h3>
-              {opened && (
-                <CheckCircle2 className="h-3.5 w-3.5 flex-shrink-0" style={{ color: `hsl(var(${colorVar}))` }} />
-              )}
-            </div>
-            <div className="mt-0.5 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-              <span className="rounded-full bg-secondary px-2 py-0.5 font-semibold text-secondary-foreground">
-                {r.type}
-              </span>
-              {(r.topicIds?.length ?? 0) > 0 && <span>· topic-specific</span>}
-            </div>
-          </div>
-        </div>
-        <a
-          href={r.fileUrl}
-          download
-          onClick={() => markResourceOpened(r.title, r.title)}
-          className="inline-flex flex-shrink-0 items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
-        >
-          <ArrowDownToLine className="h-3.5 w-3.5" style={{ color: `hsl(var(${colorVar}))` }} />
-          <span className="hidden sm:inline">{opened ? "Opened" : "Download"}</span>
-        </a>
-      </div>
-    </FadeIn>
-  );
-}
+const byPriority = (a: Resource, b: Resource) =>
+  Number(b.highlight ?? false) - Number(a.highlight ?? false) ||
+  Number(b.nepalSpecific) - Number(a.nepalSpecific) ||
+  a.title.localeCompare(b.title);
 
-export function StudyMaterialSection({ olympiad }: { olympiad: Olympiad }) {
-  const { focusedTopic, matchesFocus, clearFocus } = useOlympiadProgress();
-  const resources = olympiad.studyMaterial;
-  const c = olympiad.colorVar;
+export function StudyMaterialSection({ data }: { data: SubjectData }) {
+  const { f, reset } = useFilters();
+  const { meta } = data;
+  const c = meta.colorVar;
 
-  const visible = resources.filter((r) => matchesFocus(r.topicIds));
-  const isFocused = !!focusedTopic;
+  const resources = data.resources.filter((r) => r.access !== "dead");
+  const visible = resources.filter((r) => matchResource(r, f)).sort(byPriority);
+  const topicNames = Object.fromEntries(data.topics.map((t) => [t.id, t.name]));
+
+  const levelFilterOn = f.level !== "all";
+  const filtered =
+    f.topic !== "" || levelFilterOn || f.type !== "" || f.q !== "" || f.nepal || f.sol;
+
+  // level = all → grouped by level (subject-specific labels); else flat (T4.6)
+  const groups = LEVEL_ORDER.map((lv) => ({
+    lv,
+    items: visible.filter((r) => r.levels.includes(lv)),
+  })).filter((g) => g.items.length > 0);
+
+  // Honest empty state for non-existent levels (J.2): nearest real level's top 2
+  const chosenMeta = levelFilterOn ? meta.levels[f.level as Level] : null;
+  const nearest = (() => {
+    if (!levelFilterOn) return null;
+    const idx = LEVEL_ORDER.indexOf(f.level as Level);
+    for (const step of [1, -1, 2, -2, 3, -3]) {
+      const lv = LEVEL_ORDER[idx + step];
+      if (lv && meta.levels[lv].exists && resources.some((r) => r.levels.includes(lv))) return lv;
+    }
+    return null;
+  })();
 
   return (
-    <section id="library" className="section-anchor border-y border-border bg-secondary/20 py-20 lg:py-28">
-      <div className="mx-auto max-w-5xl px-6">
+    <section
+      id="library"
+      aria-labelledby="library-title"
+      className="section-anchor border-y border-border bg-secondary/20 py-16 lg:py-28"
+    >
+      <div className="mx-auto max-w-5xl px-5 sm:px-6">
         <SectionHeading
           index="01"
           label="Materials"
           title="Study material"
+          titleId="library-title"
           description={
-            isFocused
-              ? `Materials for ${focusedTopic.name}, plus general resources.`
-              : `Curated resources for ${olympiad.name}.`
+            f.topic
+              ? `Materials matching ${topicNames[f.topic] ?? "the selected topic"}.`
+              : `Curated resources for ${meta.name}.`
           }
           colorVar={c}
         />
 
         {resources.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
-            <p className="font-heading text-lg font-semibold text-foreground">Your library is quiet for now</p>
-            <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
-              Study materials will appear here as the Olympiad library grows.
+            <p className="font-heading text-lg font-semibold text-foreground">
+              The {meta.name} library is being curated
             </p>
+            <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
+              We only publish links a person has opened and checked. While that happens, you can
+              already see the exam ladder, the official syllabus and the topic map below.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <button
+                onClick={() => scrollToId("syllabus")}
+                className="inline-flex min-h-11 items-center rounded-full bg-primary px-6 text-sm font-semibold text-primary-foreground sm:min-h-10"
+              >
+                Read the syllabus
+              </button>
+              <button
+                onClick={() => scrollToId("topics")}
+                className="inline-flex min-h-11 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary sm:min-h-10"
+              >
+                Explore topics
+              </button>
+              <a
+                href={mailto(`Resource suggestion for ${meta.name}`)}
+                className="inline-flex min-h-11 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary sm:min-h-10"
+              >
+                Suggest a resource
+              </a>
+            </div>
+          </div>
+        ) : filtered && visible.length === 0 && chosenMeta && !chosenMeta.exists ? (
+          <div className="rounded-2xl border border-dashed border-border p-8 lg:p-12">
+            <p className="font-heading text-lg font-semibold text-foreground">
+              No official {chosenMeta.label} round
+            </p>
+            {chosenMeta.honestNote && (
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                {chosenMeta.honestNote}
+              </p>
+            )}
+            {nearest && (
+              <>
+                <p className="mt-6 text-sm font-semibold text-foreground">
+                  Here&apos;s the closest level instead:
+                </p>
+                <div className="mt-3 space-y-3">
+                  {resources
+                    .filter((r) => r.levels.includes(nearest))
+                    .sort(byPriority)
+                    .slice(0, 2)
+                    .map((r) => (
+                      <ResourceCard key={r.id} r={r} meta={meta} topicNames={topicNames} />
+                    ))}
+                </div>
+              </>
+            )}
             <button
-              onClick={() => scrollToId("topics")}
-              className="mt-6 inline-flex items-center rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground"
+              onClick={reset}
+              className="mt-6 inline-flex min-h-10 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              Explore Topics
+              Clear filters
             </button>
           </div>
-        ) : isFocused && visible.length === 0 ? (
+        ) : filtered && visible.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-10 text-center lg:p-16">
             <p className="font-heading text-lg font-semibold text-foreground">
-              No {focusedTopic.name} materials yet
+              No resources match these filters
             </p>
             <p className="mx-auto mt-2 max-w-sm text-sm text-muted-foreground">
-              Nothing is tagged to this topic yet. Clear the focus to see all materials.
+              Try removing a filter, or search all levels.
             </p>
-            <button
-              onClick={clearFocus}
-              className="mt-6 inline-flex items-center rounded-full border border-border bg-background px-6 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
-            >
-              View all materials
-            </button>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <button
+                onClick={reset}
+                className="inline-flex min-h-10 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              >
+                Clear filters
+              </button>
+              <a
+                href={mailto(`Resource suggestion for ${meta.name}`)}
+                className="inline-flex min-h-10 items-center rounded-full border border-border bg-background px-6 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              >
+                Suggest a resource
+              </a>
+            </div>
+          </div>
+        ) : levelFilterOn ? (
+          <div className="space-y-3">
+            {visible.map((r) => (
+              <ResourceCard key={r.id} r={r} meta={meta} topicNames={topicNames} />
+            ))}
           </div>
         ) : (
-          <div className="divide-y divide-border border-y border-border">
-            {visible.map((r, i) => (
-              <ResourceRow key={`${r.title}-${i}`} r={r} index={i} colorVar={c} />
+          <div className="space-y-10">
+            {groups.map((g) => (
+              <FadeIn key={g.lv}>
+                <div>
+                  <div className="mb-4 flex items-center gap-3">
+                    <h3 className="font-heading text-sm font-bold uppercase tracking-[0.2em] text-foreground">
+                      {meta.levels[g.lv].label}
+                    </h3>
+                    <span className="h-px flex-1 bg-border" />
+                    <span className="text-xs text-muted-foreground">
+                      {g.items.length} {g.items.length === 1 ? "resource" : "resources"}
+                    </span>
+                  </div>
+                  <div className="space-y-3">
+                    {g.items.map((r) => (
+                      <ResourceCard key={r.id} r={r} meta={meta} topicNames={topicNames} />
+                    ))}
+                  </div>
+                </div>
+              </FadeIn>
             ))}
           </div>
         )}

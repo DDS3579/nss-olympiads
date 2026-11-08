@@ -1,0 +1,38 @@
+{
+  "slug": "ai",
+  "name": "Artificial Intelligence",
+  "series": "05",
+  "iconKey": "brain",
+  "colorVar": "--subject-ai",
+  "motif": "ai",
+  "tagline": "Built something smarter than your teacher? Let's go further.",
+  "description": "Learn machine learning fundamentals, neural networks, and ethical AI deployment through practical project challenges.",
+  "grades": "Primary or secondary",
+  "organiser": { "name": "AION (Artificial Intelligence Olympiad Nepal)", "url": "https://aionepal.org" },
+  "levels": {
+    "district": {
+      "exists": false,
+      "label": "Round 1: Preliminary (online, nationwide)",
+      "officialName": null,
+      "honestNote": "There is no district round, but Round 1 is a nationwide online preliminary (AION: 100 MCQ in 60 minutes, AI-graded, live-proctored) — a speed test, unlike IOAI itself (6 notebook tasks × 100 pts over 2 days)."
+    },
+    "province": { "exists": true, "label": "Round 2: Provincial", "officialName": "Round 2 — Provincial (in person; the only paid stage)" },
+    "national": { "exists": true, "label": "Training + Round 3: National Final", "officialName": "Training session + Round 3: National Final (Kathmandu)" },
+    "international": { "exists": true, "label": "IOAI", "officialName": "International Olympiad in Artificial Intelligence" }
+  },
+  "rounds": [
+    {
+      "level": "district",
+      "name": "AION Round 1 — Preliminary",
+      "format": "100 MCQ in 60 minutes, AI-graded, live-proctored (online, nationwide)",
+      "dates": [],
+      "source": { "label": "PLAN Appendix B — ai.md not yet supplied; owner to confirm", "url": "" }
+    }
+  ],
+  "contacts": [
+    { "body": "AION (Artificial Intelligence Olympiad Nepal)", "role": "National organiser", "links": [ { "label": "Website", "url": "https://aionepal.org" } ], "email": "aiolympiadnepal@gmail.com", "phone": "+977 9861045081" }
+  ],
+  "syllabusFileUrl": "/materials/ai/syllabus.pdf",
+  "syllabusMeta": { "officialVerified": false },
+  "updatedAt": "2026-10-24"
+}

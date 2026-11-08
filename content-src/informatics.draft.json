@@ -1,0 +1,1769 @@
+{
+  "slug": "informatics",
+  "generatedFrom": "informatics.md",
+  "generatedAt": "2026-11-08T08:18:25.676Z",
+  "fileCompiledOn": "2026-10-23",
+  "counts": {
+    "tablesFound": 29,
+    "rawRows": 62,
+    "afterDedupe": 56,
+    "resources": 36,
+    "papers": 20,
+    "paperSets": 0,
+    "nepalSpecificFlagged": 0,
+    "byStatus": {
+      "ok": 33,
+      "caveat": 15,
+      "unknown": 6,
+      "dead": 2
+    },
+    "missingWhy": 16,
+    "gaps": 0,
+    "contacts": 0,
+    "rejected": 8
+  },
+  "resources": [
+    {
+      "id": "informatics-learncpp-com",
+      "title": "LearnCpp.com",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.learncpp.com",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-cppreference",
+      "title": "CppReference",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://en.cppreference.com/w/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "403 to scripts (bot-wall); opens normally in a browser",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-c-tricks-codeforces-blog-15643",
+      "title": "C++ Tricks (Codeforces blog 15643)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://codeforces.com/blog/entry/15643",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "403 to scripts",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-competitive-c-manifesto-codeforces-blog-64218",
+      "title": "Competitive C++ Manifesto (Codeforces blog 64218) —",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://codeforces.com/blog/entry/64218",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"style guides you can follow to write correct, fast, clear and consistent code\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-cs50-s-introduction-to-computer-science",
+      "title": "CS50's Introduction to Computer Science —",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://cs50.harvard.edu/x/2024/weeks/5/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"You can focus only on materials from Week 0–5\"",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-harvard-cs50-free-course-platform",
+      "title": "Harvard CS50 free course platform",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://cs50.harvard.edu/x/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-mit-ocw-6-006-introduction-to-algorithms",
+      "title": "MIT OCW 6.006 — Introduction to Algorithms",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-mit-ocw-6-042j-mathematics-for-computer-science",
+      "title": "MIT OCW 6.042J — Mathematics for Computer Science",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-lehman-leighton-meyer-mit-free-full-textbook-the-companion-t",
+      "title": "— Lehman, Leighton, Meyer (MIT) — free full textbook, the companion to S8",
+      "type": "book",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://courses.csail.mit.edu/6.042/spring18/mcs.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Mathematics for Computer Science",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-lecture-notes-on-discrete-mathematics-regev-nyu",
+      "title": "Lecture Notes on Discrete Mathematics (Regev, NYU) —",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://cims.nyu.edu/~regev/teaching/discrete_math_fall_2005/dmbook.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"a clear and approachable introduction… an excellent starting point compared to more formal texts\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-visualalgo",
+      "title": "VisualAlgo —",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://visualgo.net/en",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"mainly useful for visualizing the concepts you've learned… especially since they can sometimes feel abstract\"",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-codechef-data-structures-algorithms-list",
+      "title": "CodeChef — Data Structures & Algorithms list —",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://discuss.codechef.com/t/data-structures-and-algorithms/6599",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"a comprehensive list of the most commonly used data structures and algorithms, along with tutorials, implementations, and related problems… essential to bookmark\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S12"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-hyperpolyglot-c-objective-c-java-c",
+      "title": "HyperPolyglot — C++ / Objective-C / Java / C# —",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://hyperpolyglot.org/cpp",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"a detailed side-by-side reference sheet for common syntaxes\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S13"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-yet-again-on-c-input-output-codeforces-blog-5217",
+      "title": "Yet again on C++ input/output (Codeforces blog 5217) —",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://codeforces.com/blog/entry/5217",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"Learn more about C++ I/O optimizations\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S14"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-ideone-pastebin",
+      "title": "ideone · pastebin —",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://ideone.com",
+      "extraLinks": [
+        {
+          "label": "Link 2",
+          "url": "https://pastebin.com"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"semi-permanent pages for code sharing… especially useful when you need someone else to review your code\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S15"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-antti-laaksonen",
+      "title": "— Antti Laaksonen",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://cses.fi/book/book.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "NPLCoder's own #2 recommendation: \"This highly recommended beginner book for competitive programming covers various essential concepts, making it an excellent starting point for newcomers.\" Free 300-page PDF, and it is the official companion text to the CSES problem set (P4).",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S16"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-programming-camp-syllabus",
+      "title": "Programming Camp Syllabus",
+      "type": "official",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://docs.google.com/document/d/1_dc3Ifg7Gg1LxhiqMMmE9UbTsXpdRiYh4pKILYG2eA4/edit",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"A list of important topics in competitive programming with exercise problems.\" A ready-made topic→problem map.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S17"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-stanford-cs97si-introduction-to-programming-contests",
+      "title": "Stanford CS97SI — Introduction to Programming Contests",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://web.stanford.edu/class/cs97si/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"comprehensive lecture slides and a short set of exercises, introducing you to programming contests. It also revisits key concepts… showing how to apply them effectively in competitive programming.\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S18"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-cp-algorithms",
+      "title": "CP-Algorithms",
+      "type": "handout",
+      "levels": [
+        "province",
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://cp-algorithms.com/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The canonical free algorithm reference — every Round-2 and Round-3 topic with working C++ implementations and complexity proofs. Not in NPLCoder's list; an addition by this document.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S19",
+        "S26"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-usaco-guide-full-ladder-general-bronze-silver-gold-advanced",
+      "title": "USACO Guide (full ladder: General → Bronze → Silver → Gold → Advanced)",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://usaco.guide/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "\"A free collection of curated, high-quality competitive programming resources… built by former USACO finalists.\" The best structured free curriculum in the world.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S20"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-usaco-guide-all-problems-index",
+      "title": "USACO Guide — All Problems index",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://usaco.guide/problems",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Searchable problem database with difficulty + topic tags",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S21"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-codeforces-blog-13529",
+      "title": "Codeforces blog 13529 —",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://codeforces.com/blog/entry/13529",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Curated tutorials",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S22"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-codeforces-blog-57282-second-such-collection",
+      "title": "Codeforces blog 57282 — second such collection",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://codeforces.com/blog/entry/57282",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S23"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-the-science-of-training-in-competitive-programming-cf-blog-1",
+      "title": "The 'science' of training in competitive programming (CF blog 17842)",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://codeforces.com/blog/entry/17842",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Training methodology",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S24"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-if-you-ask-me-how-to-improve-your-algorithm-competition-skil",
+      "title": "\"If you ask me how to improve your algorithm competition skill, I will give you this link\" (CF blog 16599)",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://codeforces.com/blog/entry/16599",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The most-shared CP advice post",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S25"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-steven-halim-felix-halim",
+      "title": "— Steven Halim & Felix Halim",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "third-party host — prefer buying; ISBN 978-981-4608-41-1",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"Although aimed at ICPC and IOI contestants, this book is a great resource for diving deeper… ideal for advanced reading once you've completed the Competitive Programming Handbook.\"",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S27"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-clrs-cormen-leiserson-rivest-stein",
+      "title": "(CLRS) — Cormen, Leiserson, Rivest, Stein",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://a.co/d/3XkMJ48",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"often considered the 'bible' of algorithms and data structures… an in-depth and rigorous exploration.\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S28"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-steven-skiena",
+      "title": "— Steven Skiena",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://a.co/d/4jNY3WA",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"written in a more readable style, and many find it more comprehensive… valuable resources, including the author's video lectures, can be accessed on its official website.\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S29"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-",
+      "title": "",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://a.co/d/hpeaU24",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"well-organized, featuring detailed explanations and excellent illustrations. It is even used as a textbook in some IOI training camps.\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S30"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-george-po-lya",
+      "title": "— George Pólya",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://a.co/d/8GstgHz",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"A timeless classic… a systematic approach to solving problems creatively.\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S31"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-rosen",
+      "title": "— Rosen",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://a.co/d/9o6QWUc",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "unknown",
+      "accessNote": "📕 print",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"a solid option… rigorous definitions and proofs… otherwise you can safely skip it.\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S32"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-comparing-floating-point-numbers-random-ascii",
+      "title": "Comparing Floating Point Numbers (Random ASCII)",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://randomascii.wordpress.com/2012-02-25/comparing-floating-point-numbers-2012-edition/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "403 to scripts (WordPress bot-wall); opens in a browser",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"Everything you need to know about floating point numbers. A must read especially for geometry topics\" — directly serves Round 4's computational geometry",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S33"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-bit-twiddling-hacks-sean-anderson-stanford",
+      "title": "Bit Twiddling Hacks (Sean Anderson, Stanford)",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://graphics.stanford.edu/~seander/bithacks.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "dead",
+      "accessNote": "CONNECTION REFUSED from this network — see §8.4. Mirror: search \"Bit Twiddling Hacks\"",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"A huge compiled list of bit manipulation tricks\" — essential for Round 4 bitmask DP",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S34"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-how-to-prepare-for-acm-icpc-geeksforgeeks",
+      "title": "How to prepare for ACM-ICPC? (GeeksforGeeks)",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.geeksforgeeks.org/how-to-prepare-for-acm-icpc/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"A comprehensive guide to preparing for the ACM-ICPC\" — useful for the team-competition format",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S35"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-ioi-s-recommended-reading-list-official",
+      "title": "IOI's Recommended Reading List (official)",
+      "type": "official",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://ioinformatics.org/page/recommended-reading/11",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Curated by the IOI itself",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S36"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-topcoder-data-science-tutorials",
+      "title": "Topcoder Data Science Tutorials",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.topcoder.com/community/data-science/data-science-tutorials/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "dead",
+      "accessNote": "HTTP 404 — see §8.4",
+      "verified": "2026-10-23",
+      "why": "NPLCoder: \"articles and tutorials on various data structures and algorithm concepts\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S37"
+      ],
+      "needsReview": true
+    }
+  ],
+  "papers": [
+    {
+      "id": "informatics-usaco-guide-bronze",
+      "title": "USACO Guide — Bronze",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usaco.guide/bronze",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The exact match. USACO Bronze = complete search, sorting, simulation, ad-hoc, basic arrays — identical to NOI Round 1. Free, structured, with curated problem lists per topic.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "D1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-usaco-guide-general-language-choice-ide-setup-practice-tips-",
+      "title": "USACO Guide — General (language choice, IDE setup, practice tips, time complexity)",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usaco.guide/general",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "On-ramp",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-cses-problem-set-intro-sorting-searching-sections",
+      "title": "CSES Problem Set — intro/sorting/searching sections",
+      "type": "pastpaper",
+      "levels": [
+        "district",
+        "province",
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://cses.fi/problemset/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Direct drill",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D3",
+        "P4",
+        "N9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-atcoder-beginner-contest-abc-a-and-b-problems",
+      "title": "AtCoder Beginner Contest (ABC) — A and B problems",
+      "type": "pastpaper",
+      "levels": [
+        "district",
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://atcoder.jp/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Timed MCQ-free drill at exactly Round-1 difficulty",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D4",
+        "P5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-codeforces-problems-rated-800-1100",
+      "title": "Codeforces — problems rated 800–1100",
+      "type": "pastpaper",
+      "levels": [
+        "district",
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://codeforces.com/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "403 to scripts; works in a browser",
+      "verified": "2026-10-23",
+      "why": "Drill by difficulty",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D5",
+        "P6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-ioi-official-past-tasks-1989-present",
+      "title": "IOI official past tasks 1989 → present",
+      "type": "pastpaper",
+      "levels": [
+        "district",
+        "national"
+      ],
+      "year": 1989,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioinformatics.org/page/contests/10",
+          "kind": "questions"
+        },
+        {
+          "label": "File 2",
+          "url": "https://github.com/ioi/task-archive",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The target, not the entry point",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D6",
+        "N1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-usaco-guide-silver",
+      "title": "USACO Guide — Silver",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usaco.guide/silver",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The exact match for NOI Round 2. USACO Silver covers binary search, prefix sums, two pointers, sorting, stacks/queues, intro DP, adjacency-list graphs, DFS/flood fill — a one-to-one overlap with the official Round-2 topic list.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-usaco-official-past-contests",
+      "title": "USACO official past contests",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "http://www.usaco.org/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "403 to scripts; works in a browser",
+      "verified": "2026-10-23",
+      "why": "Real graded contests at this level",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-usaco-legacy-training-pages",
+      "title": "USACO legacy training pages —",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usaco.org/index.php?page=training",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "same",
+      "verified": "2026-10-23",
+      "why": "Structured drill",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-codechef",
+      "title": "CodeChef —",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.codechef.com/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Endurance practice",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-hackerrank",
+      "title": "HackerRank —",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.hackerrank.com/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "DSA drill",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-project-euler",
+      "title": "Project Euler —",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://projecteuler.net/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "403 to scripts",
+      "verified": "2026-10-23",
+      "why": "Number theory / modular arithmetic — directly serves Round-2 Mathematics",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-ioi-public-task-archive-official-github",
+      "title": "IOI Public Task Archive (official GitHub)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://github.com/ioi/task-archive",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Machine-readable archive of IOI tasks with test data — runnable on a local judge",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "N2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-ioi-statistics-site-olympiads-members-tasks-hall-of-fame",
+      "title": "IOI Statistics site — Olympiads · Members · Tasks · Hall of Fame",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://stats.ioinformatics.org/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Per-task, per-year, per-country results and statistics",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-ioi-history-tu-eindhoven",
+      "title": "IOI History (TU Eindhoven) —",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://olympiads.win.tue.nl/ioi/history.html",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "The founding archive; UNESCO initiated the first IOI in May 1989",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-previous-contest-tasks-full-ioi-task-list-by-year-ioi-te-lv",
+      "title": "Previous Contest Tasks — full IOI task list by year (ioi.te.lv)",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioi.te.lv/contest/prev.shtml",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Plain list from IOI 1989 Pravetz, Bulgaria onward",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-ioi-rankings-archive-2017-2026",
+      "title": "IOI Rankings Archive 2017 → 2026",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2017,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ioirankings.com/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Per-year rankings",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-usaco-guide-gold",
+      "title": "USACO Guide — Gold",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usaco.guide/gold",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Maps to NOI Round 3 (DSU, segment trees, shortest paths, MST, intro string structures)",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "N7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-usaco-guide-advanced",
+      "title": "USACO Guide — Advanced",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://usaco.guide/adv",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-23",
+      "why": "Maps to NOI Round 4 and IOI itself (suffix structures, advanced DP, geometry, flows/matching)",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "N8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "informatics-noi-round-1-4-past-papers",
+      "title": "❌ NOI Round 1–4 past papers",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "unknown",
+      "accessNote": "DO NOT EXIST. First iteration. → Gap I-3",
+      "verified": "2026-10-23",
+      "why": "—",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N10"
+      ],
+      "needsReview": true
+    }
+  ],
+  "paperSets": [],
+  "gaps": [],
+  "contacts": [],
+  "rejected": [
+    {
+      "what": "⭐ topcoder.com/community/data-science/data-science-tutorials/",
+      "why": "HTTP 404. Listed as item 5 under \"Data Structures & Algorithms\" in NPLCoder's own official Resources document. Dead. → Gap I-7. Replace with cp-algorithms.com (✅ verified, strictly better).",
+      "urls": [
+        "topcoder.com/community/data-science/data-science-tutorials/"
+      ]
+    },
+    {
+      "what": "⭐ graphics.stanford.edu/~seander/bithacks.html (*Bit Twiddling Hacks*)",
+      "why": "Connection refused (Errno 111) on repeated attempts. Listed as item 6 under \"Miscellaneous\" in NPLCoder's official Resources document. → Gap I-7. Substitute: the CP-Algorithms bit-manipulation pages, or an archive.org snapshot.",
+      "urls": [
+        "graphics.stanford.edu/~seander/bithacks.html"
+      ]
+    },
+    {
+      "what": "⭐ work@nplcoder.edu",
+      "why": "Non-existent TLD. Printed in the front matter of NPLCoder's official Resources document. The correct address — used later in the *same* document and everywhere on the website — is work@nplcoder.org. → Gap I-7",
+      "urls": [
+        "nplcoder.edu"
+      ]
+    },
+    {
+      "what": "Discord invite mismatch",
+      "why": "The Resources document links discord.gg/aQtu8FX2CJ; the website links discord.gg/kJrvdhmzVd. Both may work, but they are different invites. → Gap I-7",
+      "urls": []
+    },
+    {
+      "what": "stats.ioinformatics.org/people/",
+      "why": "HTTP 404 — the people index is not at this path; use /countries/ and the site's Search",
+      "urls": [
+        "stats.ioinformatics.org/people/"
+      ]
+    },
+    {
+      "what": "crazy-cat-crypto.github.io/nepal-olympiad-hub/",
+      "why": "Lists informatics under \"NOI — Nepal Olympiad in Informatics\" with organiser \"NPLCoder\" (correct) but Fee: \"TBD (likely minimal)\" — it is free, stated explicitly on NPLCoder's own NOI page — and \"Nepal Performance: First year - historic opportunity\", which understates the situation: Nepal is not an IOI member country at all and has never participated. Also lists the Himalayan Linguistic Olympiad under \"AI\". Do not copy from it.",
+      "urls": [
+        "crazy-cat-crypto.github.io/nepal-olympiad-hub/"
+      ]
+    },
+    {
+      "what": "Any claim that Nepal has participated in the IOI",
+      "why": "False. Nepal does not appear in the IOI's 118-member list and has zero recorded participations. NOI 2025 was the inaugural national olympiad.",
+      "urls": []
+    },
+    {
+      "what": "bunchofcells.vercel.app/blog/indian-astronomy-olympiads · rajit13.github.io/website_docs/problems_Pho.pdf",
+      "why": "Both HTTP 404 (carried forward from the Astronomy file — the AO Guide Resources page links both)",
+      "urls": [
+        "bunchofcells.vercel.app/blog/indian-astronomy-olympiads",
+        "rajit13.github.io/website_docs/problems_Pho.pdf"
+      ]
+    }
+  ],
+  "warnings": [
+    "no URL: N10 \"❌ NOI Round 1–4 past papers\" (3.4 Past Papers — National tier)",
+    "no status: N10 \"❌ NOI Round 1–4 past papers\"",
+    "no URL: S27 \"⭐ *Competitive Programming 3* — Steven Halim & Felix Halim\" (3.5 Study Materials — National tier)",
+    "no status: S28 \"*Introduction to Algorithms* (CLRS) — Cormen, Leiserson, Rivest, Stein\"",
+    "no status: S29 \"*The Algorithm Design Manual* — Steven Skiena\"",
+    "no status: S30 \"*Algorithms*\"",
+    "no status: S31 \"*How to Solve It* — George Pólya\"",
+    "no status: S32 \"*Discrete Mathematics and Its Applications* — Rosen\""
+  ]
+}

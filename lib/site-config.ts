@@ -1,26 +1,33 @@
+const rawUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://nss-olympiads.vercel.app";
+
 export const siteConfig = {
   name: "NSS Olympiad Hub",
-  url: "https://nss-olympiads.vercel.app/", // TODO: your real production domain
+  url: rawUrl.replace(/\/+$/, ""), // NEVER a trailing slash (B-02)
   description:
-    "Free preparation material, model question papers, and structured roadmaps for 7 Olympiads — built by NSS Clubs for Grade 11 & 12 students.",
-
+    "Free, level-wise Olympiad preparation for Nepal — verified study material, past papers and roadmaps for 7 Olympiads. Built by NSS Clubs for students in Grades 8–12.",
   social: {
     instagram: "https://www.instagram.com/nss_.club/",
-    // facebook: "https://facebook.com/nssclubs",
-    // Add more as needed:
-    // twitter: "https://x.com/nssclubs",
-    // youtube: "https://youtube.com/@nssclubs",
-    // discord: "https://discord.gg/nssclubs",
   },
-
   contact: {
-    email: "mailto:nssclub2078@gmail.com",
+    emailAddress: "nssclub2078@gmail.com",
   },
-
   legal: {
     privacy: "/privacy",
     terms: "/terms",
     faq: "/faq",
-    reportIssue: "mailto:nssclub2078@gmail.com?subject=Report%20an%20Issue",
   },
+} as const;
+
+/** Last time site-level content changed. Bump manually; never use `new Date()` in the sitemap. */
+export const SITE_UPDATED = "2026-11-07";
+
+export const mailto = (subject?: string, body?: string) => {
+  const q = [
+    subject && `subject=${encodeURIComponent(subject)}`,
+    body && `body=${encodeURIComponent(body)}`,
+  ]
+    .filter(Boolean)
+    .join("&");
+  return `mailto:${siteConfig.contact.emailAddress}${q ? `?${q}` : ""}`;
 };

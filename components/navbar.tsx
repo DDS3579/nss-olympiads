@@ -1,13 +1,17 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { usePathname } from "next/navigation"
-import { motion, useScroll, useMotionValueEvent } from "motion/react"
-import { Menu, ArrowRight } from "lucide-react"
-import { cn } from "@/lib/utils"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { motion, useScroll, useMotionValueEvent, useReducedMotion } from "motion/react";
+import { Menu, ArrowRight, Search } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { strong } from "@/lib/color";
+import { SubjectIcon } from "@/lib/data/icons";
+import { SearchPalette } from "@/components/nav/SearchPalette";
+import { ThemeToggle } from "@/components/theme-toggle";
+import type { SubjectIndexItem } from "@/lib/types";
 import {
   Sheet,
   SheetContent,
@@ -15,90 +19,82 @@ import {
   SheetTitle,
   SheetTrigger,
   SheetClose,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/olympiads", label: "Olympiads" },
-  { href: "/#why", label: "About" },
-  { href: "/#team", label: "Team" },
-  { href: "/#contact", label: "Contact" },
-]
+  { href: "/exams", label: "Exams" },
+  { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
+];
 
-export function Navbar() {
-  const [hidden, setHidden] = useState(false)
-  const [activeHash, setActiveHash] = useState("")
-  const pathname = usePathname()
-  const { scrollY } = useScroll()
-
-  // Track hash changes for active link highlighting
-  useEffect(() => {
-    const onHashChange = () => setActiveHash(window.location.hash)
-    setActiveHash(window.location.hash)
-    window.addEventListener("hashchange", onHashChange)
-    return () => window.removeEventListener("hashchange", onHashChange)
-  }, [])
+export function Navbar({ subjects }: { subjects: SubjectIndexItem[] }) {
+  const [hidden, setHidden] = useState(false);
+  const [atTop, setAtTop] = useState(true);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const pathname = usePathname();
+  const { scrollY } = useScroll();
+  const reduce = useReducedMotion();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() ?? 0
-    if (latest > previous && latest > 150) {
-      setHidden(true)
-    } else {
-      setHidden(false)
-    }
-  })
+    const previous = scrollY.getPrevious() ?? 0;
+    const hide = latest > previous && latest > 150;
+    setHidden(hide);
+    setAtTop(latest < 40);
+    // Publish visibility so every sticky element below stacks correctly.
+    document.documentElement.style.setProperty("--nav-offset", hide ? "0px" : "var(--nav-h)");
+  });
 
-  const isActive = (href: string) => {
-    // Exact match for non-hash routes
-    if (!href.includes("#")) {
-      return pathname === href
-    }
-    // For hash links like /#why — active when on homepage and hash matches
-    const [basePath, hash] = href.split("#")
-    const baseMatch = basePath === "" || basePath === "/" ? pathname === "/" : pathname === basePath
-    return baseMatch && activeHash === `#${hash}`
-  }
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <motion.header
-      initial={{ opacity: 0, y: -20 }}
+      id="site-header"
+      initial={reduce ? false : { opacity: 0, y: -20 }}
       animate={hidden ? { y: "-100%", opacity: 1 } : { y: 0, opacity: 1 }}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
-      className="sticky top-0 inset-x-0 z-50 h-20 border-b border-border bg-background/90 backdrop-blur-md transition-colors duration-300"
+      transition={{ duration: reduce ? 0 : 0.35, ease: "easeInOut" }}
+      className={cn(
+        "sticky inset-x-0 top-0 z-50 h-[var(--nav-h)] border-b border-border bg-background/90 backdrop-blur-md transition-colors duration-300",
+        pathname === "/" && atTop && "dark"
+      )}
     >
-      <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-8">
-        {/* Left: Logo */}
-        <Link href="/" className="flex items-center gap-2.5">
+      <nav
+        aria-label="Primary"
+        className="mx-auto flex h-full max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8"
+      >
+        {/* Logo */}
+        <Link href="/" className="flex min-w-0 items-center gap-2.5">
           <Image
             src="/logo.png"
-            alt="NSS Olympiad Hub logo"
+            alt=""
             width={36}
             height={36}
-            className="h-9 w-9 rounded-lg object-contain"
+            className="h-9 w-9 flex-shrink-0 rounded-lg object-contain"
           />
-          <span className="text-lg font-heading font-semibold text-foreground">
+          <span className="truncate font-heading text-base font-semibold text-foreground sm:text-lg">
             NSS Olympiad Hub
           </span>
         </Link>
 
-        {/* Center: Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-8">
+        {/* Desktop links */}
+        <div className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
+              aria-current={isActive(link.href) ? "page" : undefined}
               className={cn(
-                "relative text-sm font-medium transition-colors duration-200 py-1",
-                isActive(link.href)
-                  ? "text-foreground"
-                  : "text-foreground/70 hover:text-foreground"
+                "relative py-1 text-sm font-medium transition-colors duration-200",
+                isActive(link.href) ? "text-foreground" : "text-foreground/70 hover:text-foreground"
               )}
             >
               {link.label}
               {isActive(link.href) && (
                 <motion.span
                   layoutId="nav-underline"
-                  className="absolute -bottom-1 left-0 h-0.5 w-full bg-primary rounded-full"
+                  className="absolute -bottom-1 left-0 h-0.5 w-full rounded-full bg-primary"
                   transition={{ type: "spring", stiffness: 350, damping: 30 }}
                 />
               )}
@@ -106,35 +102,53 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Right: Actions */}
-        <div className="flex items-center gap-4">
+        {/* Actions */}
+        <div className="flex flex-shrink-0 items-center gap-1.5 sm:gap-3">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search"
+            className="flex h-11 items-center gap-2 rounded-full border border-border bg-background px-3.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground sm:h-10"
+          >
+            <Search aria-hidden className="h-4 w-4" />
+            <span className="hidden lg:inline">Search</span>
+            {!pathname.startsWith("/olympiads/") && (
+              <kbd className="hidden rounded border border-border bg-secondary px-1.5 py-0.5 text-[11px] text-muted-foreground lg:inline">
+                /
+              </kbd>
+            )}
+          </button>
           <ThemeToggle />
-          
+
           <Link
             href="/olympiads"
-            className="hidden sm:inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold font-heading text-primary-foreground border-b-4 border-primary/40 transition-all duration-150 active:translate-y-1 active:border-b-2 hover:brightness-105"
+            className="hidden items-center gap-2 rounded-full border-b-4 border-primary/40 bg-primary px-6 py-2.5 font-heading text-sm font-semibold text-primary-foreground transition-all duration-150 hover:brightness-105 active:translate-y-1 active:border-b-2 md:inline-flex"
           >
             Start Preparing
           </Link>
 
-          {/* Mobile Menu */}
+          {/* Mobile menu */}
           <Sheet>
             <SheetTrigger asChild>
-              <button className="lg:hidden p-2 text-foreground" aria-label="Open menu">
-                <Menu className="h-6 w-6" />
+              <button
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full text-foreground transition-colors hover:bg-secondary lg:hidden"
+                aria-label="Open menu"
+              >
+                <Menu aria-hidden className="h-6 w-6" />
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+            <SheetContent side="right" className="w-[300px] overflow-y-auto sm:w-[360px]">
               <SheetHeader>
                 <SheetTitle className="text-left font-heading">Menu</SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-4 mt-8">
+
+              <div className="mt-6 flex flex-col">
                 {navLinks.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Link
                       href={link.href}
+                      aria-current={isActive(link.href) ? "page" : undefined}
                       className={cn(
-                        "text-lg font-medium py-2 border-b border-border transition-colors",
+                        "flex min-h-12 items-center border-b border-border text-base font-medium transition-colors",
                         isActive(link.href) ? "text-primary" : "text-foreground"
                       )}
                     >
@@ -142,19 +156,44 @@ export function Navbar() {
                     </Link>
                   </SheetClose>
                 ))}
-                <SheetClose asChild>
-                  <Link
-                    href="/olympiads"
-                    className="mt-4 flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold font-heading text-primary-foreground border-b-4 border-primary/40 active:translate-y-1 active:border-b-2 transition-all duration-150"
-                  >
-                    Start Preparing <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </SheetClose>
               </div>
+
+              <p className="mb-3 mt-8 font-heading text-[11px] font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                Jump to an Olympiad
+              </p>
+              <ul className="grid grid-cols-2 gap-2">
+                {subjects.map((s) => (
+                  <li key={s.slug}>
+                    <SheetClose asChild>
+                      <Link
+                        href={`/olympiads/${s.slug}`}
+                        className="flex min-h-12 items-center gap-2.5 rounded-xl border border-border bg-background px-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+                      >
+                        <SubjectIcon
+                          iconKey={s.iconKey}
+                          className="h-4 w-4 flex-shrink-0"
+                          style={{ color: strong(s.colorVar) }}
+                        />
+                        <span className="truncate">{s.name}</span>
+                      </Link>
+                    </SheetClose>
+                  </li>
+                ))}
+              </ul>
+
+              <SheetClose asChild>
+                <Link
+                  href="/olympiads"
+                  className="mt-8 flex items-center justify-center gap-2 rounded-full border-b-4 border-primary/40 bg-primary px-6 py-3 font-heading text-sm font-semibold text-primary-foreground transition-all duration-150 active:translate-y-1 active:border-b-2"
+                >
+                  Start Preparing <ArrowRight aria-hidden className="h-4 w-4" />
+                </Link>
+              </SheetClose>
             </SheetContent>
           </Sheet>
         </div>
       </nav>
+      <SearchPalette open={searchOpen} onOpenChange={setSearchOpen} />
     </motion.header>
-  )
+  );
 }

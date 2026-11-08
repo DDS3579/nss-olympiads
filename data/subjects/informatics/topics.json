@@ -1,0 +1,119 @@
+[
+  {
+    "id": "core-programming",
+    "name": "Core Programming",
+    "blurb": "NOI Round 1: I/O, variables, conditionals, loops, primitive types, arrays, strings, brute force and simulation.",
+    "levels": ["district"],
+    "subtopics": ["Basic I/O, variables, conditionals, loops", "int, long long, double, char", "One-dimensional & multi-dimensional arrays", "Basic string manipulation", "Brute-force / complete search", "Simple simulation"],
+    "featured": true
+  },
+  {
+    "id": "sorting-searching",
+    "name": "Sorting & Searching",
+    "blurb": "Standard library sorting (Round 1) and binary search on sorted data (Round 2).",
+    "levels": ["district", "province"],
+    "subtopics": ["Standard library sort functions", "Binary search on sorted data"],
+    "prereqs": ["core-programming"]
+  },
+  {
+    "id": "math-for-cp",
+    "name": "Mathematics for CP",
+    "blurb": "Arithmetic, primes, GCD/LCM (Round 1); modular arithmetic and basic combinatorics (Round 2).",
+    "levels": ["district", "province"],
+    "subtopics": ["Basic arithmetic", "Primes", "GCD & LCM", "Modular arithmetic", "Basic combinatorics"],
+    "prereqs": ["core-programming"]
+  },
+  {
+    "id": "linear-data-structures",
+    "name": "Stacks, Queues, Heaps & Hashing",
+    "blurb": "NOI Round 2: stacks, queues, lists and linked lists, heaps (priority queues), basic hashing.",
+    "levels": ["province"],
+    "subtopics": ["Stacks", "Queues", "Lists & linked lists", "Heaps (priority queues)", "Basic hashing"],
+    "prereqs": ["core-programming"]
+  },
+  {
+    "id": "greedy",
+    "name": "Greedy Algorithms",
+    "blurb": "NOI Round 2.",
+    "levels": ["province"],
+    "subtopics": [],
+    "prereqs": ["core-programming"]
+  },
+  {
+    "id": "graphs-basics",
+    "name": "Graph Basics — BFS & DFS",
+    "blurb": "NOI Round 2: graph representation (adjacency list/matrix), breadth-first and depth-first search.",
+    "levels": ["province"],
+    "subtopics": ["Adjacency list & matrix", "Breadth-First Search (BFS)", "Depth-First Search (DFS)"],
+    "prereqs": ["core-programming"]
+  },
+  {
+    "id": "dynamic-programming",
+    "name": "Dynamic Programming",
+    "blurb": "Round 2: simple 1-D cases. Round 3: 2-D and grid DP. Round 4: bitmask DP and DP on trees.",
+    "levels": ["province", "national"],
+    "subtopics": ["Simple 1-D cases", "2-D DP", "Path-finding on grids", "DP with bitmasking", "DP on trees"],
+    "prereqs": ["core-programming", "math-for-cp"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "divide-conquer-backtracking",
+    "name": "Divide & Conquer and Backtracking",
+    "blurb": "NOI Round 3.",
+    "levels": ["national"],
+    "subtopics": ["Divide and conquer", "Backtracking"],
+    "prereqs": ["core-programming"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "advanced-data-structures",
+    "name": "Advanced Data Structures",
+    "blurb": "Round 3: DSU, segment trees, Fenwick trees, tries. Round 4: balanced BSTs.",
+    "levels": ["national"],
+    "subtopics": ["Disjoint Set Union (DSU)", "Segment trees", "Fenwick trees (BIT)", "Tries", "Balanced binary search trees"],
+    "prereqs": ["linear-data-structures"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "advanced-graph-algorithms",
+    "name": "Advanced Graph Algorithms",
+    "blurb": "Round 3: shortest paths (Dijkstra, Bellman-Ford, Floyd-Warshall) and MST (Kruskal, Prim). Round 4: combinations of advanced graph algorithms.",
+    "levels": ["national"],
+    "subtopics": ["Dijkstra", "Bellman-Ford", "Floyd-Warshall", "Minimum spanning trees (Kruskal, Prim)"],
+    "prereqs": ["graphs-basics"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "string-algorithms",
+    "name": "String Algorithms",
+    "blurb": "Round 3: tries. Round 4: KMP string matching.",
+    "levels": ["national"],
+    "subtopics": ["KMP string matching"],
+    "prereqs": ["core-programming"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "computational-geometry",
+    "name": "Computational Geometry",
+    "blurb": "NOI Round 4: basic computational geometry concepts.",
+    "levels": ["national"],
+    "subtopics": ["Basic computational geometry concepts"],
+    "prereqs": ["math-for-cp"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "proof-techniques",
+    "name": "Proof Techniques & Counting",
+    "blurb": "NOI Round 3: proof techniques and the inclusion-exclusion principle.",
+    "levels": ["national"],
+    "subtopics": ["Proof techniques", "Inclusion-exclusion principle"],
+    "gap": true,
+    "gapSubstituteId": null
+  }
+]

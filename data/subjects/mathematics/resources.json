@@ -1,0 +1,715 @@
+[
+  {
+    "id": "mathematics-cdc-secondary-education-curriculum-mathematics-grades-11-12-",
+    "title": "CDC — Secondary Education Curriculum, Mathematics Grades 11 & 12 (official)",
+    "type": "official",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "http://lib.moecdc.gov.np/elibrary/pages/download.php?direct=1&noattach=true&ref=10062&ext=pdf&k=",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://moecdc.gov.np/"
+      }
+    ],
+    "access": "caveat",
+    "accessNote": "Official but geo-slow — times out from outside Nepal",
+    "verified": "2026-10-22",
+    "why": "\"This course of Mathematics is designed for grade 11 and 12 students… Algebra, Trigonometry, Analytic Geometry, Vectors, Statistics and Probability, Calculus.\" The DMO syllabus is derived from this.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-man-blog",
+    "title": "MAN Blog —",
+    "type": "handout",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://www.mathassociationnepal.org.np/blog/elementary-number-theory",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Written by Prajit Adhikari — IMO Trainer, IMO 2018 & 2019 participant. Full LaTeX-rendered treatment: divisibility, Bézout's identity, Fundamental Theorem of Arithmetic, p-adic valuation vₚ(n) and its two rules, modular arithmetic and residue systems, Euler's totient theorem, and the LTE Lemma with worked examples. This is genuinely IChO/IMO-grade Nepali-authored material and the only such article found.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S24",
+      "S43"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-baltic-way-official-problems-solutions-archive-estonian-math",
+    "title": "Baltic Way — official problems & solutions archive (Estonian Math Competitions, Univ. of Tartu)",
+    "type": "official",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.math.olympiaadid.ut.ee/eng/html/?id=bw",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "\"Here you can find official problems and solutions of all Baltic Way contests.\" Nepal's 2020 Second Round P3 and P4 are Baltic Way 2019 P3 and P14. 20 problems per year, team format, since 1990.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S13",
+      "I13"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-math-olympiad-beginner-s-page",
+    "title": "Evan Chen — \"Math olympiad beginner's page\"",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/wherestart.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The world's best free on-ramp. Contains: an unofficial syllabus for math olympiads, a welcome letter for junior students (Grades 9–10), a welcome letter for older students (Grades 11–12), each with solutions, plus Intro to Proofs for the Morbidly Curious and Remarks on English. Written by an IMO gold medallist, USAMO winner and US-team coach.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S5"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-imo-shortlist-with-solutions-2024",
+    "title": "IMO Shortlist with Solutions 2024",
+    "type": "official",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S27",
+      "I3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-imo-shortlist-with-solutions-2025",
+    "title": "IMO Shortlist with Solutions 2025",
+    "type": "official",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.imo-official.org/assets/documents/problems/2025/IMO2025SL.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The IMO Shortlist is ~30 problems across A/C/G/N (Algebra, Combinatorics, Geometry, Number Theory), each with a full official solution — an order of magnitude above NMO difficulty, and the standard training diet of every medal-winning country.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S26",
+      "I2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-junior-balkan-mathematical-olympiad-compendium-problems-and-",
+    "title": "Junior Balkan Mathematical Olympiad Compendium — problems and shortlists",
+    "type": "problemset",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "http://www.toomates.net/biblioteca2/CompendiumJBMO2.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Nepal's 2021 Second Round P2 is JBMO 2013 P3; P3 and P4 are both JBMO Shortlist 2019. This compendium is the source document.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S16",
+      "I16"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-man-blog-2",
+    "title": "MAN Blog —",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://www.mathassociationnepal.org.np/blog/road-to-imo-nepals-mathematical-olympiad-journey",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The official pathway guide (Sep 2026). Links the DMO syllabus and DMO past-paper Drive folders.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S25"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-man-official-notice-board",
+    "title": "MAN Official Notice Board",
+    "type": "official",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://www.mathassociationnepal.org.np/notices",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "LIVE — but currently reads \"No Notices Currently Published\" → Gap M-10",
+    "verified": "2026-10-22",
+    "why": "DMO exam centres, PMO shortlist criteria, NMO schedules, camp notices",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S50"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-man-resources-hub-curriculum-past-papers",
+    "title": "MAN Resources Hub (\"Curriculum & Past Papers\")",
+    "type": "tool",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://www.mathassociationnepal.org.np/resources",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "LIVE but client-side rendered — needs a browser; not scrapeable",
+    "verified": "2026-10-22",
+    "why": "Official hub for syllabi, past papers and training problem sets — \"from DMO to IMO\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S49"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-sajha-notes-model-question-papers-hub-all-subjects-grades",
+    "title": "Sajha Notes — Model Question Papers hub (all subjects/grades)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/question-papers/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-sajha-notes-neb-grade-11-math-model-paper-with-solution-2078",
+    "title": "Sajha Notes — NEB Grade 11 Math model paper WITH solution (2078)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/neb-grade-11-math-paper-with-solution/",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "LIVE ⚠️ read-only online",
+    "verified": "2026-10-22",
+    "why": "New-syllabus model paper + complete worked solution. Exactly the DMO register.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-sajha-notes-neb-grade-12-mathematics-model-papers",
+    "title": "Sajha Notes — NEB Grade 12 Mathematics model papers",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/grade-12-mathematics/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "NEB-format papers, Set-1 onwards",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-how-to-write-solutions-problemwrite",
+    "title": "↳ How to Write Solutions (ProblemWrite)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/handouts/ProblemWrite/ProblemWrite.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S11"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-intro-to-proofs-for-the-morbidly-curious",
+    "title": "↳ Intro to Proofs for the Morbidly Curious",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/handouts/NaturalProof/NaturalProof.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The single most important bridge document for Nepal. DMO/PMO are MCQ + numerical; NMO is 6 full proofs. Nothing in the Nepali system teaches proof-writing.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S9"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-remarks-on-english-how-to-write-up-a-solution",
+    "title": "↳ Remarks on English (how to write up a solution)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/handouts/english/english.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "IMO marking rewards clear exposition; Nepali students lose points on write-up",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S10"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-unofficial-syllabus-for-math-olympiads-pdf",
+    "title": "↳ Unofficial syllabus for math olympiads (PDF)",
+    "type": "official",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/handouts/Syllabus/Syllabus.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-welcome-letter-junior-students-grades-9-10-solutions",
+    "title": "↳ Welcome letter — junior students (Grades 9–10) + solutions",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/static/docs/welcome-jmo.pdf",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://web.evanchen.cc/static/docs/sol-welcome-jmo.pdf"
+      }
+    ],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Matches the JBMO / IGO Elementary age band",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S8"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-welcome-letter-older-students-grades-11-12-solutions",
+    "title": "↳ Welcome letter — older students (Grades 11–12) + solutions",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/static/docs/welcome-usamo.pdf",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://web.evanchen.cc/static/docs/sol-welcome-usamo.pdf"
+      }
+    ],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Directly matches Nepal's DMO/PMO age band",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S7"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-art-of-problem-solving-aops-wiki-community",
+    "title": "Art of Problem Solving (AoPS) Wiki & Community",
+    "type": "tool",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://artofproblemsolving.com/wiki/index.php/Baltic_Way",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://artofproblemsolving.com/wiki/index.php/Junior_Balkan_Mathematical_Olympiad"
+      }
+    ],
+    "access": "caveat",
+    "accessNote": "403 to scripts (Cloudflare) — works normally in a browser",
+    "verified": "2026-10-22",
+    "why": "The world's largest olympiad problem database and forum. Every IMO/JBMO/Baltic Way/USAMO problem with community solutions.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S42"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-baltic-way-2025-official-site-univ-of-latvia",
+    "title": "Baltic Way 2025 official site (Univ. of Latvia)",
+    "type": "official",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://bw2025.lu.lv/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "\"The contest consists of solving 20 mathematical problems selected by the Jury.\" History + current regulations",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S15",
+      "I15"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-elmo-evan-chen-s-mock-olympiad",
+    "title": "ELMO — Evan Chen's mock olympiad",
+    "type": "mock",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://elmo.evanchen.cc/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Free, high-quality IMO-format mock papers",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S33",
+      "I12"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-egmo",
+    "title": "Evan Chen — (EGMO)",
+    "type": "book",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/geombook.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The standard olympiad geometry text. Directly targets Nepal's weakest area and the IGO contest Nepal already affiliates with.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S36",
+      "S46"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-v1-6",
+    "title": "Evan Chen — (v1.6)",
+    "type": "book",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/napkin.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Higher mathematics orientation; useful for the TST camp's \"university faculty\" sessions",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S37"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-barycentric-coordinates-full-abridged",
+    "title": "Evan Chen — Barycentric Coordinates (full + abridged)",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/handouts/bary/bary-full.pdf",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://web.evanchen.cc/handouts/bary/bary-short.pdf"
+      }
+    ],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Advanced geometry; NMO/TST level",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S22"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-complex-numbers-en-cmplx",
+    "title": "Evan Chen — Complex Numbers (en-cmplx)",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/handouts/cmplx/en-cmplx.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Geometry via complex numbers. Also directly serves DMO syllabus §VI (complex numbers, De Moivre's theorem).",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S21"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-directed-angles",
+    "title": "Evan Chen — Directed Angles",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/handouts/Directed-Angles/Directed-Angles.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The standard modern treatment of olympiad Euclidean geometry; both Nepal geometry problems are cyclic-quadrilateral type",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S20"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-for-coaches",
+    "title": "Evan Chen — For Coaches",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/coaches.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Directly usable by NSS STEM Club mentors",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S47"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-full-handout-index-olympiad-articles",
+    "title": "Evan Chen — full handout index (Olympiad Articles)",
+    "type": "handout",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/olympiad.html",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://github.com/vEnhance/web.evanchen.cc"
+      }
+    ],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "All of the above plus more, each with LaTeX source on GitHub",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S23",
+      "S44"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "mathematics-evan-chen-functional-equations-intro",
+    "title": "Evan Chen — Functional Equations (intro)",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://web.evanchen.cc/handouts/FuncEq-Intro/FuncEq-Intro.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Nepal 2020 Second Round P3 is a functional equation. This is the standard free introduction.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S17"
+    ],
+    "needsReview": true
+  }
+]

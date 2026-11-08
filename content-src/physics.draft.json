@@ -1,0 +1,3694 @@
+{
+  "slug": "physics",
+  "generatedFrom": "physics.md",
+  "generatedAt": "2026-11-08T08:18:25.939Z",
+  "fileCompiledOn": "2026-10-22",
+  "counts": {
+    "tablesFound": 30,
+    "rawRows": 105,
+    "afterDedupe": 95,
+    "resources": 44,
+    "papers": 51,
+    "paperSets": 9,
+    "nepalSpecificFlagged": 5,
+    "byStatus": {
+      "ok": 83,
+      "caveat": 12
+    },
+    "missingWhy": 21,
+    "gaps": 17,
+    "contacts": 8,
+    "rejected": 9
+  },
+  "resources": [
+    {
+      "id": "physics-secondary-education-curriculum-2076-physics-grades-11-12-sub",
+      "title": "Secondary Education Curriculum 2076 — Physics, Grades 11 & 12 (Subject code Phy-101 / Phy-102, 5 credit hrs, 160 working hrs)",
+      "type": "official",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "http://lib.moecdc.gov.np/elibrary/pages/download.php?direct=1&noattach=true&ref=9701&ext=pdf&k=",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "Official but geo-slow — CDC's e-library server is very slow / often times out from outside Nepal. Retry, or reach it via the portal below.",
+      "verified": "2026-10-22",
+      "why": "The single most important document at this level. NePhO Round 1 is explicitly based on it.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-curriculum-development-centre-cdc-digital-library-portal",
+      "title": "Curriculum Development Centre (CDC) — Digital Library portal",
+      "type": "official",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "http://lib.moecdc.gov.np/elibrary/pages/home.php?login=true",
+      "extraLinks": [
+        {
+          "label": "Link 2",
+          "url": "https://moecdc.gov.np/"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "Same geo-slowness. Accessible from within Nepal.",
+      "verified": "2026-10-22",
+      "why": "Entry point for all NEB textbooks & curricula.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-openstax-vol-1-mechanics",
+      "title": "OpenStax , Vol. 1 (Mechanics)",
+      "type": "book",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://openstax.org/details/books/university-physics-volume-1",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Calculus-based, IPhO-grade rigour, legally free, and it is the direct upgrade path from the NEB textbook. Prabhakar Kafle (IPhO 2017 bronze) recommends \"University Physics\" as the top choice for students comfortable with calculus.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-openstax-vol-2-thermodynamics-e-m-optics",
+      "title": "OpenStax , Vol. 2 (Thermodynamics, E&M, Optics)",
+      "type": "book",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://openstax.org/details/books/university-physics-volume-2",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Covers the entire NePhO Round-2 optics + induction + AC gap.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-openstax-vol-3-modern-quantum-physics",
+      "title": "OpenStax , Vol. 3 (Modern & Quantum Physics)",
+      "type": "book",
+      "levels": [
+        "district",
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://openstax.org/details/books/university-physics-volume-3",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Photons, matter waves, uncertainty principle, nuclear — the Final-Round modern-physics syllabus.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S5",
+        "S24"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-hyperphysics-georgia-state-university",
+      "title": "HyperPhysics (Georgia State University)",
+      "type": "tool",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://hyperphysics.phy-astr.gsu.edu/hbase/index.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Fast concept cross-referencing; excellent for filling holes before you touch olympiad problems.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-graphing-for-nepho-prabhakar-kafle-sanam-limbu",
+      "title": "Graphing for NePhO — Prabhakar Kafle & Sanam Limbu",
+      "type": "handout",
+      "levels": [
+        "district",
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://prabhakarkafle.com.np/files/Graph.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Explicitly built for NePhO. Opens with a NePhO Pre-selection 2017 graph question. Graphing is a named scoring skill in the official NePhO syllabus. 5 pp.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S7",
+        "S15"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-significant-figures-and-rounding-kafle-limbu",
+      "title": "Significant Figures and Rounding — Kafle & Limbu",
+      "type": "handout",
+      "levels": [
+        "district",
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://prabhakarkafle.com.np/files/Significant-Figures-and-Rounding.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "NePhO papers state: \"Marks will not be deducted for incorrect answers but deducted for improper significant figures.\" This is free marks most Nepali students lose. 2 pp.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S8",
+        "S16"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-errors-and-their-propagation-kafle-limbu",
+      "title": "Errors and their Propagation — Kafle & Limbu",
+      "type": "handout",
+      "levels": [
+        "district",
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://prabhakarkafle.com.np/files/Errors-and-their-Propagation.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Foundation for the mandatory \"Experimental uncertainty & Data analysis\" syllabus section. 4 pp.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S9",
+        "S17"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-uncertainty-and-error-propagation-v-lindberg-lsu-rit",
+      "title": "Uncertainty and Error Propagation — V. Lindberg (LSU/RIT)",
+      "type": "handout",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.geol.lsu.edu/jlorenzo/geophysics/uncertainties/Uncertaintiespart2.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "The quick version. Recommended by IPhO-2017 medallists specifically for NePhO-only preparation.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-mit-ocw-8-01sc-classical-mechanics",
+      "title": "MIT OCW 8.01SC Classical Mechanics",
+      "type": "course",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Full first-year mechanics with problem sets + exams. The standard bridge from board physics to olympiad mechanics.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-the-feynman-lectures-on-physics-vol-i-ii-iii-tips-on-physics",
+      "title": "The Feynman Lectures on Physics (Vol. I / II / III + Tips on Physics)",
+      "type": "official",
+      "levels": [
+        "district"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.feynmanlectures.caltech.edu/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "LIVE but bot-walled (returns 403 to scripts/scrapers — opens fine in a normal browser)",
+      "verified": "2026-10-22",
+      "why": "Legal free HTML edition from Caltech. Kafle's advice: \"like physics, but don't enjoy reading course books? Have a look at Feynman.\" Read-only online (downloads not permitted).",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S12"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-a-guide-to-nepal-physics-olympiad",
+      "title": "A Guide to Nepal Physics Olympiad",
+      "type": "book",
+      "levels": [
+        "province",
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://github.com/nkalauni/physics-olympiad-book/releases/download/v1.0.0/A_Guide_to_Nepal_Physics_Olympiad.pdf",
+      "extraLinks": [
+        {
+          "label": "Link 2",
+          "url": "https://github.com/nkalauni/physics-olympiad-book"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Written by Laxman Bist, Nabin Kalauni, Sandesh Parajuli — top-3 of NePhO 2018, Nepal's team at IPhO 2018 Lisbon. Explicitly \"organized as per the syllabus of NePhO.\" Every chapter = Key Concepts & Formulae → Bridging Problem → Level 1 problems → Level 2 problems → IPhO problems → Supplementary problems, all with solutions. Sources cited inside: Morin, Irodov, Gnädig, Sears & Zemansky. Released Oct 2023, CC BY-NC-SA 4.0.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S13",
+        "S21"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-mechanics-for-nepho-dinesh-kandel-ipho-2011-bronze-nepal",
+      "title": "Mechanics for NePhO — Dinesh Kandel (IPhO 2011 Bronze, Nepal)",
+      "type": "handout",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": true,
+      "kind": "external",
+      "url": "https://prabhakarkafle.com.np/files/Mechanics-for-NePhO.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "\"Preparation Materials FOR IPhO — NePhO, Nepal Physical Society.\" Contains an actual NePhO 2011 selection-test problem (falling-raindrop model) worked up to competition standard. The deepest Nepal-authored mechanics treatment available.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S14"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-an-introduction-to-error-analysis-john-r-taylor",
+      "title": "An Introduction to Error Analysis — John R. Taylor",
+      "type": "book",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.niser.ac.in/sps/sites/default/files/basic_page/John%20R.%20Taylor%20-%20An%20Introduction%20to%20Error%20Analysis_%20The%20Study%20of%20Uncertainties%20in%20Physical%20Measurements-University%20Science%20Books%20(1997",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "Unreachable from some networks (India-hosted mirror; times out abroad). Search title to find it; or buy.",
+      "verified": "2026-10-22",
+      "why": "Kafle: \"if you want in-depth knowledge from the very beginning (which will be required eventually in IPhO), the best material should be John R. Taylor's.\" The definitive text.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S18"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-bdpho-past-papers-13th-bdpho-category-c-higher-secondary",
+      "title": "BdPhO Past Papers — 13th BdPhO, Category C (Higher Secondary)",
+      "type": "tool",
+      "levels": [
+        "province"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bdpho.org/past-paper/13/6",
+      "extraLinks": [
+        {
+          "label": "Link 2",
+          "url": "https://www.bdpho.org/past-paper"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "LIVE but JavaScript-only SPA — needs a browser; not scrapeable. Category A/B/C correspond to school tiers.",
+      "verified": "2026-10-22",
+      "why": "Bangladesh's olympiad has an identical ladder shape to what you want: Selection Round → Regional Round (multiple question sets) → National Round, with Category C = higher secondary = Nepal's Grade 11–12. Difficulty sits right between NePhO Round 1 and Round 2. The single best volume-drill source for South Asian students.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S19"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-hbcse-india-past-papers-index-nsep-inpho-2008-2025-english-a",
+      "title": "HBCSE (India) — Past Papers index (NSEP + INPhO, 2008–2025, English and Hindi)",
+      "type": "tool",
+      "levels": [
+        "province",
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "Index ✅ LIVE, but individual PDFs 404 from non-Indian IPs (geo-restricted). Use from within Nepal/India or via archive.org.",
+      "verified": "2026-10-22",
+      "why": "India's national olympiad papers with official model solutions. INPhO is ~1 notch above NePhO Final Round; NSEP is ~NePhO Round 1. Hindi versions help Nepali students more comfortable in Devanagari.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S20",
+        "S25"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-mit-ocw-8-02-physics-ii-electricity-magnetism",
+      "title": "MIT OCW 8.02 Physics II — Electricity & Magnetism",
+      "type": "course",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Covers magnetic field, magnetic properties of materials, electromagnetic induction, alternating currents — the entire §2 of the official Final-Selection syllabus, which no Nepali resource covers.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S22"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-mit-ocw-8-03sc-physics-iii-vibrations-and-waves",
+      "title": "MIT OCW 8.03SC Physics III — Vibrations and Waves",
+      "type": "course",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Covers mechanical waves, acoustic phenomena, interference, diffraction, polarization — the entire §1 of the official Final-Selection syllabus, also uncovered by Nepali material.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S23"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-bdpho-national-round-papers-category-c",
+      "title": "BdPhO National Round papers, Category C",
+      "type": "handout",
+      "levels": [
+        "national"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.bdpho.org/past-paper",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "JS-only site",
+      "verified": "2026-10-22",
+      "why": "The National Round of BdPhO ≈ NePhO Final Round in difficulty and is freely downloadable (unlike INPhO).",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S26"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-jaan-kalda-study-guide-ver-0-87",
+      "title": "Jaan Kalda — study guide (ver 0.87)",
+      "type": "handout",
+      "levels": [
+        "national",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/Thermodyn.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "IPhO-level thermodynamics with hints. Bridges NePhO Round 1 thermo → Round 2 → IPhO.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S27",
+        "S36"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-jaan-kalda-ver-1-2",
+      "title": "Jaan Kalda — (ver 1.2)",
+      "type": "handout",
+      "levels": [
+        "national",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/electricity-circuits.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "DC/AC circuit theory at olympiad depth — covers the Kirchhoff / thermoelectric / AC circuits syllabus items the Nepal guide omits.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S28",
+        "S35"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-jaan-kalda-ver-0-5",
+      "title": "Jaan Kalda — (ver 0.5)",
+      "type": "handout",
+      "levels": [
+        "national",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/waveopt.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Interference, diffraction, polarization. The only free olympiad-grade optics handout identified; there is no Nepali equivalent at any level.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S29",
+        "S37"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-jaan-kalda-ver-1-2-2",
+      "title": "Jaan Kalda — (ver 1.2)",
+      "type": "handout",
+      "levels": [
+        "national",
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/meh_ENG2.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Rotation, rigid bodies, gravitation, oscillations — the Round-1 mechanics blocks missing from the Nepal guide.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S30",
+        "S34"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-jaan-kalda-recommended-list-of-problems",
+      "title": "Jaan Kalda — \"Recommended list of problems\"",
+      "type": "problemset",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/rec-list.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "The most respected curated olympiad problem list in the world, hand-picked by an IPhO organiser and sorted by topic: Mechanics (incl. celestial), Electromagnetism, Thermodynamics, Optics, Relativity, Quantum. Each entry annotated with why it teaches something (e.g. \"IPhO-1991-Pr1 — this will teach you the basics of the collision of bodies\"). Start here before touching raw archives.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "C1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-physics-cup-by-mail-ipho-estonia-open-online-competition-pro",
+      "title": "Physics Cup (by mail, IPhO Estonia) — open online competition, problems 2012 → 2020",
+      "type": "problemset",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://physicscup.ee/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Low-stakes, monthly, solution-published. Ideal for building consistency between NePhO rounds.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "C2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nordic-baltic-physics-olympiad-nbpho-problems",
+      "title": "Nordic-Baltic Physics Olympiad (NBPhO) problems",
+      "type": "problemset",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/E_S.html",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Kalda's own regional olympiad; the Est-Fin problems on his recommended list come from here.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "C3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-gulf-physics-olympiads-gpho",
+      "title": "Gulf Physics Olympiads (GPhO)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/GPhO",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "ABEGS-organised; 3 editions with problems.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "C4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-aapt-u-s-physics-team-exams-f-ma-usapho-usapho-plus-all-year",
+      "title": "AAPT — U.S. Physics Team exams (F=ma, USAPhO, USAPhO Plus), all years + solutions",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://aapt.org/physicsteam/PT-exams.cfm",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "F=ma is a 25-question/75-min MCQ round — perfect timed-drill material for NePhO Section A; USAPhO is free-response at NePhO-Final/IPhO difficulty.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "C5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-official-ipho-syllabus-accepted-astana-2014-amended-mumbai-2",
+      "title": "Official IPhO Syllabus (accepted Astana 2014, amended Mumbai 2015)",
+      "type": "official",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/Syllabus-new.pdf",
+      "extraLinks": [
+        {
+          "label": "Link 2",
+          "url": "https://www.ipho-new.org/statutes-syllabus/"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Section-by-section: 2.2 Mechanics (kinematics / statics / dynamics / celestial mechanics), 2.3 Electromagnetic fields (basic concepts / integral forms of Maxwell's equations / interaction of matter with fields / circuits), 2.4 Oscillations & waves (single oscillator / waves / interference & diffraction / EM waves in matter), plus thermodynamics, modern physics, and experimental skills incl. error analysis.",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S31"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-kalda-formulas-for-ipho-ver-1-1",
+      "title": "Kalda — \"Formulas for IPhO\" (ver 1.1)",
+      "type": "book",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/formulas.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "The de-facto standard IPhO formula sheet. Also in Spanish, Japanese, Portuguese, Indonesian, Estonian — no Nepali version exists (Gap I-3).",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "S32"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-kalda-kinematics-ver-2-0",
+      "title": "Kalda — Kinematics (ver 2.0)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/kin_ENG.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S33"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-kalda-theory-of-relativity-siim-ainsaar-ver-0-6",
+      "title": "Kalda — Theory of Relativity (Siim Ainsaar, ver 0.6)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/Ainsaar_Relativity.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Directly serves the \"basics of special relativity\" in the NePhO Final Round syllabus.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S38"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-kalda-quantum-mechanics-ver-0-4",
+      "title": "Kalda — Quantum Mechanics (ver 0.4)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/quant_ENG.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S39"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-kalda-a-short-introduction-to-nonlinear-waves",
+      "title": "Kalda — \"A short introduction to nonlinear waves\"",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/nonlin-waves.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Stretch material for IPhO-bound students.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S40"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-kalda-complete-study-guide-index-all-of-the-above-translatio",
+      "title": "Kalda — Complete study-guide index (all of the above + translations + terms of use)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://www.ioc.ee/~kalda/ipho/",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Master page for S31–S40.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S41"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-physoly-lagrangian-formalism-handout-ashmit-dutta",
+      "title": "Physoly — Lagrangian formalism handout (Ashmit Dutta)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://physoly.tech/static/files/Lagrangian_Handout%20(2",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Lagrangian methods unlock a large class of IPhO mechanics problems with far less algebra. Not in any syllabus but heavily rewarded.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S42"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-physoly-parabolic-projectiles-ahmed-saad-sabit",
+      "title": "Physoly — Parabolic Projectiles (Ahmed Saad Sabit)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://physoly.tech/static/files/parabolic_trajectories.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Directrix/focus methods for hard projectile problems. Maps onto NePhO 2022-style QN6(A).",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S43"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-physoly-maxwellian-distribution-murad-bashirov",
+      "title": "Physoly — Maxwellian Distribution (Murad Bashirov)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://physoly.tech/static/files/maxwell.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Kinetic theory at olympiad depth (NePhO syllabus: \"kinetic theory of gases and gas laws\").",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S44"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-physoly-golden-ratio-problem-collection-qilin-xue",
+      "title": "Physoly — \"Golden Ratio\" problem collection (QiLin Xue)",
+      "type": "problemset",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://physoly.tech/static/files/golden.pdf",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Dozens of worked problems from Morin, Purcell, Kalda, PhysicsBrawl, Pathfinder whose answer is φ. Excellent pattern-recognition drill.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S45"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-physoly-mock-f-ma-2020-solutions",
+      "title": "Physoly Mock F=ma 2020 + Solutions",
+      "type": "mock",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://physoly.tech/static/files/MockFMA-2020.pdf",
+      "extraLinks": [
+        {
+          "label": "Solutions",
+          "url": "https://physoly.tech/static/files/MockFMA-2020-S.pdf"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Timed MCQ mock in the exact NePhO Section-A / F=ma style.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S46"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-physoly-mock-f-ma-2021-solutions",
+      "title": "Physoly Mock F=ma 2021 + Solutions",
+      "type": "mock",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://physoly.tech/static/files/MockFMA-2021.pdf",
+      "extraLinks": [
+        {
+          "label": "Solutions",
+          "url": "https://physoly.tech/static/files/MockFMA-2021_sol.pdf"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S47"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-physoly-mock-f-ma-2022-solutions",
+      "title": "Physoly Mock F=ma 2022 + Solutions",
+      "type": "mock",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://physoly.tech/static/files/2022_PhODS_Mock_F_ma_.pdf",
+      "extraLinks": [
+        {
+          "label": "Solutions",
+          "url": "https://physoly.tech/static/files/solswilliam.pdf"
+        }
+      ],
+      "format": "",
+      "licence": "",
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S48"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-hrk-5th-ed-complete-mcq-answer-key-kevin-zhou-ch-1-17-physol",
+      "title": "HRK (5th ed.) — complete MCQ answer key (Kevin Zhou Ch. 1–17 + Physoly community Vol. 2)",
+      "type": "handout",
+      "levels": [
+        "international"
+      ],
+      "topics": [],
+      "author": "",
+      "nepalSpecific": false,
+      "kind": "external",
+      "url": "https://docs.google.com/document/d/1rcf25MGKGDp_TcKgY-KtGcakhbdf2890q-3TUNG7KWM/edit?usp=sharing",
+      "extraLinks": [],
+      "format": "",
+      "licence": "",
+      "access": "caveat",
+      "accessNote": "Kevin Zhou's /handouts/ index returns 404; the direct PDF and the Google Doc are the live routes",
+      "verified": "2026-10-22",
+      "why": "Halliday–Resnick–Krane is the rigorous edition; this makes it self-study-able.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "S49"
+      ],
+      "needsReview": true
+    }
+  ],
+  "papers": [
+    {
+      "id": "physics-e-mc2-hysics-lympiad-question-set",
+      "title": "E=mc² ρhysics Ωlympiad — Question Set",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/files/Emc2.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Intra/inter-college physics olympiad paper. Cover sheet has Symbol No., College:, Grade: fields — i.e. a college-level contest, the closest real analogue to a district round. 6 pp.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-e-mc2-hysics-lympiad-sample-question-set",
+      "title": "E=mc² ρhysics Ωlympiad — Sample Question Set",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/files/sample-Emc2.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Companion sample paper; MCQ + structured. Good first ever olympiad paper for a beginner. 6 pp.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepal-science-olympiad-neso-tier-ii-model-question",
+      "title": "Nepal Science Olympiad (NeSO) — Tier II Model Question",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "http://nepalscienceolympiad.org.np/wp-content/uploads/2015/12/Tier-II-model-question.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Official NeSO model paper. Section A = 20 + 5 Physics, 20 + 5 Chemistry, 25 Mathematics. Multi-subject, board-plus difficulty.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-neso-application-form-tier-i-ii-format-description",
+      "title": "NeSO application form + Tier I/II format description",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "http://nepalscienceolympiad.org.np/wp-content/uploads/2015/11/Science-Olympiad-2015-Application-Form.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Documents the Tier I (objective aptitude) → Tier II structure. Useful to understand the multi-subject olympiad format.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ccrc-mini-olympiad-for-physics",
+      "title": "CCRC \"Mini Olympiad\" for Physics",
+      "type": "pastpaper",
+      "levels": [
+        "district"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ccrc.edu.np/project/the-scientific-circle/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Capital College & Research Centre (Kathmandu) science club runs Olympiad Introduction & Interaction Sessions + model Olympiad exams + a Mini Olympiad for Physics, feeding students into NePhO. Papers are not published online.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "D5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2022-pre-selection-test-for-ipho-2023",
+      "title": "NePhO 2022 — Pre-selection Test for IPhO-2023",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2022,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.trinity.edu.np/assets/backend/uploads/Events/2080/Olympiad/PHYSICS.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "10 Dec 2022 · 3 h 15 m · 100 marks · 11 Qs (5 short + 6 long) · includes the complete official NePhO Pre-selection syllabus AND the complete official NePhO Final-Selection syllabus AND the full IPhO Syllabus (Astana 2014/Mumbai 2015) printed in the same PDF",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2018-pre-selection-first-round-ipho-49",
+      "title": "NePhO 2018 — Pre-selection (First Round), IPhO-49",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2018,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/files/NePhO-2018-first-round.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "17 Feb 2018, Saturday · 7 pp · header: \"Nepal Physics Olympiad (pre-selection Test IPHO-49)\"",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2017-pre-selection",
+      "title": "NePhO 2017 — Pre-selection",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2017,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/files/NePhO-2017-pre-selection.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Feb 2017 · 4 pp",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2017-model-question-pre-selection-format",
+      "title": "NePhO 2017 — Model Question (Pre-selection format)",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2017,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/files/NePhO-model-question-2017.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "\"NePhO, Pre-selection test, 2017 — National Physics Olympiad, Nepal, 2017 (Model questions), Saturday 17th February 2017\" · 3 h 15 m · 100 marks · 4 pp",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2019-official-registration-form-admission-card-syllabu",
+      "title": "NePhO 2019 — Official Registration Form + Admission Card + Syllabus",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://media.edusanjal.com/uploads/13th-NePhO-Registration%20Form-2019.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "LIVE — Edusanjal's CDN returns 403 to scripts but loads normally in a browser",
+      "verified": "2026-10-22",
+      "why": "13th NePhO-2019 · \"Pre-selection Test for APhO/IPhO-2019\" · lists all 10 exam centres · exam date 26 Magh 2075 (9 Feb 2019) 11:00 AM · prints the full pre-selection syllabus",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "P5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2020-old-question",
+      "title": "NePhO 2020 — Old Question",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.scribd.com/document/610347671/Old-Question-NePhO-2020",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "Scribd paywall/login — preview only; no clean public PDF exists (see Gap P-2)",
+      "verified": "2026-10-22",
+      "why": "3 h 15 m, two-section format",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2013-pre-selection-test",
+      "title": "NePhO 2013 — Pre-selection Test",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": 2013,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.scribd.com/document/668365793/NePhO-Pre-selection-test-2013-1",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "Scribd paywall/login",
+      "verified": "2026-10-22",
+      "why": "MCQ + multi-part",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-index-page-hosting-p2-p4-all-nepho-study-handouts",
+      "title": "Index page hosting P2–P4 + all NePhO study handouts",
+      "type": "pastpaper",
+      "levels": [
+        "province"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/blogs/nepal-physics-olympiad/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Prabhakar Kafle (IPhO 2017 bronze) & Sanam Limbu's NePhO blog — the de-facto public NePhO archive",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "P8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2018-final-round",
+      "title": "NePhO 2018 — Final Round",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2018,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/files/NePhO-2018-final-round.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "4 pp",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2017-final-round",
+      "title": "NePhO 2017 — Final Round",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2017,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/files/NePhO-2017-final-round.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "5 pp",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2016-final-round",
+      "title": "NePhO 2016 — Final Round",
+      "type": "pastpaper",
+      "levels": [
+        "national"
+      ],
+      "year": 2016,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://prabhakarkafle.com.np/files/NePhO-2016.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "4 pp",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2025-26-first-round-result-list-top-25-national-champi",
+      "title": "NePhO 2025/26 — First-Round Result List (Top 25 National Champions)",
+      "type": "official",
+      "levels": [
+        "national"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://nps.org.np/wp-content/uploads/2026/09/Result-heading-2025_26-NePhO.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Not a paper, but the official published national-level selection result. Useful to gauge cut-off and cohort size.",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-nepho-2025-26-final-round-result-image",
+      "title": "NePhO 2025/26 — Final Round result image",
+      "type": "official",
+      "levels": [
+        "national"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://nps.org.np/wp-content/uploads/2026/09/Final-round-result-2025-600x417-1.png",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Published final-round standings",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "N5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-2026-theoretical-examination",
+      "title": "IPhO 2026 Theoretical Examination",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://assets.zyrosite.com/mk3Jq6ly29i40jE2/theoretical-exam-VD3AIsWsVvCnBRpu.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "most recent, exactly what Team Nepal just sat",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "I1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-2026-theoretical-answer-sheet",
+      "title": "IPhO 2026 Theoretical Answer Sheet",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://assets.zyrosite.com/mk3Jq6ly29i40jE2/theoretical-answer-sheet-Ku6a8l0KhPFAmEbx.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-2026-experimental-examination",
+      "title": "IPhO 2026 Experimental Examination",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://assets.zyrosite.com/mk3Jq6ly29i40jE2/experimental-exam-pur96GYVXLCLIaEa.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "I3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-2026-experimental-answer-sheet",
+      "title": "IPhO 2026 Experimental Answer Sheet",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://assets.zyrosite.com/mk3Jq6ly29i40jE2/experimental-answer-sheet-Wgzt1rc8u7usdo2o.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-2026-official-questions-landing-page",
+      "title": "IPhO 2026 official questions landing page",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ipho2026.com/official-questions",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-2026-final-results-nepal-s-silver-is-here",
+      "title": "IPhO 2026 final results (Nepal's silver is here)",
+      "type": "official",
+      "levels": [
+        "international"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ipho2026.com/final-results",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-past-problems-solutions-1967-present-ipho-singapore-per",
+      "title": "IPhO Past Problems & Solutions, 1967 → present (IPhO Singapore permanent archive) — one download per year, every edition",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 1967,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ipho-new.org/documentations/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-statutes-syllabus-official",
+      "title": "IPhO Statutes + Syllabus (official)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.ipho-new.org/statutes-syllabus/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-unofficial-results-statistics-portal-per-country-per-ye",
+      "title": "IPhO unofficial results/statistics portal — per-country, per-year, per-student",
+      "type": "official",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://ipho-unofficial.org/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-ipho-problems-solutions-curated-pdf-collection-physics-with-",
+      "title": "IPhO Problems & Solutions, curated PDF collection (Physics with Stefan)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physicswithstefan.com/ipho-papers/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "I10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-apho-2025-theoretical-exam",
+      "title": "APhO 2025 Theoretical Exam",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.apho2025.sa/media/h5aipfl1/theory_questions_apho_2025.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "A1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-apho-2025-theory-solutions",
+      "title": "APhO 2025 Theory Solutions",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.apho2025.sa/media/zlzlx5zy/theory_solution_apho_2025.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "A2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-apho-2025-experimental-exam",
+      "title": "APhO 2025 Experimental Exam",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.apho2025.sa/media/2f2lc300/experimental_questions_apho_2025.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "A3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-apho-2025-experimental-solutions",
+      "title": "APhO 2025 Experimental Solutions",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.apho2025.sa/media/utqpcnz0/experimental_solution_apho_2025.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "A4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-apho-2025-questions-landing-page",
+      "title": "APhO 2025 questions landing page",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://www.apho2025.sa/results-and-questions/questions/",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "A5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-apho-2026-busan-korea-theoretical-problems-experimental-prob",
+      "title": "APhO 2026 (Busan, Korea) — Theoretical Problems / Experimental Problems / Theory Solution + Marking Scheme / Experimental Marking Scheme (4 items)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2026,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://apho2026.kr/bbs/board.php?bo_table=download1_en",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "A6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-apho-1st-8th-problems-solutions-compilation",
+      "title": "APhO 1st–8th Problems & Solutions compilation",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": null,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://fizikolimpiyatlari.com/wp-content/uploads/2023/10/APhO-1st-8th-Problems-and-Solutions.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "caveat",
+      "accessNote": "Not re-verified (third-party host)",
+      "verified": "2026-10-22",
+      "why": "",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "A7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2020-indonesian-national-olympiad-district-stage-selection",
+      "title": "2020 Indonesian National Olympiad — District Stage Selection",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/Indonesia-2020.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "DISTRICT",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T1"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2019-indonesian-national-olympiad-district-stage-selection",
+      "title": "2019 Indonesian National Olympiad — District Stage Selection",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/Indonesia-2019.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "DISTRICT",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T2"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-200-estonian-physics-olympiad-problems-2011-2018",
+      "title": "200 Estonian Physics Olympiad Problems (2011–2018)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2011,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/200EstonianProblems-1.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Province → National",
+      "highlight": true,
+      "origin": "external",
+      "sourceIds": [
+        "T3"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2020-russian-physics-olympiad-grade-11-round-1",
+      "title": "2020 Russian Physics Olympiad, Grade 11, Round 1",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/RuPhO-2020-11-1.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "National",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T4"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2020-russian-physics-olympiad-grade-11-round-2",
+      "title": "2020 Russian Physics Olympiad, Grade 11, Round 2",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/RuPhO-2020-11-2.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "National",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T5"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2019-russian-physics-olympiad-grade-10",
+      "title": "2019 Russian Physics Olympiad, Grade 10",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/RuPhO-2019.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "National",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T6"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2018-chinese-physics-olympiad-finals",
+      "title": "2018 Chinese Physics Olympiad — Finals",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2018,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/CPhO-2018-F.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "International+",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T7"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2018-chinese-physics-olympiad-finals-solutions",
+      "title": "2018 Chinese Physics Olympiad — Finals Solutions",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2018,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/CPhO-2018-F-S.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "International+",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T8"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2019-chinese-physics-olympiad-finals-8-problems",
+      "title": "2019 Chinese Physics Olympiad — Finals (8 problems)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/CPhO-2019.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "International+",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T9"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2020-azerbaijan-physics-olympiad-finals",
+      "title": "2020 Azerbaijan Physics Olympiad — Finals",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/AzPhO-2020.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "National",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T10"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2020-azerbaijan-physics-olympiad-semi-finals",
+      "title": "2020 Azerbaijan Physics Olympiad — Semi-Finals",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/AzPhO-2020-SF.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "Province",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T11"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2019-romanian-physics-olympiad",
+      "title": "2019 Romanian Physics Olympiad",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/RoPhO-2019.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "National",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T12"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2018-brazil-team-selection-test",
+      "title": "2018 Brazil Team Selection Test",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2018,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/BrTST-2018.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "National",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T13"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2019-2018-eo-tvo-s-competition-hungary",
+      "title": "2019 & 2018 Eötvös Competition (Hungary)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "2019",
+          "url": "https://physoly.tech/static/files/archive/Eotvos-2019.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "2018",
+          "url": "https://physoly.tech/static/files/archive/Eotvos-2018.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "International",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T14"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2020-taiwan-ipho-apho-team-selection-3-4-hour-exams",
+      "title": "2020 Taiwan IPhO/APhO Team Selection (3 × 4-hour exams)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/2020_Taiwan_TST-Translation.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "International+",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T15"
+      ],
+      "needsReview": true
+    },
+    {
+      "id": "physics-2011-seagull-competition-estonia-model-building",
+      "title": "2011 Seagull Competition (Estonia, model-building)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2011,
+      "topics": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://physoly.tech/static/files/archive/Seagull-2011.pdf",
+          "kind": "questions"
+        }
+      ],
+      "format": {
+        "duration": "",
+        "marks": null,
+        "questions": "",
+        "calculator": "",
+        "negativeMarking": null
+      },
+      "hasSolutions": null,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "International",
+      "highlight": false,
+      "origin": "external",
+      "sourceIds": [
+        "T16"
+      ],
+      "needsReview": true
+    }
+  ],
+  "paperSets": [
+    {
+      "id": "physics-eupho-9th-2025-sofia-bulgaria",
+      "title": "EuPhO — 9th · 2025 (Sofia, Bulgaria)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2025,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2025/06/EuPhO_2025_Theory_ENG.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2025/06/EuPhO25_Theory_Solutions_20250616_1120.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2025/06/EuPhO_2025_experiment.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Experimental solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2025/06/EuPhO25_Exp_Problems_Solutions_20250616_1120.pdf",
+          "kind": "solutions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    },
+    {
+      "id": "physics-eupho-8th-2024-kutaisi-georgia",
+      "title": "EuPhO — 8th · 2024 (Kutaisi, Georgia)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2024,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2024/07/EuPhO_2024_theory_final.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2024/07/EuPhO_2024_theory_sol.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2024/07/EuPhO_2024_experiment_final.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Experimental solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2024/07/EuPhO_2024_ep_sol.pdf",
+          "kind": "solutions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    },
+    {
+      "id": "physics-eupho-7th-2023-hannover-germany",
+      "title": "EuPhO — 7th · 2023 (Hannover, Germany)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2023,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2023/06/EuPhO_2023_theory.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2023/06/EuPhO_2023_theo_sol.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2023/06/EuPhO_2023_expreiment.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Experimental solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2023/06/EuPhO_2023_exp_sol.pdf",
+          "kind": "solutions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    },
+    {
+      "id": "physics-eupho-6th-2022-ljubljana-slovenia",
+      "title": "EuPhO — 6th · 2022 (Ljubljana, Slovenia)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2022,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2022/05/EuPhO_2022_theory___English.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2022/05/EuPhO_2022_Solutions.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2022/05/EuPhO_2022_exp.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Experimental solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2022/05/EuPhO_2022_Solutions___experiment-1.pdf",
+          "kind": "solutions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    },
+    {
+      "id": "physics-eupho-5th-2021-online-estonia",
+      "title": "EuPhO — 5th · 2021 (Online (Estonia))",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2021,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2021/06/EuPhO_2021-theory.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2021/06/EuPhO_2021_Solutions-2.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2021/06/EuPhO_2021-exp.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Experimental solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2021/06/EuPhO_2021_exp_solutions-2.pdf",
+          "kind": "solutions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    },
+    {
+      "id": "physics-eupho-4th-2020-online-estonia",
+      "title": "EuPhO — 4th · 2020 (Online (Estonia))",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2020,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO_2020_Theory.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO20_Theory_Solutions-7.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO20_experiment-1.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Experimental solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO20_experiment_Solutions.pdf",
+          "kind": "solutions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    },
+    {
+      "id": "physics-eupho-3rd-2019-riga-latvia",
+      "title": "EuPhO — 3rd · 2019 (Riga, Latvia)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2019,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO_2019_theory_problems.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO_2019_theory_solutions.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO_2019_exp_problems.pdf",
+          "kind": "questions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    },
+    {
+      "id": "physics-eupho-2nd-2018-dolgoprudny-russia",
+      "title": "EuPhO — 2nd · 2018 (Dolgoprudny, Russia)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2018,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/eupho18-theory.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/eupho18-th-solution.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/eupho18-experiment.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Experimental solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/eupho18-exp-solution.pdf",
+          "kind": "solutions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    },
+    {
+      "id": "physics-eupho-1st-2017-tartu-estonia",
+      "title": "EuPhO — 1st · 2017 (Tartu, Estonia)",
+      "type": "pastpaper",
+      "levels": [
+        "international"
+      ],
+      "year": 2017,
+      "topics": [],
+      "files": [
+        {
+          "label": "Theory problems",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO17_theory.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Theory solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO17_theory_solution_marking.pdf",
+          "kind": "solutions"
+        },
+        {
+          "label": "Experimental problems",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO17_exp.pdf",
+          "kind": "questions"
+        },
+        {
+          "label": "Experimental solutions",
+          "url": "https://eupho.ee/wp-content/uploads/2020/07/EuPhO17_exp_solution.pdf",
+          "kind": "solutions"
+        }
+      ],
+      "hasSolutions": true,
+      "nepalSpecific": false,
+      "access": "ok",
+      "accessNote": "",
+      "verified": "2026-10-22",
+      "why": "",
+      "origin": "external",
+      "needsReview": true
+    }
+  ],
+  "gaps": [
+    {
+      "id": "D-1",
+      "level": "District",
+      "missing": "A district/foundation-tier physics olympiad question bank for Nepal. None exists — no body conducts one, and the college contests (E=mc², CCRC Mini Olympiad) publish nothing.",
+      "evidence": "MoEST दफा ३(४) permits a district stage; NPS uses province only. Students outside the ~10 provincial centres have zero calibrated entry point.",
+      "aiSpec": "Generate 3 full \"District Diagnostic Tests\": 25 MCQ + 10 short-answer, 45 min, Grade-11 NEB curriculum only (no calculus required beyond basics), with answer key + one-line rationale per item + topic tag. Calibrate difficulty to NeSO Tier-I / BdPhO Selection Round. Model the two verified specimens: Emc2.pdf, sample-Emc2.pdf.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "D-2",
+      "level": "District",
+      "missing": "NEB Grade 11–12 Physics → Olympiad \"bridge\" mapping. The CDC curriculum PDF exists but is geo-slow, and nobody has mapped curriculum chapters to olympiad topics.",
+      "evidence": "NePhO Round 1 is *\"mostly based on the Secondary Education Curriculum-2076 of grade 11.\"* Students don't know which board chapters to over-study.",
+      "aiSpec": "Generate a two-column mapping table: every unit of Curriculum-2076 Physics Gr.11 & Gr.12 → (a) which NePhO syllabus clause it serves, (b) which olympiad extensions beyond the board text are required, (c) 3 named practice problems.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "P-1",
+      "level": "Province",
+      "missing": "NePhO Round-1 papers for 2019, 2021, 2023, 2024, 2025, 2026. Not published anywhere. NPS releases result lists only.",
+      "evidence": "Only 2013, 2017, 2018, 2020 (paywalled) and 2022 exist. Students are drilling a 4-year-old specimen.",
+      "aiSpec": "Contact NPS first (info@nps.org.np) — this is a retrieval problem, not an authoring problem. If unavailable, generate a reconstructed NePhO Round-1 mock series matching the *exact* verified 2022 template: 3 h 15 m, 100 marks, Section A = 5 short questions (2.5 marks per part), Section B = 6 long questions (5–10 marks), a constants table (c, h, G, e, ε₀, N_A, α), the \"significant figures\" warning block, and the same topic distribution as §2.5. Produce 6 sets (one per missing year).",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "P-2",
+      "level": "Province",
+      "missing": "Official marking schemes / model solutions for NePhO Round 1. None exist for *any* year.",
+      "evidence": "EuPhO publishes full marking schemes; NePhO publishes nothing. Students cannot self-assess, and cannot learn how partial credit is awarded.",
+      "aiSpec": "Generate full model solutions + a marks-allocation rubric for each of the 5 available NePhO Round-1 papers (2017 model, 2017, 2018, 2020, 2022). For each question: final answer, method marks breakdown, common-error deductions, and the significant-figure check NePhO explicitly penalises. Use EuPhO marking schemes (eupho18-th-marking.pdf) as the format template.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "P-3",
+      "level": "Province",
+      "missing": "OPTICS module for NePhO. The official syllabus lists *\"Reflection at curved mirrors; Refraction at plane surfaces, through prisms; Dispersion.\"* The only Nepali olympiad book has no optics chapter whatsoever.",
+      "evidence": "NePhO 2022 QN3(A,B) = 5 marks on concave-mirror focal length in oil + 45-45-90 TIR prism in water. Recurring, free marks, entirely undrilled.",
+      "aiSpec": "Generate \"Optics for NePhO\": (i) formula sheet — mirror/lens equation, sign conventions, magnification, Snell, critical angle, prism deviation & minimum deviation, dispersion & Abbe number; (ii) 20 Level-1 + 12 Level-2 solved problems in the *A Guide to Nepal Physics Olympiad* house style (Key Concepts → Bridging Problem → Level 1 → Level 2 → IPhO Problems → Supplementary); (iii) source problems from OpenStax Vol. 2 Ch. 2–4, Irodov §4, and Kalda's wave-optics guide. Must include mirror-in-medium and multi-prism/TIR cases.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "P-4",
+      "level": "Province",
+      "missing": "Rotational dynamics + Gravitation + SHM/Periodic motion module. All three are explicit syllabus items; none has a chapter in the Nepali guide.",
+      "evidence": "NePhO 2022 QN7(A) = 10 marks requiring moment of inertia by integration for a disc (thickness *t*, radius *R*) and a solid cone. QN1(B) = rolling-without-slipping KE + diameter-doubling variation. QN9(A) = superposition of two perpendicular SHMs → Lissajous.",
+      "aiSpec": "Generate \"Rotation, Gravitation & Oscillations for NePhO\": moment-of-inertia table + derivation-by-integration drills; parallel/perpendicular axis theorems; rolling without slipping (incl. KE partition); angular momentum conservation; torque; physical pendulum & reduced length; Kepler's laws & orbital energy; gravitation inside/outside shells; SHM energy methods; damped & forced oscillators; superposition of perpendicular SHMs (Lissajous figures). 25 solved + 25 unsolved, Level 1/Level 2 split. Anchor to Kalda's meh_ENG.pdf and Morin Ch. 6–8.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "P-5",
+      "level": "Province",
+      "missing": "DC circuits, Kirchhoff's laws, thermoelectric & chemical effects of current. In the syllabus (Source A §4 + Source B §4) but under-covered — the guide's Ch. 4 is electrostatics-weighted.",
+      "evidence": "NePhO 2022 QN4(B) = short-circuiting one of two EMF sources, \"is it possible to increase the current through R?\" — a *conceptual* circuit question of exactly this type.",
+      "aiSpec": "Generate \"DC Circuits & Current Electricity for NePhO\": series/parallel & infinite networks; Kirchhoff's rules with systematic node/mesh setup; EMF & internal resistance; maximum power transfer; non-ohmic conductors and given V–I characteristics; Wheatstone/metre bridge; potentiometer; thermoelectric effects (Seebeck/Peltier/Thomson, thermocouple laws); chemical effects of current (Faraday's laws of electrolysis, electrochemical equivalent); RC transients. 20 solved + 20 unsolved. Anchor to Kalda's electricity-circuits.pdf.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "P-6",
+      "level": "Province",
+      "missing": "Elasticity & Hydrostatics. Both listed in the official syllabus (\"Elasticity\" Source B §1; \"hydrostatics\" Source A §1). No Nepali olympiad material covers either.",
+      "evidence": "Syllabus-listed but completely undrilled.",
+      "aiSpec": "Generate \"Elasticity & Fluids for NePhO\": stress/strain, Young's modulus, elastic energy density, wires in series/parallel, thermal stress; hydrostatic pressure, manometers, buoyancy & flotation stability, surface tension & capillarity, Bernoulli & continuity, viscosity & Stokes' law with terminal velocity, flow through orifices. Include the Physoly Surface Tension handout as a cross-reference once released. 18 solved + 18 unsolved.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "P-7",
+      "level": "Province",
+      "missing": "Nepali-language (नेपाली) olympiad physics material — none exists at any level.",
+      "evidence": "IPhO rules permit Nepali students to write the exam in Nepali, and leaders translate questions into Nepali. Yet every resource — including *A Guide to Nepal Physics Olympiad* — is English-only. Students from government schools are structurally disadvantaged.",
+      "aiSpec": "Generate a bilingual (नेपाली/English) glossary + formula booklet for the full NePhO pre-selection syllabus: ~350 terms, each with Nepali term, English term, symbol, SI unit, and the governing equation. Then translate the Key Concepts & Formulae sections (not the problems) of each module. Note: Kalda's *Formulas for IPhO* exists in English, Spanish, Japanese, Portuguese, Indonesian and Estonian — but not Nepali, so a Nepali version would be a genuine first.",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "N-1",
+      "level": "National",
+      "missing": "NePhO Final Round papers for 2019 → 2026. Only 2016, 2017, 2018 are public, all scanned, all without solutions.",
+      "evidence": "This is the round that decides who goes to IPhO. Students have 3 papers, 6–10 years old, no solutions.",
+      "aiSpec": "Same retrieval-first approach (NPS). Otherwise generate a NePhO Final-Round Mock Series to the verified Final-Selection syllabus (§3.4): 5 sets, each theory (3 h, 5 problems) + experimental (3 h, 1 practical task with data table). Theory must cover Waves & Optics (interference, diffraction, polarization), Magnetic fields & materials, Electromagnetic induction, AC circuits, Semiconductors, Radioactivity & nuclear reactions, Matter waves & uncertainty principle, Planck/Wien/Stefan–Boltzmann, plus a data-analysis problem requiring linear regression with uncertainty on gradient and intercept. Calibrate to INPhO difficulty.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "N-2",
+      "level": "National",
+      "missing": "⭐ EXPERIMENTAL PHYSICS TRAINING MANUAL FOR NEPAL. NPS's 2025/26 notice confirms the Final Round includes an experimental examination. There is no Nepali experimental olympiad material of any kind — not in the NPS documents, not in *A Guide to Nepal Physics Olympiad* (0 pages of lab content), not on any Nepali site.",
+      "evidence": "This is the largest single gap in Nepali physics-olympiad preparation. IPhO allocates 20 of 50 marks to experiment. Nepal's whole medal record rests on theory performance alone.",
+      "aiSpec": "Generate \"NePhO/IPhO Experimental Physics Manual for Nepal\" in 4 parts: (1) Apparatus literacy — vernier caliper, screw gauge, stopwatch, spring balance, metre scale, multimeter, galvanometer, potentiometer, travelling microscope, optical bench, spherometer, sonometer, calorimeter, thermistor, photogate; least count and zero-error for each. (2) 40 standard experiments with objective, apparatus, procedure, observation table, sample data, graph to plot, uncertainty budget, and result — chosen from NEB Gr. 11/12 practicals *plus* IPhO/EuPhO experimental tasks (pendulum & g, moment of inertia by torsion, Young's modulus by Searle, focal length by u–v and by displacement method, refractive index of prism, metre bridge & potentiometer, EMF/internal resistance, diode & Zener characteristics, transistor gain, half-life by GM counter / simulation, Stefan–Boltzmann, Wien, specific heat, surface tension by capillary, viscosity by Stokes, speed of sound by resonance column, solar-cell I–V, LC oscillations, coefficient of restitution). (3) Data analysis — random vs systematic, absolute/relative uncertainty, addition by modulus vs Pythagorean, standard deviation, linearisation of nonlinear relations, least-squares fit with uncertainties on slope and intercept, optimal graph scales, error bars, residual plots. (4) Low-cost / at-home substitutes — because most district schools in Nepal lack the apparatus; specify phone-sensor (phyphox), ruler-and-string, and simulation (PhET) alternatives for every experiment.",
+      "priority": "🔴 P1 — HIGHEST"
+    },
+    {
+      "id": "N-3",
+      "level": "National",
+      "missing": "A \"Top-25 Camp\" simulation pack. The camp is 10 days (13–22 May 2026) with theoretical + experimental exams at the end, and only 5 of 25 make IPhO. No public material describes what the camp tests or how to peak for it.",
+      "evidence": "NPS states final training focuses on: past/model questions, systematic experiment practice, evaluating question difficulty, and concise-and-complete solution strategy.",
+      "aiSpec": "Generate a 10-day camp simulation schedule: daily 3-h theory block + 2-h lab block + 1-h review, with a problem set per day mapped to §3.4, a difficulty-triage protocol (how to decide in 10 minutes which 3 of 5 problems to attack), and a solution-writing template that maximises partial credit (declare symbols → state principle → general-form solution → dimensional check → limiting-case check → numerical substitution with units and sig figs).",
+      "priority": "🟠 P2"
+    },
+    {
+      "id": "I-1",
+      "level": "International",
+      "missing": "APhO-specific preparation pathway for Nepal. NPS documents name APhO as an objective and describe selecting 8 students, but also record that Grade-12 students cannot attend because of board exams. Nepal effectively does not field an APhO team.",
+      "evidence": "No strategy document exists for how Nepal could field an APhO team (e.g. selecting from the *previous* year's cohort, as NPS itself suggests).",
+      "aiSpec": "Generate an APhO readiness pack: (a) APhO statutes & eligibility summary from apho2026.kr/en/sub1_4.html; (b) a difficulty comparison of APhO vs IPhO vs NePhO Final using the verified APhO 2025/2026 papers; (c) a cohort-continuity plan showing how NePhO Year-N finalists become APhO Year-N+1 representatives; (d) a 6-month APhO training syllabus.",
+      "priority": "🟡 P3"
+    },
+    {
+      "id": "I-2",
+      "level": "International",
+      "missing": "Experimental-problem bank with worked uncertainty budgets at IPhO standard. IPhO/EuPhO publish experimental problems but *student-facing* worked solutions with full uncertainty accounting are scarce and scattered.",
+      "evidence": "20/50 IPhO marks. Nepal has never been able to train this systematically.",
+      "aiSpec": "Generate 20 IPhO-standard experimental problems (drawn from the verified IPhO 2026 / APhO 2025 / EuPhO 2017–2025 archives), each with: full data table, required graph, complete uncertainty budget propagated step by step, the marking-scheme breakdown, and a \"what the examiners were looking for\" commentary.",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "I-3",
+      "level": "International",
+      "missing": "Nepali-language IPhO formula booklet. Kalda's *Formulas for IPhO* exists in EN/ES/JA/PT/ID/ET. No Nepali.",
+      "evidence": "Nepali is a permitted IPhO exam language.",
+      "aiSpec": "Translate ioc.ee/~kalda/ipho/formulas.pdf into Nepali, preserving all symbols, LaTeX-rendered equations, and the topic order. Credit Kalda per his terms of use (ioc.ee/~kalda/ipho/termsofusage.html).",
+      "priority": "🟡 P3"
+    },
+    {
+      "id": "ALL",
+      "level": "All",
+      "missing": "A NePhO-aligned timed mock-test platform / problem-difficulty ladder. Your site shows \"80 Problems\" and \"0 Model Papers\" with a generic 5-topic tree. There is no level-calibrated progression.",
+      "evidence": "Students cannot tell whether they are at Province or National standard.",
+      "aiSpec": "Generate a 200-problem calibrated bank in the *A Guide to Nepal Physics Olympiad* format — Level 1 (District/board), Level 2 (Province/NePhO R1), Level 3 (National/NePhO Final), Level 4 (International/IPhO) — tagged by the official NePhO syllabus clause number, each with a full solution and a mark value. Then publish 6 full-length timed papers (3 Province-format, 3 National-format).",
+      "priority": "🔴 P1"
+    },
+    {
+      "id": "ALL",
+      "level": "All",
+      "missing": "Re-base the site's topic taxonomy on the official syllabus. Current tree = Mechanics / Electromagnetism / Thermodynamics / Optics / Modern Physics. Official NePhO Round-1 tree = Mechanics / Heat & Thermodynamics / Optics / Electricity & Magnetism / Modern Physics / Experimental Uncertainty & Data Analysis. Official Round-2 tree = Waves & Optics / E&M / Modern Physics / Experimental Uncertainty & Data Analysis.",
+      "evidence": "The missing \"Experimental Uncertainty & Data Analysis\" node alone is ~12.5 % of the Round-1 paper and 100 % of the Round-2 practical.",
+      "aiSpec": "Restructure into a two-syllabus tree (Round 1 / Round 2) exactly matching §2.4 and §3.4, and add the sixth node.",
+      "priority": "🟠 P2"
+    }
+  ],
+  "contacts": [
+    {
+      "body": "Nepal Physical Society (NPS)",
+      "role": "Runs NePhO; selects & trains the IPhO team",
+      "channels": "info@nps.org.np · https://nps.org.np/ · https://nps.org.np/?page_id=72 · FB: facebook.com/npsorgnp",
+      "urls": [
+        "https://nps.org.np/",
+        "https://nps.org.np/?page_id=72"
+      ]
+    },
+    {
+      "body": "Nepal Physics Olympiad (NPS sub-page)",
+      "role": "Round-1 notices, forms, centres",
+      "channels": "FB: facebook.com/nepalphysics.olympiad",
+      "urls": []
+    },
+    {
+      "body": "NePhO Discussion Group",
+      "role": "Peer Q&A among aspirants & alumni",
+      "channels": "FB group: facebook.com/groups/382117412258231/",
+      "urls": []
+    },
+    {
+      "body": "MoEST",
+      "role": "National olympiad recognition & funding (कार्यविधि २०८२)",
+      "channels": "https://moest.gov.np/content/13499/in-procedure-of-olmpiad-operations-related-to/",
+      "urls": [
+        "https://moest.gov.np/content/13499/in-procedure-of-olmpiad-operations-related-to/"
+      ]
+    },
+    {
+      "body": "Curriculum Development Centre",
+      "role": "NEB Grade 11–12 Physics curriculum & textbooks",
+      "channels": "https://moecdc.gov.np/ · info@moecdc.gov.np · http://lib.moecdc.gov.np/",
+      "urls": [
+        "https://moecdc.gov.np/",
+        "http://lib.moecdc.gov.np/"
+      ]
+    },
+    {
+      "body": "ANPA (Association of Nepali Physicists in America)",
+      "role": "MoU with NPS; diaspora mentoring",
+      "channels": "https://anpaglobal.org/",
+      "urls": [
+        "https://anpaglobal.org/"
+      ]
+    },
+    {
+      "body": "IPhO 2027 (Saudi Arabia)",
+      "role": "Next international target",
+      "channels": "https://ipho-unofficial.org/timeline/2027/",
+      "urls": [
+        "https://ipho-unofficial.org/timeline/2027/"
+      ]
+    },
+    {
+      "body": "*Contributions to the Nepali guide*",
+      "role": "The LaTeX repo is open to contributors",
+      "channels": "https://github.com/nkalauni/physics-olympiad-book (CC BY-NC-SA 4.0)",
+      "urls": [
+        "https://github.com/nkalauni/physics-olympiad-book"
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "what": "olymped.com (\"Nepal's first platform for Olympiad students\", by Physics Initiatives Nepal)",
+      "why": "Domain does not resolve. Verified dead via two independent methods. Defunct.",
+      "urls": [
+        "olymped.com"
+      ]
+    },
+    {
+      "what": "phoxiv.org/olympiads/ipho",
+      "why": "HTTP 403 Forbidden",
+      "urls": [
+        "phoxiv.org/olympiads/ipho"
+      ]
+    },
+    {
+      "what": "olimpicos.net/ipho/",
+      "why": "Repeated timeouts",
+      "urls": [
+        "olimpicos.net/ipho/"
+      ]
+    },
+    {
+      "what": "ipho.phy.ntnu.edu.tw/problems-and-solutions.html",
+      "why": "DNS does not resolve. Dead.",
+      "urls": [
+        "ipho.phy.ntnu.edu.tw/problems-and-solutions.html"
+      ]
+    },
+    {
+      "what": "ipho-official.org / apho-official.org / olympiad.physics.org",
+      "why": "DNS does not resolve. Not real domains.",
+      "urls": [
+        "ipho-official.org",
+        "apho-official.org",
+        "olympiad.physics.org"
+      ]
+    },
+    {
+      "what": "practicalphysics.org",
+      "why": "DNS does not resolve from this network",
+      "urls": [
+        "practicalphysics.org"
+      ]
+    },
+    {
+      "what": "physoly.tech/static/files/MockFMA-2022.pdf",
+      "why": "404 — the 2022 mock is at 2022_PhODS_Mock_F_ma_.pdf instead",
+      "urls": [
+        "physoly.tech/static/files/MockFMA-2022.pdf"
+      ]
+    },
+    {
+      "what": "crazy-cat-crypto.github.io/nepal-olympiad-hub/",
+      "why": "Loads, but contains materially inaccurate claims (e.g. it lists the Himalayan Linguistic Olympiad under \"AI\", and states IMO is organised by the \"Mathematical Association of Nepal\"). Useful as a directory of contacts only — do not copy its facts.",
+      "urls": [
+        "crazy-cat-crypto.github.io/nepal-olympiad-hub/"
+      ]
+    },
+    {
+      "what": "NPS statement \"57th IPhO 2026, Columbia\"",
+      "why": "Factually wrong. IPhO 2026 Bucaramanga = 56th; 57th = 2027 Saudi Arabia (per ipho-unofficial.org/timeline/).",
+      "urls": []
+    }
+  ],
+  "warnings": [
+    "known-missing row in \"3.2 Past Papers — National tier (NePhO Final Round)\": NePhO 2019 / 2021 / 2023 / 2024 Final Round papers"
+  ]
+}

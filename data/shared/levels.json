@@ -1,0 +1,9 @@
+{
+  "order": ["district", "province", "national", "international"],
+  "labels": {
+    "district": "District",
+    "province": "Province",
+    "national": "National",
+    "international": "International"
+  }
+}

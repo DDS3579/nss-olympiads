@@ -1,0 +1,11 @@
+{
+  "hosts": ["olymped.com", "phoxiv.org", "olimpicos.net", "ipho.phy.ntnu.edu.tw", "ipho-official.org", "apho-official.org", "olympiad.physics.org", "practicalphysics.org", "crazy-cat-crypto.github.io", "stemnepal.org", "hlon.org"],
+  "substrings": ["physoly.tech/static/files/MockFMA-2022.pdf"],
+  "notes": {
+    "olymped.com": "Domain does not resolve (defunct).",
+    "stemnepal.org": "IChO event partner site — cPanel error page; STAN has no website.",
+    "hlon.org": "Listed by IOAI as Nepal's body but broken (HTTP 409 / SSL); use AION (aionepal.org).",
+    "crazy-cat-crypto.github.io": "Contains verified factual errors (IMO tally, IAO/IOAA mix-up, Linguistic olympiad under AI, NOI fee 'TBD', invented 'Nepal Chemistry Society').",
+    "MockFMA-2022.pdf": "404 — the 2022 mock is 2022_PhODS_Mock_F_ma_.pdf"
+  }
+}

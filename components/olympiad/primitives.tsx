@@ -4,21 +4,17 @@ import { useMemo } from "react";
 import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import { FadeIn } from "@/components/FadeIn";
-import { getLenis } from "@/components/SmoothScroll";
-import type { MotifKey } from "@/lib/data/olympiads";
+// — scroll helper imported via lib/scroll.ts re-export (T3.5)
+import type { MotifKey } from "@/lib/types";
+import { strong } from "@/lib/color";
 
 // ---------------------------------------------------------------------------
 // Scroll helper (uses Lenis when available)
 // ---------------------------------------------------------------------------
-export function scrollToId(id: string) {
-  if (typeof window === "undefined") return;
-  const lenis = getLenis();
-  if (lenis) {
-    lenis.scrollTo(`#${id}`, { offset: -96, duration: 1.4 });
-  } else {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-}
+// ---------------------------------------------------------------------------
+// Scroll helper — single source of truth lives in lib/scroll.ts (T3.5)
+// ---------------------------------------------------------------------------
+export { scrollToId } from "@/lib/scroll";
 
 // ---------------------------------------------------------------------------
 // Deterministic pseudo-random (avoids hydration mismatch)
@@ -196,6 +192,7 @@ export function SectionHeading({
   description,
   colorVar,
   className,
+  titleId,
 }: {
   index: string;
   label: string;
@@ -203,20 +200,22 @@ export function SectionHeading({
   description?: string;
   colorVar?: string;
   className?: string;
+  /** id put on the <h2> so the parent <section> can aria-labelledby it (T3.6) */
+  titleId?: string;
 }) {
   return (
     <FadeIn className={cn("mb-10 lg:mb-14", className)}>
       <div className="flex items-center gap-4">
         <span
           className="whitespace-nowrap font-heading text-[11px] font-semibold uppercase tracking-[0.3em]"
-          style={{ color: colorVar ? `hsl(var(${colorVar}))` : "hsl(var(--primary))" }}
+          style={{ color: colorVar ? strong(colorVar) : "hsl(var(--primary))" }}
         >
           {index} / {label}
         </span>
         <span className="h-px flex-1 bg-border" />
       </div>
-      {title && (
-        <h2 className="mt-5 font-heading text-3xl font-bold text-foreground text-balance lg:text-4xl">
+    {title && (
+      <h2 id={titleId} className="mt-5 font-heading text-3xl font-bold text-foreground text-balance lg:text-4xl">
           {title}
         </h2>
       )}
@@ -249,9 +248,9 @@ export function StatChip({
       >
         {value}
       </span>
-      <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-        {label}
-      </span>
+    <span className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+      {label}
+    </span>
     </div>
   );
 }
@@ -278,11 +277,12 @@ export function DifficultyMeter({
         <span
           key={i}
           className="h-1.5 w-4 rounded-full"
-          style={{
-            background:
-              i <= level
-                ? `hsl(var(${colorVar ?? "--primary"}))`
-                : `hsl(var(--border))`,
+          style={{              background:
+                i <= level
+                  ? colorVar
+                    ? strong(colorVar)
+                    : "hsl(var(--primary))"
+                  : `hsl(var(--border))`,
           }}
         />
       ))}

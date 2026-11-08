@@ -1,0 +1,77 @@
+{
+  "slug": "biology",
+  "name": "Biology",
+  "series": "07",
+  "iconKey": "leaf",
+  "colorVar": "--subject-biology",
+  "motif": "biology",
+  "tagline": "Obsessed with how life actually works? This one's for you.",
+  "description": "Investigate cell biology, genetics, evolution, and ecology with the depth required for IBO and national biology exams.",
+  "grades": "10–12",
+  "organiser": { "name": "Science Teachers' Association of Nepal (STAN) — hosting institution for the National Biology Olympiad (NBO)" },
+  "levels": {
+    "district": { "exists": true, "label": "Local + District (Rounds 1–2)", "officialName": "NBO Round 1 (Local) & Round 2 (District)" },
+    "province": { "exists": true, "label": "Provincial (Round 3)", "officialName": "NBO Round 3 (Province) — National Selection" },
+    "national": { "exists": true, "label": "National (Round 4) + Practical + camp", "officialName": "NBO Round 4 (National) + Practical Round" },
+    "international": { "exists": true, "label": "IBO", "officialName": "International Biology Olympiad" }
+  },
+  "rounds": [
+    {
+      "level": "district",
+      "name": "Rounds 1 & 2 — Local Test & District",
+      "format": "Round 1: MCQ via 753 Local Committees (school science teachers, ≈2,500 students) · Round 2: MCQ via 77 District Committees",
+      "eligibility": "Age 16–19, below university",
+      "dates": [],
+      "source": { "label": "Nepal IBO delegation profile", "url": "https://www.ibo-info.org/en/countries/nbo/np-nepal-biology-olympiad-8.html" }
+    },
+    {
+      "level": "province",
+      "name": "Round 3 — Provincial (National Selection)",
+      "format": "MCQ + Subjective — first round with written non-MCQ answers",
+      "eligibility": "District qualifiers",
+      "centres": "7 Province Committees",
+      "dates": [
+        { "label": "Provincial results published (April 2026)", "iso": null, "status": "past" }
+      ],
+      "source": { "label": "STAN notices (biology research file §2.1)", "url": "https://www.facebook.com/scienceteachersnepal/" }
+    },
+    {
+      "level": "national",
+      "name": "Round 4 — National + Practical Round",
+      "format": "Round 4: MCQ + Subjective, followed by a separate Practical Round; medals and certificates; Top 4 → IBO",
+      "eligibility": "Provincial qualifiers",
+      "dates": [
+        { "label": "National round, Kathmandu — 3rd & 4th Baisakh 2083 (mid-April 2026)", "iso": null, "status": "past" }
+      ],
+      "source": { "label": "STAN notices (biology research file §3.1)", "url": "https://www.facebook.com/scienceteachersnepal/" }
+    },
+    {
+      "level": "national",
+      "name": "Online Study & National Camp",
+      "format": "15-day training (sometimes online, sometimes offline) between selection stages",
+      "dates": [],
+      "source": { "label": "Nepal IBO delegation profile", "url": "https://www.ibo-info.org/en/countries/nbo/np-nepal-biology-olympiad-8.html" }
+    },
+    {
+      "level": "international",
+      "name": "IBO",
+      "format": "2 theory papers × 3 h (~100 closed-ended tasks) + 4 practicals × 1.5 h across 3–4 laboratories",
+      "eligibility": "Top 4; age 16–19 below university (NBO); IBO: under 20 at 1 July, max 2 participations, no full-time university enrolment",
+      "dates": [
+        { "label": "IBO 2026 — Vilnius, Lithuania (Nepal ranked 288–301 of 302)", "iso": null, "status": "past" }
+      ],
+      "source": { "label": "IBO participation page", "url": "https://www.ibo-info.org/en/contest/participation.html" }
+    }
+  ],
+  "contacts": [
+    { "body": "Science Teachers' Association of Nepal (STAN)", "role": "Hosting & appointing institution for NBO; IBO-registered 'official website' is this Facebook page", "links": [ { "label": "Facebook", "url": "https://www.facebook.com/scienceteachersnepal/" }, { "label": "Facebook group", "url": "https://www.facebook.com/groups/1942336182687088/" } ], "email": "stannationalolympiads@gmail.com", "phone": "984-1346504" },
+    { "body": "Teacher Scientist Manoj Acharya", "role": "IBO Country Coordinator for Nepal — contact for IBO paper password & NBO past papers", "links": [], "email": "stannationalolympiads@gmail.com" },
+    { "body": "IBO Office", "role": "International governing body", "links": [ { "label": "Website", "url": "https://www.ibo-info.org/en/" } ], "email": "office@ibo-info.org" },
+    { "body": "HBCSE (India)", "role": "INBO papers + IBO paper passwords", "links": [ { "label": "Past papers", "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/" } ], "email": "olybio@hbcse.tifr.res.in" },
+    { "body": "MoEST", "role": "National olympiad recognition (कार्यविधि २०८२)", "links": [ { "label": "Olympiad procedure (NPS mirror)", "url": "https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf" } ] },
+    { "body": "Curriculum Development Centre (CDC)", "role": "NEB Grade 11–12 Biology curriculum", "links": [ { "label": "Website", "url": "https://moecdc.gov.np/" }, { "label": "Digital library", "url": "http://lib.moecdc.gov.np/" } ] }
+  ],
+  "syllabusFileUrl": "/materials/biology/syllabus.pdf",
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true, "weightSource": { "label": "IBO Operational Guidelines v.7 §3.7.3", "url": "https://www.ibo-info.org/files/downloads/rules/IBO%20Operational%20Guidelines_v.7.pdf" } },
+  "updatedAt": "2026-10-24"
+}

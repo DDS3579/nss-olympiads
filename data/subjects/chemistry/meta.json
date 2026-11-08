@@ -1,0 +1,79 @@
+{
+  "slug": "chemistry",
+  "name": "Chemistry",
+  "series": "03",
+  "iconKey": "flask",
+  "colorVar": "--subject-chemistry",
+  "motif": "chemistry",
+  "tagline": "If reactions excite you more than gossip, welcome home.",
+  "description": "Dive into organic, inorganic, and physical chemistry with a focus on reaction mechanisms and laboratory intuition.",
+  "grades": "11–12",
+  "organiser": { "name": "Science Teachers' Association of Nepal (STAN)" },
+  "levels": {
+    "district": { "exists": true, "label": "NOoN District Round", "officialName": "NOoN District Round (Senior Chemistry)" },
+    "province": { "exists": true, "label": "NOoN Provincial", "officialName": "NOoN Provincial Selection Exam" },
+    "national": { "exists": true, "label": "NChO National", "officialName": "National Chemistry Olympiad (NChO)" },
+    "international": { "exists": true, "label": "IChO", "officialName": "IChO" }
+  },
+  "rounds": [
+    {
+      "level": "district",
+      "name": "NOoN District Round",
+      "format": "Unpublished — no syllabus, sample paper, past paper or marking scheme exists",
+      "registration": "Opens for Senior Chemistry (NChO), Senior Biology and Junior Science together under NOoN; STAN publishes a District Selection List",
+      "dates": [],
+      "source": { "label": "STAN notices (chemistry research file §0B.3)", "url": "https://www.facebook.com/scienceteachersnepal/" }
+    },
+    {
+      "level": "province",
+      "name": "NOoN Provincial Selection Exam",
+      "format": "Unpublished — no format, duration, mark total or syllabus ever published",
+      "eligibility": "District qualifiers",
+      "centres": "All 7 provinces (STAN publishes per-province centres for Senior Chemistry)",
+      "dates": [
+        { "label": "NOoN 2026 provincial stage (6 PM onwards)", "iso": "2026-04-06", "status": "past" }
+      ],
+      "source": { "label": "STAN notices (chemistry research file §2.1)", "url": "https://www.facebook.com/scienceteachersnepal/" }
+    },
+    {
+      "level": "national",
+      "name": "NChO National Chemistry Olympiad",
+      "format": "Two sittings (NOoN 2026: 16 April 3:00 PM & 17 April 8:00 AM); Top 32 scorers → interview → Top 4 to IChO",
+      "eligibility": "Provincial qualifiers",
+      "dates": [
+        { "label": "NOoN 2026 national exam (2083 BS)", "iso": "2026-04-16/2026-04-17", "status": "past" }
+      ],
+      "source": { "label": "STAN notices (chemistry research file §3.1)", "url": "https://www.facebook.com/scienceteachersnepal/" }
+    },
+    {
+      "level": "national",
+      "name": "Chemistry Olympiad Experience Sharing & Learning Camp",
+      "format": "Mandatory mentoring between stages (MoEST दफा ३(६))",
+      "dates": [],
+      "source": { "label": "STAN notices (chemistry research file §0B.3)", "url": "https://www.facebook.com/scienceteachersnepal/" }
+    },
+    {
+      "level": "international",
+      "name": "IChO",
+      "format": "Theoretical + practical (experimental) parts; team of 4 students + 2 mentors",
+      "eligibility": "Top 4 of the national selection; list sent by STAN to the international event partner",
+      "dates": [
+        { "label": "58th IChO 2026 — Tashkent, Uzbekistan (Nepal: 4 participants)", "iso": "2026-07-10/2026-07-19", "status": "past" },
+        { "label": "59th IChO 2027 — Chinese Taipei", "iso": "2027-07-19/2027-07-28", "status": "upcoming" },
+        { "label": "60th IChO 2028 — Messina, Italy", "iso": "2028-07-02/2028-07-11", "status": "upcoming" }
+      ],
+      "source": { "label": "IChO Steering Committee", "url": "https://www.ichosc.org/" }
+    }
+  ],
+  "contacts": [
+    { "body": "Science Teachers' Association of Nepal (STAN)", "role": "National organiser — NOoN district, provincial & national rounds for Chemistry. No website — Facebook only.", "links": [ { "label": "Facebook", "url": "https://www.facebook.com/scienceteachersnepal/" }, { "label": "Facebook group", "url": "https://www.facebook.com/groups/1942336182687088/" } ], "email": "stannationalolympiads@gmail.com", "phone": "984-1346504" },
+    { "body": "STEM Foundation Nepal", "role": "International event partner — receives the IChO team list. ⚠ stemnepal.org is dead; contact via STAN.", "links": [] },
+    { "body": "MoEST", "role": "National recognition & funding (कार्यविधि २०८२)", "links": [ { "label": "Olympiad procedure (NPS mirror)", "url": "https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf" } ] },
+    { "body": "Curriculum Development Centre (CDC)", "role": "NEB Grade 11–12 Chemistry curriculum & textbooks", "links": [ { "label": "Website", "url": "https://moecdc.gov.np/" }, { "label": "Digital library", "url": "http://lib.moecdc.gov.np/" } ], "email": "info@moecdc.gov.np" },
+    { "body": "IChO Steering Committee", "role": "International governing body", "links": [ { "label": "Website", "url": "https://www.ichosc.org/" } ] },
+    { "body": "IChO International Information Centre (Bratislava)", "role": "Mandated archive of all IChO documentation since 1968", "links": [ { "label": "Website", "url": "https://icho.sk/" } ], "email": "anton.sirota@stuba.sk" }
+  ],
+  "syllabusFileUrl": "/materials/chemistry/syllabus.pdf",
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true, "levelCounts": { "L1": 95, "L2": 55, "L3": 176 } },
+  "updatedAt": "2026-10-24"
+}

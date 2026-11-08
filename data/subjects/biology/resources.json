@@ -1,0 +1,517 @@
+[
+  {
+    "id": "biology-nn-education-neb-grade-11-12-biology-syllabus-complete-unit-",
+    "title": "NN Education — NEB Grade 11 & 12 Biology syllabus, complete unit-by-unit",
+    "type": "official",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://nneducation.com/neb-grade-11-12-new-syllabus-biology/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "The most complete free transcription of the CDC Biology curriculum found: all 20 units, exact teaching hours, every sub-topic, exam structure (75 + 25), and Grade-11-vs-12 differentiation. This is the document to build District prep from.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-bioly-guide-free-usabo-ibo-handout-library-400-pages",
+    "title": "Bioly.guide — free USABO/IBO handout library (400+ pages)",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bioly.guide/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"Learn advanced concepts for the Biology Olympiad — for free. 400+ pages of written handouts & practice problems.\" Its handouts are organised into exactly the IBO's seven official §3.7.3 domains — see §2.4. The single best free resource in this subject.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S9"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-meronotes-neb-class-12-biology-notes-pdf",
+    "title": "MeroNotes — NEB Class 12 Biology Notes (PDF)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://meroenotes.com/neb-class-12-biology-notes-in-pdf/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Free handwritten notes + question papers, downloadable as PDF (unlike Sajha Notes)",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-neb-biology-solution-in-nepali-youtube-playlist-class-12-bot",
+    "title": "NEB Biology Solution in Nepali — YouTube playlist (Class 12 Botany)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://www.youtube.com/playlist?list=PLztdBcd3--U3igIij1NT-WaDp3Zy7AaDV",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Chapter-by-chapter NEB Botany solutions in Nepali — the only Nepali-language biology video resource found",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S7"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-nepal-online-school-class-11-neb-biology-zoology-notes-video",
+    "title": "Nepal Online School — Class 11 NEB Biology & Zoology notes/videos",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://www.facebook.com/NepalOnlineSchool/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Free Nepali non-profit video lessons",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S8"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-nepalnotes-class-12-biology-botany-zoology-chapter-wise",
+    "title": "NepalNotes — Class 12 Biology (Botany & Zoology, chapter-wise)",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://nepalenotes.com/2022/02/class-12-biology-notes/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "\"Explore Botany and Zoology chapter-wise notes and learning materials. 27 Topics — Part A: Botany 01 Plant Anatomy, 02 Water Relation, 03 Photosynthesis…\"",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-sajha-notes-neb-grade-11-biology",
+    "title": "Sajha Notes — NEB Grade 11 Biology",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/grade-11-biology/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "⚠️ Badly incomplete. Verified content: one section \"Biomolecules and Cell Biology — 4 topics\", of which two are literally labelled \"Coming soon\" (only Biomolecules and Carbohydrates and Amino Acids and Proteins are written). Contrast with Sajha's excellent Chemistry coverage. → Gap B-6",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-characteristics-of-exams-used-at-the-ibo",
+    "title": "— \"Characteristics of Exams Used at the IBO\"",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.lifescied.org/doi/10.1187/cbe.19-10-0215",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "403 to scripts (publisher bot-wall); resolves in a browser. Also reachable via DOI 10.1187/cbe.19-10-0215",
+    "verified": "2026-10-23",
+    "why": "Academic analysis of how IBO assessments are actually constructed. Useful for anyone writing Nepali mock papers.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S27"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-animal-anatomy-and-physiology-handouts",
+    "title": "↳ Animal Anatomy and Physiology handouts",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bioly.guide/handouts/animal-anatomy-and-physiology",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "IBO domain III — 25 %, the heaviest single domain",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S12"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-biosystematics-handouts",
+    "title": "↳ Biosystematics handouts",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bioly.guide/handouts/biosystematics",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "IBO domain VII — 5 %",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S15"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-cell-biology-handouts",
+    "title": "↳ Cell Biology handouts",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bioly.guide/handouts/cell-biology",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "IBO domain I — 20 % of the exam",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S10"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-ecology-and-ethology-handouts",
+    "title": "↳ Ecology and Ethology handouts",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bioly.guide/handouts/ecology-and-ethology",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "IBO domains VI + IV — 10 % + 5 %",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S13"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-genetics-and-evolution-handouts",
+    "title": "↳ Genetics and Evolution handouts",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bioly.guide/handouts/genetics-and-evolution",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "IBO domain V — 20 %",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S14"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-handouts-index",
+    "title": "↳ Handouts index",
+    "type": "handout",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bioly.guide/handouts",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "All six domain libraries",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S16",
+      "S21"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-plant-biology-handouts",
+    "title": "↳ Plant Biology handouts",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bioly.guide/handouts/plant-biology",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "IBO domain II — 15 %",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S11"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-bioguide-world-biology-olympiad-preparation",
+    "title": "Bioguide.world — Biology Olympiad Preparation",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://bioguide.world/biology-olympiad-preparation/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Study plans, books, topic roadmaps, practice questions for IBO/USABO/INBO",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S18"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-bioguide-world-ibo-preparation",
+    "title": "Bioguide.world — IBO Preparation",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://bioguide.world/ibo-preparation/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Format, what gets tested, recommended resources, past papers, strategy",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S24"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-biolympiads-where-to-start",
+    "title": "Biolympiads — \"Where to Start\"",
+    "type": "handout",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://biolympiads.com/where-to-start/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "On-ramp guide, textbook list, study group",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S17",
+      "S26"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-ibo-2026-official-site",
+    "title": "IBO 2026 official site",
+    "type": "official",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ibo2026.lt/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S28"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-omegalearn-high-school-competition-biology",
+    "title": "OmegaLearn — High School Competition Biology",
+    "type": "tool",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.omegalearn.org/high-competition-biology",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Official study materials, past papers, community study groups for USABO & IBO",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S19",
+      "S25"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-openstax",
+    "title": "OpenStax",
+    "type": "book",
+    "levels": [
+      "district",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://openstax.org/details/books/biology-2e",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Full university-track general biology, free. The direct upgrade path from NEB.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S5",
+      "S23"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-openstax-2",
+    "title": "OpenStax",
+    "type": "book",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://openstax.org/details/books/concepts-biology",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Lighter, non-majors route — good for Grades 10–11 entry",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "biology-usabo-student-corner",
+    "title": "USABO Student Corner",
+    "type": "official",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://usabo-trc.org/usabo-student-corner",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Exam instructions, honor code, apps, current-cycle materials",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S20"
+    ],
+    "needsReview": true
+  }
+]

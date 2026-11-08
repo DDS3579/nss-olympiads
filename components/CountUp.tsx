@@ -1,47 +1,51 @@
-"use client"
-import { useEffect, useRef, useState } from 'react'
-import { animate } from 'animejs'
+"use client";
 
-export function CountUp({ 
-  to, 
-  duration = 1200, 
-  suffix = "" 
-}: { 
-  to: number, 
-  duration?: number, 
-  suffix?: string 
+import { useEffect, useRef, useState } from "react";
+
+export function CountUp({
+  to,
+  duration = 1000,
+  suffix = "",
+}: {
+  to: number;
+  duration?: number;
+  suffix?: string;
 }) {
-  const [display, setDisplay] = useState(0)
-  const ref = useRef<HTMLSpanElement>(null)
-  const hasAnimated = useRef(false)
+  const [display, setDisplay] = useState(to); // ← final value first: SSR/no-JS/crawlers see the truth
+  const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (!ref.current) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true
-          const obj = { val: 0 }
-          animate(
-            obj,
-            {
-              val: to,
-              duration: duration,
-              easing: 'easeOutExpo',
-              onUpdate: () => {
-                setDisplay(Math.round(obj.val))
-              }
-            }
-          )
-        }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const el = ref.current;
+    if (!el) return;
+    let raf = 0;
+    let done = false;
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (!e.isIntersecting || done) return;
+        done = true;
+        const t0 = performance.now();
+        setDisplay(0);
+        const tick = (t: number) => {
+          const p = Math.min(1, (t - t0) / duration);
+          setDisplay(Math.round(to * (1 - Math.pow(1 - p, 3)))); // easeOutCubic
+          if (p < 1) raf = requestAnimationFrame(tick);
+        };
+        raf = requestAnimationFrame(tick);
       },
       { threshold: 0.5 }
-    )
+    );
+    io.observe(el);
+    return () => {
+      io.disconnect();
+      cancelAnimationFrame(raf);
+    };
+  }, [to, duration]);
 
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [to, duration])
-
-  return <span ref={ref}>{display}{suffix}</span>
+  return (
+    <span ref={ref}>
+      {display}
+      {suffix}
+    </span>
+  );
 }

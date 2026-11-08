@@ -1,0 +1,47 @@
+[
+  {
+    "id": "foundations",
+    "level": "district",
+    "title": "Foundations",
+    "what": "Build core concepts from your school syllabus before touching Olympiad-level problems. Focus on accuracy over speed.",
+    "actions": [],
+    "outcome": "Confident with fundamentals",
+    "placeholder": true
+  },
+  {
+    "id": "intermediate",
+    "level": "province",
+    "title": "Intermediate",
+    "what": "Work through Olympiad problems by topic. Start recognising the patterns that sit behind the problems.",
+    "actions": [],
+    "outcome": "Topic-level fluency",
+    "placeholder": true
+  },
+  {
+    "id": "advanced",
+    "level": "national",
+    "title": "Advanced",
+    "what": "Tackle multi-concept and proof-based problems. Develop rigorous, competition-grade arguments.",
+    "actions": [],
+    "outcome": "Solves hard problems",
+    "placeholder": true
+  },
+  {
+    "id": "simulation",
+    "level": "national",
+    "title": "Simulation",
+    "what": "Attempt full-length past papers under real timing. Build stamina and exam temperament.",
+    "actions": [],
+    "outcome": "Exam-ready speed",
+    "placeholder": true
+  },
+  {
+    "id": "olympiad",
+    "level": "international",
+    "title": "Olympiad",
+    "what": "Final refinement. Light practice, weak-area review, and peak taper before the national round.",
+    "actions": [],
+    "outcome": "Compete at nationals",
+    "placeholder": true
+  }
+]

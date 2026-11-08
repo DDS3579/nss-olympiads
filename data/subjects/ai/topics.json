@@ -1,0 +1,38 @@
+[
+  {
+    "id": "foundational-classical-ml",
+    "name": "Foundational & Classical ML",
+    "blurb": "IOAI Syllabus 2026 §1. Sub-topics pending ai.md.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": [],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "neural-networks-deep-learning",
+    "name": "Neural Networks & Deep Learning",
+    "blurb": "IOAI Syllabus 2026 §2. Sub-topics pending ai.md.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": [],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "computer-vision",
+    "name": "Computer Vision",
+    "blurb": "IOAI Syllabus 2026 §3 — first-class in IOAI (unlike the old site taxonomy). Sub-topics pending ai.md.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": [],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "nlp-audio",
+    "name": "NLP & Audio",
+    "blurb": "IOAI Syllabus 2026 §4 — first-class in IOAI. 'Probabilistic Models' removed: it is not in the IOAI syllabus. Sub-topics pending ai.md.",
+    "levels": ["district", "province", "national", "international"],
+    "subtopics": [],
+    "gap": true,
+    "gapSubstituteId": null
+  }
+]

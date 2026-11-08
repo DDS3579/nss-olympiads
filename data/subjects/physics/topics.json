@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mechanics",
+    "name": "Mechanics",
+    "blurb": "Kinematics, dynamics, energy, rotation, gravitation and periodic motion — the heaviest block of NePhO Round 1.",
+    "levels": ["province"],
+    "subtopics": ["Kinematics", "Newton's laws of motion and applications", "Work, energy and power", "Circular motion", "Gravitation", "Elasticity", "Rotational dynamics", "Periodic motion", "Simple harmonic motion", "Hydrostatics"],
+    "featured": true
+  },
+  {
+    "id": "heat-thermodynamics",
+    "name": "Heat & Thermodynamics",
+    "blurb": "Calorimetry, expansion of materials, kinetic theory of gases and the laws of thermodynamics.",
+    "levels": ["province"],
+    "subtopics": ["Heat and temperature", "Quantity of heat", "Calorimetry", "Expansion of materials", "Ideal gas", "Kinetic theory of gases and gas laws", "First and second law of thermodynamics"]
+  },
+  {
+    "id": "optics",
+    "name": "Optics",
+    "blurb": "Mirrors, refraction, prisms and dispersion in Round 1; interference, diffraction and polarization in the Final Round.",
+    "levels": ["province", "national"],
+    "subtopics": ["Reflection at curved mirrors", "Refraction at plane surfaces and through prisms", "Dispersion", "Nature and propagation of light", "Interference", "Diffraction", "Polarization"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "electricity-magnetism",
+    "name": "Electricity & Magnetism",
+    "blurb": "Electrostatics and DC circuits in Round 1; magnetic fields, induction and alternating currents in the Final Round.",
+    "levels": ["province", "national"],
+    "subtopics": ["Electric charges", "Electric field", "Potential", "Capacitor", "DC circuits", "Kirchhoff's laws", "Thermoelectric effects", "Magnetic field", "Magnetic properties of materials", "Electromagnetic induction", "Alternating currents"]
+  },
+  {
+    "id": "modern-physics",
+    "name": "Modern Physics",
+    "blurb": "Electrons, photons and nuclear physics in Round 1; semiconductors, quantum physics and statistical physics in the Final Round.",
+    "levels": ["province", "national"],
+    "subtopics": ["Electrons", "Photons", "Quantization of energy", "Nuclear physics", "Solids", "Semiconductor devices", "Radioactivity and nuclear reaction", "Particles as waves", "Uncertainty principle", "Planck's law", "Wien's displacement law", "Stefan-Boltzmann law"]
+  },
+  {
+    "id": "experimental-uncertainty-data-analysis",
+    "name": "Experimental Uncertainty & Data Analysis",
+    "blurb": "Error sources, uncertainty estimation, straight-line fits with error bars — examined in both rounds; ~12.5% of Round 1 and 100% of the Round 2 practical.",
+    "levels": ["province", "national"],
+    "subtopics": ["Identification of dominant error sources", "Estimation of experimental uncertainties", "Random and systematic errors", "Standard deviation", "Converting an equation to a straight line", "Plotting graphs with error bars", "Fitting a straight line", "Slopes and intercepts", "Linear regression parameters with uncertainty", "Optimal scales for graphs"],
+    "gap": true,
+    "gapSubstituteId": null
+  },
+  {
+    "id": "waves",
+    "name": "Waves",
+    "blurb": "Mechanical waves and acoustic phenomena — Final Round only.",
+    "levels": ["national"],
+    "subtopics": ["Mechanical waves", "Acoustic phenomena"]
+  }
+]

@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+combined-output.xml
+repomix-output.xml
+
+# link check output
+link-report.json
+
+
+.cloud-attachments/

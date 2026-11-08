@@ -1,0 +1,86 @@
+{
+  "slug": "informatics",
+  "name": "Informatics",
+  "series": "06",
+  "iconKey": "code",
+  "colorVar": "--subject-informatics",
+  "motif": "informatics",
+  "tagline": "Think in loops and logic? Time to compete like it.",
+  "description": "Sharpen your algorithmic thinking, data structures, and competitive programming skills for IOI and national coding rounds.",
+  "grades": "8–12",
+  "organiser": { "name": "NPLCoder", "url": "https://www.nplcoder.org/en" },
+  "levels": {
+    "district": { "exists": true, "label": "NOI District Round", "officialName": "NOI Round 1 — District Level Competition" },
+    "province": { "exists": true, "label": "NOI Provincial Round", "officialName": "NOI Round 2 — Provincial Level Competition" },
+    "national": { "exists": true, "label": "Pre-Finals + Finals", "officialName": "NOI Round 3 (Pre-Finals) & Round 4 (Finals)" },
+    "international": {
+      "exists": false,
+      "label": "IOI",
+      "officialName": "International Olympiad in Informatics",
+      "honestNote": "Nepal is not yet an IOI member and has never participated — verified against the official 118-country member list (stats.ioinformatics.org). NOI names its Top 4 the 'IOI Nepal Team' and runs a C++ training camp for them, but IOI accreditation is the missing step. Every other South Asian country (India, Pakistan, Bangladesh, Sri Lanka) is a member."
+    }
+  },
+  "rounds": [
+    {
+      "level": "district",
+      "name": "NOI Round 1 — District Level Competition",
+      "format": "Each district hosts its own contest; cutoff determined independently per district; Top 3 per district awarded. Any programming language allowed.",
+      "eligibility": "Nepali citizens in Grades 8–12, not enrolled in undergraduate studies (students born in Nepal studying abroad are eligible)",
+      "registration": "Free of charge; all official updates sent by email",
+      "dates": [
+        { "label": "Registration deadline (published on nplcoder.org)", "iso": "2025-10-30", "status": "past" }
+      ],
+      "source": { "label": "NOI Program Structure (official)", "url": "https://docs.google.com/document/d/1IwdxzyBaWY5_elIPTX_6GZYatZpCl_1i0rRfMDEyEnE/edit" }
+    },
+    {
+      "level": "province",
+      "name": "NOI Round 2 — Provincial Level Competition",
+      "format": "District qualifiers compete per province; independent cutoff per province; Top 3 per province awarded. Any programming language allowed.",
+      "eligibility": "District qualifiers",
+      "dates": [],
+      "source": { "label": "NOI Program Structure (official)", "url": "https://docs.google.com/document/d/1IwdxzyBaWY5_elIPTX_6GZYatZpCl_1i0rRfMDEyEnE/edit" }
+    },
+    {
+      "level": "national",
+      "name": "NOI Round 3 — Pre-Finals",
+      "format": "Top ~50 students nationwide; selection criteria and problem set standardized nationwide; Top 25 advance.",
+      "eligibility": "Provincial qualifiers",
+      "dates": [],
+      "source": { "label": "NOI Program Structure (official)", "url": "https://docs.google.com/document/d/1IwdxzyBaWY5_elIPTX_6GZYatZpCl_1i0rRfMDEyEnE/edit" }
+    },
+    {
+      "level": "national",
+      "name": "NOI Round 4 — Finals",
+      "format": "Top 25 compete; Top 10 = National Winners (medals, certificates); Top 4 = official 'IOI Nepal Team'. Problems comparable in difficulty and style to the IOI.",
+      "eligibility": "Pre-Finals Top 25",
+      "dates": [],
+      "source": { "label": "NOI Program Structure (official)", "url": "https://docs.google.com/document/d/1IwdxzyBaWY5_elIPTX_6GZYatZpCl_1i0rRfMDEyEnE/edit" }
+    },
+    {
+      "level": "national",
+      "name": "IOI Training Camp",
+      "format": "For the Top 4 exclusively. Curriculum exclusively in C++ (IOI's mandatory language): advanced algorithms, data structures, optimisation, competition strategy.",
+      "eligibility": "Top 4 of the Finals",
+      "dates": [],
+      "source": { "label": "NOI Program Structure (official)", "url": "https://docs.google.com/document/d/1IwdxzyBaWY5_elIPTX_6GZYatZpCl_1i0rRfMDEyEnE/edit" }
+    },
+    {
+      "level": "international",
+      "name": "IOI",
+      "format": "2 days × 3 tasks × 5 h · C++ only · 100 points per task · 600 total · subtask scoring",
+      "eligibility": "Not yet reachable — Nepal's IOI membership is pending (see the honest note on the International level)",
+      "dates": [],
+      "source": { "label": "IOI official", "url": "https://ioinformatics.org/" }
+    }
+  ],
+  "contacts": [
+    { "body": "NPLCoder", "role": "National organiser — NOI, NPLAlgo, NPLIMO, AIMS", "links": [ { "label": "Website", "url": "https://www.nplcoder.org/en" }, { "label": "Discord (800+ members)", "url": "https://discord.gg/kJrvdhmzVd" }, { "label": "Facebook", "url": "https://www.facebook.com/people/NPLCoder/61576287650990/" } ], "email": "work@nplcoder.org", "phone": "+977 9862021531 (Nepal) · +1 615-484-1629 (USA)" },
+    { "body": "Michal Forišek (Comenius University)", "role": "IOI Syllabus maintainer — IOI accreditation questions", "links": [], "email": "misof@algo.sk" },
+    { "body": "IOI", "role": "International governing body", "links": [ { "label": "Website", "url": "https://ioinformatics.org/" }, { "label": "Statistics", "url": "https://stats.ioinformatics.org/" } ] },
+    { "body": "MoEST", "role": "National olympiad recognition (कार्यविधि २०८२)", "links": [ { "label": "Olympiad procedure (NPS mirror)", "url": "https://nps.org.np/wp-content/uploads/2026/09/National-Olympiad-Guidelines.pdf" } ] },
+    { "body": "Mathematical Association of Nepal (MAN)", "role": "Cross-subject partner — NPLIMO overlaps with MAN's IMO pipeline", "links": [ { "label": "Website", "url": "https://www.mathassociationnepal.org.np/" } ], "email": "imonepal22@gmail.com" }
+  ],
+  "syllabusFileUrl": "/materials/informatics/syllabus.pdf",
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true, "levelCounts": { "included": 148, "excluded": 85, "outsideOfFocus": 24 } },
+  "updatedAt": "2026-10-24"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "informatics-merge-sort-recurrence",
+    "title": "Merge Sort Recurrence",
+    "topicId": "sorting-searching",
+    "level": "national",
+    "difficulty": 2,
+    "statement": "Give the time complexity of merge sort and justify it from its recurrence.",
+    "hint": "T(n) = 2T(n/2) + O(n), which solves to O(n log n).",
+    "solutionUrl": null,
+    "source": {
+      "label": "National Round — citation to verify.",
+      "url": ""
+    },
+    "verified": false
+  }
+]

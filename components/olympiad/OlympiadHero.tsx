@@ -5,15 +5,34 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { MagneticButton } from "@/components/MagneticButton";
 import { Motif, StarField, StatChip } from "./primitives";
-import { getOlympiadStats, type Olympiad } from "@/lib/data/olympiads";
+import type { Olympiad } from "@/components/olympiad/legacy";
+import { subjectStats } from "@/lib/data/stats";
+import type { SubjectData } from "@/lib/types";
+import { strong, onStrong } from "@/lib/color";
 
-export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
+export function OlympiadHero({ olympiad, data }: { olympiad: Olympiad; data: SubjectData }) {
   const Icon = olympiad.icon;
-  const stats = getOlympiadStats(olympiad);
   const c = olympiad.colorVar;
 
+  // Every number computed from data (R0.6 / R-HS) — nothing hand-typed
+  const s = subjectStats(data);
+  const LEVEL_ORDER = ["district", "province", "national", "international"] as const;
+  const existingRounds = LEVEL_ORDER.filter((k) => data.meta.levels[k].exists).length;
+  const missingSlot = LEVEL_ORDER.find((k) => !data.meta.levels[k].exists);
+  const missingShort = missingSlot
+    ? data.meta.levels[missingSlot].label.split(/[(:]/)[0].trim()
+    : null;
+  const levelsValue = missingShort ? `${existingRounds} + ${missingShort}` : String(existingRounds);
+  const lastVerifiedLabel = s.lastVerified
+    ? new Date(`${s.lastVerified}T00:00:00`).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      })
+    : "—";
+
   return (
-    <section className="relative overflow-hidden pb-14 pt-28 lg:pb-20 lg:pt-32">
+    <section aria-label={`${olympiad.name} Olympiad overview`} className="relative overflow-hidden pb-14 pt-28 lg:pb-20 lg:pt-32">
       {/* ambient subject illumination */}
       <div
         className="pointer-events-none absolute inset-0"
@@ -60,7 +79,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
             <FadeIn y={10} delay={0.16}>
               <p
                 className="mt-4 text-sm font-medium"
-                style={{ color: `hsl(var(${c}))` }}
+                style={{ color: strong(c) }}
               >
                 {olympiad.disciplines.join(" · ")}
               </p>
@@ -76,14 +95,15 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <MagneticButton>
                   <a
-                    href="#topics"
-                    className="inline-flex items-center gap-2 rounded-full border-b-4 px-7 py-3 font-heading text-sm font-semibold text-white transition-all duration-150 hover:brightness-110 active:translate-y-1 active:border-b-2"
+                    href="#start"
+                    className="inline-flex items-center gap-2 rounded-full border-b-4 px-7 py-3 font-heading text-sm font-semibold transition-all duration-150 hover:brightness-110 active:translate-y-1 active:border-b-2"
                     style={{
-                      backgroundColor: `hsl(var(${c}))`,
-                      borderColor: `hsl(var(${c}) / 0.4)`,
+                      backgroundColor: strong(c),
+                      borderColor: `hsl(var(${c}-strong) / 0.4)`,
+                      color: onStrong,
                     }}
                   >
-                    Start Preparing <ArrowRight className="h-4 w-4" />
+                    Find my level <ArrowRight className="h-4 w-4" />
                   </a>
                 </MagneticButton>
                 <a
@@ -97,10 +117,10 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
 
             <FadeIn y={10} delay={0.38}>
               <div className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-6 sm:grid-cols-4">
-                <StatChip value={stats.topics} label="Topics" />
-                <StatChip value={stats.problems} label="Problems" />
-                <StatChip value={stats.papers} label="Model Papers" />
-                <StatChip value={olympiad.meta.difficultyRange} label="Level" small />
+                <StatChip value={levelsValue} label="official rounds" />
+                <StatChip value={s.resources} label="verified resources" />
+                <StatChip value={s.papers} label="past papers" />
+                <StatChip value={lastVerifiedLabel} label="last verified" small />
               </div>
             </FadeIn>
           </div>
@@ -127,7 +147,7 @@ export function OlympiadHero({ olympiad }: { olympiad: Olympiad }) {
                   >
                     <Icon
                       className="h-8 w-8"
-                      style={{ color: `hsl(var(${c}))` }}
+                      style={{ color: strong(c) }}
                     />
                   </div>
                 </div>

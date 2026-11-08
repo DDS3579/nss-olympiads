@@ -1,0 +1,9 @@
+[
+  { "subject": "physics", "round": "NePhO (Round 1)", "wrongAnswer": "No deduction", "notes": "Marks deducted for improper significant figures; units required", "calculator": "Non-programmable, non-graphical", "source": "https://www.trinity.edu.np/assets/backend/uploads/Events/2080/Olympiad/PHYSICS.pdf" },
+  { "subject": "mathematics", "round": "DMO", "wrongAnswer": "−0.25 per wrong answer", "notes": "50 MCQ / 100 min", "calculator": null, "source": "" },
+  { "subject": "astronomy", "round": "Provincial", "wrongAnswer": "No negative marking", "notes": "30 MCQ ×2 + 3 long ×10 = 90 marks; +10 marks for the application file", "calculator": "Non-programmable", "source": "" },
+  { "subject": "chemistry", "round": null, "wrongAnswer": null, "notes": null, "calculator": null, "source": "" },
+  { "subject": "biology", "round": null, "wrongAnswer": null, "notes": null, "calculator": null, "source": "" },
+  { "subject": "informatics", "round": null, "wrongAnswer": null, "notes": null, "calculator": null, "source": "" },
+  { "subject": "ai", "round": "AION Round 1", "wrongAnswer": null, "notes": "100 MCQ in 60 minutes, AI-graded, live-proctored", "calculator": null, "source": "" }
+]

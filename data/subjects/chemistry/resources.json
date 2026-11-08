@@ -1,0 +1,604 @@
+[
+  {
+    "id": "chemistry-sajha-notes-neb-grade-11-chemistry",
+    "title": "Sajha Notes — NEB Grade 11 Chemistry",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/grade-11-chemistry/",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "LIVE ⚠️ read-only online (site disables print/PDF)",
+    "verified": "2026-10-22",
+    "why": "39 topics in the exact NEB structure: Physical (15) · Inorganic (14) · Applied (2) · Organic (8). The best free Nepali-curriculum chemistry resource found anywhere.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-sajha-notes-neb-grade-12-chemistry",
+    "title": "Sajha Notes — NEB Grade 12 Chemistry",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/grade-12-chemistry/",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "LIVE ⚠️ read-only",
+    "verified": "2026-10-22",
+    "why": "34 topics: Physical (11) · Inorganic (6) · Organic (10) · Organic Conversion Reactions (3) · Applied (4). The Organic Conversion Reactions section (aliphatic conversions, aromatic conversions, conversion practice questions with solutions) is directly the format of olympiad synthesis problems.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S10"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-atkins-jones-laverman-7th-ed-w-h-freeman-isbn-9781464183959",
+    "title": "— Atkins, Jones & Laverman, 7th ed., W. H. Freeman, ISBN 9781464183959",
+    "type": "book",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.amazon.com/dp/1464183953",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-22",
+    "why": "\"A rigorous treatment of chemistry from a physical chemistry perspective. Essential for students aiming for Study Camp and beyond.\" Deeper thermodynamics + quantum than any general text.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S19"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-clayden-greeves-warren-2nd-ed-oup-isbn-9780199270293",
+    "title": "— Clayden, Greeves & Warren, 2nd ed., OUP, ISBN 9780199270293",
+    "type": "book",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.amazon.com/dp/0199270295",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-22",
+    "why": "The gold standard. \"Exceptional mechanism explanations with curved arrows… advanced synthesis planning and retrosynthetic analysis.\" Required for IChO organic, which NEB does not reach.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S20"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-david-harvey-depauw-university",
+    "title": "— David Harvey, DePauw University",
+    "type": "book",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://sites.google.com/depauw.edu/dth/analytical-curriculum-projects/analytical-chemistry-2-1",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Covers modern instrumental analysis — IChO §12 Analytical chemistry and §8 Spectroscopy, both entirely outside NEB. The best free route into the largest Nepali syllabus gap.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S22",
+      "S31"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-official-icho-syllabus-practical-part",
+    "title": "Official IChO Syllabus — Practical Part",
+    "type": "official",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.icho.sk/files/syllabus%20for%20the%20practical%20part%20of%20the%20icho%20competition.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "5 sections: ① Synthesis of inorganic & organic compounds (33+ tagged techniques) ② Identification of inorganic & organic compounds ③ Determination of some inorganic & organic compounds ④ Special measurements and procedures ⑤ Evaluation of results. Level tags work the same way — and the rule is explicit: \"If the organizer wants to apply a technique which is not mentioned in the above syllabus, this technique is set to level 3 automatically.\"",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S29"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-official-icho-syllabus-theoretical-part",
+    "title": "Official IChO Syllabus — Theoretical Part",
+    "type": "official",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.icho.sk/files/syllabus%20for%20the%20theoretical%20part%20of%20the%20icho%20competition.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "12 sections, 326 entries, each tagged Level 1/2/3. §1 The atom · §2 Chemical bonding · §3 Chemical calculations · §4 Periodic trends · §5 Inorganic Chemistry · §6 Physical chemistry · §7 Chemical kinetics (homogeneous) · §8 Spectroscopy · §9 Organic Chemistry · §10 Polymers · §11 Biochemistry · §12 Analytical chemistry. This is the contract you train against.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S28"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-neb-grade-11-chemistry-syllabus-sajha-notes-write-up-of-the-",
+    "title": "NEB Grade 11 Chemistry Syllabus (Sajha Notes' write-up of the CDC curriculum)",
+    "type": "official",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/neb-grade-11-chemistry-syllabus/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Know the boundary before you study past it.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-neb-grade-12-chemistry-syllabus",
+    "title": "NEB Grade 12 Chemistry Syllabus",
+    "type": "official",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/neb-grade-12-chemistry-syllabus/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S11"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-neb-syllabus-2076-updated-downloadable-group-pdf",
+    "title": "NEB Syllabus 2076 (updated) — downloadable group PDF",
+    "type": "official",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://blog.bed.com.np/neb-syllabus-2076-updated-version-download/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "NEB grades 11–12 syllabus bundle",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S13"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-sajha-notes-chemistry-practicals-lab-grade-11",
+    "title": "Sajha Notes — Chemistry Practicals (Lab), Grade 11",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/chemistry-lab/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "NEB board practicals. The only free Nepali lab resource found.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-sajha-notes-chemistry-practicals-lab-grade-12",
+    "title": "Sajha Notes — Chemistry Practicals (Lab), Grade 12",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/chemistry-lab-12/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Includes volumetric analysis, titration, gravimetric analysis — which are also named NEB Grade 12 physical-chemistry topics.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S12"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-sajha-notes-model-question-papers",
+    "title": "Sajha Notes — Model Question Papers",
+    "type": "handout",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://sajhanotes.com/question-papers/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "NEB-format papers; useful timing drill",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-secondary-education-curriculum-2076-chemistry-grades-11-12-o",
+    "title": "Secondary Education Curriculum 2076 — Chemistry, Grades 11 & 12 (official CDC)",
+    "type": "official",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://moecdc.gov.np/",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "http://lib.moecdc.gov.np/elibrary/pages/home.php?login=true"
+      }
+    ],
+    "access": "caveat",
+    "accessNote": "Government server, very slow / times out from outside Nepal",
+    "verified": "2026-10-22",
+    "why": "The source document STAN's rounds are based on",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S14"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-david-r-klein-4th-ed-wiley-isbn-9781119659594",
+    "title": "— David R. Klein, 4th ed., Wiley, ISBN 9781119659594",
+    "type": "book",
+    "levels": [
+      "province",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.dcho.us/textbooks",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-22",
+    "why": "Best-in-class for building mechanistic thinking — the skill olympiad organic questions actually test. SkillBuilder exercises.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S16",
+      "S18",
+      "S35"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-keeler-wothers-2nd-ed-oup-isbn-9780199604135",
+    "title": "— Keeler & Wothers, 2nd ed., OUP, ISBN 9780199604135",
+    "type": "book",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.amazon.com/dp/0199604134",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-22",
+    "why": "Integrated organic + inorganic + physical, with strong molecular orbital theory. \"Ideal for advanced IChO-level preparation.\" MO theory is IChO Level 3 and completely absent from NEB.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S21"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-klein-vol-1-isbn-9781119837091-vol-2-isbn-9781119837053-6th-",
+    "title": "— Klein, Vol. 1 (ISBN 9781119837091) & Vol. 2 (ISBN 9781119837053), 6th ed.",
+    "type": "book",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.amazon.com/dp/111983709X",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://www.amazon.com/dp/1119837057"
+      }
+    ],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-22",
+    "why": "The famous thin companion. Vol. 2 covers aromatics + IR and NMR spectroscopy — both IChO Level 3 and absent from NEB. Highest value-per-rupee book on this list.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S17"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-zumdahl-zumdahl-decoste-11th-ed-cengage-isbn-9780357850671",
+    "title": "— Zumdahl, Zumdahl & DeCoste, 11th ed., Cengage, ISBN 9780357850671",
+    "type": "book",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.amazon.com/dp/035785067X",
+    "extraLinks": [],
+    "access": "unknown",
+    "accessNote": "📕 print",
+    "verified": "2026-10-22",
+    "why": "The classic general-chemistry text used for AP and college. Strong thermodynamics and equilibrium — the two heaviest olympiad-physical-chemistry blocks.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S15"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-acs-accessible-periodic-table",
+    "title": "ACS Accessible Periodic Table",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.acs.org/education/olympiad/prepare-for-exams/accessible-periodic-table.html",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "bot-walled",
+    "verified": "2026-10-22",
+    "why": "Screen-reader-friendly periodic table for practice",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S26"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-acs-usnco-exam-reference-page",
+    "title": "ACS USNCO Exam Reference Page",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.acs.org/education/olympiad/prepare-for-exams/reference-page.html",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "bot-walled",
+    "verified": "2026-10-22",
+    "why": "Exactly what constants/equations you are given vs must know",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S25"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-hyperphysics-chemistry",
+    "title": "HyperPhysics — Chemistry",
+    "type": "tool",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://hyperphysics.phy-astr.gsu.edu/hbase/index.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Fast cross-referencing",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S9"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-khan-academy-high-school-chemistry",
+    "title": "Khan Academy — High School Chemistry",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.khanacademy.org/science/hs-chemistry",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Recommended by Dr. Chen's Academy as the Level-1 companion",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S7"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-libretexts-chemistry",
+    "title": "LibreTexts Chemistry",
+    "type": "book",
+    "levels": [
+      "district",
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://chem.libretexts.org/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Modular; excellent for filling single-topic holes fast",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S6",
+      "S23"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-omegalearn-usnco-prep-guide",
+    "title": "OmegaLearn — USNCO Prep Guide",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.omegalearn.org/usnco",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Points to the ACS archive plus annotated solutions for free-response and lab sections",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S27"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-openstax",
+    "title": "OpenStax",
+    "type": "book",
+    "levels": [
+      "district",
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://openstax.org/details/books/chemistry-2e",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Full general chemistry, calculus-free, IChO-adjacent rigour. The free equivalent of Zumdahl.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S5",
+      "S24"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "chemistry-uci-opencourseware-preparation-for-chemistry",
+    "title": "UCI OpenCourseWare — Preparation for Chemistry",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://ocw.uci.edu/courses/chem_1p_preparation_for_chemistry.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Pre-general-chemistry bridge",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S8"
+    ],
+    "needsReview": true
+  }
+]

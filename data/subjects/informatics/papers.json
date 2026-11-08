@@ -1,0 +1,686 @@
+[
+  {
+    "id": "informatics-usaco-guide-bronze",
+    "title": "USACO Guide — Bronze",
+    "type": "pastpaper",
+    "levels": [
+      "district"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://usaco.guide/bronze",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "The exact match. USACO Bronze = complete search, sorting, simulation, ad-hoc, basic arrays — identical to NOI Round 1. Free, structured, with curated problem lists per topic.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "D1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-usaco-guide-general-language-choice-ide-setup-practice-tips-",
+    "title": "USACO Guide — General (language choice, IDE setup, practice tips, time complexity)",
+    "type": "pastpaper",
+    "levels": [
+      "district"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://usaco.guide/general",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "On-ramp",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-cses-problem-set-intro-sorting-searching-sections",
+    "title": "CSES Problem Set — intro/sorting/searching sections",
+    "type": "pastpaper",
+    "levels": [
+      "district",
+      "province",
+      "national"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://cses.fi/problemset/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Direct drill",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D3",
+      "P4",
+      "N9"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-atcoder-beginner-contest-abc-a-and-b-problems",
+    "title": "AtCoder Beginner Contest (ABC) — A and B problems",
+    "type": "pastpaper",
+    "levels": [
+      "district",
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://atcoder.jp/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Timed MCQ-free drill at exactly Round-1 difficulty",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D4",
+      "P5"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-codeforces-problems-rated-800-1100",
+    "title": "Codeforces — problems rated 800–1100",
+    "type": "pastpaper",
+    "levels": [
+      "district",
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://codeforces.com/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "403 to scripts; works in a browser",
+    "verified": "2026-10-23",
+    "why": "Drill by difficulty",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D5",
+      "P6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-ioi-official-past-tasks-1989-present",
+    "title": "IOI official past tasks 1989 → present",
+    "type": "pastpaper",
+    "levels": [
+      "district",
+      "national"
+    ],
+    "year": 1989,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://ioinformatics.org/page/contests/10",
+        "kind": "questions"
+      },
+      {
+        "label": "File 2",
+        "url": "https://github.com/ioi/task-archive",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "The target, not the entry point",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "D6",
+      "N1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-usaco-guide-silver",
+    "title": "USACO Guide — Silver",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://usaco.guide/silver",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "The exact match for NOI Round 2. USACO Silver covers binary search, prefix sums, two pointers, sorting, stacks/queues, intro DP, adjacency-list graphs, DFS/flood fill — a one-to-one overlap with the official Round-2 topic list.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "P1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-usaco-official-past-contests",
+    "title": "USACO official past contests",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "http://www.usaco.org/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "403 to scripts; works in a browser",
+    "verified": "2026-10-23",
+    "why": "Real graded contests at this level",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "P2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-usaco-legacy-training-pages",
+    "title": "USACO legacy training pages —",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://usaco.org/index.php?page=training",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "same",
+    "verified": "2026-10-23",
+    "why": "Structured drill",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "P3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-codechef",
+    "title": "CodeChef —",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.codechef.com/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Endurance practice",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "P7"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-hackerrank",
+    "title": "HackerRank —",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://www.hackerrank.com/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "verified": "2026-10-23",
+    "why": "DSA drill",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "P8"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-project-euler",
+    "title": "Project Euler —",
+    "type": "pastpaper",
+    "levels": [
+      "province"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://projecteuler.net/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "caveat",
+    "accessNote": "403 to scripts",
+    "verified": "2026-10-23",
+    "why": "Number theory / modular arithmetic — directly serves Round-2 Mathematics",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "P9"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-ioi-public-task-archive-official-github",
+    "title": "IOI Public Task Archive (official GitHub)",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://github.com/ioi/task-archive",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Machine-readable archive of IOI tasks with test data — runnable on a local judge",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "N2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-ioi-statistics-site-olympiads-members-tasks-hall-of-fame",
+    "title": "IOI Statistics site — Olympiads · Members · Tasks · Hall of Fame",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://stats.ioinformatics.org/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Per-task, per-year, per-country results and statistics",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N3"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-ioi-history-tu-eindhoven",
+    "title": "IOI History (TU Eindhoven) —",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://olympiads.win.tue.nl/ioi/history.html",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "The founding archive; UNESCO initiated the first IOI in May 1989",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-previous-contest-tasks-full-ioi-task-list-by-year-ioi-te-lv",
+    "title": "Previous Contest Tasks — full IOI task list by year (ioi.te.lv)",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://ioi.te.lv/contest/prev.shtml",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Plain list from IOI 1989 Pravetz, Bulgaria onward",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N5"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-ioi-rankings-archive-2017-2026",
+    "title": "IOI Rankings Archive 2017 → 2026",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": 2017,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://ioirankings.com/",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Per-year rankings",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "N6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-usaco-guide-gold",
+    "title": "USACO Guide — Gold",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://usaco.guide/gold",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Maps to NOI Round 3 (DSU, segment trees, shortest paths, MST, intro string structures)",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "N7"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "informatics-usaco-guide-advanced",
+    "title": "USACO Guide — Advanced",
+    "type": "pastpaper",
+    "levels": [
+      "national"
+    ],
+    "year": null,
+    "topics": [],
+    "files": [
+      {
+        "label": "Open",
+        "url": "https://usaco.guide/adv",
+        "kind": "questions"
+      }
+    ],
+    "format": {
+      "duration": null,
+      "marks": null,
+      "questions": null,
+      "calculator": null,
+      "negativeMarking": null
+    },
+    "hasSolutions": false,
+    "nepalSpecific": false,
+    "access": "ok",
+    "verified": "2026-10-23",
+    "why": "Maps to NOI Round 4 and IOI itself (suffix structures, advanced DP, geometry, flows/matching)",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "N8"
+    ],
+    "needsReview": true
+  }
+]

@@ -1,0 +1,706 @@
+[
+  {
+    "id": "physics-a-guide-to-nepal-physics-olympiad",
+    "title": "A Guide to Nepal Physics Olympiad",
+    "type": "book",
+    "levels": [
+      "province",
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://github.com/nkalauni/physics-olympiad-book/releases/download/v1.0.0/A_Guide_to_Nepal_Physics_Olympiad.pdf",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://github.com/nkalauni/physics-olympiad-book"
+      }
+    ],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Written by Laxman Bist, Nabin Kalauni, Sandesh Parajuli — top-3 of NePhO 2018, Nepal's team at IPhO 2018 Lisbon. Explicitly \"organized as per the syllabus of NePhO.\" Every chapter = Key Concepts & Formulae → Bridging Problem → Level 1 problems → Level 2 problems → IPhO problems → Supplementary problems, all with solutions. Sources cited inside: Morin, Irodov, Gnädig, Sears & Zemansky. Released Oct 2023, CC BY-NC-SA 4.0.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S13",
+      "S21"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-jaan-kalda-recommended-list-of-problems",
+    "title": "Jaan Kalda — \"Recommended list of problems\"",
+    "type": "problemset",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/rec-list.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The most respected curated olympiad problem list in the world, hand-picked by an IPhO organiser and sorted by topic: Mechanics (incl. celestial), Electromagnetism, Thermodynamics, Optics, Relativity, Quantum. Each entry annotated with why it teaches something (e.g. \"IPhO-1991-Pr1 — this will teach you the basics of the collision of bodies\"). Start here before touching raw archives.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "C1"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-kalda-formulas-for-ipho-ver-1-1",
+    "title": "Kalda — \"Formulas for IPhO\" (ver 1.1)",
+    "type": "book",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/formulas.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "The de-facto standard IPhO formula sheet. Also in Spanish, Japanese, Portuguese, Indonesian, Estonian — no Nepali version exists (Gap I-3).",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S32"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-official-ipho-syllabus-accepted-astana-2014-amended-mumbai-2",
+    "title": "Official IPhO Syllabus (accepted Astana 2014, amended Mumbai 2015)",
+    "type": "official",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/Syllabus-new.pdf",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://www.ipho-new.org/statutes-syllabus/"
+      }
+    ],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Section-by-section: 2.2 Mechanics (kinematics / statics / dynamics / celestial mechanics), 2.3 Electromagnetic fields (basic concepts / integral forms of Maxwell's equations / interaction of matter with fields / circuits), 2.4 Oscillations & waves (single oscillator / waves / interference & diffraction / EM waves in matter), plus thermodynamics, modern physics, and experimental skills incl. error analysis.",
+    "highlight": true,
+    "origin": "external",
+    "sourceIds": [
+      "S31"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-errors-and-their-propagation-kafle-limbu",
+    "title": "Errors and their Propagation — Kafle & Limbu",
+    "type": "handout",
+    "levels": [
+      "district",
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://prabhakarkafle.com.np/files/Errors-and-their-Propagation.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Foundation for the mandatory \"Experimental uncertainty & Data analysis\" syllabus section. 4 pp.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S9",
+      "S17"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-graphing-for-nepho-prabhakar-kafle-sanam-limbu",
+    "title": "Graphing for NePhO — Prabhakar Kafle & Sanam Limbu",
+    "type": "handout",
+    "levels": [
+      "district",
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://prabhakarkafle.com.np/files/Graph.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Explicitly built for NePhO. Opens with a NePhO Pre-selection 2017 graph question. Graphing is a named scoring skill in the official NePhO syllabus. 5 pp.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S7",
+      "S15"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-mechanics-for-nepho-dinesh-kandel-ipho-2011-bronze-nepal",
+    "title": "Mechanics for NePhO — Dinesh Kandel (IPhO 2011 Bronze, Nepal)",
+    "type": "handout",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://prabhakarkafle.com.np/files/Mechanics-for-NePhO.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "\"Preparation Materials FOR IPhO — NePhO, Nepal Physical Society.\" Contains an actual NePhO 2011 selection-test problem (falling-raindrop model) worked up to competition standard. The deepest Nepal-authored mechanics treatment available.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S14"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-significant-figures-and-rounding-kafle-limbu",
+    "title": "Significant Figures and Rounding — Kafle & Limbu",
+    "type": "handout",
+    "levels": [
+      "district",
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": true,
+    "kind": "external",
+    "url": "https://prabhakarkafle.com.np/files/Significant-Figures-and-Rounding.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "NePhO papers state: \"Marks will not be deducted for incorrect answers but deducted for improper significant figures.\" This is free marks most Nepali students lose. 2 pp.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S8",
+      "S16"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-aapt-u-s-physics-team-exams-f-ma-usapho-usapho-plus-all-year",
+    "title": "AAPT — U.S. Physics Team exams (F=ma, USAPhO, USAPhO Plus), all years + solutions",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://aapt.org/physicsteam/PT-exams.cfm",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "F=ma is a 25-question/75-min MCQ round — perfect timed-drill material for NePhO Section A; USAPhO is free-response at NePhO-Final/IPhO difficulty.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "C5"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-an-introduction-to-error-analysis-john-r-taylor",
+    "title": "An Introduction to Error Analysis — John R. Taylor",
+    "type": "book",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.niser.ac.in/sps/sites/default/files/basic_page/John%20R.%20Taylor%20-%20An%20Introduction%20to%20Error%20Analysis_%20The%20Study%20of%20Uncertainties%20in%20Physical%20Measurements-University%20Science%20Books%20(1997",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "Unreachable from some networks (India-hosted mirror; times out abroad). Search title to find it; or buy.",
+    "verified": "2026-10-22",
+    "why": "Kafle: \"if you want in-depth knowledge from the very beginning (which will be required eventually in IPhO), the best material should be John R. Taylor's.\" The definitive text.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S18"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-bdpho-national-round-papers-category-c",
+    "title": "BdPhO National Round papers, Category C",
+    "type": "handout",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bdpho.org/past-paper",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "JS-only site",
+    "verified": "2026-10-22",
+    "why": "The National Round of BdPhO ≈ NePhO Final Round in difficulty and is freely downloadable (unlike INPhO).",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S26"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-bdpho-past-papers-13th-bdpho-category-c-higher-secondary",
+    "title": "BdPhO Past Papers — 13th BdPhO, Category C (Higher Secondary)",
+    "type": "tool",
+    "levels": [
+      "province"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.bdpho.org/past-paper/13/6",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://www.bdpho.org/past-paper"
+      }
+    ],
+    "access": "caveat",
+    "accessNote": "LIVE but JavaScript-only SPA — needs a browser; not scrapeable. Category A/B/C correspond to school tiers.",
+    "verified": "2026-10-22",
+    "why": "Bangladesh's olympiad has an identical ladder shape to what you want: Selection Round → Regional Round (multiple question sets) → National Round, with Category C = higher secondary = Nepal's Grade 11–12. Difficulty sits right between NePhO Round 1 and Round 2. The single best volume-drill source for South Asian students.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S19"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-curriculum-development-centre-cdc-digital-library-portal",
+    "title": "Curriculum Development Centre (CDC) — Digital Library portal",
+    "type": "official",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "http://lib.moecdc.gov.np/elibrary/pages/home.php?login=true",
+    "extraLinks": [
+      {
+        "label": "Link 2",
+        "url": "https://moecdc.gov.np/"
+      }
+    ],
+    "access": "caveat",
+    "accessNote": "Same geo-slowness. Accessible from within Nepal.",
+    "verified": "2026-10-22",
+    "why": "Entry point for all NEB textbooks & curricula.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S2"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-gulf-physics-olympiads-gpho",
+    "title": "Gulf Physics Olympiads (GPhO)",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/GPhO",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "ABEGS-organised; 3 editions with problems.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "C4"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-hbcse-india-past-papers-index-nsep-inpho-2008-2025-english-a",
+    "title": "HBCSE (India) — Past Papers index (NSEP + INPhO, 2008–2025, English and Hindi)",
+    "type": "tool",
+    "levels": [
+      "province",
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://olympiads.hbcse.tifr.res.in/how-to-prepare/past-papers/",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "Index ✅ LIVE, but individual PDFs 404 from non-Indian IPs (geo-restricted). Use from within Nepal/India or via archive.org.",
+    "verified": "2026-10-22",
+    "why": "India's national olympiad papers with official model solutions. INPhO is ~1 notch above NePhO Final Round; NSEP is ~NePhO Round 1. Hindi versions help Nepali students more comfortable in Devanagari.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S20",
+      "S25"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-hrk-5th-ed-complete-mcq-answer-key-kevin-zhou-ch-1-17-physol",
+    "title": "HRK (5th ed.) — complete MCQ answer key (Kevin Zhou Ch. 1–17 + Physoly community Vol. 2)",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://docs.google.com/document/d/1rcf25MGKGDp_TcKgY-KtGcakhbdf2890q-3TUNG7KWM/edit?usp=sharing",
+    "extraLinks": [],
+    "access": "caveat",
+    "accessNote": "Kevin Zhou's /handouts/ index returns 404; the direct PDF and the Google Doc are the live routes",
+    "verified": "2026-10-22",
+    "why": "Halliday–Resnick–Krane is the rigorous edition; this makes it self-study-able.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S49"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-hyperphysics-georgia-state-university",
+    "title": "HyperPhysics (Georgia State University)",
+    "type": "tool",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://hyperphysics.phy-astr.gsu.edu/hbase/index.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Fast concept cross-referencing; excellent for filling holes before you touch olympiad problems.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S6"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-jaan-kalda-ver-0-5",
+    "title": "Jaan Kalda — (ver 0.5)",
+    "type": "handout",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/waveopt.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Interference, diffraction, polarization. The only free olympiad-grade optics handout identified; there is no Nepali equivalent at any level.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S29",
+      "S37"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-jaan-kalda-ver-1-2",
+    "title": "Jaan Kalda — (ver 1.2)",
+    "type": "handout",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/electricity-circuits.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "DC/AC circuit theory at olympiad depth — covers the Kirchhoff / thermoelectric / AC circuits syllabus items the Nepal guide omits.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S28",
+      "S35"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-jaan-kalda-ver-1-2-2",
+    "title": "Jaan Kalda — (ver 1.2)",
+    "type": "handout",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/meh_ENG2.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Rotation, rigid bodies, gravitation, oscillations — the Round-1 mechanics blocks missing from the Nepal guide.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S30",
+      "S34"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-jaan-kalda-study-guide-ver-0-87",
+    "title": "Jaan Kalda — study guide (ver 0.87)",
+    "type": "handout",
+    "levels": [
+      "national",
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/Thermodyn.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "IPhO-level thermodynamics with hints. Bridges NePhO Round 1 thermo → Round 2 → IPhO.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S27",
+      "S36"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-kalda-a-short-introduction-to-nonlinear-waves",
+    "title": "Kalda — \"A short introduction to nonlinear waves\"",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/nonlin-waves.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Stretch material for IPhO-bound students.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S40"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-kalda-complete-study-guide-index-all-of-the-above-translatio",
+    "title": "Kalda — Complete study-guide index (all of the above + translations + terms of use)",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Master page for S31–S40.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S41"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-kalda-kinematics-ver-2-0",
+    "title": "Kalda — Kinematics (ver 2.0)",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/kin_ENG.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S33"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-kalda-quantum-mechanics-ver-0-4",
+    "title": "Kalda — Quantum Mechanics (ver 0.4)",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/quant_ENG.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S39"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-kalda-theory-of-relativity-siim-ainsaar-ver-0-6",
+    "title": "Kalda — Theory of Relativity (Siim Ainsaar, ver 0.6)",
+    "type": "handout",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/Ainsaar_Relativity.pdf",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Directly serves the \"basics of special relativity\" in the NePhO Final Round syllabus.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S38"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-mit-ocw-8-01sc-classical-mechanics",
+    "title": "MIT OCW 8.01SC Classical Mechanics",
+    "type": "course",
+    "levels": [
+      "district"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Full first-year mechanics with problem sets + exams. The standard bridge from board physics to olympiad mechanics.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S11"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-mit-ocw-8-02-physics-ii-electricity-magnetism",
+    "title": "MIT OCW 8.02 Physics II — Electricity & Magnetism",
+    "type": "course",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Covers magnetic field, magnetic properties of materials, electromagnetic induction, alternating currents — the entire §2 of the official Final-Selection syllabus, which no Nepali resource covers.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S22"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-mit-ocw-8-03sc-physics-iii-vibrations-and-waves",
+    "title": "MIT OCW 8.03SC Physics III — Vibrations and Waves",
+    "type": "course",
+    "levels": [
+      "national"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Covers mechanical waves, acoustic phenomena, interference, diffraction, polarization — the entire §1 of the official Final-Selection syllabus, also uncovered by Nepali material.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "S23"
+    ],
+    "needsReview": true
+  },
+  {
+    "id": "physics-nordic-baltic-physics-olympiad-nbpho-problems",
+    "title": "Nordic-Baltic Physics Olympiad (NBPhO) problems",
+    "type": "problemset",
+    "levels": [
+      "international"
+    ],
+    "topics": [],
+    "nepalSpecific": false,
+    "kind": "external",
+    "url": "https://www.ioc.ee/~kalda/ipho/E_S.html",
+    "extraLinks": [],
+    "access": "ok",
+    "verified": "2026-10-22",
+    "why": "Kalda's own regional olympiad; the Est-Fin problems on his recommended list come from here.",
+    "highlight": false,
+    "origin": "external",
+    "sourceIds": [
+      "C3"
+    ],
+    "needsReview": true
+  }
+]

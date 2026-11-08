@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail } from "lucide-react";
-import { olympiads } from "@/lib/data/olympiads";
-import { siteConfig } from "@/lib/site-config";
+import { getSubjectIndex } from "@/lib/data";
+import { siteConfig, mailto } from "@/lib/site-config";
 
 function InstagramIcon({ className }: { className?: string }) {
   return (
@@ -14,6 +13,7 @@ function InstagramIcon({ className }: { className?: string }) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden
     >
       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -22,35 +22,21 @@ function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
-function FacebookIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  );
-}
+const linkCls =
+  "inline-flex min-h-9 items-center text-sm text-muted-foreground transition-colors hover:text-foreground";
 
 export function Footer() {
+  const subjects = getSubjectIndex();
+
   return (
-    <footer
-      className="border-t border-border bg-background pb-8 pt-16"
-      id="contact"
-    >
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 sm:grid-cols-2 lg:grid-cols-5">
+    <footer id="contact" className="border-t border-border bg-background pb-8 pt-14">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-10 px-5 sm:px-6 lg:grid-cols-12 lg:gap-8">
         {/* Brand */}
-        <div className="sm:col-span-2">
-          <Link href="/" className="flex items-center gap-2.5">
+        <div className="col-span-2 lg:col-span-4">
+          <Link href="/" className="inline-flex items-center gap-2.5">
             <Image
               src="/logo.png"
-              alt="NSS Olympiad Hub logo"
+              alt=""
               width={32}
               height={32}
               className="h-8 w-8 rounded-lg object-contain"
@@ -59,157 +45,84 @@ export function Footer() {
               NSS Olympiad Hub
             </span>
           </Link>
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Free Olympiad preparation for NSS students — organized by NSS Clubs
-            Education Section.
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            Free, level-wise Olympiad preparation for students in Nepal — built by the STEM Club of
+            NSS Clubs. Every link opened and checked by a person.
           </p>
-          <div className="mt-6 flex gap-4">
+          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
+            <a
+              href={mailto()}
+              className="text-sm font-medium text-foreground underline-offset-4 hover:underline"
+            >
+              {siteConfig.contact.emailAddress}
+            </a>
             <a
               href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
             >
               <InstagramIcon className="h-5 w-5" />
-              <span className="sr-only">Instagram</span>
-            </a>
-            {/* <a
-              href={siteConfig.social.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              <FacebookIcon className="h-5 w-5" />
-              <span className="sr-only">Facebook</span>
-            </a> */}
-            <a
-              href={siteConfig.contact.email}
-              className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            >
-              <Mail className="h-5 w-5" />
-              <span className="sr-only">Email</span>
+              <span className="sr-only">Instagram (opens in new tab)</span>
             </a>
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div>
-          <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground">
-            Quick Links
-          </h3>
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href="/"
-                className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/olympiads"
-                className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Olympiads
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#why"
-                className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#team"
-                className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Team
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#contact"
-                className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Categories */}
-        <div>
-          <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground">
-            Categories
-          </h3>
-          <ul className="space-y-2">
-            {olympiads.map((o) => (
-              <li key={o.slug}>
-                <Link
-                  href={`/olympiads/${o.slug}`}
-                  className="block py-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {o.name}
+        {/* Olympiads */}
+        <nav aria-label="Olympiads" className="col-span-1 lg:col-span-3">
+          <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-foreground">
+            Olympiads
+          </h2>
+          <ul className="mt-3">
+            {subjects.map((s) => (
+              <li key={s.slug}>
+                <Link href={`/olympiads/${s.slug}`} className={linkCls}>
+                  {s.name}
                 </Link>
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
 
-        {/* Support */}
-        <div>
-          <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground">
-            Support
-          </h3>
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href="/#contact"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={siteConfig.legal.faq}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
-              >
-                FAQ
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={siteConfig.legal.reportIssue}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors block py-1"
-              >
-                Report Issue
-              </Link>
-            </li>
+        {/* Explore */}
+        <nav aria-label="Explore" className="col-span-1 lg:col-span-2">
+          <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-foreground">
+            Explore
+          </h2>
+          <ul className="mt-3">
+            <li><Link href="/olympiads" className={linkCls}>All Olympiads</Link></li>
+            <li><Link href="/exams" className={linkCls}>Exam rules &amp; dates</Link></li>
+            <li><Link href="/search" className={linkCls}>Search</Link></li>
+            <li><Link href="/about" className={linkCls}>About &amp; verification</Link></li>
+            <li><Link href="/faq" className={linkCls}>FAQ</Link></li>
           </ul>
-        </div>
+        </nav>
+
+        {/* Help */}
+        <nav aria-label="Help and legal" className="col-span-2 lg:col-span-3">
+          <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.2em] text-foreground">
+            Help
+          </h2>
+          <ul className="mt-3">
+            <li>
+              <a href={mailto("Broken or incorrect link", "Page:\nWhat's wrong:\n")} className={linkCls}>
+                Report a broken link
+              </a>
+            </li>
+            <li>
+              <a href={mailto("Suggest a resource", "Subject:\nLink:\nWhy it helps:\n")} className={linkCls}>
+                Suggest a resource
+              </a>
+            </li>
+            <li><Link href={siteConfig.legal.privacy} className={linkCls}>Privacy</Link></li>
+            <li><Link href={siteConfig.legal.terms} className={linkCls}>Terms</Link></li>
+          </ul>
+        </nav>
       </div>
 
-      <div className="mt-16 pt-8 border-t border-border mx-auto max-w-7xl px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <p>© {new Date().getFullYear()} NSS Clubs. All Rights Reserved.</p>
-        <div className="flex gap-4">
-          <Link
-            href={siteConfig.legal.privacy}
-            className="hover:text-foreground transition-colors"
-          >
-            Privacy
-          </Link>
-          <Link
-            href={siteConfig.legal.terms}
-            className="hover:text-foreground transition-colors"
-          >
-            Terms
-          </Link>
-        </div>
+      <div className="mx-auto mt-12 flex max-w-7xl flex-col gap-2 border-t border-border px-5 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <p>© {new Date().getFullYear()} NSS Clubs · STEM Club. Free for every student.</p>
+        <p>Always confirm dates and rules with the official organiser.</p>
       </div>
     </footer>
   );

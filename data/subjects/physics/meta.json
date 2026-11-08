@@ -1,0 +1,78 @@
+{
+  "slug": "physics",
+  "name": "Physics",
+  "series": "02",
+  "iconKey": "atom",
+  "colorVar": "--subject-physics",
+  "motif": "physics",
+  "tagline": "Passionate about how the universe actually works? This one's for you.",
+  "description": "Explore mechanics, thermodynamics, electromagnetism, and modern physics through challenging theoretical and experimental problems.",
+  "grades": "11–12",
+  "organiser": { "name": "Nepal Physical Society (NPS)", "url": "https://nps.org.np/" },
+  "levels": {
+    "district": {
+      "exists": false,
+      "label": "Foundation (NEB Gr. 11–12)",
+      "officialName": null,
+      "honestNote": "Nepal has no official district-level physics olympiad. MoEST's 2082 procedure allows 'district or province'; NPS chose province. This slot is the NEB Grade 11–12 syllabus itself — about 90% of NePhO Round-1 marks come from it."
+    },
+    "province": { "exists": true, "label": "NePhO Round 1", "officialName": "NePhO Round 1 (Pre-selection Test)" },
+    "national": { "exists": true, "label": "NePhO Final + camp", "officialName": "NePhO Final Round" },
+    "international": { "exists": true, "label": "IPhO · APhO", "officialName": "IPhO" }
+  },
+  "rounds": [
+    {
+      "level": "district",
+      "name": "Foundation (NEB Gr. 11–12)",
+      "eligibility": "Higher-secondary student",
+      "dates": [],
+      "source": { "label": "PHYSICS research file §1.1", "url": "https://nps.org.np/?page_id=72" }
+    },
+    {
+      "level": "province",
+      "name": "NePhO Round 1 (Pre-selection Test)",
+      "format": "3 h 15 m · 100 marks · 11 questions (5 short + 6 long)",
+      "marking": "No deduction for incorrect answers; marks deducted for improper significant figures; every answer starts on a new page; labelled diagram expected",
+      "calculator": "Non-programmable, non-graphical",
+      "eligibility": "Higher-secondary student; under 20 by 30 June; not enrolled in any Bachelor's programme",
+      "registration": "Through your institution or self; deadline ≈ Mangsir (December)",
+      "centres": "≈ 10 provincial centres (Kathmandu, Biratnagar, Birgunj, Janakpur, Bharatpur, Pokhara, Butwal, Nepalgunj, Mahendranagar, Dhangadhi; Palpa in one NPS document)",
+      "dates": [],
+      "source": { "label": "NePhO-2022 paper + NPS activity document", "url": "https://www.trinity.edu.np/assets/backend/uploads/Events/2080/Olympiad/PHYSICS.pdf" }
+    },
+    {
+      "level": "national",
+      "name": "NePhO Final Round (after mandatory camp)",
+      "format": "Theory + experimental examinations",
+      "eligibility": "Top ~25 'National Champions' of Round 1",
+      "registration": "Accommodation only is arranged by NPS; insurance is the student's job; under-16s need a minor certificate + parental consent",
+      "dates": [
+        { "label": "NePhO 2025/26 closed camp (TU Kirtipur)", "iso": "2026-05-13/2026-05-22", "status": "past" }
+      ],
+      "source": { "label": "NPS NePhO page", "url": "https://nps.org.np/?page_id=72" }
+    },
+    {
+      "level": "international",
+      "name": "IPhO",
+      "format": "Theory 5 h / 30 marks + Experimental 5 h / 20 marks",
+      "eligibility": "Top 5 of the Final Round; valid passport required",
+      "dates": [
+        { "label": "IPhO 2027 — Saudi Arabia (57th)", "iso": null, "status": "upcoming" }
+      ],
+      "source": { "label": "ipho-unofficial.org timeline", "url": "https://ipho-unofficial.org/timeline/" }
+    }
+  ],
+  "contacts": [
+    { "body": "Nepal Physical Society (NPS)", "role": "Runs NePhO; selects & trains the IPhO team", "links": [ { "label": "Website", "url": "https://nps.org.np/" }, { "label": "NePhO page", "url": "https://nps.org.np/?page_id=72" }, { "label": "Facebook", "url": "https://www.facebook.com/npsorgnp" } ], "email": "info@nps.org.np" },
+    { "body": "Nepal Physics Olympiad (NPS sub-page)", "role": "Round-1 notices, forms, centres", "links": [ { "label": "Facebook", "url": "https://www.facebook.com/nepalphysics.olympiad" } ] },
+    { "body": "NePhO Discussion Group", "role": "Peer Q&A among aspirants & alumni", "links": [ { "label": "Facebook group", "url": "https://www.facebook.com/groups/382117412258231/" } ] },
+    { "body": "MoEST", "role": "National olympiad recognition & funding (कार्यविधि २०८२)", "links": [ { "label": "Olympiad procedure", "url": "https://moest.gov.np/content/13499/in-procedure-of-olmpiad-operations-related-to/" } ] },
+    { "body": "Curriculum Development Centre (CDC)", "role": "NEB Grade 11–12 Physics curriculum & textbooks", "links": [ { "label": "Website", "url": "https://moecdc.gov.np/" }, { "label": "Digital library", "url": "http://lib.moecdc.gov.np/" } ], "email": "info@moecdc.gov.np" },
+    { "body": "ANPA (Association of Nepali Physicists in America)", "role": "MoU with NPS; diaspora mentoring", "links": [ { "label": "Website", "url": "https://anpaglobal.org/" } ] },
+    { "body": "IPhO 2027 (Saudi Arabia)", "role": "Next international target", "links": [ { "label": "Timeline", "url": "https://ipho-unofficial.org/timeline/2027/" } ] },
+    { "body": "A Guide to Nepal Physics Olympiad", "role": "Nepali olympiad book — open to contributors (CC BY-NC-SA 4.0)", "links": [ { "label": "GitHub", "url": "https://github.com/nkalauni/physics-olympiad-book" } ] }
+  ],
+  "syllabusFileUrl": "/materials/physics/syllabus.pdf",
+  "syllabusMeta": { "officialVerified": false, "pdfUnderReview": true },
+  "updatedAt": "2026-10-24"
+}
