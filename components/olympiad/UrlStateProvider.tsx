@@ -31,22 +31,10 @@ export function UrlStateProvider({ slug, children }: { slug: string; children: R
   // Server + first client render use defaults → no hydration mismatch.
   const [f, setF] = useState<Filters>(DEFAULT_FILTERS);
 
+  // The URL is the single source of truth. Re-read it on mount, when the
+  // subject changes, and on Back/Forward.
   useEffect(() => {
-    // Mount: URL wins; if no level is present, restore the student's last choice (T4.3 writes it).
-    let initial = readFilters(window.location.search);
-    if (initial.level === "all") {
-      try {
-        const saved = window.localStorage.getItem(`nss:v2:level:${slug}`);
-        if (saved) {
-          initial = { ...initial, level: saved };
-          writeFilters(initial, "replace");
-        }
-      } catch {
-        /* ignore */
-      }
-    }
-    setF(initial);
-
+    setF(readFilters(window.location.search));
     const onPop = () => setF(readFilters(window.location.search));
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
