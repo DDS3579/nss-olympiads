@@ -1,22 +1,22 @@
 {
   "slug": "mathematics",
   "generatedFrom": "mathematics.md",
-  "generatedAt": "2026-10-27T13:11:42.620Z",
+  "generatedAt": "2026-11-08T08:18:25.808Z",
   "fileCompiledOn": "2026-10-22",
   "counts": {
     "tablesFound": 33,
     "rawRows": 90,
-    "afterDedupe": 71,
+    "afterDedupe": 68,
     "resources": 45,
-    "papers": 26,
+    "papers": 23,
     "paperSets": 0,
     "nepalSpecificFlagged": 8,
     "byStatus": {
-      "ok": 58,
+      "ok": 55,
       "caveat": 9,
       "unknown": 4
     },
-    "missingWhy": 24,
+    "missingWhy": 21,
     "gaps": 14,
     "contacts": 11,
     "rejected": 9
@@ -1455,7 +1455,13 @@
       ],
       "year": null,
       "topics": [],
-      "files": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/1c0g54cX-tC9rSNDiVCYGtZihQ_DjSqDZ/view",
+          "kind": "questions"
+        }
+      ],
       "format": {
         "duration": "",
         "marks": null,
@@ -1485,7 +1491,13 @@
       ],
       "year": null,
       "topics": [],
-      "files": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/1xI-IQ8teyI1zFIRyh2W4dQwipQ-T7AxX/view",
+          "kind": "questions"
+        }
+      ],
       "format": {
         "duration": "",
         "marks": null,
@@ -1511,11 +1523,18 @@
       "title": "Nepal Mathematics Olympiad 2021 — Second Round",
       "type": "pastpaper",
       "levels": [
-        "province"
+        "province",
+        "national"
       ],
       "year": 2021,
       "topics": [],
-      "files": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/1l9nuCbMBDTL6NGL4Y8_IPRy4imh8DFtR/view",
+          "kind": "questions"
+        }
+      ],
       "format": {
         "duration": "",
         "marks": null,
@@ -1532,7 +1551,8 @@
       "highlight": true,
       "origin": "external",
       "sourceIds": [
-        "P3"
+        "P3",
+        "N3"
       ],
       "needsReview": true
     },
@@ -1541,11 +1561,18 @@
       "title": "Nepal Mathematics Olympiad 2020 — Second Round",
       "type": "pastpaper",
       "levels": [
-        "province"
+        "province",
+        "national"
       ],
       "year": 2020,
       "topics": [],
-      "files": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/1Qo6D6CvgemJDgAQZSqeO9h-912dZFqrO/view",
+          "kind": "questions"
+        }
+      ],
       "format": {
         "duration": "",
         "marks": null,
@@ -1562,7 +1589,8 @@
       "highlight": true,
       "origin": "external",
       "sourceIds": [
-        "P4"
+        "P4",
+        "N2"
       ],
       "needsReview": true
     },
@@ -1571,11 +1599,18 @@
       "title": "Nepal Mathematics Olympiad 2022 — Second Round",
       "type": "pastpaper",
       "levels": [
-        "province"
+        "province",
+        "national"
       ],
       "year": 2022,
       "topics": [],
-      "files": [],
+      "files": [
+        {
+          "label": "Open",
+          "url": "https://drive.google.com/file/d/1At7MxNYkDgT_taY-xRr3nc9drOXboOiY/view",
+          "kind": "questions"
+        }
+      ],
       "format": {
         "duration": "",
         "marks": null,
@@ -1592,7 +1627,8 @@
       "highlight": true,
       "origin": "external",
       "sourceIds": [
-        "P5"
+        "P5",
+        "N4"
       ],
       "needsReview": true
     },
@@ -1629,114 +1665,6 @@
       "origin": "external",
       "sourceIds": [
         "N1"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "mathematics-nepal-mathematics-olympiad-2020-second-round-p4-above-6-prob",
-      "title": "Nepal Mathematics Olympiad 2020 — Second Round (= P4 above; 6 problems, IMO-format)",
-      "type": "pastpaper",
-      "levels": [
-        "national"
-      ],
-      "year": 2020,
-      "topics": [],
-      "files": [
-        {
-          "label": "Open",
-          "url": "https://drive.google.com/file/d/1Qo6D6CvgemJDgAQZSqeO9h-912dZFqrO/view",
-          "kind": "questions"
-        }
-      ],
-      "format": {
-        "duration": "",
-        "marks": null,
-        "questions": "",
-        "calculator": "",
-        "negativeMarking": null
-      },
-      "hasSolutions": null,
-      "nepalSpecific": false,
-      "access": "ok",
-      "accessNote": "",
-      "verified": "2026-10-22",
-      "why": "",
-      "highlight": false,
-      "origin": "external",
-      "sourceIds": [
-        "N2"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "mathematics-nepal-mathematics-olympiad-2021-second-round-p3-above-4-prob",
-      "title": "Nepal Mathematics Olympiad 2021 — Second Round (= P3 above; 4 problems)",
-      "type": "pastpaper",
-      "levels": [
-        "national"
-      ],
-      "year": 2021,
-      "topics": [],
-      "files": [
-        {
-          "label": "Open",
-          "url": "https://drive.google.com/file/d/1l9nuCbMBDTL6NGL4Y8_IPRy4imh8DFtR/view",
-          "kind": "questions"
-        }
-      ],
-      "format": {
-        "duration": "",
-        "marks": null,
-        "questions": "",
-        "calculator": "",
-        "negativeMarking": null
-      },
-      "hasSolutions": null,
-      "nepalSpecific": false,
-      "access": "ok",
-      "accessNote": "",
-      "verified": "2026-10-22",
-      "why": "",
-      "highlight": false,
-      "origin": "external",
-      "sourceIds": [
-        "N3"
-      ],
-      "needsReview": true
-    },
-    {
-      "id": "mathematics-nepal-mathematics-olympiad-2022-second-round-p5-above-4-prob",
-      "title": "Nepal Mathematics Olympiad 2022 — Second Round (= P5 above; 4 problems)",
-      "type": "pastpaper",
-      "levels": [
-        "national"
-      ],
-      "year": 2022,
-      "topics": [],
-      "files": [
-        {
-          "label": "Open",
-          "url": "https://drive.google.com/file/d/1At7MxNYkDgT_taY-xRr3nc9drOXboOiY/view",
-          "kind": "questions"
-        }
-      ],
-      "format": {
-        "duration": "",
-        "marks": null,
-        "questions": "",
-        "calculator": "",
-        "negativeMarking": null
-      },
-      "hasSolutions": null,
-      "nepalSpecific": false,
-      "access": "ok",
-      "accessNote": "",
-      "verified": "2026-10-22",
-      "why": "",
-      "highlight": false,
-      "origin": "external",
-      "sourceIds": [
-        "N4"
       ],
       "needsReview": true
     },
@@ -2423,11 +2351,6 @@
   "warnings": [
     "no URL: D5 \"❌ Actual DMO question papers\" (1.4 Past Papers — District tier)",
     "no status: D5 \"❌ Actual DMO question papers\"",
-    "no URL: P1 \"⭐ PMO New Sample Set\" (2.2 ⭐ Past Papers — Province tier (all downloaded and read))",
-    "no URL: P2 \"⭐ PMO FINAL QUESTIONS\" (2.2 ⭐ Past Papers — Province tier (all downloaded and read))",
-    "no URL: P3 \"⭐ Nepal Mathematics Olympiad 2021 — Second Round\" (2.2 ⭐ Past Papers — Province tier (all downloaded and read))",
-    "no URL: P4 \"⭐ Nepal Mathematics Olympiad 2020 — Second Round\" (2.2 ⭐ Past Papers — Province tier (all downloaded and read))",
-    "no URL: P5 \"⭐ Nepal Mathematics Olympiad 2022 — Second Round\" (2.2 ⭐ Past Papers — Province tier (all downloaded and read))",
     "no URL: N8 \"❌ NMO Finals papers 2023, 2024, 2025, 2026\" (3.2 Past Papers — National tier)",
     "no status: N8 \"❌ NMO Finals papers 2023, 2024, 2025, 2026\"",
     "no URL: N9 \"❌ Any TST paper\" (3.2 Past Papers — National tier)",
