@@ -32,7 +32,7 @@
     "sourceIds": [
       "D3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-gecaa-2020-1st-theory-data-analysis-observation-round-team-c",
@@ -69,7 +69,7 @@
       "D4",
       "N10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-nao-syllabus-senior-category-official-pdf",
@@ -104,7 +104,7 @@
     "sourceIds": [
       "P1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-nao-syllabus-junior-category-official-pdf",
@@ -139,7 +139,7 @@
     "sourceIds": [
       "P2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-guidelines-for-the-12th-national-astronomy-olympiad-2025-off",
@@ -174,7 +174,7 @@
     "sourceIds": [
       "P3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-national-astronomy-olympiad-nepal-country-advice-document-7-",
@@ -209,7 +209,7 @@
     "sourceIds": [
       "P4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-nao2026-results-first-round-provincial",
@@ -244,7 +244,7 @@
     "sourceIds": [
       "P6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-nao2026-results-second-round-national-senior-junior",
@@ -284,7 +284,7 @@
     "sourceIds": [
       "P7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-nao2026-results-final-round-closed-camp-senior-junior",
@@ -324,7 +324,7 @@
     "sourceIds": [
       "P8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-inao-indian-national-astronomy-olympiad-past-papers-hbcse",
@@ -360,7 +360,7 @@
     "sourceIds": [
       "P9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-usaaao-past-exams-first-round-nac",
@@ -396,7 +396,7 @@
     "sourceIds": [
       "P10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-ioaa-problem-book-2007-2025-14-subject-chapters-latex-transc",
@@ -432,7 +432,7 @@
     "sourceIds": [
       "N1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-ioaa-2025-18th-mumbai-complete-official-set-39-pdfs",
@@ -467,7 +467,7 @@
     "sourceIds": [
       "N2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-ioaa-past-question-papers-2016-2017-2018-2019-2020-2021",
@@ -502,7 +502,7 @@
     "sourceIds": [
       "N3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-ioaa-data-analysis-solutions-2016-2017-2018-2019",
@@ -537,7 +537,7 @@
     "sourceIds": [
       "N4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-official-ioaa-syllabus-appendix-a-of-the-ioaa-problem-book",
@@ -577,7 +577,7 @@
     "sourceIds": [
       "N5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-official-ioaa-statutes",
@@ -612,7 +612,7 @@
     "sourceIds": [
       "N6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-astroarena-ioaa-2011-2019-per-year-theory-data-analysis-nigh",
@@ -647,7 +647,7 @@
     "sourceIds": [
       "N7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-astroarena-compilation-of-ioaa-problems-2007-2012-single-pdf",
@@ -682,7 +682,7 @@
     "sourceIds": [
       "N8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-astroarena-iao-international-astronomy-olympiad-2013-2021-th",
@@ -717,7 +717,7 @@
     "sourceIds": [
       "N9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-astroarena-usaaao",
@@ -752,6 +752,6 @@
     "sourceIds": [
       "N11"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]

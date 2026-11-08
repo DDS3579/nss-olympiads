@@ -19,7 +19,7 @@
     "sourceIds": [
       "S1"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-lee-yiu-sing-s-comprehensive-ioaa-resource",
@@ -41,7 +41,7 @@
     "sourceIds": [
       "S15"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-practical-handouts-for-olympiad-ayush-tiwari",
@@ -63,7 +63,7 @@
     "sourceIds": [
       "S14"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-stellarium-desktop-mobile",
@@ -85,7 +85,7 @@
     "sourceIds": [
       "S3"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-analemma-primer-fahim-rajit-hossain",
@@ -107,7 +107,7 @@
     "sourceIds": [
       "S24"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-ao-guide-resources-page",
@@ -129,7 +129,7 @@
     "sourceIds": [
       "S2"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-ao-guide-astrophysics-challenge-aoac",
@@ -151,7 +151,7 @@
     "sourceIds": [
       "S29"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-ao-guide-master-drive-all-sources-national-international-oly",
@@ -173,7 +173,7 @@
     "sourceIds": [
       "S20"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-aoxiv",
@@ -195,7 +195,7 @@
     "sourceIds": [
       "S30"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-astronomy-olympiad-archives-mega-by-stefan-ivanov",
@@ -218,7 +218,7 @@
     "sourceIds": [
       "S21"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-astronomy-olympiad-discord-server-aods",
@@ -240,7 +240,7 @@
     "sourceIds": [
       "S28"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-astronomy-olympiad-potd-problem-of-the-day-archive-fahim-raj",
@@ -262,7 +262,7 @@
     "sourceIds": [
       "S23"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-astronomy-via-latex-a-guide-to-problem-writing-for-astronomy",
@@ -284,7 +284,7 @@
     "sourceIds": [
       "S25"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-baao-observational-handouts",
@@ -306,7 +306,7 @@
     "sourceIds": [
       "S18"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-bdoaa-preparation-material",
@@ -328,7 +328,7 @@
     "sourceIds": [
       "S19"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-celestia",
@@ -350,7 +350,7 @@
     "sourceIds": [
       "S4"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-celestial-sphere-webapp",
@@ -372,7 +372,7 @@
     "sourceIds": [
       "S7"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-country-advice-documents-india-romania-singapore-bangladesh",
@@ -407,7 +407,7 @@
     "sourceIds": [
       "S31"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-kaiwen-s-astronomy-notes-notion",
@@ -429,7 +429,7 @@
     "sourceIds": [
       "S27"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-kepler-s-equation-the-unsolvable-equation-of-celestial-mecha",
@@ -451,7 +451,7 @@
     "sourceIds": [
       "S26"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-kevin-zhou-s-physics-olympiad-handouts-esp-m6-and-x3",
@@ -473,7 +473,7 @@
     "sourceIds": [
       "S22"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-learn-the-sky-youtube",
@@ -495,7 +495,7 @@
     "sourceIds": [
       "S8"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-nasa-exoplanet-archive",
@@ -517,7 +517,7 @@
     "sourceIds": [
       "S13"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-openstax",
@@ -539,7 +539,7 @@
     "sourceIds": [
       "S11"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-sean-ken-m-galanza-s-astronomy-handouts",
@@ -561,7 +561,7 @@
     "sourceIds": [
       "S17"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-sky-academy-android",
@@ -583,7 +583,7 @@
     "sourceIds": [
       "S9"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-skychart-tasks",
@@ -605,7 +605,7 @@
     "sourceIds": [
       "S6"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-star-maps-101-and-practices-fahim-rajit-hossain",
@@ -627,7 +627,7 @@
     "sourceIds": [
       "S10"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-stellar-guesser",
@@ -649,7 +649,7 @@
     "sourceIds": [
       "S5"
     ],
-    "needsReview": true
+    "needsReview": false
   },
   {
     "id": "astronomy-usaaao-guide-handouts",
@@ -671,6 +671,6 @@
     "sourceIds": [
       "S16"
     ],
-    "needsReview": true
+    "needsReview": false
   }
 ]
